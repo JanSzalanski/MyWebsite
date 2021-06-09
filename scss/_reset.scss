@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+
+input:focus {
+    outline: 0; //głupia obwódka w webkicie w polach formularza przy wpisywaniu
+}
+
+button:focus {
+    outline: 0; //głupia obwódka w webkicie na buttonie po kliknieciu
+}
+
+textarea:focus {
+    outline: 0; //głupia obwódka w webkicie na buttonie po wpisywaniu
+}

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moja strona firmowo-domowa</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baloo+2&family=Libre+Barcode+128+Text&family=Montserrat:wght@500;600;700;900&family=Source+Sans+Pro:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="~/../scss/main.css" />
+</head>
+
+<body>
+  <!-- <div class="GridHelperCross"></div> -->
+
+  <div class="WrapperBorder1"></div>
+  <div class="Wrapper">
+    <div class="GridHelper"></div>
+
+    <div class="FirmaPicture"></div>
+
+    <div class="GreyTop"></div>
+
+    <header class="Header">
+      <section class="Header__Logo">
+        <div class="Header__Logo-Left">
+          <!--przy braku podobnej zawartości w Header__Logo-Right responsywność po 800px nie dziala rownomiernie...-->
+
+          <!-- <p>--Test-- <br>For now recomended resolution is: 1920 x 1080 px. </p> zakomentowanie h3 ponizej powoduje brak powrotu ze stref spokoju z animacja -->
+          <h3 class="Header__Logo-Left-H3">szalanski.eu</h3>
+        </div>
+
+        <div class="Header__Logo-Middle">
+          <div class="Header__Logo-Middle-Div">szalanski.eu</div>
+          <h1 class="Header__Logo-Middle-H1">szalanski<b>.</b>eu</h1>
+        </div>
+
+        <div class="Header__Logo-Right">
+          <div class="ornament1"></div>
+          <div class="ornament2"></div>
+          <div class="ornament3"></div>
+          <div class="ornament4"></div>
+          <!--  sociale ostatecznie tutaj nie wykorzystane
+                    <div class="Header__Logo-Right-Div1">
+
+                        <a href="https://www.linkedin.com/in/jan-szalanski/">
+                            <div class="socialL"></div>
+                        </a>
+
+                        <a href="https://www.youtube.com/channel/UCY59lj5rPEpNdXwBlK7uMnQ/about?view_as=subscriber">
+                            <div class="socialY"></div>
+                        </a>
+
+                        <a href="https://facebook.com">
+                            <div class="socialF"></div>
+                        </a>
+
+                    </div> -->
+        </div>
+      </section>
+
+      <section class="Contact">
+        <div class="Contact__Board">
+          <h2 class="Contact__Board-H2">kontakt</h2>
+
+          <form class="Contact__Form" action="kontakt.php" method="post">
+            <div class="Contact__Form-Name">
+              <input type="text" name="imie" placeholder="Imię *" maxlength="30" required="required" tabindex="1"
+                autocomplete="off" />
+            </div>
+
+            <div class="Contact__Form-Email">
+              <input type="email" name="emial" placeholder="E-mail *" maxlength="40" required="required" tabindex="2"
+                autocomplete="off" />
+            </div>
+
+            <div class="Contact__Form-Topic">
+              <input type="topic" name="temat" placeholder="Temat" maxlength="30" tabindex="3" tabindex="3"
+                autocomplete="off" />
+            </div>
+
+            <div class="Contact__Form-Submit">
+              <input type="submit" value="wyślij" tabindex="4" autocomplete="off" />
+            </div>
+
+            <div class="Contact__Form-Area">
+              <textarea class="Contact__Form-Textarea" name="message" id="message" cols="80" rows="5"
+                placeholder="Wiadomość *" maxlength="600" required="required" tabindex="5"></textarea>
+            </div>
+          </form>
+        </div>
+
+        <button class="Contact__Btn">Kontakt</button>
+        <div class="Contact__Cross-V--Btn"></div>
+        <div class="Contact__Cross-H--Btn"></div>
+      </section>
+
+      <section class="Menu">
+        <div class="Menu__Left">
+          <div class="Menu__Left-Left"></div>
+
+          <nav class="Nav">
+            <!-- Od tego momentu zaczyna sie właściwa nawigacja  zmieniłem Bem na komponent od tego momentu-->
+
+            <ul class="Nav__List">
+              <li class="Nav__Item">
+                <a href="firma.html" class="Nav__Link">
+                    <p class="Nav__Title">O Firmie</p>
+                  </a>
+              </li>
+
+              <li class="Nav__Item">
+                <a href="praktyka.html" class="Nav__Link">
+                    <p class="Nav__Title">Praktyka</p>
+                  </a>
+              </li>
+
+              <li class="Nav__Item">
+                <a href="projekty.html" class="Nav__Link">
+                    <p class="Nav__Title">Projekty</p>
+                  </a>
+              </li>
+
+              <li class="Nav__Item">
+                <a href="prywatnie.html" class="Nav__Link">
+                    <p class="Nav__Title">Prywatnie</p>
+                  </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="Menu__Middle">
+          <svg class="Menu__Middle-Svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 20" width="60px"
+            height="20px">
+            <path class="cls-1" d="M0,0H60V5A22.26,22.26,0,0,0,47,9c-3,2-7,5-11,7a42.56,42.56,0,0,1-17,4H0Z" />
+          </svg>
+        </div>
+
+        <div class="Menu__Right"></div>
+
+        <div class="StripeGrey"></div>
+
+        <div class="Menu__Svg">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 40 20">
+            <polygon class="cls-2" points="40,0 0,0 0,20 27,20 	" />
+          </svg>
+        </div>
+
+        <div class="Menu__Skew"></div>
+
+        <div class="Menu__SkewB">
+          <h3>/ komunikacja kwantowa /</h3>
+        </div>
+      </section>
+    </header>
+
+    <div class="Troll">
+      <div class="GreyMiddleB Firma">
+        <div class="BackgroundGrey"></div>
+        <div class="Miara"></div>
+
+        <aside class="BoardF">
+          <div class="CanvasShadow"></div>
+          <div class="CanvasB"></div>
+          <div class="CanvasA"></div>
+          <div class="Canvas"></div>
+
+          <div class="Article">
+            <h2 class="Article__TytulBoczny">Pierwiastek \ Żywioł - <b class="Article__TytulBoczny-B">02</b></h2>
+
+            <header class="Article__Naglowek">
+              <h2 class="Article__H2">Harmonia<span class="Article__H2-Span">| woda</span></h2>
+            </header>
+
+            <div class="Article__Overflow">
+              <article id="Article__Artykul-Two">
+                <p id="Article__Artykul-Pro-Two">
+                  Dawno, dawno temu w odległej galaktyce… była sobie harmonia. Mam nieodparte wrażenie, że w
+                  otaczającym nas świecie to zjawisko, to słowo, jest coraz rzadziej spotykane, że powoli staje się
+                  archaizmem. Gdzie i w czym można teraz znaleźć odrobinę harmonii, wyważenia, stonowania, balansu czy
+                  dobrego smaku? Wszystko tylko więcej, szybciej, bardziej, mocniej, lepiej, na wczoraj i od zaraz.
+                  Dlatego uważam, że to dobre słowo klucz w zakładce o firmie? Nie twierdzę, że ja i moja firma to
+                  uosobienie i wzorcowy przykład harmonii - choć bardzo bym sobie tego życzył. Ale to pojęcie wydało
+                  mi się bardzo na miejscu w odniesieniu do żywiołu wody, który uznałem że będzie wiodącym dla tej
+                  podstrony. Jest to również coś, co ja chciałbym odnajdować we wszystkich moich działaniach i to nie
+                  tylko tych związanych ze sferą czysto biznesową.
+                </p>
+                <p id="Article__Artykul-Pro-Two-B">
+                  Dlatego pracuję nad tym, żeby jednak ta utopijna i mityczna cecha, ten biały jednorożec coraz
+                  częściej bywał gościem otaczającej mnie rzeczywistości. Myślę, że znalezienie tej harmonii, tego
+                  złotego środka pomiędzy pracą i działaniem a czasem przeznaczonym na odpoczynek i relaks lub po
+                  prostu na inne zajęcia, (bo przecież można odpoczywać aktywnie) czy zwyczajnie na życie prywatne to
+                  jest to, o czym dziś większość z nas kompletnie zapomniała. Zatraciliśmy tę umiejętność lub co
+                  gorsza nigdy jej nie doświadczyliśmy będąc tym samym pozbawionym płynącej z niej nauki. Równowaga w
+                  każdej dziedzinie życia, w każdej motywacji, postępowaniu, czy nawet postrzeganiu różnych spraw jest
+                  tym, czego sobie i Wam życzę, na co dzień… nie od święta… i nie na pokaz...
+                </p>
+              </article>
+            </div>
+
+            <footer class="Article__Stopka">
+              <div class="Article__Corner">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 12">
+                  <path d="M100,12H10C4.48,12,0,7.52,0,2V0h92L100,12z" />
+                </svg>
+              </div>
+              <div class="Article__Buttons">
+                <div data-index="" class="Article__Btn Article__Btn--active"></div>
+
+                <div data-index="" class="Article__Btn-B Article__Btn--inactive"></div>
+              </div>
+            </footer>
+          </div>
+
+          <div class="DescryptionBtn">
+            <span class="DescryptionBtn__Span">D</span>
+            <p class="DescryptionBtn__P"><span>D</span>escription</p>
+            <div class="DescryptionBtn__Border"></div>
+          </div>
+
+          <div class="InfoF">
+            <header class="Info__Naglowek">
+              <h2 class="Info__H2">Woda<span class="Info__H2-Span">| harmonia</span></h2>
+            </header>
+
+            <article class="Info__Artykul">
+              <p class="Info__Artykul-P">
+                Woda to intuicja i wrażliwość. Jest płynna, a zatem również zmienna i może być przez to
+                nieprzewidywalna. To umiejętność płynięcia z nurtem życia. Według wierzeń brak tego składnika to
+                problemy z zrelaksowaniem i wyciszeniem, to ciągłe odczuwanie napięcia. Uznawana głównie za żeński
+                pierwiastek. Jest symbolem życia - poszukiwania w kosmosie właśnie w niej dopatrują się jego oznak.
+                Woda rządzi zmysłem smaku i brzuchem. Element przeciwstawny do ognia.
+              </p>
+            </article>
+          </div>
+
+          <div class="Button">></div>
+        </aside>
+
+        <div class="WrapperTresc Ofirmie">
+          <h1 class="Tresc__H1">
+            FIRMA - 02 harmonia
+            <div class="Square"></div>
+          </h1>
+
+          <div class="CornerTop"></div>
+          <div class="CornerTopIn"></div>
+          <div class="CornerTopR"></div>
+          <div class="LineCornerTR"></div>
+          <div class="CornerBottom"></div>
+          <div class="CornerBottomIn"></div>
+          <div class="CornerBottomR"></div>
+          <div class="Line"></div>
+          <div class="LineIn"></div>
+          <div class="LineLeft"></div>
+          <div class="LineLeftIn"></div>
+          <div class="LineRight"></div>
+          <div class="ShapeA">
+            <div class="ShapeARect"></div>
+            <div class="ShapeBRect"></div>
+            <div class="ShapeCRect"></div>
+            <h3>|Description</h3>
+          </div>
+          <div class="RectangleA OFirmie"></div>
+          <div class="LinesA OFirmie"></div>
+          <div class="LinesB OFirmie"></div>
+          <div class="RectangleTresc OFirmie">
+            <div class="Background"></div>
+            <div class="BackgroundNoise"></div>
+            <div class="BackgroundGrid"></div>
+            <div class="BackgroundGardient"></div>
+
+            <h3 class="NaglowekTresc OFirmie">szalanski.eu</h3>
+
+            <div class="maska">
+              <div class="ozdobnik">
+                <div class="geo begining"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo end"></div>
+              </div>
+            </div>
+            <p class="OFirmie">
+              Rok 2012 był przełomowym okresem w podejmowanych przeze mnie działaniach biznesowych. W tym właśnie
+              czasie będąc zatrudnionym w instytucji publicznej, pewne okoliczności poniekąd wymusiły na mnie –
+              rejestracje działalności gospodarczej. Mimo że uważałem, że to nie ten czas i nie do końca właściwy
+              pomysł na siebie - to mimo wszystko podjąłem wyzwanie i założyłem firmę. Pomyślałem sobie - dobra jak
+              nie teraz to, kiedy - przecież okoliczności nigdy nie są idealne? Zobaczymy, co ma być to będzie? I tak
+              oto zacząłem świadczyć usługi informatyczne na rzecz sądu na zasadach outsourcingu. Zobowiązanie to
+              faktycznie sprowadzało się do wsparcia przez pełen etat, będąc zarazem nie tylko szeregowym
+              informatykiem, ale i administratorem a czasem i elektrykiem w jednej osobie. Oczywiście taki jedynie
+              charakter pracy nie pokrywał się z moimi ambicjami. Z czasem w miarę swoich sił i umiejętności starałem
+              się poszerzać swoją działalność - próbować nowych rzeczy, badać rynek i reagować elastycznie do potrzeb.
+              Na przestrzeni lat zdobyłem dzięki temu sporo różnych kompetencji. Nieocenione jest także doświadczanie
+              wyniesione z kooperacji właśnie z instytucjami publicznymi, które w odróżnieniu od sektora prywatnego
+              rządzą się specyficznymi zasadami. Najbardziej jednak cenię sobie osoby, z którymi miałem przyjemność
+              współpracować w ramach mojej skromnej firmy przy różnych projektach. Być może było tak, dlatego że
+              zawszę do kooperacji udawało mi się zachęcić osoby zdolne, zaangażowane i zdyscyplinowane. Wydaje mi
+              się, że to jest taka złota zasada dobrze funkcjonujących biznesów - mieć to szczęście, aby mimo jak się
+              zdaje posiadanego własnego wachlarza kompetencji otaczać się osobami jeszcze bardziej utalentowanymi.
+            </p>
+            <div class="maska">
+              <div class="ozdobnik">
+                <div class="geo begining"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo end"></div>
+              </div>
+            </div>
+
+            <p class="OFirmie">
+              Tak, więc jeśli chcesz nawiązać kontakt z osobą, która jest informatykiem i ma pojęcie o elektronice
+              albo na odwrót mocno siedzi w elektronice i kojarzy zagadnienia informatyczne - to śmiało nie krępuj
+              się. Jeśli jakimś cudem to by było za mało dla Ciebie i masz specyficzne wymagania takie jak np. że
+              osoba taka dodatkowo powinna mieć pojęcie o sieciach, albo być za pan brat z multimediami a w
+              szczególności z grafiką 3d. Albo szukasz kogoś, kto miał do czynienia z różnymi bazami danych z
+              naciskiem na SQL i administrował różnymi systemami. (niestety nie linuks\unix). Gdyby i to było mało, bo
+              szukasz kogoś, kto programuje a do tego zajmuję web developingiem choćby hobbistycznie. To proszę
+              sprawdzamy. Co prawda do tej pory nie obrałem stricte programistycznej ścieżki, ale teraz staram się to
+              nadrobić - na początek za pomocą front-endu webowego gdzie używam Java Skrypt, czego dowodem niech
+              będzie ta strona. Dodatkowo rozglądam się za innym językiem programowania, który warto znać i aktywnie
+              wykorzystywać. Pewnie wrócę do Java albo wybór padnie na rozwój w Pythonie. Dlaczego napisałem, że
+              wrócę, ponieważ na studiach, jakie ukończyłem największy nacisk kładziony był na programowanie właśnie w
+              tej technologii. Poza tym na uczelni w mniejszym stopniu, ale także miałem styczność z C++, czystym C
+              oraz z wspomnianym Pythonem. Można by zauważyć, że idę w kierunku jakiegoś technicznego generalisty.
+              Takiego, jakiego wiele osób wyobraża sobie myśląc o tym gościu w okularach i flanelowej koszuli w kratę.
+              Nie zdając sobie przy tym sprawy, że w informatyce są różne dziedziny a w nich kategorie, podkategorie i
+              specjalizacje a tam frameworki a w nich biblioteki... Sam często śmiałem się z właśnie takiego wyobrażenia
+              informatyka, który wszystko ogranie co tylko "Pani Basi" przyjdzie do głowy. Ale wracając do samej idei
+              - to tak przeszła mi taka myśl przez głowę - jeśli by dodać do tej listy linuksa i komputery kwantowe
+              oraz szczyptę security ;) <br />
+              Oczywiście znawcy tematu stwierdzą teraz, że to nie możliwe - nie można być specjalistą z tylu działów i
+              z tak rozległej dyscypliny ?! A ja na to - pewnie że nie ! I nie o to mi chodzi, ale bycie zaznajomionym
+              z tyloma obszarami i kojarzenie wielu tak różnorodnych wątków to już coś! Bo należy pamiętać że z
+              niektórymi zagadnieniami będę tylko zaznajomiony ale w pewnych mogę być całkiem mocny. Poza tym uczciwie
+              muszę przyznać że to nie tylko była kwestia jakiegoś długoterminowego planu na siebie i na biznes ale
+              także okoliczności na które trzeba było reagować. Ale dobrze żeby nie przesadzić z tym wszystkim a
+              raczej nie przesłodzić. Choć i tak już w tej chwili znajdą się i tacy co powiedzą - o to z tobą jest
+              jak z tym uniwersalnym proszkiem do prania albo nie miałieś pomysłu na siebie i tak skakałeś z kwiatka na
+              kwiatek? :D To tak całkiem schodząc na ziemię – chcesz nawiązać współpracę z osobą myślącą
+              analitycznie, która nie nastawia się na z góry ustalone i znane rozwiązania. I osoba taka jest w stanie
+              i chce nauczyć się dowolnego nowego mechanizmu i nie zawaha się przy tym pójść drogą inną niż znane
+              ścieżki i utarte schematy?! To bardzo proszę w górnym lewym rogu masz przycisk kontakt, kursorem myszy
+              najedź na niego i naciśnij… <br />
+              Ps. Żeby nie było nie widzę nic złego w utartych schematach - ba! Nie widzę też nic złego w drodze na
+              skróty pod warunkiem, że efekt końcowy będzie taki, jak oczekiwano.
+            </p>
+
+            <div class="maska">
+              <div class="ozdobnik">
+                <div class="geo begining"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo end"></div>
+              </div>
+            </div>
+
+            <div class="pictureFirma">
+              <img src="./assets/FirmaJaA.webp" alt="męszczyzna w czarnej koszuli na tle serwerów \ napisów" srcset=""
+                draggable="false" />
+            </div>
+
+            <div class="ShapeB modF">
+              <h3 class="modF">sektor /// a</h3>
+            </div>
+          </div>
+          <div class="ShapeC OFirmie"></div>
+          <div class="ShapeD"></div>
+        </div>
+
+        <aside class="BoardMobo Firma">
+          <div class="CanvasShadowM"></div>
+
+          <div class="CanvasBM"></div>
+
+          <div class="CanvasAM"></div>
+
+          <div class="CanvasM Firma"></div>
+
+          <div class="BMWrap__articles-container">
+            <div class="BMWrap__article-container BMWrap__article-container--second">
+              <div class="BMWrap__background--second Firma"></div>
+
+              <h2 class="BMWrap__header BMWrap__header--second">Woda <span>| harmonia</span></h2>
+
+              <p class="BMWrap__Info">
+                Woda to intuicja i wrażliwość. Jest płynna, a zatem również zmienna i może być przez to
+                nieprzewidywalna. To umiejętność płynięcia z nurtem życia. Według wierzeń brak tego składnika to
+                problemy z zrelaksowaniem i wyciszeniem, to ciągłe odczuwanie napięcia. Uznawana głównie za żeński
+                pierwiastek. Jest symbolem życia - poszukiwania w kosmosie właśnie w niej dopatrują się jego oznak.
+                Woda rządzi zmysłem smaku i brzuchem. Element przeciwstawny do ognia.
+              </p>
+            </div>
+            <div class="BMWrap__article-container BMWrap__article-container--first">
+              <div class="BMWrap__background--first"></div>
+
+              <h2 class="BMWrap__header BMWrap__header--first">Harmonia <span>| woda</span></h2>
+              <div class="BMWrap__Overflow">
+                <div class="BMWrap__paragraphs">
+                  <p class="BMWrap__paragraphA">
+                    Dawno, dawno temu w odległej galaktyce… była sobie harmonia. Mam nieodparte wrażenie, że w
+                    otaczającym nas świecie to zjawisko, to słowo, jest coraz rzadziej spotykane, że powoli staje się
+                    archaizmem. Gdzie i w czym można teraz znaleźć odrobinę harmonii, wyważenia, stonowania, balansu
+                    czy dobrego smaku? Wszystko tylko więcej, szybciej, bardziej, mocniej, lepiej, na wczoraj i od
+                    zaraz. Dlatego uważam, że to dobre słowo klucz w zakładce o firmie? Nie twierdzę, że ja i moja
+                    firma to uosobienie i wzorcowy przykład harmonii - choć bardzo bym sobie tego życzył. Ale to
+                    pojęcie wydało mi się bardzo na miejscu w odniesieniu do żywiołu wody, który uznałem że będzie
+                    wiodącym dla tej podstrony. Jest to również coś, co ja chciałbym odnajdować we wszystkich moich
+                    działaniach i to nie tylko tych związanych ze sferą czysto biznesową.
+                  </p>
+
+                  <p class="BMWrap__paragraphB">
+                    Dlatego pracuję nad tym, żeby jednak ta utopijna i mityczna cecha, ten biały jednorożec coraz
+                    częściej bywał gościem otaczającej mnie rzeczywistości. Myślę, że znalezienie tej harmonii, tego
+                    złotego środka pomiędzy pracą i działaniem a czasem przeznaczonym na odpoczynek i relaks lub po
+                    prostu na inne zajęcia, (bo przecież można odpoczywać aktywnie) czy zwyczajnie na życie prywatne
+                    to jest to, o czym dziś większość z nas kompletnie zapomniała. Zatraciliśmy tę umiejętność lub co
+                    gorsza nigdy jej nie doświadczyliśmy będąc tym samym pozbawionym płynącej z niej nauki. Równowaga
+                    w każdej dziedzinie życia, w każdej motywacji, postępowaniu, czy nawet postrzeganiu różnych spraw
+                    jest tym, czego sobie i Wam życzę, na co dzień… nie od święta… i nie na pokaz...
+                  </p>
+                </div>
+              </div>
+
+              <div class="BMWrap__Corner">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 12">
+                  <path d="M100,12H10C4.48,12,0,7.52,0,2V0h92L100,12z" />
+                </svg>
+              </div>
+              <div class="BMWrap__Buttons">
+                <div data-index="" class="BMWrap__Btn BMWrap__Btn--active"></div>
+
+                <div data-index="" class="BMWrap__Btn-B"></div>
+              </div>
+            </div>
+            <div class="BMWrap__handle">
+              <!-- <div class="BMWrap__handle-ArrowL">&lt;</div>
+
+              <div class="BMWrap__handle-ArrowR">></div> -->
+            </div>
+          </div>
+
+          <div class="BMWrap__divider">
+            <div class="BMWrap__divider_outline"></div>
+            <div class="BMWrap__divider_dot">D</div>
+            <span class="BMWrap__divider_span">escription</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <footer class="Footer">
+      <section class="Footer__Nav">
+        <div class="Footer__Nav-Left"></div>
+
+        <div class="Footer__Nav-Middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 20" width="60px" height="20px">
+            <path class="cls-2" d="M0,0H60V5A22.26,22.26,0,0,0,47,9c-3,2-7,5-11,7a42.56,42.56,0,0,1-17,4H0Z" />
+          </svg>
+        </div>
+
+        <div class="Footer__Nav-Right">
+          <div class="Footer__Nav-Right-Title">
+            Panel Sterowania
+            <div class="Footer__Nav-Right-Arrow">></div>
+          </div>
+
+          <div class="Footer__Nav-Right-Bars">
+            <div class="Footer__Nav-Right-Bar1"></div>
+
+            <div class="Footer__Nav-Right-Bar2"></div>
+
+            <div class="Footer__Nav-Right-Bar3"></div>
+
+            <div class="Footer__Nav-Right-Bar4"></div>
+          </div>
+
+          <div class="Footer__Nav-Right-Space"></div>
+        </div>
+
+        <div class="ASMR"></div>
+      </section>
+
+      <section class="Footer__BottomSection">
+        <!-- <div class="Footer__BottomSection-MarginL"></div> -->
+
+        <div class="Footer__BottomSection-Left">
+          <div class="Footer__BottomSection-Left-Div2">
+            <h3 class="Footer__BottomSection-Left-h3">2012 - 2021 &copy; Wszelkie prawa zastrzeżone.</h3>
+          </div>
+
+          <div class="Footer__BottomSection-Left-Div1">
+            <h2 class="Footer__BottomSection-Left-h2">szalanski.eu</h2>
+          </div>
+
+          <div class="QRKode"></div>
+        </div>
+
+        <div class="Footer__BottomSection-Middle">
+          <div class="Footer__BottomSection-Middle-Div1">
+            <h2 class="Footer__BottomSection-Middle-h2">
+              Informacja: Strona niniejsza wykorzystuje do prawidłowego działania pliki cookies
+              <a class="Cookies" href="https://skrypt-cookies.pl/czym-sa-ciasteczka" target="_blank"
+                  >[ Więcej informacji ]</a>
+            </h2>
+          </div>
+        </div>
+
+        <div class="Footer__BottomSection-Right">
+          <div class="Footer__BottomSection-Right-P">
+            <div class="Footer__BottomSection-Right-Div1">
+              <h2 class="Footer__BottomSection-Right-h2">
+                szalanski.eu <br />
+                Jan Szałański
+              </h2>
+            </div>
+
+            <div class="Footer__BottomSection-Right-Div2">
+              <h3 class="Footer__BottomSection-Right-h3">
+                02-285 Warszawa <br />
+                Szyszkowa 46\13<br />
+                NIP: 5222739323 <br />REGON :1462757
+              </h3>
+            </div>
+
+            <div class="Footer__BottomSection-Right-Div3">
+              <h3 class="Footer__BottomSection-Right-h3B">Polityka Prywatności</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="Footer__BottomSection-MarginR"></div> -->
+      </section>
+    </footer>
+  </div>
+
+  <script src="~/../js/firma.js"></script>
+  <script src="~/../js/boardMobo.js"></script>
+  <script src="~/../js/board.js"></script>
+</body>
+
+</html>

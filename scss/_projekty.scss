@@ -1,0 +1,154 @@
+$color1: #7b4800b0;
+
+.st0 {
+    fill: #3d2d17b0;
+}
+
+.st1 {
+    fill: #3d2d177e;
+}
+
+.st2 {
+    fill: #3d2d1757;
+}
+
+.st3 {
+    fill: #3d2d1738;
+}
+
+.Projects {
+
+    position: absolute;
+    left: 52.5%;
+    top: -85px;
+    width: 670px;
+    height: 750px;
+    border-radius: 10px 27px 10px 30px;
+    background-color: #7b4800b0;
+    transform: translateX(-25%);
+    backdrop-filter: blur(6px);
+    box-shadow: inset 5px 5px 5px #c09456b0, inset -5px -5px 5px #35291698;
+    border: 1px solid rgba(29, 29, 29, 0.1);
+
+}
+
+
+.corner {
+
+    position: absolute;
+    width: 28%;
+    top: 12px;
+    right: 14px;
+
+}
+
+.cornerB {
+
+    position: absolute;
+    width: 38%;
+    bottom: 8px;
+    left: 12px;
+
+}
+
+
+.sector {
+
+    position: absolute;
+    height: 5%;
+    width: 108px;
+    top: 12px;
+    right: 30%;
+    text-align: center;
+    // background-color: rgba(184, 135, 11, 0.603);
+
+}
+
+.sector-box {
+
+    position: absolute;
+    height: 47%;
+    width: 30%;
+    top: 0;
+    left: 0%;
+    border-radius: 5px 0px 0px 5px;
+    background-color: black;
+
+}
+
+.sector-box-h1 {
+
+    font-family: $font-audio;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: white;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.sector-h1 {
+    font-family: $font-audio;
+    font-weight: 400;
+    position: absolute;
+    right: 5%;
+    top: 0px;
+    line-height: 18px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: black;
+    // background-color: #3d2d17b0;
+    width: 60%;
+
+}
+
+.sector-h2 {
+    font-family: $font-audio;
+    font-weight: 300;
+    position: absolute;
+    top: 55%;
+    left: 1px;
+    letter-spacing: 3.5px;
+    font-size: 1rem;
+    color: black;
+    line-height: 1;
+
+}
+
+.Projects-Article {
+    position: absolute;
+    top: 6%;
+    bottom: 4.7%;
+    left: 5.5%;
+    right: 6%;
+    background-color: #4d351562;
+    border-radius: 5px;
+    border: 1px dashed #3d2d17b0;
+
+
+}
+
+.Projects-Article p {
+    font-family: $font-source;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.rectangle {
+    position: absolute;
+    right: 41px;
+    top: 34px;
+    width: 24%;
+    height: 8px;
+    background-color: #3d2d17b0;
+    border-radius: 0px 4px 0px 0px;
+
+}

@@ -1,0 +1,760 @@
+.Footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  // z-index: 1;
+
+  @include mq(ultra) {
+    position: absolute;
+  }
+
+  @include mq(xxxl) {
+    @media (min-height: 1081px) {
+      position: absolute;
+    }
+  }
+
+  &--Open {
+    will-change: transform;
+    animation: StopkaDown 2.2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  &--Close {
+    will-change: transform;
+    animation: StopkaOut 1.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+  }
+}
+
+.Footer__Nav {
+  width: 100%;
+  position: absolute;
+  // bottom: calc(16.42vh - 4px); to mnie troch zdumiało
+  // left: 0;
+  // width: 100%;
+  height: $main-spacing;
+  display: grid;
+  grid-template-columns: 48% auto minmax(580px, 52%);
+  // grid-template-rows: $main-spacing;
+  // grid-auto-rows: auto; // to chyba nic nie wnosiło ???
+  animation-timing-function: ease-in-out;
+  background-color: rgba(10, 10, 10, 0.3);
+
+  @include mq(ultra) {
+    bottom: 196px;
+  }
+
+  @include mq(xxxl) {
+    bottom: calc(16.42vh + 4px);
+
+    @media (min-height: 1195px) {
+      bottom: 196px;
+    }
+  }
+
+  @include mq(big) {
+    bottom: calc(14vh + 4px);
+  }
+
+  @include mq(xl) {
+    bottom: calc(12vh + 4px);
+  }
+
+  @include mq(small) {
+    grid-template-columns: 1fr;
+  }
+
+  @include mq(xs) {
+    bottom: 44px;
+  }
+
+  &--open {
+    will-change: transform;
+    animation: ASMRUp 1.2s;
+    animation-fill-mode: forwards;
+  }
+
+  &--close {
+    will-change: transform;
+    animation: ASMRDown 1.2s;
+    animation-fill-mode: backwards;
+  }
+}
+
+.ASMR {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 23px; //calc(16.42vh - 128px); borderz zmienil wartosc
+  height: 130px;
+  background-image: url("../assets/holes.png");
+  box-shadow: inset 0px 3px 5px 3px rgba(0, 0, 0, 0.6);
+  border-top: 2px solid var(--color-main1);
+
+  @include mq(ultra) {
+    bottom: 64px; //196px - 130 - 2
+  }
+}
+
+.Footer__Nav-Left {
+  height: 5px;
+  background-color: var(--color-main);
+  align-self: end;
+
+  @include mq(small) {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+.Footer__Nav-Middle {
+  transform: rotate(180deg);
+  height: $main-spacing;
+
+  @include mq(small) {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+.Footer__Nav-Right-Arrow {
+  display: inline-block;
+  font-family: $font-audio;
+  font-size: $main-spacing;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--color-white);
+  position: absolute;
+  left: -27px;
+  transform: rotateZ(-90deg);
+  transition: 0.25s;
+  user-select: none;
+
+  @include mq(small) {
+    left: $main-spacing;
+  }
+}
+
+.Footer__Nav-Right-ArrowP {
+  @extend .Footer__Nav-Right-Arrow;
+  color: var(--color-dark-grey);
+}
+
+.Footer__Nav-Right {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  grid-template-rows: $main-spacing;
+  background-color: var(--color-main);
+
+  @include mq(small) {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+.Footer__Nav-Right-Title {
+  position: relative;
+
+  font-family: $font-mont;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: $main-spacing;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  width: 160px;
+  cursor: pointer;
+  transition: 0.25s;
+  // z-index: 2;
+  user-select: none;
+
+  @include mq(small) {
+    width: 100%;
+    text-align: right;
+    padding-right: $main-spacing;
+  }
+
+  &:hover {
+    letter-spacing: 0.2px; // - powoduje przesuwanie strzalki ktora sie orientuje na ten element
+    color: black;
+  }
+
+  &:hover .Footer__Nav-Right-Arrow {
+    font-size: 2rem;
+    color: black;
+  }
+}
+
+.Footer__Nav-Right-TitleP {
+  @extend .Footer__Nav-Right-Title;
+  color: var(--color-dark-grey);
+}
+
+.Footer__Nav-Right-Bars {
+  height: 60%;
+  background-color: var(--color-main);
+  color: var(--color-white);
+  width: 20px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100%;
+  align-self: center;
+
+  & div {
+    width: 2px;
+    background-color: var(--color-white);
+    display: inline-block;
+    transition: 0.4s;
+    align-self: end;
+    will-change: height;
+  }
+
+  &:hover div {
+    background-color: black;
+  }
+
+  &:hover .Footer__Nav-Right-Bar1 {
+    height: 10px;
+  }
+
+  &:hover .Footer__Nav-Right-Bar2 {
+    height: 8px;
+  }
+
+  &:hover .Footer__Nav-Right-Bar3 {
+    height: 6px;
+  }
+
+  &:hover .Footer__Nav-Right-Bar3 {
+    height: 4px;
+  }
+}
+
+.Footer__Nav-Right-BarsP {
+  @extend .Footer__Nav-Right-Bars;
+
+  & div {
+    background-color: var(--color-dark-grey);
+  }
+}
+
+.Footer__Nav-Right-Bar1 {
+  height: 8px;
+}
+
+.Footer__Nav-Right-Bar2 {
+  height: 4px;
+}
+
+.Footer__Nav-Right-Bar3 {
+  height: 11px;
+}
+
+.Footer__Nav-Right-Bar4 {
+  height: 7px;
+}
+
+.Footer__Nav-Right-Space {
+  background-color: var(--color-main);
+
+  @include mq(small) {
+    position: absolute;
+    visibility: hidden;
+  }
+}
+
+/* --------------StopkaFaktyczna-------------- */
+
+.Footer__BottomSection {
+  display: grid;
+  grid-template-columns: 13.3vw 1fr minmax(640px, 1fr) 1fr 13.3vw;
+  grid-template-rows: 16.42vh;
+  position: absolute; //brak position psuło zleżności z-index a właściwie ich brak cz dodane jeden pies działało jak chciało ...
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  border-top: 2px solid var(--color-main1);
+  // opacity: .7; //TODO:
+
+  @include mq(ultra) {
+    grid-template-columns: 1fr minmax(640px, 1fr) 1fr;
+    grid-template-rows: 192px;
+  }
+
+  @include mq(xxxl) {
+    grid-template-columns: 1fr minmax(640px, 1fr) 1fr;
+    grid-template-rows: 16.42vh;
+
+    @media (min-height: 1195px) {
+      grid-template-rows: 192px;
+    }
+  }
+
+  @media (max-width: 1680px) {
+    grid-template-columns: 1fr minmax(640px, 1fr) 1fr;
+  }
+
+  @include mq(xxl) {
+    grid-template-columns: 1fr minmax(640px, 1fr) 1fr;
+  }
+
+  @include mq(big) {
+    grid-template-rows: 14vh;
+  }
+
+  @include mq(xl) {
+    grid-template-columns: 1fr minmax(640px, 1fr) 1fr;
+    grid-template-rows: 12vh;
+  }
+
+  @include mq(small) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 12vh;
+  }
+
+  @include mq(xs) {
+    grid-template-rows: 40px;
+  }
+}
+
+.Footer__BottomSection-MarginL {
+  background-color: var(--color-main);
+  width: 100%;
+
+  @include mq(xl) {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+.Footer__BottomSection-Left {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-main);
+
+  @include mq(small) {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+.Footer__BottomSection-Left-Div1 {
+  position: absolute;
+  left: $main-spacing;
+  bottom: 50px;
+  transform: translate(-40%, -50%) rotateZ(-90deg);
+  width: 100px;
+  height: 20px;
+  text-align: center;
+
+  @include mq(big) {
+    bottom: 42px;
+  }
+
+  @include mq(xl) {
+    transform: translate(-50%, 0%) rotateZ(0deg);
+    left: 9vw;
+    bottom: 15px;
+
+    @media (min-height: 765px) {
+      left: 9.3vw;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    @media (min-height: 765px) {
+      left: 10vw;
+    }
+  }
+
+  @media (max-width: 1152px) {
+    left: 9.7vw;
+
+    @media (min-height: 860px) {
+      left: 11vw;
+    }
+  }
+
+  @include mq(large) {
+    left: 11vw;
+
+    @media (min-height: 760px) {
+      left: 12.5vw;
+    }
+  }
+
+  @include mq(medium) {
+    visibility: hidden;
+  }
+}
+
+.Footer__BottomSection-Left-h2 {
+  font-size: 1.4rem;
+  font-family: $font-mont;
+  color: var(--color-white);
+  font-weight: 600;
+  line-height: 1.2;
+
+  @include mq(big) {
+    font-size: 1.3rem;
+  }
+
+  @include mq(xl) {
+    font-size: 1.2rem;
+  }
+}
+
+.Footer__BottomSection-Left-h2P {
+  @extend .Footer__BottomSection-Left-h2;
+  color: var(--color-dark-grey);
+}
+
+.Footer__BottomSection-Left-Div2 {
+  position: absolute;
+  left: $main-spacing;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  text-align: left;
+
+  @include mq(xl) {
+    left: 5.9vw;
+
+    @media (min-height: 765px) {
+      left: 6.2vw;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    left: 5.7vw;
+
+    @media (min-height: 765px) {
+      left: 6.6vw;
+    }
+  }
+
+  @media (max-width: 1152px) {
+    left: 6vw;
+
+    @media (min-height: 860px) {
+      left: 7.2vw;
+    }
+  }
+
+  @include mq(large) {
+    left: 6.9vw;
+
+    @media (min-height: 760px) {
+      left: 8.2vw;
+    }
+  }
+
+  @include mq(medium) {
+    visibility: hidden;
+  }
+}
+
+.Footer__BottomSection-Left-h3 {
+  margin-left: 5px;
+  font-size: 1.2rem;
+  font-family: $font-source;
+  color: var(--color-white);
+  line-height: 30px;
+  font-weight: 400;
+
+  @include mq(xl) {
+    font-size: 1rem;
+  }
+}
+
+.Footer__BottomSection-Left-h3P {
+  @extend .Footer__BottomSection-Left-h3;
+  color: var(--color-dark-grey);
+}
+
+.QRKode {
+  // visibility: hidden;
+  background: url("../assets/qrCodeWhite.webp");
+  background-size: cover;
+  background-position: center;
+  height: 9.5vh;
+  width: 9.5vh;
+  position: absolute;
+  bottom: 24px;
+  left: $main-spacing + 18px;
+
+  @include mq(ultra) {
+    height: 95px;
+    width: 95px;
+  }
+
+  @include mq(xxxl) {
+    @media (min-height: 1080px) {
+      height: 95px;
+      width: 95px;
+    }
+  }
+
+  @include mq(xl) {
+    height: 63px;
+    width: 63px;
+    bottom: 10px;
+    left: $main-spacing;
+
+    @media (min-height: 765px) {
+      height: 70px;
+      width: 70px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    height: 55px;
+    width: 55px;
+
+    @media (min-height: 765px) {
+      height: 70px;
+      width: 70px;
+    }
+
+    @include mq(medium) {
+      visibility: hidden;
+    }
+  }
+}
+
+.Dark {
+  background: url("../assets/qrCodeBlack.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.Footer__BottomSection-Middle {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-main);
+}
+
+.Footer__BottomSection-Middle-Div1 {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  width: 80%;
+  height: 30px;
+  text-align: center;
+
+  @include mq(xxs) {
+    width: 100%;
+  }
+}
+
+.Footer__BottomSection-Middle-h2 {
+  color: var(--color-white);
+
+  font-size: 1.2rem;
+  font-family: $font-source;
+  color: var(--color-white);
+  line-height: 30px;
+  font-weight: 400;
+
+  @include mq(xl) {
+    font-size: 1rem;
+  }
+
+  @include mq(xs) {
+    font-size: 0.8rem;
+  }
+}
+
+.Footer__BottomSection-Middle-h2P {
+  // to sa te wersje dark
+
+  @extend .Footer__BottomSection-Middle-h2;
+  color: var(--color-dark-grey);
+}
+
+.Cookies {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.CookiesP {
+  color: var(--color-dark-grey);
+  text-decoration: none;
+}
+
+.Footer__BottomSection-Right {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-main);
+
+  @include mq(small) {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+.Footer__BottomSection-Right-P {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-align: right;
+}
+
+.Footer__BottomSection-Right-Div1 {
+  position: absolute;
+  right: $main-spacing;
+  bottom: 50%;
+  margin-right: 3px;
+  width: 100px;
+  height: 40px;
+  text-align: right;
+
+  @include mq(xxl) {
+    bottom: 57%;
+  }
+
+  @include mq(big) {
+    bottom: 61%;
+  }
+
+  @include mq(xl) {
+    bottom: 56%;
+  }
+
+  @media (max-width: 1152px) {}
+}
+
+.Footer__BottomSection-Right-h2 {
+  // szalanski.eu <br> Jan Szałański
+
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 1.4rem;
+  font-family: $font-mont;
+  color: var(--color-white);
+  font-weight: 600;
+  line-height: 1;
+
+  @include mq(xl) {
+    font-size: 1.1rem;
+
+    @media (min-height: 765px) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.Footer__BottomSection-Right-h2P {
+  @extend .Footer__BottomSection-Right-h2;
+  color: var(--color-dark-grey);
+}
+
+.Footer__BottomSection-Right-Div2 {
+  position: absolute;
+  right: $main-spacing;
+  bottom: 16%;
+  margin-right: 3px;
+  width: 140px;
+  height: 60px;
+  text-align: right;
+
+  @include mq(big) {
+    bottom: 20%;
+  }
+
+  @include mq(xl) {
+    bottom: 10px;
+  }
+}
+
+.Footer__BottomSection-Right-h3 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  font-size: 1.4rem;
+  font-family: $font-source;
+  color: var(--color-white);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1px;
+
+  @include mq(big) {
+    font-size: 1.3rem;
+    line-height: 0.9;
+  }
+
+  @include mq(xl) {
+    font-size: 1.1rem;
+
+    @media (min-height: 765px) {
+      line-height: 1;
+    }
+  }
+}
+
+.Footer__BottomSection-Right-h3P {
+  @extend .Footer__BottomSection-Right-h3;
+  color: var(--color-dark-grey);
+}
+
+.Footer__BottomSection-Right-Div3 {
+  margin-right: 3px;
+  position: absolute;
+  right: $main-spacing * 2;
+  bottom: 0;
+  width: 150px;
+  height: 30px;
+  text-align: right;
+
+  @include mq(xxxl) {
+    right: $main-spacing;
+
+    @media (min-height: 1081px) {
+      right: $main-spacing * 2;
+    }
+  }
+
+  @include mq(xl) {
+    right: 120px;
+  }
+}
+
+.Footer__BottomSection-Right-h3B {
+  // Polityka Prywatności
+
+  font-size: 1.2rem;
+  font-family: $font-source;
+  color: var(--color-white);
+  line-height: 30px;
+  font-weight: 400;
+
+  @include mq(xl) {
+    font-size: 1rem;
+  }
+}
+
+.Footer__BottomSection-Right-h3BP {
+  @extend .Footer__BottomSection-Right-h3B;
+  color: var(--color-dark-grey);
+}
+
+.Footer__BottomSection-MarginR {
+  width: 100%;
+  background-color: var(--color-main);
+
+  @include mq(xl) {
+    visibility: hidden;
+    position: absolute;
+  }
+}

@@ -1,0 +1,497 @@
+$color-grey1: rgba(107, 107, 107, 1);
+$color-grey2: rgba(75, 75, 75, 1);
+$color-grey3: rgba(55, 55, 55, 1);
+$width-btn: 115px;
+
+.BoardMobo {
+  @include mq(xs) {
+    visibility: visible;
+    display: block;
+  }
+
+  position: absolute;
+  left: 50%;
+  top: 380px;
+  transform: translateX(-50%);
+  display: none;
+  // visibility: hidden;
+  width: var(--mobo-board-width);
+  height: 370px;
+  // overflow: hidden; FIXME:
+  // opacity: .8;
+
+  &--Hide {
+    will-change: opacity;
+    animation: BoardZnika 1.4s;
+    animation-fill-mode: forwards;
+  }
+
+  &--Discover {
+    will-change: opacity;
+    animation: BoardPojawia 1.4s;
+    animation-fill-mode: backwards;
+  }
+}
+
+.BoardMobo.Index {
+  @include mq(xs) {
+    // top: 44.5%;
+  }
+}
+
+.BoardMobo.Firma {
+  top: --HeightOfirmie;
+  @include mq(xs) {
+    top: calc(var(--HeightOfirmie) - 90px);
+  }
+}
+
+.BoardMobo.Praktyka {
+  @include mq(xs) {
+    top: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB) - 80px);
+  }
+}
+
+.BoardMobo.Projekty {
+  @include mq(xs) {
+    top: calc(var(--HeightOprojektach) + var(--HeightOprojektachB) - 80px);
+  }
+}
+
+//--------------------Ramki i cienie----------------------------------------------------------//
+.CanvasM {
+  @include mq(xs) {
+    transform: skew(-1.2deg, -1.2deg);
+  }
+
+  @include mq(xxs) {
+    transform: skew(-1.2deg, -1.2deg);
+  }
+
+  // visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  // z-index: -1;
+
+  border-radius: 10px;
+  border-radius: $border-radius;
+  transform: skew(-2deg, -2deg);
+  background-image: linear-gradient(0deg, var(--color-main4) 0%, var(--color-main1) 100%);
+  transition: 0.3s;
+
+  &--Hide {
+    display: none;
+  }
+
+  &--Discover {
+    display: block;
+  }
+}
+
+.CanvasAM {
+  @include mq(xs) {
+    left: 3px;
+    bottom: 3px;
+    transform: skew(-1.5deg, -1.5deg);
+  }
+
+  @include mq(xxs) {
+    left: 3px;
+    bottom: 3px;
+    transform: skew(-1.5deg, -1.5deg);
+  }
+
+  @extend .CanvasM;
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  border-radius: $border-radius + 2;
+  transform: skew(-3deg, -3deg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, var(--color-main1) 100%);
+  box-shadow: inset 1px 1px 4px rgba(255, 255, 255, 0.7), inset -1px -1px 4px rgba(0, 0, 0, 0.8); // --------------------bevel & emboss//
+  opacity: 0.55;
+  // z-index: -1;
+}
+
+.CanvasBM {
+  @include mq(xs) {
+    left: 5px;
+    bottom: 5px;
+    transform: skew(-2deg, -2deg);
+  }
+
+  @include mq(xxs) {
+    left: 5px;
+    bottom: 5px;
+    transform: skew(-2deg, -2deg);
+  }
+
+  @extend .CanvasAM;
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  border-radius: $border-radius + 4;
+  transform: skew(-4deg, -4deg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, var(--color-main1) 100%);
+  box-shadow: inset 2px 2px 6px rgba(255, 255, 255, 0.7), inset -2px -2px 6px rgba(0, 0, 0, 0.8); // --------------------bevel & emboss//
+  opacity: 0.55;
+  // z-index: -2;
+}
+
+.CanvasShadowM {
+  @extend .CanvasM;
+  box-shadow: -15px 18px 18px 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-light-grey);
+  background-image: none;
+  // z-index: -3;
+}
+
+//----------------------------------ciało board mobo------------------------------------------//
+
+.BMWrap__articles-container {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  padding-bottom: var(--mobo-board-proportion);
+}
+
+.BMWrap__article-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+
+  h2 {
+    display: block;
+    position: relative;
+    padding: $main-spacing;
+    font-size: 2.4rem;
+    font-family: $font-mont;
+    color: var(--color-white);
+    font-weight: 600;
+
+    &.BMWrap__header--second {
+      position: absolute;
+      width: var(--mobo-board-width);
+      color: var(--color-black);
+
+      span {
+        color: var(--color-black);
+        font-weight: 600;
+      }
+    }
+
+    span {
+      font-size: 1.2rem;
+      display: inline-block;
+      font-family: $font-mont;
+      font-weight: 500;
+      color: var(--color-white);
+      transform: translateY(-0.3rem);
+      margin-left: 0px;
+    }
+  }
+
+  &.BMWrap__article-container--first {
+    mask-image: url("../assets/MaskInfoMobo.svg");
+    mask-position: 0px;
+    mask-repeat: no-repeat;
+    width: 680px;
+    height: 100%;
+    user-select: none;
+
+    // will-change: mask-position;
+    // animation: MaskMovment 2s linear;
+    // animation-delay: 4s;
+    // animation-fill-mode: forwards;
+    // animation-iteration-count: infinite;
+    // animation-direction: alternate;
+  }
+
+  &.BMWrap__article-container--second {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.BMWrap__Info {
+  position: absolute;
+  color: var(--color-black);
+  padding: $main-spacing;
+  padding-right: $main-spacing + 5px;
+  padding-top: 6.9rem;
+  font-size: 1.2rem;
+  font-family: $font-source;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.BMWrap__Overflow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  // scrollbar-color: var(--color-light-grey) var(--color-main);
+  // scrollbar-width: thin;
+}
+
+.BMWrap__Overflow::-webkit-scrollbar {
+  display: none;
+}
+
+.BMWrap__paragraphs {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 680px;
+  height: 100%;
+  // border: 1px solid black;
+  // overflow: scroll;
+  // overflow-x: scroll;
+  display: flex;
+  // justify-content: space-around;
+  // align-content: center;
+
+  p {
+    display: inline-block;
+    width: 340px;
+    height: 100%;
+    // border: 1px solid red;
+    padding: $main-spacing;
+    padding-right: $main-spacing + 5px;
+    padding-top: 6.9rem;
+    font-size: 1.2rem;
+    font-family: $font-source;
+    color: var(--color-white);
+    line-height: 1.3;
+    font-weight: 400;
+  }
+}
+
+.BMWrap__paragraphs.Projekty {
+  width: calc(340px * 5);
+}
+
+.BMWrap__Corner {
+  position: absolute;
+  bottom: 5px;
+  left: $main-spacing / 2;
+  width: 20%;
+  fill: rgba(255, 255, 255, 0.15);
+}
+
+.BMWrap__Buttons {
+  position: absolute;
+  left: calc(20% + 10px);
+  bottom: 9px;
+  width: 20%;
+  height: 17px;
+  // border: 1px solid black;
+
+  &.Projekty {
+    width: 20%;
+  }
+}
+
+.BMWrap__Btn {
+  position: absolute;
+  width: $main-spacing / 2;
+  height: $main-spacing - 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transform: skew(35deg);
+  left: 0px;
+  bottom: 0;
+
+  &--active {
+    background-color: var(--color-main4);
+  }
+}
+
+.BMWrap__Btn-B {
+  @extend .BMWrap__Btn;
+  left: $main-spacing - 5px;
+}
+
+.BMWrap__Btn-C {
+  @extend .BMWrap__Btn;
+  left: $main-spacing + 10px;
+}
+
+.BMWrap__Btn-D {
+  @extend .BMWrap__Btn;
+  left: $main-spacing * 2 + 5px;
+}
+
+.BMWrap__Btn-E {
+  @extend .BMWrap__Btn;
+  left: $main-spacing * 3;
+}
+
+.BMWrap__background--first {
+  height: 370px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 680px;
+  position: absolute;
+  user-select: none;
+  background-image: linear-gradient(0deg, $color-grey1 0%, $color-grey1 70%, $color-grey2 85%, $color-grey3 98%);
+}
+
+.BMWrap__background--second {
+  height: 370px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--mobo-board-width);
+  position: absolute;
+  user-select: none;
+  background-color: var(--color-main2);
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(20, 20, 20, 0.6) 10%,
+      rgba(25, 25, 25, 0.75) 27%,
+      var(--color-main1A) 48%,
+      var(--color-main1) 75%,
+      #ff7700e5 97%
+    ),
+    url("../assets/lawa.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.BMWrap__background--second.Firma {
+  background-color: var(--color-main2);
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.2) 15%,
+      rgba(25, 25, 25, 0.3) 27%,
+      #00d9ffda 60%,
+      #00d9ffda 80%,
+      #0066ff 97%
+    ),
+    url("../assets/lod.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.BMWrap__background--second.Praktyka {
+  background-color: var(--color-main2);
+  background-image: linear-gradient(
+      to top,
+      rgba(25, 25, 25, 0.7) 3%,
+      rgba(25, 25, 25, 0.4) 10%,
+      rgba(25, 25, 25, 0.4) 15%,
+      var(--color-main3) 27%,
+      var(--color-main2) 70%,
+      var(--color-main1A) 90%
+    ),
+    url("../assets/ziemiaSatur.webp");
+}
+
+.BMWrap__background--second.Projekty {
+  background-color: var(--color-main2);
+  background-image: linear-gradient(
+      to top,
+      rgba(55, 55, 55, 0.5) 10%,
+      rgba(0, 0, 0, 0.5) 18%,
+      rgba(200, 200, 200, 0.85) 30%,
+      rgba(200, 200, 200, 0.85) 75%,
+      rgba(255, 255, 255, 0.4) 80%,
+      #005558aa 90%
+    ),
+    url("../assets/powietrze.webp");
+}
+.BMWrap__divider_dot {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  // transform: translate(50%, 50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-main1);
+  color: var(--color-white);
+  font-size: 1rem;
+  font-family: $font-mont;
+  text-align: center;
+  line-height: 17px;
+  font-weight: 700;
+}
+
+.BMWrap__divider_outline {
+  position: absolute;
+  height: 160px;
+  width: 30px;
+  border-radius: 15px;
+  left: -6px;
+  top: -6px;
+  border: 1px solid var(--color-main4A);
+}
+
+.BMWrap__divider {
+  user-select: none;
+  height: 150px;
+  width: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--color-main4);
+  background-color: #6b6b6b;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-9px, -75px);
+  cursor: pointer;
+  // will-change: transform;
+  // animation: DividerMovment 2s linear;
+  // animation-delay: 4s;
+  // animation-fill-mode: forwards;
+  // animation-iteration-count: infinite;
+  // animation-direction: alternate;
+
+  span {
+    font-size: 0.9rem;
+    font-family: $font-mont;
+    color: var(--color-white);
+    letter-spacing: 0.1rem;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+    // border: 1px blue solid;
+  }
+}
+
+.BMWrap__handle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(0);
+  height: 100%;
+  width: 1px;
+  background-color: var(--color-main4);
+  outline: solid;
+  outline-width: 1px;
+  outline-offset: 1px;
+  outline-color: var(--color-main4A);
+  // animation: HandlerMovment 2s linear;
+  // animation-delay: 4s;
+  // animation-fill-mode: forwards;
+  // animation-iteration-count: infinite;
+  // animation-direction: alternate;
+}

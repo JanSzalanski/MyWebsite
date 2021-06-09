@@ -1,0 +1,700 @@
+/* --------------PasMiddle-------------- */
+
+$grey-helper: #8d8d8d;
+
+.GreyMiddle {
+  // visibility: hidden;
+
+  position: relative;
+  width: 100%;
+  background-color: var(--color-light-grey);
+  outline: solid 5px var(--color-light-grey);
+  outline-offset: 2px;
+  margin-top: 56vh;
+  height: 44vh;
+
+  @include mq(ultra) {
+    margin-top: calc(var(--MaxHeight) / 2 + 70px);
+    height: calc(var(--MaxHeight) / 2 - 70px); // troche ch... wie dlaczego tyle cos mi sie nie zgadza ...
+
+    @media (max-height: 1080px) {
+      margin-top: calc(var(--MaxHeight) / 2);
+      height: calc(var(--MaxHeight) / 2);
+    }
+  }
+
+  @include mq(xxxl) {
+    @media (max-height: 1050px) {
+      margin-top: 56vh;
+      height: 44vh;
+    }
+
+    @media (min-height: 1195px) {
+      margin-top: calc(var(--MaxHeight) / 2 + 70px);
+      height: calc(var(--MaxHeight) / 2 - 70px);
+    }
+  }
+
+  @media (max-width: 1680px) {
+    margin-top: 57vh;
+    height: 43vh;
+
+    @media (min-height: 1045px) {
+      margin-top: 57vh;
+      height: 43vh;
+    }
+  }
+
+  @include mq(xxl) {
+    margin-top: 55vh;
+    height: 45vh;
+
+    @media (min-height: 750px) {
+      margin-top: 55vh;
+      height: 45vh;
+    }
+
+    @media (min-height: 1050px) {
+      margin-top: 56vh;
+      height: 44vh;
+    }
+
+    @media (min-height: 1199px) {
+      margin-top: 51vh;
+      height: 49vh;
+    }
+  }
+
+  @include mq(xl) {
+    margin-top: 57vh;
+    height: 43vh;
+
+    @media (min-height: 765px) {
+      margin-top: 59vh;
+      height: 41vh;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    // warunki do zastanowienia
+
+    @media (max-height: 768px) {
+      margin-top: 57vh;
+      height: 43vh;
+    }
+
+    @media (min-height: 795px) {
+      margin-top: 58vh;
+      height: 42vh;
+    }
+
+    @media (min-height: 815px) {
+      margin-top: 58vh;
+      height: 42vh;
+    }
+
+    @media (min-height: 955px) {
+      margin-top: 61vh;
+      height: 39vh;
+    }
+
+    @media (min-height: 1020px) {
+      margin-top: 62vh;
+      height: 38vh;
+    }
+  }
+
+  @media (max-width: 1152px) {
+    margin-top: 58vh;
+    height: 42vh;
+
+    @media (min-height: 860px) {
+      margin-top: 60vh;
+      height: 40vh;
+    }
+  }
+
+  @include mq(xs) {
+    height: 905px;
+  }
+
+  &--Hide {
+    will-change: transform;
+    animation: ArtykulZnika 2.6s;
+    animation-delay: 0.4s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  &--Discover {
+    will-change: transform;
+    animation: ArtykulPojawia 1.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+  }
+}
+
+.GreyMiddle__Div {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  & p {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-family: $font-source;
+    color: darken($grey-helper, 17%);
+    font-style: italic;
+    line-height: 1.2;
+    text-align: left;
+    font-weight: 600;
+    user-select: none;
+
+    @include mq(large) {
+      font-size: 1.2rem;
+    }
+  }
+
+  @include mq(xl) {
+    width: 100%;
+  }
+
+  @media (max-width: 961px) {
+    flex-wrap: wrap;
+  }
+
+  @include mq(xs) {
+    height: 120vh;
+
+    justify-content: flex-start;
+  }
+}
+
+.GreyMiddle__P1 {
+  opacity: 0;
+  padding: 10px;
+  padding-top: 40px;
+
+  @media (max-height: 750px) {
+    padding-top: 10px;
+  }
+}
+
+.GreyMiddle__P2 {
+  opacity: 0;
+  padding: 10px;
+  padding-top: 20px;
+
+  @media (max-height: 750px) {
+    padding-top: 10px;
+  }
+}
+
+.GreyMiddle__P3 {
+  opacity: 0;
+  padding: 10px;
+  padding-top: 40px;
+
+  @media (max-height: 750px) {
+    padding-top: 10px;
+  }
+}
+
+.GreyMiddle__P4 {
+  opacity: 0;
+  padding: 10px;
+  padding-top: 20px;
+
+  @media (max-height: 750px) {
+    padding-top: 10px;
+  }
+}
+
+.LinkZmiennicy {
+  color: darken($grey-helper, 21%);
+  text-decoration: none;
+  // cursor: pointer;
+}
+
+// .MiddleZone {
+
+//     position: absolute;
+//     right: 0px;
+//     left: 0px;
+//     bottom: 150px;
+//     top: 150px;
+
+// }
+
+.GreyMiddle__P--Hide {
+  will-change: opacity;
+  animation: WiezaBabelZnika 1.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
+}
+
+.GreyMiddle__P--Discover {
+  will-change: opacity;
+  animation: WiezaBabelPojawia 4.4s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2.8s;
+}
+
+//----------------------------------------------------------------Podstrony---------------------------------------------------------------------------------------------------------------------------------//@extend
+
+.Troll {
+  width: 100%;
+  height: 100%;
+  overflow: auto; // FIXME:
+
+  position: relative;
+  scrollbar-color: var(--color-light-grey) var(--color-main);
+  scrollbar-width: thin;
+
+  @include mq(xs) {
+    overflow: hidden;
+  }
+}
+
+.Troll::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--color-main);
+}
+
+.Troll::-webkit-scrollbar-thumb {
+  background-color: var(--color-light-grey);
+  box-shadow: inset 0px 0px 0px 1px var(--color-main);
+}
+
+.GreyMiddleB {
+  // visibility: hidden;
+
+  position: relative;
+  width: 100%;
+  background-color: var(--color-light-grey);
+  outline: solid 5px var(--color-light-grey);
+  outline-offset: 2px;
+  margin-top: 56.5vh;
+  height: 100vh;
+
+  @include mq(ultra) {
+    margin-top: calc(var(--MaxHeight) / 2 + 70px);
+
+    @media (max-height: 1080px) {
+      margin-top: calc(var(--MaxHeight) / 2);
+    }
+  }
+
+  @include mq(xxxl) {
+    @media (max-height: 1050px) {
+      margin-top: 56vh;
+    }
+
+    @media (min-height: 1195px) {
+      margin-top: calc(var(--MaxHeight) / 2 + 70px);
+    }
+  }
+
+  @media (max-width: 1680px) {
+    margin-top: 57vh;
+
+    @media (min-height: 1045px) {
+      margin-top: 57vh;
+    }
+  }
+
+  @include mq(xxl) {
+    margin-top: 55vh;
+
+    @media (min-height: 750px) {
+      margin-top: 55vh;
+    }
+
+    @media (min-height: 1050px) {
+      margin-top: 56vh;
+    }
+
+    @media (min-height: 1199px) {
+      margin-top: 51vh;
+    }
+  }
+
+  @include mq(xl) {
+    margin-top: 57vh;
+
+    @media (min-height: 765px) {
+      margin-top: 59vh;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    // warunki do zastanowienia
+
+    @media (max-height: 768px) {
+      margin-top: 57vh;
+    }
+
+    @media (min-height: 795px) {
+      margin-top: 58vh;
+    }
+
+    @media (min-height: 815px) {
+      margin-top: 58vh;
+    }
+
+    @media (min-height: 955px) {
+      margin-top: 61vh;
+    }
+
+    @media (min-height: 1020px) {
+      margin-top: 62vh;
+    }
+  }
+
+  @media (max-width: 1152px) {
+    margin-top: 58vh;
+
+    @media (min-height: 860px) {
+      margin-top: 60vh;
+    }
+  }
+
+  @include mq(xs) {}
+
+  /* &--Hide {
+
+        will-change: transform;
+        animation: ArtykulZnika 2.6s;
+        animation-delay: .4s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+
+    &--Discover {
+
+        will-change: transform;
+        animation: ArtykulPojawia 1.5s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: backwards;
+    }*/
+}
+
+.GreyMiddleB.Firma {
+  height: calc(var(--HeightOfirmie) + 60px);
+
+  @include mq(ultra) {
+    height: calc(var(--HeightOfirmie) + 100px); //top -40px
+  }
+
+  @include mq(xxxl) {
+    height: calc(var(--HeightOfirmie) + 40px); //top: -60px; 1360
+
+    @media (min-height: 1050px) {
+      height: calc(var(--HeightOfirmie) + 80px); //1400px
+    }
+  }
+
+  @media (max-width: 1680px) {
+    height: calc(var(--HeightOfirmie) + 30px); //--HeightOfirmie 1410px
+  }
+
+  @include mq(xxl) {
+    height: calc(var(--HeightOfirmie) + 10px); //1420
+
+    @media (min-height: 895px) {
+      height: calc(var(--HeightOfirmie) + 30px); //1440
+    }
+
+    @media (min-height: 1055px) {
+      height: calc(var(--HeightOfirmie) + 60px); //1470
+    }
+
+    @media (min-height: 1195px) {
+      height: calc(var(--HeightOfirmie) + 90px); //1490
+    }
+  }
+
+  @media (max-width: 1536px) {
+    //--HeightOfirmie 1300px
+
+    height: calc(var(--HeightOfirmie) + 10px); //1320
+
+    @media (min-height: 862px) {
+      height: calc(var(--HeightOfirmie) + 40px);
+    }
+  }
+
+  @media (max-width: 1400px) {
+    @media (min-height: 1045px) {
+      height: calc(var(--HeightOfirmie) + 40px); //1360
+    }
+  }
+
+  @include mq(xl) {
+    //--HeightOfirmie 1270px
+    height: calc(var(--HeightOfirmie) - 30px);
+
+    @media (min-height: 765px) {
+      height: calc(var(--HeightOfirmie) - 10px);
+    }
+  }
+
+  @media (max-width: 1280px) {
+    //--HeightOfirmie 1250
+    height: var(--HeightOfirmie);
+
+    @media (min-height: 620px) {
+      height: calc(var(--HeightOfirmie) - 10px); //1240
+    }
+
+    @media (min-height: 905px) {
+      height: calc(var(--HeightOfirmie) + 10px); //1270
+    }
+  }
+
+  @include mq(large) {
+    //--HeightOfirmie 1320
+    height: calc(var(--HeightOfirmie) - 40px);
+
+    @media (min-height: 765px) {
+      height: calc(var(--HeightOfirmie) - 10px); //1240
+    }
+  }
+
+  @include mq(xs) {
+    //--HeightOfirmie 1320
+    height: calc(var(--HeightOfirmie) + var(--BoardMoboHeight));
+  }
+}
+
+.GreyMiddleB.Praktyka {
+  //1830 1410
+  height: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB) + var(--BoardMoboHeight));
+
+  @include mq(ultra) {
+    height: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB) + 140px);
+  }
+
+  @include mq(xxxl) {
+    height: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB) + 100px);
+
+    @media (min-height: 1050px) {
+      height: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB) + 120px);
+    }
+
+    @media (min-height: 1195px) {
+      height: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB) + 130px);
+    }
+  }
+
+  @media (max-width: 1680px) {
+    height: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB) + 110px);
+  }
+
+  @include mq(xxl) {
+    height: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB) + 80px);
+
+    @media (min-height: 895px) {
+      height: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB) + 100px);
+    }
+
+    @media (min-height: 1055px) {
+      height: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB) + 120px);
+    }
+
+    @media (min-height: 1195px) {
+      height: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB) + 130px);
+    }
+  }
+
+  @media (max-width: 1536px) {
+    height: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB) + 70px);
+
+    @media (min-height: 862px) {
+      height: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB) + 90px);
+    }
+  }
+
+  @include mq(big) {
+    height: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB) + 70px);
+  }
+
+  @media (max-width: 1400px) {
+    height: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB) + 90px);
+  }
+
+  @include mq(xl) {
+    height: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB) + 40px);
+  }
+
+  @media (max-width: 1280px) {
+    height: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB) + 60px);
+  }
+
+  @include mq(large) {
+    height: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB));
+
+    @media (min-height: 760px) {
+      height: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB) + 40px);
+    }
+  }
+
+  @include mq(xs) {
+    height: calc(var(--HeightOPraktyceA) + var(--HeightOPraktyceB) + var(--BoardMoboHeight) + 20px);
+  }
+}
+
+.GreyMiddleB.Projekty {
+  height: calc(var(--HeightOprojektach) + var(--HeightOprojektachB) + 140px);
+
+  @include mq(xxxl) {
+    height: calc(var(--HeightOprojektach) + var(--HeightOprojektachB) + 120px);
+  }
+
+  @include mq(xxl) {
+    height: calc(var(--HeightOprojektach) + var(--HeightOprojektachB) + 90px);
+
+    @media (min-height: 1081px) {
+      height: calc(var(--HeightOprojektach) + var(--HeightOprojektachB) + 140px);
+    }
+  }
+
+  @media (max-width: 1536px) {
+    height: calc(var(--HeightOprojektach) + var(--HeightOprojektachB) + 80px);
+  }
+
+  @include mq(big) {
+    height: calc(var(--HeightOprojektach) + var(--HeightOprojektachB) + 70px);
+  }
+
+  @include mq(xl) {
+    height: calc(var(--HeightOprojektach) + var(--HeightOprojektachB) + 40px);
+  }
+
+  @media (max-width: 1280px) {
+    height: calc(var(--HeightOprojektach) + var(--HeightOprojektachB) + 60px);
+  }
+
+  @media (max-width: 1152px) {
+    height: calc(var(--HeightOprojektach) + var(--HeightOprojektachB) + 50px);
+  }
+
+  @include mq(large) {
+    height: calc(var(--HeightOprojektach) + var(--HeightOprojektachB) + 40px);
+  }
+
+  @include mq(xs) {
+    height: calc(var(--HeightOprojektach) + var(--HeightOprojektachB) + var(--BoardMoboHeight) + 20px);
+  }
+}
+
+.GreyMiddleB.Priv {
+  height: calc(var(--HeightOMnie) + var(--HeightEdu) + 520px);
+
+  @include mq(xs) {
+    height: calc(var(--HeightOMnie) + var(--HeightEdu) + 250px);
+  }
+}
+
+.BackgroundGrey {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+
+  border: 1px solid black;
+  // background-color: rgba(80, 90, 87, 0.479);
+  background-image: url(../assets/siatkaC.webp);
+  opacity: 0.07;
+  // background-size: contain;
+}
+
+.Miara {
+  position: absolute;
+  top: 50%;
+  left: $main-spacing + 5px;
+  transform: translate(-50%, -50%);
+  width: $main-spacing;
+  height: calc(100% - 20px);
+  // background-color: rgba(80, 90, 87, 0.479);
+  background-image: url(../assets/miarka.webp);
+  opacity: 0.2;
+  // background-size: contain;
+}
+
+.RedMask {
+  width: 290px;
+  height: 250px;
+  position: absolute;
+  left: 50%;
+  bottom: 150px;
+  transform: translate(-50%, -50%);
+  // border: 2px solid black;
+  background-image: url(../assets/diabel.webp);
+  background-position: center;
+  background-size: cover;
+
+  & h2 {
+    position: absolute;
+    right: 50%;
+    top: 65%;
+    transform: translate(50%, -50%);
+    font-size: 1.5rem;
+    font-family: $font-audio;
+    color: var(--color-main);
+    line-height: 1.6rem;
+    opacity: 0.6;
+
+    @include mq(xs) {
+      font-size: 1.1rem;
+    }
+  }
+
+  @include mq(xxxl) {
+    bottom: 180px;
+    width: 255px;
+    height: 220px;
+  }
+
+
+  @include mq(xl) {
+    bottom: 150px;
+    width: 230px;
+    height: 200px;
+  }
+
+  @include mq(large) {
+    bottom: 150px;
+    width: 230px;
+    height: 200px;
+  }
+
+
+  @include mq(xs) {
+    bottom: 20px;
+    width: 200px;
+    height: 175px;
+  }
+}
+
+.LineCross {
+  // FIXME:
+  // ------------------------------------lina pomocnicza na srodku pionowa -------------
+  display: none;
+  width: 1px;
+  height: calc(55vh + 100%);
+  position: absolute;
+  transform: translate(-50%, 0);
+  left: 50%;
+  top: -55vh;
+  border-left: 1px dashed greenyellow;
+  z-index: 2;
+}

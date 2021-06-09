@@ -1,0 +1,1215 @@
+.News {
+  // visibility: hidden; //FIXME:
+  background-image: url("../assets/betonC.webp");
+  border: 2px solid var(--color-main1AA);
+  background-size: cover;
+  background-position: center;
+  border-radius: $border-radius;
+  position: absolute;
+  right: 21.6%;
+  width: 36.5%;
+  height: 300px;
+  bottom: 150px;
+  box-shadow: inset 3px 3px 5px #a5a5a5b0, inset -3px -3px 5px #3f3f3fb0;
+  // overflow: hidden; //FIXME:
+
+  // z-index: 3;
+
+  @include mq(ultra) {
+    bottom: 158px; // troche ch... wie dlaczego tyle cos mi sie nie zgadza ...
+    height: 340px;
+
+    @media (max-height: 1080px) {
+      bottom: 232px;
+    }
+  }
+
+  @include mq(xxxl) {
+    bottom: 141px;
+    height: 320px;
+
+    @media (min-height: 1050px) {
+      // bo 1058
+
+      bottom: 164px;
+    }
+
+    @media (min-height: 1079px) {
+      // bo 1058
+      height: 320px;
+      bottom: 174px;
+    }
+
+    @media (min-height: 1195px) {
+      bottom: 191px;
+    }
+  }
+
+  @media (max-width: 1680px) {
+    right: 20.5%;
+    bottom: 132px;
+
+    @media (min-height: 1045px) {
+      bottom: 138px;
+      height: 340px;
+    }
+
+
+    @media (min-height: 1081px) {
+      bottom: 50%;
+
+    }
+  }
+
+  @include mq(xxl) {
+    right: 14.5%;
+    bottom: 195px;
+    width: 44%;
+
+    @media (min-height: 750px) {
+      bottom: 60px;
+    }
+
+    @media (min-height: 895px) {
+      // ustalnie co do piksela wyraznie nie jest dobre trzba dawac min zaps
+      bottom: 120px;
+    }
+
+    @media (min-height: 1050px) {
+      bottom: 152px;
+    }
+
+    @media (min-height: 1199px) {
+      bottom: 282px;
+    }
+  }
+
+  @media (max-width: 1536px) {
+    right: 20.3%;
+    bottom: 60px;
+    width: 42.5%;
+
+    @media (min-height: 850px) {
+      bottom: 104px;
+    }
+
+    @media (min-height: 920px) {
+      bottom: 150px;
+
+    }
+
+    @media (min-height: 1100px) {
+      bottom: 35%;
+
+    }
+
+    @media (min-height: 1200px) {
+      bottom: 50%;
+
+    }
+
+    @media (min-height: 1300px) {
+      bottom: 55%;
+
+    }
+
+    @media (min-height: 1400px) {
+      bottom: 60%;
+
+    }
+  }
+
+  @include mq(big) {
+    right: 13%;
+    width: 47%;
+    // bottom: 150px;
+
+    @media (min-height: 1081px) {
+      bottom: 150px;
+
+    }
+  }
+
+  @media (max-width: 1400px) {
+    bottom: 122px;
+
+    @media (min-height: 1000px) {
+      height: 360px;
+    }
+
+    @media (min-height: 1081px) {
+      bottom: 242px;
+
+    }
+  }
+
+  @include mq(xl) {
+    height: 250px;
+    right: 14.5%;
+    bottom: 65px;
+
+    @media (max-height: 630px) {
+      bottom: 45px;
+    }
+
+    @media (min-height: 765px) {
+      bottom: 63px;
+      height: 270px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    height: 260px;
+    bottom: 65px;
+
+    @media (min-height: 575px) {
+      height: 230px;
+      bottom: 45px;
+    }
+
+    @media (min-height: 620px) {
+      height: 240px;
+      bottom: 55px;
+    }
+
+    @media (min-height: 650px) {
+      height: 255px;
+      bottom: 65px;
+    }
+
+    @media (min-height: 715px) {
+      height: 260px;
+      bottom: 65px;
+    }
+
+    @media (min-height: 765px) {
+      height: 275px;
+      bottom: 72px;
+    }
+
+    @media (min-height: 799px) {
+      height: 285px;
+      bottom: 72px;
+    }
+
+    @media (min-height: 815px) {
+      height: 300px;
+      bottom: 74px;
+    }
+
+    @media (min-height: 880px) {
+      height: 320px;
+      bottom: 90px;
+    }
+  }
+
+  @media (max-width: 1152px) {
+    bottom: 75px;
+    height: 260px;
+    right: 12.5%;
+
+    @media (min-height: 860px) {
+      height: 285px;
+      bottom: 95px;
+    }
+  }
+
+  @include mq(large) {
+    height: 240px;
+    bottom: 62px;
+
+    @media (min-height: 760px) {
+      height: 260px;
+      bottom: 80px;
+    }
+  }
+
+  @include mq(xs) {
+    left: 50%;
+    top: -30px;
+    transform: translate(-50%, 0);
+    width: 345px;
+    height: 380px;
+    border: 2px solid var(--color-main1);
+    box-shadow: inset 2px 2px 3px #a5a5a585, inset -2px -2px 3px #1d1d1dda;
+    background-image: url("../assets/betonC.webp");
+    background-size: cover;
+    background-position: center;
+  }
+
+  &--Hide {
+    will-change: transform;
+    animation: BetonZnika 1.4s;
+    animation-delay: 0.4s;
+    animation-timing-function: cubic-bezier(0.44, 0.08, 0.73, 0.44);
+    animation-fill-mode: forwards;
+  }
+
+  &--Discover {
+    will-change: transform;
+    animation: BetonPojawia 1.3s;
+    animation-timing-function: cubic-bezier(0.5, 1.6, 0.3, 0.8);
+    animation-fill-mode: backwards;
+  }
+}
+
+.News__Div {
+  position: absolute;
+  left: 7%;
+  top: 10%;
+  width: 92px;
+  height: 60px;
+  overflow: hidden; // FIXME:
+
+  @media (max-width: 1680px) {
+    left: 11.5%;
+  }
+
+  @include mq(xxl) {
+    left: 4%;
+  }
+
+  @media (max-width: 1536px) {
+    left: 12%;
+  }
+
+  @include mq(big) {
+    left: 6.7%;
+  }
+
+  @media (max-width: 1400px) {
+    left: 8.5%;
+  }
+
+  @media (max-width: 1280px) {
+    left: 9%;
+
+    @media (min-height: 620px) {
+      left: 9.3%;
+      top: 12%;
+    }
+
+    @media (min-height: 650px) {
+      left: 9.3%;
+      top: 13%;
+    }
+
+    @media (min-height: 880px) {
+      top: 14%;
+      left: 9.2%;
+    }
+  }
+
+  @include mq(large) {
+    left: 4.5%;
+    top: 8%;
+
+    @media (min-height: 760px) {
+      left: 4.6%;
+      top: 8.5%;
+    }
+  }
+
+  @include mq(xs) {
+    left: 10%;
+    top: 12px;
+    width: 116px;
+    height: 74px;
+    // border: 1px white solid;
+  }
+}
+
+.News__Div-H1 {
+  color: var(--color-main1);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  font-size: 7.2rem;
+  font-weight: 400;
+  font-family: $font-audio;
+  opacity: 0.5;
+
+  @include mq(xl) {
+    font-size: 7rem;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 6rem;
+  }
+
+  @include mq(xs) {
+    font-size: 10rem;
+  }
+}
+
+.News__Div-H1-Dust {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  font-size: 7.2rem;
+  font-weight: 400;
+  font-family: $font-audio;
+  background: url("../assets/Dust.webp") no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @include mq(xl) {
+    font-size: 7rem;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 6rem;
+  }
+
+  @include mq(xs) {
+    font-size: 10rem;
+    // display: none;
+  }
+}
+
+.News__DivB {
+  position: absolute;
+  left: 7.5%;
+  top: 28.5%;
+  width: 90px;
+  height: 30px;
+
+  @media (max-width: 1680px) {
+    left: 11.5%;
+  }
+
+  @include mq(xxl) {
+    left: 4.5%;
+  }
+
+  @media (max-width: 1536px) {
+    left: 12.3%;
+  }
+
+  @include mq(big) {
+    left: 6.7%;
+  }
+
+  @media (max-width: 1400px) {
+    left: 8.7%;
+  }
+
+  @include mq(xl) {
+    left: 9%;
+    top: 33%;
+
+    @media (min-height: 765px) {
+      top: 32%;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    top: 33%;
+    left: 9.5%;
+
+    @media (min-height: 815px) {
+      top: 31%;
+    }
+  }
+
+  @include mq(large) {
+    left: 4.7%;
+    top: 30%;
+  }
+
+  @include mq(xs) {
+    left: 10%;
+    top: 87px; //bo div1 80 plus jego top 10 plus ten top 10
+    width: 118px;
+    height: 28px;
+    // border: 1px solid white;
+  }
+}
+
+.News__DivB-H2 {
+  color: var(--color-main1);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  font-size: 2.6rem;
+  font-weight: 400;
+  font-family: $font-audio;
+  opacity: 0.52;
+
+  @include mq(xl) {
+    font-size: 2.4rem;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 2rem;
+  }
+
+  @include mq(xs) {
+    letter-spacing: 1px;
+    font-size: 3.4rem;
+  }
+}
+
+.News__DivB-H2-Dust {
+  color: var(--color-light-grey);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  font-size: 2.6rem;
+  font-weight: 400;
+  font-family: $font-audio;
+  background: url("../assets/Dust.webp") no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @include mq(xl) {
+    font-size: 2.4rem;
+  }
+
+  @include mq(xs) {
+    letter-spacing: 1px;
+    font-size: 3.4rem;
+  }
+}
+
+.News__Title {
+  font-size: 2.2rem;
+  font-family: $font-mont;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-main1);
+  text-align: left;
+  position: absolute;
+  left: 16.8%;
+  top: 20%;
+  font-weight: 900;
+  transform: rotatez(-90deg);
+
+  @media (max-width: 1680px) {
+    left: 22%;
+  }
+
+  @include mq(xxl) {
+    left: 13.8%;
+    top: 19.5%;
+    letter-spacing: 2px;
+  }
+
+  @media (max-width: 1536px) {
+    left: 22%;
+  }
+
+  @include mq(big) {
+    left: 18%;
+  }
+
+  @include mq(xl) {
+    top: 22%;
+    left: 18.5%;
+
+    @media (min-height: 765px) {
+      top: 21%;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    left: 19%;
+    top: 24%;
+    font-size: 2rem;
+  }
+
+  @media (max-width: 1152px) {
+    left: 21%;
+  }
+
+  @include mq(large) {
+    left: 17%;
+    top: 20%;
+  }
+
+  @include mq(xs) {
+    top: 115px;
+    left: 10%;
+    font-size: 3rem;
+    transform: rotatez(0deg);
+  }
+}
+
+.News__DivC {
+  position: absolute;
+  left: 0;
+  top: calc(10% - 10px);
+  width: calc(26.5% + 3px);
+  height: $main-spacing / 2;
+
+  border-radius: 0 10px 0 0;
+  border-top: 3px double var(--color-main1);
+  border-right: 3px double var(--color-main1);
+
+  @media (max-width: 1680px) {
+    width: calc(32% + 3px);
+  }
+
+  @include mq(xxl) {
+    width: calc(27.5% + 3px);
+  }
+
+  @media (max-width: 1536px) {
+    width: calc(32.5% + 4px);
+
+    border-top: 4px double var(--color-main1AA);
+    border-right: 4px double var(--color-main1AA);
+  }
+
+  @include mq(big) {
+    width: calc(28% + 4px);
+  }
+
+  @media (max-width: 1280px) {
+    top: calc(10% - 10px);
+
+    @media (min-height: 815px) {
+      top: calc(15% - 10px);
+    }
+  }
+
+  @media (max-width: 1152px) {
+    width: calc(31% + 4px);
+    top: calc(15% - 10px);
+  }
+
+  @include mq(large) {
+    top: calc(10% - 10px);
+    width: calc(28% + 4px);
+  }
+
+  @include mq(xs) {
+    display: none;
+  }
+}
+
+.News__Article {
+  position: relative;
+  left: 26.5%;
+  top: 10%;
+  width: 73.5%;
+  height: 88px;
+  overflow: hidden;
+  border-radius: 0 0 0 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-bottom: 3px double var(--color-main1);
+  border-left: 3px double var(--color-main1);
+  padding-left: 10px;
+  //   background-color: rgb(20, 20, 20);
+  backdrop-filter: blur(3px);
+
+  @media (max-width: 1680px) {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    left: 32%;
+    width: 68%;
+  }
+
+  @include mq(xxl) {
+    width: 72.5%;
+    left: 27.5%;
+  }
+
+  @media (max-width: 1536px) {
+    left: 32.5%;
+    width: 67.5%;
+    font-size: 1.5rem;
+    border-bottom: 4px double var(--color-main1AA);
+    border-left: 4px double var(--color-main1AA);
+  }
+
+  @include mq(big) {
+    left: 28%;
+    width: 72%;
+  }
+
+  @include mq(xl) {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 1280px) {
+    @media (min-height: 815px) {
+      top: 15%;
+    }
+  }
+
+  @media (max-width: 1152px) {
+    top: 15%;
+    left: 31%;
+    font-size: 1.3rem;
+    height: 80px;
+    width: 69%;
+  }
+
+  @include mq(large) {
+    height: 75px;
+    width: 72%;
+    //
+    top: 10%;
+    left: 28%;
+  }
+
+  @include mq(xs) {
+    height: 217px;
+    width: 306px;
+    font-size: 1.4rem;
+    padding-left: 0;
+
+    border-top: 4px double var(--color-main1AA);
+    border-radius: 10px 0 0 10px;
+    top: 150px;
+    left: 10%;
+  }
+}
+
+.News__Article::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to bottom,
+      rgba(24, 0, 0, 0) 50%,
+      rgba(117, 0, 0, 0.363) 50%);
+  background-size: 100% 4px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.ScanlineI {
+  width: 100%;
+  height: 25%;
+  // z-index: 3;
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(255, 0, 0, 0.2) 10%,
+      rgba(49, 0, 0, 0.1) 100%);
+  opacity: 0.5;
+  position: absolute;
+  bottom: 100%;
+  transform: translateY(0);
+  will-change: transform;
+  animation: scanline 7s linear infinite;
+}
+
+.News__Article-Content {
+  display: block;
+  font-size: 1.7em;
+  font-family: $font-binar;
+  text-transform: uppercase;
+
+  font-weight: 400;
+  color: var(--color-main1);
+  line-height: 1.2;
+  text-align: left;
+  animation: textShadow 2s infinite;
+
+  @media (max-width: 1680px) {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 1536px) {
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 1152px) {
+    font-size: 1.2rem;
+  }
+
+  @include mq(large) {
+    font-size: 1.1rem;
+  }
+
+  @include mq(xs) {
+    animation: none;
+    font-size: 1.6rem;
+  }
+}
+
+.News__Article-Div {
+  width: 380px;
+  height: 100%;
+  // border: 1px white solid; TODO
+  display: flex;
+  align-content: center;
+  align-items: center;
+
+  @media (max-width: 1680px) {
+    width: 350px;
+  }
+
+  @include mq(xxl) {
+    width: 400px;
+  }
+
+  @media (max-width: 1536px) {
+    width: 350px;
+  }
+
+  @include mq(big) {
+    width: 380px;
+  }
+
+  @include mq(xl) {
+    width: 360px;
+  }
+
+  @media (max-width: 1280px) {
+    width: 340px;
+  }
+
+  @media (max-width: 1152px) {
+    width: 270px;
+  }
+
+  @include mq(large) {
+    width: 250px;
+  }
+
+  @include mq(xs) {
+    padding-top: 1px;
+    padding-left: 10px;
+    align-items: flex-start;
+  }
+}
+
+//-----------------------------------------------------Cube 3d------------------------------------------------------------//
+
+.Container__Cube {
+  position: absolute;
+  right: $main-spacing * 1.2;
+  top: 50%;
+  transform: translate(0, -50%);
+  // border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 80px;
+  height: 80px;
+  perspective: 160px;
+
+  @media (max-width: 1680px) {
+    right: $main-spacing / 2;
+
+    width: 60px;
+    height: 60px;
+    perspective: 120px;
+  }
+
+  @include mq(xxl) {
+    right: $main-spacing;
+  }
+
+  @media (max-width: 1536px) {
+    right: $main-spacing / 2;
+  }
+
+  @include mq(big) {
+    right: $main-spacing;
+  }
+
+  @include mq(xl) {
+    right: $main-spacing / 2;
+  }
+
+  @include mq(large) {
+    width: 50px;
+    height: 50px;
+    perspective: 100px;
+  }
+
+  @include mq(xs) {
+    display: none;
+    // top: 75%;
+    // right: 50%;
+    // transform: translate(50%, -50%);
+    // width: 100px;
+    // height: 100px;
+    // perspective: 200px;
+  }
+}
+
+.Cube {
+  will-change: transform;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, -20px) rotateY(0deg) rotateZ(0deg);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+
+  transform-style: preserve-3d;
+  animation: Rotate3DCube 10s linear infinite;
+
+  @include mq(large) {
+    width: 30px;
+    height: 30px;
+    transform: translate3d(-50%, -50%, -15px) rotateY(0deg) rotateZ(0deg);
+  }
+
+  @include mq(xs) {
+    width: 50px;
+    height: 50px;
+    transform: translate3d(-50%, -50%, -25px) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+.Cube p {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, -50%, 0px) rotateY(0deg);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 3.5rem;
+  font-family: $font-audio;
+
+  @include mq(large) {
+    font-size: 2.5rem;
+  }
+
+  @include mq(xs) {
+    font-size: 3rem;
+  }
+}
+
+.CubeFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+  background-color: var(--color-main1AAA);
+}
+
+.Mid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.CubeFace.Front {
+  transform: rotateY(0deg) translateZ(20px);
+
+  @include mq(large) {
+    transform: rotateY(0deg) translateZ(15px);
+  }
+
+  @include mq(xs) {
+    transform: rotateY(0deg) translateZ(25px);
+  }
+}
+
+.CubeFace.Back {
+  transform: rotateY(180deg) translateZ(20px);
+
+  @include mq(large) {
+    transform: rotateY(180deg) translateZ(15px);
+  }
+
+  @include mq(xs) {
+    transform: rotateY(180deg) translateZ(25px);
+  }
+}
+
+.CubeFace.Left {
+  transform: rotateY(-90deg) translateZ(20px);
+
+  @include mq(large) {
+    transform: rotateY(-90deg) translateZ(15px);
+  }
+
+  @include mq(xs) {
+    transform: rotateY(-90deg) translateZ(25px);
+  }
+}
+
+.CubeFace.Right {
+  transform: rotateY(90deg) translateZ(20px);
+
+  @include mq(large) {
+    transform: rotateY(90deg) translateZ(15px);
+  }
+
+  @include mq(xs) {
+    transform: rotateY(90deg) translateZ(25px);
+  }
+}
+
+.CubeFace.Top {
+  transform: rotateX(90deg) translateZ(20px);
+
+  @include mq(large) {
+    transform: rotateX(90deg) translateZ(15px);
+  }
+
+  @include mq(xs) {
+    transform: rotateX(90deg) translateZ(25px);
+  }
+}
+
+.CubeFace.Bottom {
+  transform: rotateX(-90deg) translateZ(20px);
+
+  @include mq(large) {
+    transform: rotateX(-90deg) translateZ(15px);
+  }
+
+  @include mq(xs) {
+    transform: rotateX(-90deg) translateZ(25px);
+  }
+}
+
+//--------------------------kod kreskowy---------------------------------------------//
+.News__Code {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+
+  border-top: 1px solid var(--color-main1);
+  border-left: 1px solid var(--color-main1);
+  border-radius: 10px 0 0 0;
+  height: 36%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+
+  @include mq(ultra) {
+    height: 36%;
+
+    @media (max-height: 1020px) {
+      height: 41%;
+    }
+  }
+
+  @include mq(xxxl) {
+    height: 32%;
+
+    @media (min-height: 1075px) {
+      height: 29%;
+    }
+  }
+
+  @media (max-width: 1680px) {
+    height: 35%;
+  }
+
+  @include mq(xxl) {
+    height: 38%;
+
+    @media (min-height: 750px) {
+      height: 49%;
+    }
+
+    @media (min-height: 899px) {
+      height: 35%;
+    }
+  }
+
+  @media (max-width: 1536px) {
+    height: 47%;
+
+    @media (min-height: 860px) {
+      height: 40%;
+    }
+  }
+
+  @include mq(big) {
+    height: 42%;
+
+    @media (min-height: 899px) {
+      height: 36%;
+    }
+  }
+
+  @include mq(xl) {
+    height: 42%;
+
+    @media (max-height: 626px) {
+      height: 45%;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    height: 38%;
+
+    @media (min-height: 760px) {
+      height: 35%;
+    }
+
+    @media (min-height: 810px) {
+      height: 35%;
+    }
+
+    @media (min-height: 1020px) {
+      height: 38%;
+    }
+  }
+
+  @media (max-width: 1152px) {
+    height: 35%;
+  }
+
+  @include mq(large) {
+    height: 39%;
+  }
+
+  @include mq(xs) {
+    border: 1px solid var(--color-main1);
+    border-radius: 10px;
+    height: 20%;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.News__Code::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to bottom,
+      rgba(24, 0, 0, 0) 50%,
+      rgba(117, 0, 0, 0.363) 50%);
+  background-size: 100% 4px;
+  // z-index: 2; // z-index na elemencie before ... hmmm no firefox powodowało wyjście poza panerl sterowania nawet...
+  pointer-events: none;
+  opacity: 1;
+}
+
+.News__Code-H3 {
+  position: relative;
+  top: 25px;
+  left: 0;
+  font-size: 4.4rem;
+
+  font-family: $font-barcode;
+  color: var(--color-main1AA);
+  font-weight: 300;
+  text-align: left;
+  letter-spacing: 1px;
+  line-height: 0;
+
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 8px;
+  padding-bottom: 0;
+
+  @media (max-width: 1536px) {
+    font-size: 4rem;
+  }
+
+  @include mq(xl) {
+    padding-top: 5px;
+    font-size: 3.5rem;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 4rem;
+  }
+
+  @media (max-width: 1152px) {
+    font-size: 3.6rem;
+  }
+
+  @include mq(xs) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+  }
+}
+
+.CodeBelow {
+  position: absolute;
+  transform: translate(-50%, 0);
+  bottom: -16px;
+  left: 50%;
+
+  width: calc(100% - 20px);
+  height: 12px;
+  background-color: var(--color-main1AA);
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+
+  & h3 {
+    display: block;
+    line-height: 1.2rem;
+    font-size: 1.2rem;
+    font-family: $font-audio;
+    color: var(--color-dark-grey);
+
+    @include mq(xl) {
+      font-size: 1rem;
+    }
+  }
+}
+
+//-------------------------------------------------------------------------- Ozdobniki ----------------------------------------------------------------------//
+.sectorI {
+  position: absolute;
+  height: $main-spacing;
+  width: 180px;
+  top: -2rem;
+  right: 0;
+  // border: 1px solid black;
+  text-align: right;
+
+  @include mq(xs) {
+    width: 140px;
+  }
+}
+
+.sectorI-box {
+  position: absolute;
+  top: 0.35rem;
+  left: 0;
+  height: 1.3rem;
+  width: 1.3rem;
+  background-color: var(--color-main1);
+  opacity: 0.7;
+
+  @include mq(xs) {
+    top: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+}
+
+.sectorI-h1 {
+  font-size: 1.3rem;
+  font-family: $font-audio;
+  color: var(--color-main1);
+  line-height: 2rem;
+  opacity: 0.8;
+  position: absolute;
+  right: $main-spacing;
+  top: 0px;
+  width: 100%;
+
+  @include mq(xs) {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,488 @@
+:root {
+  --color-dark-grey: #373737;
+  --color-light-grey: #8d8d8d;
+  --color-main: #8a0212; //#8a0212 #162e52; #b69732 #af7d21 #ad7918 #ada597   main  //#a8a8a8
+  --color-main1A: #ff0000cc; //#ff0000cc 00e1ffcc #00e1ffcc #fd0505 #00e1ffcc main1a//#e4e4e4
+  --color-main1AA: #ff010099; // #ff010099 fd050599
+  --color-main1AAA: #ff00005b;
+  --color-main1: #fd0505; //#fd0505 #ff010 #00d9ff #fdc305 #fd0505            main1 //#fd0505
+  --color-main2: #ff7700; //#ff7700 #fdfd05 #ff0000 #ff0000                   main2 //#a8a8a8
+  --color-main3: #ffc800; //#ffc800 #00ffbf                                   main3 //#a8a8a8
+  --color-main4: #ff7700;
+  --color-main4A: #ff77007e; //#ff7700                                           main4 //#a80000
+  --color-main5: #ff7700; //#ff7700                                         main5 //#a8a8a8bb
+  --color-white: white;
+  --color-black: black;
+
+  --board-width: 438px;
+  --board-height: 360px;
+
+  --arrow-shadow: 12px;
+  --arrow-shadow-hover: 6px;
+  --arrow-shadowP: 12px;
+  --arrow-shadow-hoverP: 6px;
+  --arrow-shadowB: -12px;
+  --arrow-shadow-hoverB: -6px;
+  --MaxWidth: 1920px;
+  --MaxHeight: 1080px;
+
+  --mobo-board-width: 345px;
+  --mobo-board-proportion: 370/345 * 100%;
+  --BoardMoboHeight: 370px;
+
+  @media (max-width: 360px) {
+    --BoardMoboHeight: 370px;
+  }
+
+  @media (max-width: 320px) {
+    --BoardMoboHeight: 360px;
+  }
+
+  --BoardMoboWidth: 345px;
+
+  @media (max-width: 360px) {
+    --BoardMoboWidth: 345px;
+  }
+
+  @media (max-width: 360px) {
+    --BoardMoboWidth: 330px;
+  }
+
+  //---------------------firma var--------------------------------//
+
+  --HeightOfirmie: 1870px;
+
+  @media (max-width: 1920px) {
+    --HeightOfirmie: 1860px;
+  }
+
+  @media (max-width: 1680px) {
+    --HeightOfirmie: 1980px; //+20px w stosunku do różnicy od ultra ...
+  }
+
+  @media (max-width: 1536px) {
+    --HeightOfirmie: 1790px; //-60px
+  }
+
+  @media (max-width: 1366px) {
+    --HeightOfirmie: 1750px; //-70px
+  }
+
+  @media (max-width: 1280px) {
+    --HeightOfirmie: 1750px; //-50px
+  }
+
+  @media (max-width: 1024px) {
+    --HeightOfirmie: 1930px; //+60px
+  }
+
+  @media (max-width: 480px) {
+    --HeightOfirmie: 2250px; //+200px
+  }
+
+  //---------------------praktyka var--------------------------------//
+
+  --HeightOPraktyceA: 1920px; //90
+
+  @media (max-width: 1920px) {
+    --HeightOPraktyceA: 1900px;
+  }
+
+  @media (max-width: 1680px) {
+    --HeightOPraktyceA: 2040px; //0px tyle samo co do zmiany na ultra
+  }
+
+  @media (max-width: 1536px) {
+    --HeightOPraktyceA: 1810px; //+90px
+  }
+
+  @media (max-width: 1366px) {
+    --HeightOPraktyceA: 1770px; //+30px
+  }
+
+  @media (max-width: 1024px) {
+    --HeightOPraktyceA: 1850px; //-10px
+  }
+
+  @media (max-width: 480px) {
+    --HeightOPraktyceA: 2100px; //-70px
+  }
+
+  ///////////////////////B///////////////////////
+
+  --HeightOPraktyceB: 1550px; //140
+
+  @media (max-width: 1920px) {
+    --HeightOPraktyceB: 1510px;
+  }
+
+  @media (max-width: 1680px) {
+    --HeightOPraktyceB: 1630px; //-20px do róznicy od ultra
+  }
+
+  @media (max-width: 1536px) {
+    --HeightOPraktyceB: 1420px; //-90px
+  }
+
+  @media (max-width: 1440px) {
+    --HeightOPraktyceB: 1420px; //-80px
+  }
+
+  @media (max-width: 1366px) {
+    --HeightOPraktyceB: 1390px; //-50px
+  }
+
+  @media (max-width: 1024px) {
+    --HeightOPraktyceB: 1470px; //-80px
+  }
+
+  @media (max-width: 480px) {
+    --HeightOPraktyceB: 1690px; //-70px
+  }
+
+  //---------------------projekty var--------------------------------//
+
+  --HeightOprojektach: 920px; // nowa wartość
+
+  @media (max-width: 1680px) {
+    --HeightOprojektach: 980px; //60px
+  }
+
+  @media (max-width: 1536px) {
+    --HeightOprojektach: 870px; //-50px
+  }
+
+  @media (max-width: 1366px) {
+    --HeightOprojektach: 840px; //-80px
+  }
+
+  @media (max-width: 1024px) {
+    --HeightOprojektach: 890px; //-30px
+  }
+
+  @media (max-width: 480px) {
+    --HeightOprojektach: 1000px; //+80px
+  }
+
+  ////////////////////////B/////////////////////
+
+  --HeightOprojektachB: 340px;
+
+  // @media (max-width: 1680px) {
+  //   --HeightOprojektachB: 1150px;
+  // }
+
+  // @media (max-width: 1536px) {
+  //   --HeightOprojektachB: 950px;
+  // }
+
+  // @media (max-width: 1366px) {
+  //   --HeightOprojektachB: 920px;
+  // }
+
+  // @media (max-width: 1280px) {
+  //   --HeightOprojektachB: 910px;
+  // }
+
+  // @media (max-width: 1024px) {
+  //   --HeightOprojektachB: 1000px;
+  // }
+
+  // @media (max-width: 360px) {
+  //   --HeightOprojektachB: 1130px;
+  // }
+
+  //------------------------------------------------------------Omnie-----------------------------------------------------------//
+
+  --HeightOMnie: 1250px;
+
+  @media (max-width: 1920px) {
+    --HeightOMnie: 1210px;
+  }
+
+  @media (max-width: 1680px) {
+    --HeightOMnie: 1350px; //20px
+  }
+
+  @media (max-width: 1600px) {
+    --HeightOMnie: 1420px; //20px
+  }
+
+  @media (max-width: 1536px) {
+    --HeightOMnie: 1180px;
+  }
+
+  @media (max-width: 1440px) {
+    --HeightOMnie: 1245px; //20px
+  }
+
+  @media (max-width: 1400px) {
+    --HeightOMnie: 1275px; //20px
+  }
+
+  @media (max-width: 1366px) {
+    --HeightOMnie: 1265px; //20px
+  }
+
+  @media (max-width: 1280px) {
+    --HeightOMnie: 1340px;
+  }
+
+  @media (max-width: 1200px) {
+    --HeightOMnie: 1410px;
+  }
+
+  @media (max-width: 1152px) {
+    --HeightOMnie: 1490px;
+  }
+
+  @media (max-width: 480px) {
+    --HeightOMnie: 2570px;
+  }
+
+  //////////////////////////////////////////Edu/////////////////////////////////////
+
+  --HeightEdu: 700px;
+
+  @media (max-width: 1440px) {
+    --HeightEdu: 660px;
+  }
+
+  @media (max-width: 1152px) {
+    --HeightEdu: 640px;
+  }
+
+  @media (max-width: 480px) {
+    --HeightEdu: 830px;
+  }
+}
+
+.cls-1 {
+  //top svg
+  fill: var(--color-dark-grey);
+}
+
+.cls-2 {
+  // bottom svg
+  fill: var(--color-main);
+}
+
+.st0 {
+  // fill: #1877F2;
+}
+
+.st1 {
+  // fill: #FFFFFF;
+  fill: none;
+}
+
+.st2 {
+  // fill: #FF0000;
+}
+
+.st3 {
+  // fill: #FFFFFF;
+  fill: var(--color-dark-grey);
+}
+
+.st4 {
+  // fill: #282828;
+}
+
+.st5 {
+  // fill: #FFFFFF;
+}
+
+.st6 {
+  fill: none;
+  // fill: #2967B2;
+}
+
+.japanRed {
+  fill: #d51309;
+}
+
+.logoPath {
+  fill: rgba(0, 0, 0, 0.02);
+}
+
+.japanlogo {
+  width: 120px;
+}
+
+.japanWhite {
+  fill: var(--color-white);
+}
+
+.MeButtonShape {
+  fill: var(--color-main);
+}
+
+.cornerSVG {
+  fill: red;
+}
+
+text {
+  fill: var(--color-black);
+}
+
+$font-mont: "Montserrat",
+sans-serif;
+$font-audio: "Audiowide",
+cursive;
+$font-source: "Source Sans Pro",
+sans-serif;
+$font-barcode: "Libre Barcode 128",
+cursive;
+$font-baloo: "Baloo 2",
+cursive;
+$font-binar: "VT323",
+monospace;
+$font-japan: "OPTIOpus",
+sans-serif;
+
+$base-font-size: 10px;
+$max-width: 1920px;
+$max-height: 1080px;
+$border-radius: 15px;
+$border-radius-min: 5px;
+$main-spacing: 20px;
+
+$breakpoints: (xxs: (max-width: 360px,
+  ),
+  xs: (max-width: 480px,
+  ),
+  small: (max-width: 640px,
+  ),
+  medium: (max-width: 800px,
+  ),
+  large: (max-width: 1024px,
+  ),
+  xl: (max-width: 1366px,
+  ),
+  big: (max-width: 1440px,
+  ),
+  xxl: (max-width: 1600px,
+  ),
+  xxxl: (max-width: 1920px,
+  ),
+  ultra: (min-width: 1921px,
+  ),
+);
+
+@font-face {
+  font-family: "OPTIOpus";
+  src: url("../fonts/OPTIOpus.ttf.woff") format("woff"), url("../fonts/OPTIOpus.ttf.svg#OPTIOpus") format("svg"),
+    url("../fonts/OPTIOpus.ttf.eot"), url("OPTIOpus.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+//audiowide-regular - latin-ext_latin
+@font-face {
+  font-family: "Audiowide";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Audiowide Regular"), local("Audiowide-Regular"),
+    url("../fonts/audiowide-v8-latin-ext_latin-regular.woff2") format("woff2"),
+    url("../fonts/audiowide-v8-latin-ext_latin-regular.woff") format("woff");
+}
+
+/*
+// baloo-2-regular - latin-ext_latin 
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Baloo 2 Regular'), local('Baloo2-Regular'),
+    url('../fonts/baloo-2-v1-latin-ext_latin-regular.woff2') format('woff2'),
+
+    url('../fonts/baloo-2-v1-latin-ext_latin-regular.woff') format('woff');
+
+}
+
+// montserrat-regular - latin-ext_latin 
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+    url('../fonts/montserrat-v14-latin-ext_latin-regular.woff2') format('woff2'),
+
+    url('../fonts/montserrat-v14-latin-ext_latin-regular.woff') format('woff');
+
+}
+
+// montserrat-500 - latin-ext_latin 
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Montserrat Medium'), local('Montserrat-Medium'),
+    url('../fonts/montserrat-v14-latin-ext_latin-500.woff2') format('woff2'),
+
+    url('../fonts/montserrat-v14-latin-ext_latin-500.woff') format('woff');
+
+}
+
+// montserrat-600 - latin-ext_latin 
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+    url('../fonts/montserrat-v14-latin-ext_latin-600.woff2') format('woff2'),
+
+    url('../fonts/montserrat-v14-latin-ext_latin-600.woff') format('woff');
+
+}
+
+// montserrat-700 - latin-ext_latin 
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+    url('../fonts/montserrat-v14-latin-ext_latin-700.woff2') format('woff2'),
+
+    url('../fonts/montserrat-v14-latin-ext_latin-700.woff') format('woff');
+
+}
+
+// montserrat-900 - latin-ext_latin 
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Montserrat Black'), local('Montserrat-Black'),
+    url('../fonts/montserrat-v14-latin-ext_latin-900.woff2') format('woff2'),
+
+    url('../fonts/montserrat-v14-latin-ext_latin-900.woff') format('woff');
+
+}
+
+// source-sans-pro-300 - latin-ext_latin 
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'),
+    url('../fonts/source-sans-pro-v13-latin-ext_latin-300.woff2') format('woff2'),
+
+    url('../fonts/source-sans-pro-v13-latin-ext_latin-300.woff') format('woff');
+
+}
+
+// source-sans-pro-regular - latin-ext_latin 
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
+    url('../fonts/source-sans-pro-v13-latin-ext_latin-regular.woff2') format('woff2'),
+
+    url('../fonts/source-sans-pro-v13-latin-ext_latin-regular.woff') format('woff');
+
+}
+
+*/

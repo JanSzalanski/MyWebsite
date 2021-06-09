@@ -1,0 +1,345 @@
+body {
+  // height: 100vh;
+  // width: 100vw;
+  // overflow: hidden;
+  background-color: var(--color-black);
+}
+
+.WrapperBorder1 {
+  position: absolute;
+  z-index: -2;
+  width: calc(var(--MaxWidth) + 2px);
+  height: calc(var(--MaxHeight) + 2px);
+  left: calc(50vw - calc(var(--MaxWidth) / 2 + 1px));
+  top: calc(50vh - calc(var(--MaxHeight) / 2 + 1px));
+  clip-path: polygon(0 3%, 2% 0, 100% 0, 100% 97%, 98% 100%, 0 100%);
+  background-color: var(--color-main1);
+
+  @include mq(ultra) {
+    //tylko taka forma wypośrodkowania kontera nie wpływa na właściwość background-attachment: fixed dla box'a tak aby poprawnie uzyskac efekt Glich image.
+
+    @media (max-height: 1080px) {
+      //tutaj te nie szczesne rodzielczosci jak 2048 x 1152 ktore dla hight w przegladarce nie daja przestrzeni dla kontenera 1080p.
+      height: calc(98vh + 2px);
+      top: calc(1vh - 1px);
+    }
+  }
+
+  @include mq(xxxl) {
+    display: none;
+
+    @media (min-height: 1081px) {
+      display: block;
+      clip-path: polygon(0 3%, 2.4% 0, 100% 0, 100% 97.1%, 98.1% 100%, 0 100%);
+      height: calc(var(--MaxHeight) + 2px);
+      top: calc(50vh - calc(var(--MaxHeight) / 2 + 1px));
+      width: 100vw;
+      left: calc(50vw - calc(100vw / 2));
+    }
+
+    @include mq(xxl) {
+      display: none;
+
+      @media (min-height: 1081px) {
+        display: block;
+        clip-path: polygon(0 3%, 2.4% 0, 100% 0, 100% 97.1%, 98.1% 100%, 0 100%);
+        height: calc(var(--MaxHeight) + 2px);
+        top: calc(50vh - calc(var(--MaxHeight) / 2 + 1px));
+        width: 100vw;
+        left: calc(50vw - calc(100vw / 2));
+      }
+    }
+  }
+}
+
+.Wrapper {
+  position: relative;
+  // z-index: -1;
+  width: 100vw; // skoro narazie nie widze mozliwosci pojawienia sie scrola na PC to moga to byc vh i vw???
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  overflow: hidden; //FIXME:
+  // border: 2px solid orange;
+
+  //clip-path: polygon(0% 3%, 2% 0%, 100% 0%, 100% 97%, 98% 100%, 0% 100%);
+
+  @include mq(ultra) {
+    width: var(--MaxWidth);
+    height: var(--MaxHeight);
+    left: calc(50vw - calc(var(--MaxWidth) / 2));
+    top: calc(50vh - calc(var(--MaxHeight) / 2));
+    border: 1px solid var(--color-main1);
+    mask-image: url("../assets/Mask.svg");
+    mask-repeat: no-repeat;
+    //tylko taka forma wypośrodkowania kontera nie wpływa na właściwość background-attachment: fixed dla box'a tak aby poprawnie uzyskac efekt Glich image.
+
+    @media (max-height: 1080px) {
+      //tutaj te nie szczesne rodzielczosci jak 2048 x 1152 ktore dla hight w przegladarce nie daja przestrzeni dla kontenera 1080p.
+      clip-path: polygon(0 3%, 2% 0, 100% 0, 100% 97%, 98% 100%, 0 100%);
+      mask-size: var(--MaxWidth), 98vh; // to plus linijka powyżej to rzeźba w gównie poziom hard! czyli maska i clip-path żeby było okej z rogami kurwa!!! ...
+      height: 98vh;
+      top: 1vh;
+    }
+
+    // @media (min-height: 1200px) {
+
+    //     width: var(--MaxWidth);
+    //     height: var(--MaxHeight);
+    //     border: 2px var(--color-main1) solid;
+    //     left: calc(50vw - calc(var(--MaxWidth) / 2));
+    //     top: calc(50vh - calc(var(--MaxHeight) / 2));
+    // }
+  }
+
+  @include mq(xxxl) {
+    border: none;
+    clip-path: none;
+    mask-image: none;
+    width: 100vw; // skoro narazie nie widze mozliwosci pojawienia sie scrola na PC to moga to byc vh i vw???
+    height: 100vh;
+
+    @media (min-height: 1081px) {
+      mask-image: url("../assets/Mask.svg");
+      mask-repeat: no-repeat;
+      display: block;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      clip-path: polygon(0 3.1%, 2.5% 0, 100% 0, 100% 97%, 98% 100%, 0 100%);
+      height: calc(var(--MaxHeight) + 2px);
+      top: calc(50vh - calc(var(--MaxHeight) / 2 + 1px));
+      width: 100vw;
+      left: calc(50vw - calc(100vw / 2));
+      border-left: 1px solid var(--color-main1);
+      border-right: 1px solid var(--color-main1);
+      border-top: 1px solid var(--color-main1);
+      border-bottom: 1px solid var(--color-main1);
+    }
+  }
+
+  @include mq(xxl) {
+    border: none;
+    clip-path: none;
+    mask-image: none;
+    width: 100vw; // skoro narazie nie widze mozliwosci pojawienia sie scrola na PC to moga to byc vh i vw???
+    height: 100vh;
+
+    @media (min-height: 1081px) {
+      display: block;
+      // mask-image: url("../assets/Mask.svg");
+      // mask-repeat: no-repeat;
+      // mask-size: cover;
+      clip-path: polygon(0 3.1%, 2.5% 0, 100% 0, 100% 97%, 98% 100%, 0 100%);
+      height: calc(var(--MaxHeight) + 2px);
+      top: calc(50vh - calc(var(--MaxHeight) / 2 + 1px));
+      width: 100vw;
+      left: calc(50vw - calc(100vw / 2));
+      border-left: 1px solid var(--color-main1);
+      border-right: 1px solid var(--color-main1);
+      border-top: 1px solid var(--color-main1);
+      border-bottom: 1px solid var(--color-main1);
+    }
+  }
+
+  @include mq(xs) {
+    height: auto;
+  }
+}
+
+// in XXXL @media (min-height:1200px) {
+//  to ma niby adresować te dziwne rozdzielczosci ... takie jak 1920 x 1440, 1856 x 1392 , 1792 x 1344, nie uwzglednia 2048 x 1152 oraz 1920 x 1200 wawrunek dla tej ostatniej przy
+//uwzglednieniu paska windows czy zakladek przegladarki pokrywa sie z warunkiem 1920 x 1080 czyli moja rozdzielczoscia flagowa ... max co na wysokosc zabiera przegladarka chrome
+// i pasek win to 142px w warunku 145px dla bezpieczenstwa tak wiec 1344 - 145 = 1199 i stad plus 1 czyli 1200 pamietac nalezy o widoku pelny ekran na ekranach i tv
+
+.MainPicture {
+  background: url("../assets/Grafika_StronaG1920.webp") no-repeat;
+  // background-size: cover;
+  // background-attachment: fixed;
+  background-position: center;
+  position: fixed;
+  left: 0;
+  top: 35%;
+  height: 640px;
+  width: 100%;
+  transform: translate(0, -50%);
+  width: 100%;
+  // z-index: -1;
+  // top: 30px;
+  // border: 1px solid greenyellow;
+
+  @include mq(ultra) {
+    top: 40%;
+    position: absolute; //bo ramka na wrapper
+
+    @media (max-height: 1080px) {
+      top: 37%;
+    }
+  }
+
+  @include mq(xxxl) {
+    top: 35%;
+
+    @media (min-height: 1050px) {
+      top: 35%;
+    }
+
+    @media (min-height: 1081px) {
+      position: absolute; // bo ramka
+    }
+
+    @media (min-height: 1195px) {
+      top: 40%;
+    }
+  }
+
+  @media (max-width: 1680px) {
+    top: 35%;
+  }
+
+  @include mq(xxl) {
+    top: 33%;
+
+    @media (min-height: 1050px) {
+      top: 35%;
+    }
+
+    @media (min-height: 1195px) {
+      top: 40%;
+    }
+  }
+
+  @media (max-width: 1536px) {
+    top: 32%;
+  }
+
+  @include mq(large) {
+    background: url("../assets/Grafika_StronaG1024.webp") no-repeat;
+    background-position: center;
+  }
+
+  @include mq(xs) {
+    background: url("../assets/Grafika_StronaG480.webp") no-repeat;
+    background-position: center;
+    position: fixed;
+  }
+}
+
+#MeButton {
+  //svg obiect
+
+  opacity: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -2%);
+  position: absolute;
+  display: block;
+
+  // z-index: 1; //w relacji do kontakt
+}
+
+.MeButton-Link {
+  cursor: help;
+}
+
+// .GridHelperCross {
+//   //Tylko w celu ustawiania elementów do grida wyswietlanego w mozlilla developer za pomoca absolute
+
+//   display: none;
+//   visibility: hidden;
+//   position: relative;
+//   width: 100%;
+//   height: 100%;
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+//   grid-template-rows: 50% 50%;
+// }
+
+// .GridHelper {
+//   //Tylko w celu ustawiania elementów do grida wyswietlanego w mozlilla developer za pomoca absolute
+
+//   position: absolute;
+
+//   left: 0px;
+//   right: 0px;
+//   bottom: 0px;
+//   top: 0px;
+//   display: grid;
+//   grid-template-columns: repeat(14, 1fr);
+//   grid-column-gap: 20px;
+//   grid-template-rows: 5% 5% 5% 5% 5% 5% 5% 5% 5% 10% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+//   // z-index: -2; zakomentowany
+//   //z-index: -1; //nic to nie dało ???
+
+//   @include mq(xxl) {
+//     grid-template-columns: repeat(12, 1fr);
+//   }
+
+//   @include mq(big) {
+//     grid-column-gap: 15px;
+//   }
+
+//   @media (max-width: 1280px) {
+//     grid-column-gap: 10px;
+//   } 
+
+//   @media (max-width: 1152px) {
+//     grid-template-columns: repeat(10, 1fr);
+//   }
+// }
+
+//-----------------------------------------------------------------------------------podstrony-----------------------------------------------------------------------------------------------------//
+
+.projekty {
+  position: absolute;
+  left: 50%;
+  top: -80px;
+  width: 600px;
+  height: 750px;
+  border-radius: 20px;
+  background-color: rgba(105, 68, 0, 0.6);
+  transform: translateX(-25%);
+  backdrop-filter: blur(5px);
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.4), inset -2px -2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.FirmaPicture {
+  @extend .MainPicture;
+  background: url("../assets/Grafika_Firma1920.webp") no-repeat;
+  background-position: center;
+
+  @include mq(xxs) {
+    background: url("../assets/Grafika_Firma360.webp") no-repeat;
+    background-position: center;
+    position: fixed;
+  }
+}
+
+.PraktykaPicture {
+  @extend .FirmaPicture;
+  background: url("../assets/Grafika_Praktyka1920.webp") no-repeat;
+  background-position: center;
+}
+
+.ProjektyPicture {
+  @extend .FirmaPicture;
+  background: url("../assets/Grafika_Projekty1920.webp") no-repeat;
+  background-position: center;
+
+  @include mq(xxs) {
+    background: url("../assets/Grafika_Projekty360.webp") no-repeat;
+    background-position: center;
+    position: fixed;
+  }
+}
+
+.PrywatniePicture {
+  @extend .FirmaPicture;
+  background: url("../assets/Grafika_Prywatnie1920.webp") no-repeat;
+  background-position: center;
+
+  @include mq(xxs) {
+    background: url("../assets/Grafika_Prywatnie360.webp") no-repeat;
+    background-position: center;
+    position: fixed;
+  }
+}

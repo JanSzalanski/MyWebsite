@@ -1,0 +1,1805 @@
+$color-grey1: rgba(107, 107, 107, 1);
+$color-grey2: rgba(75, 75, 75, 1);
+$color-grey3: rgba(55, 55, 55, 1);
+$width-board: var(--board-width);
+$height-board: var(--board-height);
+$width-btn: 115px;
+
+.Board {
+  // visibility: hidden;
+  z-index: 1;
+  position: absolute;
+  left: 20.6%;
+  top: 49.5%;
+  width: $width-board;
+  height: $height-board;
+  border-radius: $border-radius;
+
+  @include mq(ultra) {
+    //top: 51.7%; zgrywam strzalke jak w 1920 x 1080p czyli xxxl
+    top: 51.7%;
+
+    @media (max-height: 1080px) {
+      top: 48%;
+    }
+  }
+
+  @include mq(xxxl) {
+    top: 49.6%;
+
+    @media (min-height: 1050px) {
+      // tutaj zaadresowałem 1080 full screen
+      top: 53.1%;
+    }
+
+    @media (min-height: 1195px) {
+      top: 51.7%;
+    }
+  }
+
+  @media (max-width: 1680px) {
+    left: 20.5%;
+
+    @media (min-height: 1045px) {
+      top: 52%;
+    }
+  }
+
+  @include mq(xxl) {
+    left: 14.5%;
+
+    @media (min-height: 750px) {
+      top: 45.1%;
+    }
+
+    @media (min-height: 895px) {
+      top: 48%;
+    }
+
+    @media (min-height: 1050px) {
+      top: 51%;
+    }
+  }
+
+  @media (max-width: 1536px) {
+    top: 46%;
+    width: 395px;
+    height: 325px;
+
+    @media (min-height: 850px) {
+      top: 50%;
+    }
+  }
+
+  @include mq(big) {
+    top: 48%;
+
+    @media (min-height: 895px) {
+      top: 51.5%;
+    }
+
+    @media (min-height: 1040px) {
+      top: 55%;
+    }
+  }
+
+  @include mq(xl) {
+    left: 14.6%;
+    top: 47%;
+    width: 360px;
+    height: 300px;
+
+    @media (min-height: 765px) {
+      top: 53%;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    top: 46%;
+
+    @media (min-height: 575px) {
+      top: 42%;
+    }
+
+    @media (min-height: 575px) {
+      top: 42%;
+    }
+
+    @media (min-height: 625px) {
+      top: 46%;
+    }
+
+    @media (min-height: 655px) {
+      top: 47%;
+    }
+
+    @media (min-height: 715px) {
+      top: 51%;
+    }
+
+    @media (min-height: 799px) {
+      top: 52%;
+    }
+
+    @media (min-height: 815px) {
+      top: 51%;
+      height: 340px;
+    }
+
+    @media (min-height: 880px) {
+      top: 52%;
+    }
+
+    @media (min-height: 955px) {
+      top: 55%;
+    }
+
+    @media (min-height: 1020px) {
+      top: 57%;
+    }
+  }
+
+  @media (max-width: 1152px) {
+    left: 12.6%;
+
+    @media (min-height: 750px) {
+      top: 52%;
+    }
+
+    @media (min-height: 860px) {
+      top: 53%;
+    }
+  }
+
+  @include mq(large) {
+    width: 300px;
+    height: 300px;
+    top: 45%;
+
+    @media (min-height: 760px) {
+      top: 52%;
+    }
+  }
+
+  @include mq(small) {
+    visibility: hidden;
+    display: none;
+  }
+
+  /* @include mq(xs) {
+
+        top: 450px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 345px;
+        height: 370px;
+    }
+
+    @include mq(xxs) {
+
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 330px;
+        height: 360px;
+    }*/
+
+  &--Hide {
+    will-change: opacity;
+    animation: BoardZnika 1.4s;
+    animation-fill-mode: forwards;
+  }
+
+  &--Discover {
+    will-change: opacity;
+    animation: BoardPojawia 1.4s;
+    animation-fill-mode: backwards;
+  }
+}
+
+.DescryptionBtn {
+  @include mq(xs) {
+    height: $main-spacing + 6;
+  }
+
+  @include mq(xxs) {
+    height: $main-spacing + 6;
+  }
+
+  width: $width-btn;
+  height: $main-spacing;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(0%, 50%);
+  cursor: help;
+  z-index: 2; //znika D pod kropka 1 juz wystarcza ...
+  border-right: none;
+}
+
+.DescryptionBtn__P {
+
+  // display: inline-block;
+  @include mq(xs) {
+    font-size: 0.9rem;
+    transform: translate(-40%, -50%);
+  }
+
+  @include mq(xxs) {
+    font-size: 0.9rem;
+    transform: translate(-40%, -50%);
+  }
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  font-family: $font-mont;
+  color: var(--color-white);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: 0.3s;
+
+  & span {
+    color: rgba(0,
+        0,
+        0,
+        0); //alpha po to żęby D tam było ale nie widoczne dla utrzymania proporcji contentu
+  }
+}
+
+.DescryptionBtn__Span {
+  @include mq(xs) {
+    left: 19%;
+    font-size: 1.4rem;
+  }
+
+  @include mq(xxs) {
+    left: 19%;
+    font-size: 1.4rem;
+  }
+
+  font-size: 1rem;
+  font-family: $font-mont;
+  color: var(--color-white);
+  font-weight: 700;
+  position: absolute;
+  left: 18%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  transition: 0.3s;
+}
+
+.DescryptionBtn__Border {
+  @include mq(xs) {
+    height: $main-spacing + 2;
+  }
+
+  @include mq(xxs) {
+    height: $main-spacing + 2;
+  }
+
+  width: $width-btn;
+  height: $main-spacing - 4;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  border: 1px dotted rgba(255, 255, 255, 0.2);
+  border-radius: $border-radius-min;
+  border-right: none;
+  transition: 0.3s;
+}
+
+.DescryptionBtn:hover .DescryptionBtn__P {
+  letter-spacing: 0px;
+  color: var(--color-black);
+}
+
+.DescryptionBtn:hover .DescryptionBtn__P.Pro {
+  letter-spacing: 0px;
+  color: var(--color-white);
+}
+
+.DescryptionBtn:hover .DescryptionBtn__Span {
+  @include mq(xs) {
+    left: 29%;
+  }
+
+  @include mq(xxs) {
+    left: 29%;
+  }
+
+  color: var(--color-black);
+  left: 27%;
+}
+
+.DescryptionBtn:hover .DescryptionBtn__Span.Pro {
+  color: rgb(255, 255, 255);
+}
+
+.DescryptionBtn:hover .DescryptionBtn__Border {
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+.DescryptionBtn.Pro:hover .DescryptionBtn__Border {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.Info {
+  // visibility: hidden;
+
+  @media (max-width: 1536px) {
+    clip-path: circle(2.8% at 76.1% 6.1%);
+  }
+
+  @include mq(xl) {
+    clip-path: circle(2.8% at 73.7% 6.7%);
+  }
+
+  @media (max-width: 1280px) {
+    clip-path: circle(2.8% at 73.7% 6.7%);
+
+    @media (min-height: 815px) {
+      clip-path: circle(2.8% at 73.7% 5.9%);
+    }
+  }
+
+  @include mq(large) {
+    clip-path: circle(3% at 68.6% 6.7%);
+  }
+
+  @include mq(xs) {
+    clip-path: circle(4% at 73% 7.2%);
+  }
+
+  @include mq(xxs) {
+    clip-path: circle(4% at 71.5% 7.1%);
+  }
+
+  @extend .Board;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  background-color: var(--color-main1);
+  background-size: cover;
+  clip-path: circle(2.4% at 78.5% 5.5%);
+  border: solid 1px var(--color-main3);
+  border-top: none;
+  border-right: none;
+  transition: background-color 500ms ease-in-out,
+  clip-path 500ms ease-in-out;
+  transform: translate(0, 0);
+
+  &__Naglowek {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 20%;
+  }
+
+  &__H2 {
+    @media (max-width: 1536px) {
+      font-size: 2.6rem;
+    }
+
+    @include mq(xl) {
+      font-size: 2rem;
+    }
+
+    @include mq(large) {
+      font-size: 1.8rem;
+      left: 6.1%;
+      top: 57%;
+    }
+
+    @include mq(xs) {
+      font-size: 2.4rem;
+    }
+
+    @include mq(xxs) {
+      font-size: 2.4rem;
+    }
+
+    display: block;
+    font-size: 2.8rem;
+    font-family: $font-mont;
+    color: var(--color-black);
+    font-weight: 600;
+    text-align: left;
+    position: absolute;
+    left: 4.5%;
+    top: 50%;
+    transform: translate(0%, -50%);
+
+    &-Span {
+      @media (max-width: 1536px) {
+        font-size: 1.3rem;
+      }
+
+      @include mq(xl) {
+        font-size: 1.2rem;
+        transform: translateY(-0.2rem);
+      }
+
+      @include mq(large) {
+        font-size: 1.1rem;
+      }
+
+      @include mq(xs) {
+        font-size: 1.2rem;
+        line-height: 1.3;
+      }
+
+      @include mq(xxs) {
+        font-size: 1.2rem;
+        line-height: 1.3;
+      }
+
+      display: inline-block;
+      font-size: 1.5rem;
+      font-family: $font-mont;
+      font-weight: 500;
+      color: var(--color-black);
+      transform: translateY(-0.3rem);
+      margin-left: 5px;
+    }
+  }
+
+  &__Artykul {
+    @media (max-width: 1280px) {
+      @media (min-height: 815px) {
+        top: 5px;
+      }
+    }
+
+    @include mq(large) {
+      top: 12px;
+      left: 5px;
+    }
+
+    @include mq(xs) {
+      padding-top: 20%;
+      padding-bottom: 20%;
+    }
+
+    @include mq(xxs) {
+      padding-top: 20%;
+      padding-bottom: 20%;
+    }
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 15%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 15%;
+
+    &-P {
+      @media (max-width: 1536px) {
+        font-size: 1.2rem;
+      }
+
+      @include mq(xl) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+      }
+
+      @media (max-width: 1280px) {
+        @media (min-height: 815px) {
+          font-size: 1.2rem;
+        }
+      }
+
+      @include mq(large) {
+        font-size: 1.1rem;
+        line-height: 1.1;
+      }
+
+      @include mq(xs) {
+        font-size: 1.1rem;
+      }
+
+      @include mq(xxs) {
+        font-size: 1.1rem;
+      }
+
+      font-size: 1.4rem;
+      font-family: $font-source;
+      color: var(--color-black);
+      line-height: 1.3;
+      text-align: left;
+      font-weight: 500;
+    }
+  }
+}
+
+.DescryptionBtn:hover+.Info {
+  background-color: var(--color-main2);
+  background-image: linear-gradient(to top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(20, 20, 20, 0.6) 10%,
+      rgba(25, 25, 25, 0.75) 27%,
+      var(--color-main1A) 48%,
+      var(--color-main1) 75%,
+      #ff7700e5 97%),
+    url("../assets/lawa.webp");
+  will-change: clip-path;
+  clip-path: circle(70%);
+}
+
+.Button {
+  @include mq(xl) {
+    font-size: 6rem;
+  }
+
+  @include mq(xs) {
+    display: none;
+    visibility: hidden;
+  }
+
+  @include mq(xxs) {
+    display: none;
+    visibility: hidden;
+  }
+
+  user-select: none;
+  font-size: 7.2rem;
+  font-family: $font-audio;
+  color: rgb(255, 255, 255);
+  // line-height: .8; ????
+  text-align: left;
+  text-shadow: 0px var(--arrow-shadow) 6px rgba(0, 0, 0, 0.4);
+
+  cursor: pointer;
+  font-weight: 100;
+  transform: skew(-5deg, -1.2deg);
+
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%) rotateZ(0);
+  transition: 0.3s;
+
+  z-index: 2;
+
+  &:hover {
+    text-shadow: 0px var(--arrow-shadow-hover) 6px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.Button2 {
+  @include mq(xl) {
+    font-size: 6rem;
+  }
+
+  @include mq(xs) {
+    visibility: hidden;
+    display: none;
+  }
+
+  @include mq(xxs) {
+    visibility: hidden;
+    display: none;
+  }
+
+  visibility: hidden;
+  display: none;
+  user-select: none;
+  font-size: 7.2rem;
+  font-family: $font-audio;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  text-shadow: 0px var(--arrow-shadowP) 6px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  font-weight: 100;
+  transform: skew(-5deg, -1.2deg);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%) rotateZ(0deg);
+  transition: 0.5s;
+  z-index: 2;
+  opacity: 0;
+
+  &:hover {
+    text-shadow: 0px var(--arrow-shadow-hoverP) 6px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.visible {
+  visibility: visible;
+  display: block;
+}
+
+////////////////////////////////////////////////////////////////////////////////////---------------------------------ARTYKUL------------------------------------////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.Article {
+  @extend .Board;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(0deg,
+      $color-grey1 0%,
+      $color-grey1 70%,
+      $color-grey2 85%,
+      $color-grey3 98%);
+  border: solid 1px lighten($color-grey1, 20%);
+  border-top: none;
+  border-right: none;
+  transform: translate(0, 0);
+
+  &__TytulBoczny {
+    @include mq(ultra) {
+      top: 48%;
+    }
+
+    @include mq(xxxl) {
+      top: 50%;
+
+      @media (min-height: 1079px) {
+        top: 49%;
+      }
+    }
+
+    @include mq(xl) {
+      top: 48%;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 1280px) {
+      top: 55%;
+
+      @media (min-height: 575px) {
+        top: 49%;
+      }
+
+      @media (min-height: 715px) {
+        top: 50%;
+      }
+
+      @media (min-height: 815px) {
+        top: 50%;
+        font-size: 1.4rem;
+      }
+
+      @media (min-height: 1020px) {
+        top: 50%;
+      }
+    }
+
+    @include mq(large) {
+      letter-spacing: 2px;
+      font-size: 1.1rem;
+    }
+
+    @include mq(xs) {
+      left: 20%;
+      top: 100%;
+      transform: translate(0, 10%);
+      font-size: 1.2rem;
+    }
+
+    @include mq(xxs) {
+      left: 20%;
+      top: 100%;
+      transform: translate(0, 10%);
+      font-size: 1.2rem;
+    }
+
+    position: absolute;
+    left: -($main-spacing / 1.2);
+    top: 53%;
+    font-size: 1.4rem;
+    font-family: $font-audio;
+    color: var(--color-main4);
+    font-weight: 300;
+    letter-spacing: 1px;
+    transform: translate(-50%, -50%) rotatez(-90deg);
+
+    &-B {
+      @include mq(xl) {
+        font-size: 1.2rem;
+      }
+
+      @media (max-width: 1280px) {
+        @media (min-height: 815px) {
+          font-size: 1.3rem;
+        }
+      }
+
+      @include mq(xs) {
+        font-size: 1.4rem;
+      }
+
+      @include mq(xxs) {
+        font-size: 1.4rem;
+      }
+
+      left: 20%;
+      top: 100%;
+      transform: translate(0, 0%);
+      letter-spacing: 2px;
+      font-size: 1.5rem;
+      font-family: $font-audio;
+    }
+  }
+
+  &__TytulBoczny-Pro {
+    @include mq(ultra) {
+      top: 48%;
+    }
+
+    @include mq(xxxl) {
+      top: 50%;
+
+      @media (min-height: 1079px) {
+        top: 49%;
+      }
+    }
+
+    @include mq(xl) {
+      top: 48%;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 1280px) {
+      top: 55%;
+
+      @media (min-height: 575px) {
+        top: 49%;
+      }
+
+      @media (min-height: 715px) {
+        top: 50%;
+      }
+
+      @media (min-height: 815px) {
+        top: 50%;
+        font-size: 1.4rem;
+      }
+
+      @media (min-height: 1020px) {
+        top: 50%;
+      }
+    }
+
+    @include mq(large) {
+      letter-spacing: 2px;
+      font-size: 1.1rem;
+    }
+
+    @include mq(xs) {
+      left: 20%;
+      top: 100%;
+      transform: translate(0, 10%);
+      font-size: 1.2rem;
+    }
+
+    @include mq(xxs) {
+      left: 20%;
+      top: 100%;
+      transform: translate(0, 10%);
+      font-size: 1.2rem;
+    }
+
+    position: absolute;
+    left: -($main-spacing / 1.2);
+    top: 53%;
+    font-size: 1.4rem;
+    font-family: $font-audio;
+    color: var(--color-main4);
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: 0.4s;
+    transform: translate(-50%, -50%) rotatez(-90deg);
+
+    &-B {
+      @include mq(xl) {
+        font-size: 1.2rem;
+      }
+
+      @media (max-width: 1280px) {
+        @media (min-height: 815px) {
+          font-size: 1.3rem;
+        }
+      }
+
+      @include mq(xs) {
+        font-size: 1.4rem;
+      }
+
+      @include mq(xxs) {
+        font-size: 1.4rem;
+      }
+
+      left: 20%;
+      top: 100%;
+      transform: translate(0, 0%);
+      letter-spacing: 2px;
+      font-size: 1.5rem;
+      font-family: $font-audio;
+    }
+  }
+
+  &__Naglowek {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 20%;
+  }
+
+  &__H2 {
+    @media (max-width: 1536px) {
+      font-size: 2.6rem;
+    }
+
+    @include mq(xl) {
+      font-size: 2rem;
+    }
+
+    @include mq(large) {
+      font-size: 1.8rem;
+      left: 6.1%;
+      top: 57%;
+    }
+
+    @include mq(xs) {
+      font-size: 2.4rem;
+    }
+
+    @include mq(xxs) {
+      font-size: 2.4rem;
+    }
+
+    display: block;
+    font-size: 2.8rem;
+    font-family: $font-mont;
+    color: var(--color-white);
+    font-weight: 600;
+    text-align: left;
+    position: absolute;
+    left: 4.5%;
+    top: 50%;
+    transform: translate(0%, -50%);
+
+    &-Span {
+      @media (max-width: 1536px) {
+        font-size: 1.3rem;
+      }
+
+      @include mq(xl) {
+        transform: translateY(-0.2rem);
+        font-size: 1.2rem;
+      }
+
+      @include mq(large) {
+        font-size: 1.1rem;
+      }
+
+      @include mq(xs) {
+        font-size: 1.2rem;
+      }
+
+      @include mq(xxs) {
+        font-size: 1.2rem;
+      }
+
+      display: inline-block;
+      font-size: 1.5rem;
+      font-family: $font-mont;
+      font-weight: 500;
+      color: var(--color-white);
+      transform: translateY(-0.3rem);
+      margin-left: 5px;
+    }
+  }
+
+  &__Overflow {
+    @include mq(xs) {
+      left: 50%;
+      top: 5%;
+    }
+
+    @include mq(xxs) {
+      top: 5%;
+      left: 50%;
+    }
+
+    @extend .Board;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden; //FIXME:
+  }
+
+  &__Overflow-Pro {
+    @include mq(xs) {
+      left: 50%;
+      top: 5%;
+    }
+
+    @include mq(xxs) {
+      top: 5%;
+      left: 50%;
+    }
+
+    @extend .Board;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    overflow: hidden; //FIXME:
+  }
+
+  &__Artykul {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include mq(xs) {
+      padding-top: 20%;
+      padding-bottom: 20%;
+    }
+
+    @include mq(xxs) {
+      padding-top: 20%;
+      padding-bottom: 20%;
+    }
+
+    width: 250%;
+    height: 100%;
+    position: absolute;
+    // border: 1px solid greenyellow;
+
+    &-P {
+      &--Left {
+        will-change: transform, opacity;
+        animation: LeftToRight 0.7s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+      }
+
+      &--Right {
+        will-change: transform, opacity;
+        animation: RightToLeft 0.7s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+      }
+
+      @media (max-width: 1536px) {
+        font-size: 1.2rem;
+      }
+
+      @include mq(xl) {
+        line-height: 1.2;
+        font-size: 1.2rem;
+      }
+
+      @media (max-width: 1280px) {
+        @media (min-height: 815px) {
+          font-size: 1.2rem;
+          top: 5px;
+          left: -1px;
+        }
+      }
+
+      @include mq(large) {
+        font-size: 1.1rem;
+        line-height: 1.1;
+        top: 12px;
+        left: 5px;
+      }
+
+      @include mq(xs) {
+        font-size: 1.1rem;
+      }
+
+      @include mq(xxs) {
+        font-size: 1.1rem;
+      }
+
+      font-size: 1.4rem;
+      font-family: $font-source;
+      color: var(--color-white);
+      line-height: 1.3;
+      text-align: left;
+      position: absolute;
+      padding: 6% 2% 5% 2%;
+      // margin-bottom: 10px;
+      left: 0;
+      top: 0;
+      column-count: 2;
+      // column-width: 250px;
+      column-gap: 28%;
+      transform: translateX(0%);
+      font-weight: 400;
+    }
+  }
+
+  &__Stopka {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    // background-color: slategrey;
+  }
+
+  &__Corner {
+    // height: 10px;
+    position: absolute;
+    bottom: 5px;
+    left: 7px;
+    width: 30%;
+    fill: rgba(255, 255, 255, 0.15);
+  }
+
+  &__Btn {
+    @media (max-width: 1536px) {
+      height: $main-spacing - 6px;
+    }
+
+    @include mq(xl) {
+      height: $main-spacing - 7px;
+    }
+
+    @include mq(large) {
+      height: $main-spacing - 9px;
+      left: 33%;
+    }
+
+    @include mq(xs) {
+      // visibility: hidden;
+    }
+
+    @include mq(xxs) {
+      // visibility: hidden;
+    }
+
+    position: absolute;
+    width: $main-spacing / 2;
+    height: $main-spacing - 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transform: skew(32deg);
+    left: 32%;
+    bottom: 8px;
+    cursor: pointer;
+    transition: 0.15s;
+    z-index: 2;
+  }
+
+  &__Btn-B {
+    @extend .Article__Btn;
+    left: 36%;
+
+    @include mq(large) {
+      left: 38%;
+    }
+  }
+
+  &__Btn-C {
+    @extend .Article__Btn;
+    left: 40%;
+
+    @include mq(large) {
+      left: 43%;
+    }
+  }
+
+  &__Btn-D {
+    @extend .Article__Btn;
+    left: 44%;
+
+    @include mq(large) {
+      left: 48%;
+    }
+  }
+
+  &__Btn-E {
+    @extend .Article__Btn;
+    left: 48%;
+
+    @include mq(large) {
+      left: 53.3%;
+    }
+  }
+
+  &__Btn--inactive {
+    @extend .Article__Btn;
+    background-color: rgba(255, 255, 255, 0.3);
+
+    &:hover {
+      width: $main-spacing / 1.5;
+      height: $main-spacing / 2;
+      background-color: var(--color-main4);
+      opacity: 0.5;
+
+      @media (max-width: 1536px) {
+        height: $main-spacing / 3;
+      }
+    }
+  }
+
+  &__Btn--active {
+    @extend .Article__Btn;
+
+    background-color: var(--color-main4);
+  }
+}
+
+#Article__Artykul-Two {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+
+  //background-color: rgba(255, 255, 255, .2); //FIXME:
+
+  width: 258%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  @include mq(xs) {
+    padding-top: 20%;
+    padding-bottom: 20%;
+  }
+
+  @include mq(xxs) {
+    padding-top: 20%;
+    padding-bottom: 20%;
+  }
+}
+
+#Article__Artykul-Pro {
+  //id miałem wewnatrz klasy artykulu ... dosc dziwnie czemu było id ??? cos z java
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+
+  //background-color: rgba(255, 255, 255, .2); //FIXME:
+
+  width: 750%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  @include mq(xs) {
+    padding-top: 20%;
+    padding-bottom: 20%;
+  }
+
+  @include mq(xxs) {
+    padding-top: 20%;
+    padding-bottom: 20%;
+  }
+}
+
+.RightMove {
+  will-change: transform;
+  animation: RightMoveArtykul 0.7s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.LeftMove {
+  will-change: transform;
+  animation: LeftMoveArtykul 0.7s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+#Article__Artykul-Pro-Two {
+  @media (max-width: 1536px) {
+    font-size: 1.2rem;
+  }
+
+  @include mq(xl) {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  @media (max-width: 1280px) {
+    @media (min-height: 815px) {
+      font-size: 1.2rem;
+      top: 5px;
+      left: -1px;
+    }
+  }
+
+  @include mq(large) {
+    font-size: 1.1rem;
+    line-height: 1.1;
+    top: 12px;
+    left: 5px;
+  }
+
+  @include mq(xs) {
+    font-size: 1.1rem;
+  }
+
+  @include mq(xxs) {
+    font-size: 1.1rem;
+  }
+
+  font-size: 1.4rem;
+  font-family: $font-source;
+  color: var(--color-white);
+  line-height: 1.3;
+  text-align: left;
+  position: relative;
+  padding: 5% 2% 3% 2%;
+  // transform: translateX(0%);
+  font-weight: 400;
+  width: 37%;
+  height: 100%;
+  display: block;
+}
+
+#Article__Artykul-Pro-Two-B {
+  @extend #Article__Artykul-Pro-Two;
+}
+
+#Article__Artykul-Pro-A {
+  @media (max-width: 1536px) {
+    font-size: 1.2rem;
+  }
+
+  @include mq(xl) {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  @media (max-width: 1280px) {
+    @media (min-height: 815px) {
+      font-size: 1.2rem;
+      top: 5px;
+      left: -1px;
+    }
+  }
+
+  @include mq(large) {
+    font-size: 1.1rem;
+    line-height: 1.1;
+    top: 12px;
+    left: 5px;
+  }
+
+  @include mq(xs) {
+    font-size: 1.1rem;
+  }
+
+  @include mq(xxs) {
+    font-size: 1.1rem;
+  }
+
+  font-size: 1.4rem;
+  font-family: $font-source;
+  color: var(--color-white);
+  line-height: 1.3;
+  text-align: left;
+  position: relative;
+  padding: 2% 0.66% 2% 0.66%;
+  // transform: translateX(0%);
+  font-weight: 400;
+  width: 13.3%;
+  height: 100%;
+  display: block;
+}
+
+.AnimoOpacity {
+  will-change: opacity;
+  animation: opacityAnimo 0.7s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+#Article__Artykul-Pro-B {
+  @extend #Article__Artykul-Pro-A;
+}
+
+#Article__Artykul-Pro-C {
+  @extend #Article__Artykul-Pro-A;
+}
+
+#Article__Artykul-Pro-D {
+  @extend #Article__Artykul-Pro-A;
+}
+
+#Article__Artykul-Pro-E {
+  @extend #Article__Artykul-Pro-A;
+}
+
+.Canvas {
+  @media (max-width: 1536px) {
+    width: 395px;
+    height: 325px;
+  }
+
+  @include mq(xl) {
+    width: 360px;
+    height: 300px;
+  }
+
+  @media (max-width: 1280px) {
+    @media (min-height: 815px) {
+      height: 340px;
+    }
+  }
+
+  @include mq(large) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @include mq(xs) {
+    width: 345px;
+    height: 370px;
+    transform: skew(-1.2deg, -1.2deg);
+  }
+
+  @include mq(xxs) {
+    width: 330px;
+    height: 360px;
+    transform: skew(-1.2deg, -1.2deg);
+  }
+
+  // visibility: hidden;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: $width-board;
+  height: $height-board;
+  border-radius: $border-radius;
+  transform: skew(-2deg, -2deg);
+  background-image: linear-gradient(0deg,
+    var(--color-main4) 0%,
+    var(--color-main1) 100%);
+  transition: 0.3s;
+
+  &--Hide {
+    display: none;
+  }
+
+  &--Discover {
+    display: block;
+  }
+}
+
+.CanvasA {
+  @include mq(xs) {
+    left: 3px;
+    bottom: 3px;
+    transform: skew(-1.5deg, -1.5deg);
+  }
+
+  @include mq(xxs) {
+    left: 3px;
+    bottom: 3px;
+    transform: skew(-1.5deg, -1.5deg);
+  }
+
+  @extend .Canvas;
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  border-radius: $border-radius+2;
+  transform: skew(-3deg, -3deg);
+  background-image: linear-gradient(0deg,
+    rgba(0, 0, 0, 0) 0%,
+    var(--color-main1) 100%);
+  box-shadow: inset 1px 1px 4px rgba(255, 255, 255, 0.7),
+  inset -1px -1px 4px rgba(0, 0, 0, 0.8); // --------------------bevel & emboss//
+  opacity: 0.55;
+  // z-index: -1;
+}
+
+.CanvasB {
+  @include mq(xs) {
+    left: 5px;
+    bottom: 5px;
+    transform: skew(-2deg, -2deg);
+  }
+
+  @include mq(xxs) {
+    left: 5px;
+    bottom: 5px;
+    transform: skew(-2deg, -2deg);
+  }
+
+  @extend .CanvasA;
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  border-radius: $border-radius+4;
+  transform: skew(-4deg, -4deg);
+  background-image: linear-gradient(0deg,
+    rgba(0, 0, 0, 0) 0%,
+    var(--color-main1) 100%);
+  box-shadow: inset 2px 2px 6px rgba(255, 255, 255, 0.7),
+  inset -2px -2px 6px rgba(0, 0, 0, 0.8); // --------------------bevel & emboss//
+  opacity: 0.55;
+  // z-index: -2;
+}
+
+.CanvasShadow {
+  @extend .Canvas;
+  box-shadow: -15px 18px 18px 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-light-grey);
+  background-image: none;
+  // z-index: -3;
+}
+
+//---------------------------------------------------------Podstrony-----------------------------------------------------------------------------------------------------------------------------
+
+.BoardF {
+  z-index: 1;
+  position: absolute;
+  left: 20.8%;
+  top: -40px;
+  width: $width-board;
+  height: $height-board;
+  border-radius: $border-radius;
+
+  @include mq(ultra) {
+    //top: 51.7%; zgrywam strzalke jak w 1920 x 1080p czyli xxxl
+    top: -40px;
+
+    @media (max-height: 1080px) {
+      top: -40px;
+    }
+  }
+
+  @include mq(xxxl) {
+    top: -60px;
+
+    @media (min-height: 1050px) {
+      // tutaj zaadresowałem 1080 full screen
+      top: -38px;
+    }
+
+    @media (min-height: 1195px) {
+      top: -54px;
+    }
+  }
+
+  @media (max-width: 1680px) {
+    top: -70px;
+    left: 20.5%;
+
+    @media (min-height: 1045px) {
+      top: -50px;
+    }
+  }
+
+  @include mq(xxl) {
+    left: 14.5%;
+
+    @media (min-height: 750px) {
+      top: -75px;
+    }
+
+    @media (min-height: 895px) {
+      top: -62px;
+    }
+
+    @media (min-height: 1050px) {
+      top: -60px;
+    }
+  }
+
+  @media (max-width: 1536px) {
+    top: -67px;
+    width: 395px;
+    height: 325px;
+
+    @media (min-height: 850px) {
+      top: -45px;
+    }
+  }
+
+  @include mq(big) {
+    top: -53px;
+
+    @media (min-height: 895px) {
+      top: -30px;
+    }
+  }
+
+  @include mq(xl) {
+    left: 14.6%;
+    top: -65px;
+    width: 360px;
+    height: 300px;
+
+    @media (min-height: 765px) {
+      top: -46px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    @media (min-height: 575px) {
+      top: -86px;
+    }
+
+    @media (min-height: 625px) {
+      top: -69px;
+    }
+
+    @media (min-height: 655px) {
+      top: -68px;
+    }
+
+    @media (min-height: 715px) {
+      top: -42px;
+    }
+
+    @media (min-height: 799px) {
+      top: -48px;
+    }
+
+    @media (min-height: 815px) {
+      top: -56px;
+      height: 340px;
+    }
+
+    @media (min-height: 880px) {
+      top: -52px;
+    }
+
+    @media (min-height: 955px) {
+      top: -58px;
+    }
+
+    @media (min-height: 1020px) {
+      top: -50px;
+    }
+  }
+
+  @media (max-width: 1152px) {
+    left: 12.6%;
+    top: -51px;
+
+    @media (min-height: 860px) {
+      top: -61px;
+    }
+  }
+
+  @include mq(large) {
+    width: 300px;
+    height: 300px;
+    top: -81px;
+
+    @media (min-height: 760px) {
+      top: -46px;
+    }
+  }
+
+  @include mq(small) {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.LineHelp {
+  //linia pomocnicza pozioma ...
+  //FIXME:
+  display: none;
+  position: absolute;
+  left: 0;
+  top: -40px;
+  height: 1px;
+  border-top: 1px dashed rgb(153, 255, 0);
+  width: 100%;
+  z-index: 2;
+
+  @include mq(ultra) {
+    //top: 51.7%; zgrywam strzalke jak w 1920 x 1080p czyli xxxl
+    top: -40px;
+
+    @media (max-height: 1080px) {
+      top: -40px;
+    }
+  }
+
+  @include mq(xxxl) {
+    top: -60px;
+
+    @media (min-height: 1050px) {
+      // tutaj zaadresowałem 1080 full screen
+      top: -38px;
+    }
+
+    @media (min-height: 1195px) {
+      top: -54px;
+    }
+  }
+
+  @media (max-width: 1680px) {
+    top: -70px;
+    left: 20.5%;
+
+    @media (min-height: 1045px) {
+      top: -50px;
+    }
+  }
+
+  @include mq(xxl) {
+    left: 14.5%;
+
+    @media (min-height: 750px) {
+      top: -75px;
+    }
+
+    @media (min-height: 895px) {
+      top: -62px;
+    }
+
+    @media (min-height: 1050px) {
+      top: -60px;
+    }
+  }
+
+  @media (max-width: 1536px) {
+    top: -67px;
+    width: 395px;
+    height: 325px;
+
+    @media (min-height: 850px) {
+      top: -45px;
+    }
+  }
+
+  @include mq(big) {
+    top: -53px;
+
+    @media (min-height: 895px) {
+      top: -30px;
+    }
+  }
+
+  @include mq(xl) {
+    left: 14.6%;
+    top: -65px;
+    width: 360px;
+    height: 300px;
+
+    @media (min-height: 765px) {
+      top: -46px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    @media (min-height: 575px) {
+      top: -86px;
+    }
+
+    @media (min-height: 625px) {
+      top: -69px;
+    }
+
+    @media (min-height: 655px) {
+      top: -68px;
+    }
+
+    @media (min-height: 715px) {
+      top: -42px;
+    }
+
+    @media (min-height: 799px) {
+      top: -48px;
+    }
+
+    @media (min-height: 815px) {
+      top: -56px;
+      height: 340px;
+    }
+
+    @media (min-height: 880px) {
+      top: -52px;
+    }
+
+    @media (min-height: 955px) {
+      top: -58px;
+    }
+
+    @media (min-height: 1020px) {
+      top: -50px;
+    }
+  }
+
+  @media (max-width: 1152px) {
+    left: 12.6%;
+    top: -51px;
+
+    @media (min-height: 860px) {
+      top: -61px;
+    }
+  }
+
+  @include mq(large) {
+    width: 300px;
+    height: 300px;
+    top: -81px;
+
+    @media (min-height: 760px) {
+      top: -46px;
+    }
+  }
+
+  @include mq(small) {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.InfoF {
+  @extend .Info;
+}
+
+.DescryptionBtn:hover+.InfoF {
+  background-color: var(--color-main2);
+  background-image: linear-gradient(to top,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.2) 15%,
+      rgba(25, 25, 25, 0.3) 27%,
+      #00d9ffda 60%,
+      #00d9ffda 80%,
+      #0066ff 97%),
+    url("../assets/lod.webp");
+  will-change: clip-path;
+  clip-path: circle(70%);
+}
+
+//-----------------------------------------------------------Praktyka------------//
+
+.BoardP {
+  @extend .BoardF;
+
+  .InfoP {
+    @extend .Info;
+  }
+
+  .DescryptionBtn:hover+.InfoP {
+    background-color: var(--color-main2);
+    background-image: linear-gradient(to top,
+        rgba(25, 25, 25, 0.7) 3%,
+        rgba(25, 25, 25, 0.4) 10%,
+        rgba(25, 25, 25, 0.4) 15%,
+        var(--color-main3) 27%,
+        var(--color-main2) 70%,
+        var(--color-main1A) 90%),
+      url("../assets/ziemiaSatur.webp");
+    will-change: clip-path;
+    clip-path: circle(70%);
+  }
+}
+
+.BoardPro {
+  @extend .BoardF;
+
+  .InfoPro {
+    @extend .Info;
+  }
+
+  .DescryptionBtn:hover+.InfoPro {
+    background-color: var(--color-main2);
+    background-image: linear-gradient(to top,
+        rgba(55, 55, 55, 0.5) 10%,
+        rgba(0, 0, 0, 0.5) 18%,
+        rgba(200, 200, 200, 0.85) 30%,
+        rgba(200, 200, 200, 0.85) 75%,
+        rgba(255, 255, 255, 0.4) 80%,
+        #005558aa 90%),
+      url("../assets/powietrze.webp");
+    will-change: clip-path;
+    clip-path: circle(70%);
+  }
+}

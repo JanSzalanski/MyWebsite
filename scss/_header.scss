@@ -1,0 +1,922 @@
+$grey-help: #8d8d8d;
+
+.GreyTop {
+  // GreyTop to div przed i poza struktura headera no ale jest tutaj zeby nie zwiekszac liczby plikow czastkowych
+
+  // visibility: hidden;
+  // opacity: .4;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 80px; //15.37
+  left: 0px;
+  top: 0px;
+  background-color: lighten($grey-help, 15%);
+  outline: solid 5px lighten($grey-help, 15%);
+  outline-offset: 2px;
+
+  @include mq(ultra) {
+    height: 185px;
+  }
+
+  @include mq(xxxl) {
+    height: 80px;
+
+    @media (min-height: 1195px) {
+      height: 185px;
+    }
+  }
+
+  @include mq(xxl) {
+    @media (min-height: 1195px) {
+      height: 150px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    // no te warunki ponizej do przeanalizowania ...
+    height: 70px;
+
+    @media (max-height: 768px) {
+      display: none;
+    }
+
+    @media (max-height: 800px) {
+      height: 85px;
+    }
+
+    @media (min-height: 805px) {
+      height: 90px;
+    }
+
+    @media (min-height: 955px) {
+      height: 95px;
+    }
+  }
+
+  &--Hide {
+    will-change: transform;
+    animation: TopZnika 2.6s;
+    animation-delay: 0.4s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  &--Discover {
+    will-change: transform;
+    animation: TopPojawia 1.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+  }
+}
+
+.Header {
+  // visibility: hidden;
+  position: fixed; //musiałem użyć bo użycie wcześniej w kodzie html MainPicture i GreyTop powoduje zakrywanie headera bez position i z-index ...
+  z-index: 2;
+  width: 100%;
+
+  @include mq(ultra) {
+    position: absolute;
+  }
+
+  @include mq(xxxl) {
+    @media (min-height: 1081px) {
+      position: absolute;
+    }
+  }
+}
+
+.Header--Open {
+  will-change: transform;
+  animation: NaglowekOut 2.2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.Header--Close {
+  will-change: transform;
+  animation: NaglowekDown 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: backwards;
+}
+
+.Header__Logo {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr minmax(640px, 1fr) 1fr;
+  border-bottom: solid 2px var(--color-main1);
+
+  @include mq(small) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.Header__Logo-Left {
+  position: relative; //bo orientuje małą nazwe szalanski.eu po rozjechaniu na ten element....
+  width: 100%;
+  max-height: 16.42vh;
+  background-color: var(--color-dark-grey);
+
+  @include mq(ultra) {
+    max-height: 192px;
+  }
+
+  @include mq(small) {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  & p {
+    color: var(--color-black);
+    font-size: 1.4rem;
+    font-family: $font-baloo;
+    margin: 20px 20px; // to do rozważenia i zamiany na wrtośći
+  }
+
+  &-H3 {
+    position: absolute;
+    bottom: -1px;
+    left: 13.3vw;
+    font-size: 1.4rem;
+    font-family: $font-baloo;
+    font-weight: 400;
+    color: var(--color-white);
+    opacity: 0;
+    letter-spacing: 0.5px;
+    // z-index: 2; // bo w dziwnych rodzialkach nakrywa to Header__Logog-Middle zakomentowane ....
+
+    @include mq(ultra) {
+      left: 10vw;
+    }
+
+    @include mq(xxxl) {
+      left: 13.3vw;
+    }
+
+    @media (max-width: 1680px) {
+      left: 7.1vw;
+    }
+
+    @include mq(xxl) {
+      left: 7vw;
+    }
+
+    @media (max-width: 1536px) {
+      left: 7.2vw;
+    }
+
+    @include mq(big) {
+      left: 7.2vw;
+    }
+
+    @include mq(xl) {
+      left: 1.5vw;
+    }
+
+    &--Discover {
+      will-change: opacity;
+      animation: nazwaPojawia 3.5s;
+      animation-delay: 1.5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+    }
+
+    &--Hide {
+      will-change: opacity;
+      animation: nazwaZnika 0.2s;
+      animation-timing-function: ease-in;
+      animation-fill-mode: backwards;
+    }
+  }
+}
+
+.Header__Logo-Middle {
+  position: relative;
+  height: 16.42vh;
+  width: 100%;
+  background-color: var(--color-dark-grey);
+  text-align: center;
+
+  @include mq(ultra) {
+    height: 192px;
+  }
+
+  @include mq(xxxl) {
+    height: 16.42vh;
+
+    @media (min-height: 1195px) {
+      height: 192px;
+    }
+  }
+
+  @include mq(xxl) {
+    height: 16.42vh;
+
+    @media (min-height: 750px) {
+      height: 14vh;
+    }
+  }
+
+  @include mq(xl) {
+    height: 12vh;
+  }
+
+  @include mq(xs) {
+    height: $main-spacing * 2;
+  }
+
+  &-H1 {
+    color: var(--color-white);
+    font-size: 3.6rem;
+    font-family: $font-baloo;
+    font-weight: 400;
+    letter-spacing: normal;
+
+    @include mq(ultra) {
+      line-height: 192px;
+    }
+
+    @include mq(xxxl) {
+      line-height: 16.42vh;
+
+      @media (min-height: 1195px) {
+        line-height: 192px;
+      }
+    }
+
+    @include mq(xxl) {
+      font-size: 3rem;
+      line-height: 16.42vh;
+
+      @media (min-height: 750px) {
+        line-height: 14vh;
+      }
+    }
+
+    @include mq(big) {
+      font-size: 3rem;
+    }
+
+    @include mq(xl) {
+      line-height: 12vh;
+      font-size: 2.2rem;
+    }
+
+    @include mq(small) {
+      font-size: 2.6rem;
+    }
+
+    @include mq(xs) {
+      font-size: 2rem;
+      line-height: $main-spacing * 2;
+    }
+
+    & b {
+      color: var(--color-main1);
+    }
+  }
+
+  &-H1::before,
+  &-H1::after {
+    color: rgba(255, 255, 255, 0.8);
+    content: "szalanski.eu";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    // background: black;
+    overflow: hidden;
+    top: 0;
+  }
+
+  &-H1::before {
+    clip: rect(10px, 10px, 10px, 10px);
+    left: 2px;
+    text-shadow: -2px 0 rgb(161, 2, 50);
+  }
+
+  &-H1::after {
+    clip: rect(10px, 10px, 10px, 10px);
+    left: -2px;
+    text-shadow: -2px 0 rgb(0, 174, 255);
+  }
+}
+
+.Header__Logo-Middle-Div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  font-size: 3.6rem;
+  font-family: $font-baloo;
+  font-weight: 400;
+  letter-spacing: normal;
+  cursor: pointer;
+
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+
+  @include mq(xxl) {
+    font-size: 3rem;
+  }
+
+  @include mq(big) {
+    font-size: 3rem;
+  }
+
+  @include mq(xl) {
+    font-size: 2.2rem;
+  }
+
+  @include mq(small) {
+    font-size: 2.6rem;
+  }
+}
+// Do awangardowego animowania loga do odkomentowania jeszcze w animacjach
+// .Header__Logo-Middle-Div:hover + .Header__Logo-Middle-H1::before {
+//   animation-name: glitch-animation-1;
+//   animation-duration: 2s;
+//   animation-timing-function: linear;
+//   animation-delay: 0.5s;
+//   animation-iteration-count: 1;
+//   animation-direction: reverse-alternate;
+// }
+
+// .Header__Logo-Middle-Div:hover + .Header__Logo-Middle-H1::after {
+//   animation-name: glitch-animation-2;
+//   animation-duration: 2s;
+//   animation-timing-function: linear;
+//   animation-delay: 0.5s;
+//   animation-iteration-count: 1;
+//   animation-direction: reverse-alternate;
+// }
+
+.Header__Logo-Right {
+  position: relative;
+  width: 100%;
+  max-height: 16.42vh;
+  background-color: var(--color-dark-grey);
+
+  @include mq(ultra) {
+    max-height: 192px;
+  }
+
+  @include mq(small) {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+//-----------------------------------------------------Ornamenty------------------------------------------------------------------------------------//
+
+.ornament4 {
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  width: 185px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.12);
+
+  @include mq(ultra) {
+    width: 185px;
+  }
+
+  @media (max-width: 1680px) {
+    width: 26px;
+  }
+
+  @include mq(xxl) {
+    width: 24px;
+  }
+
+  @include mq(big) {
+    width: 14px;
+  }
+
+  @include mq(xl) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.ornament3 {
+  position: absolute;
+  right: 192px;
+  bottom: 0px;
+  width: 10px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.12);
+
+  @include mq(ultra) {
+    right: 192px;
+  }
+
+  @media (max-width: 1680px) {
+    right: 35px;
+  }
+
+  @include mq(xxl) {
+    right: 32px;
+  }
+
+  @include mq(big) {
+    right: 22px;
+  }
+
+  @include mq(xl) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.ornament2 {
+  position: absolute;
+  right: 209px;
+  bottom: 0px;
+  width: 40px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.12);
+
+  @include mq(ultra) {
+    right: 209px;
+  }
+
+  @media (max-width: 1680px) {
+    right: 53px;
+  }
+
+  @include mq(xxl) {
+    right: 49px;
+  }
+
+  @include mq(big) {
+    right: 40px;
+  }
+
+  @include mq(xl) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.ornament1 {
+  position: absolute;
+  right: 255px;
+  bottom: 0px;
+  width: 120px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 10px 0px 0px 0px;
+
+  @include mq(ultra) {
+    right: 256px;
+  }
+
+  @media (max-width: 1680px) {
+    right: 101px;
+  }
+
+  @include mq(xxl) {
+    right: 96px;
+  }
+
+  @media (max-width: 1536px) {
+    right: 92px;
+  }
+
+  @include mq(big) {
+    right: 86px;
+  }
+
+  @include mq(xl) {
+    right: 0px;
+  }
+}
+
+//todo
+
+//--------------------------------------Sociale ----------------------------------------
+
+.Header__Logo-Right-Div1 {
+  position: absolute;
+  right: 6vw;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 130px; // wrzuce to do sekcji asmr i bedzie 130px
+  // transform: translate(0, -50%);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: right;
+  align-items: center;
+
+  @include mq(ultra) {
+    right: 13.3vw;
+  }
+
+  @include mq(xxxl) {
+    right: 13.3vw;
+  }
+
+  @include mq(xxl) {
+    right: 6vw;
+  }
+
+  @include mq(xl) {
+    right: 0;
+  }
+}
+
+.socialF {
+  width: 135px;
+  opacity: 0.25;
+  transition: 0.1s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+    fill: #29487d;
+  }
+
+  &:hover .st0 {
+    fill: var(--color-white);
+  }
+}
+
+.socialY {
+  width: 112px;
+  align-self: center;
+
+  opacity: 0.25;
+  transition: 0.1s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+    fill: #ff0000;
+  }
+
+  &:hover .st2 {
+    opacity: 0.8;
+    fill: var(--color-white);
+  }
+
+  &:hover .st3 {
+    opacity: 0.8;
+    fill: var(--color-balck);
+  }
+
+  &:hover .st4 {
+    opacity: 0.8;
+    fill: #232323;
+  }
+}
+
+.socialL {
+  width: 100px;
+  opacity: 0.25;
+  transition: 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+/*-----------------------------------------------------------LiniaTop------------------------------------------------ */
+
+.Menu {
+  position: absolute;
+  top: calc(16.42vh + 4px);
+  left: 0;
+  width: 100%;
+  height: $main-spacing - 6px;
+  display: grid;
+  grid-template-columns: minmax(580px, 1fr) auto 1fr;
+  // grid-auto-rows: auto; // to chyba nic nie wnosiło ???
+  background-color: var(--color-main1AA);
+
+  @include mq(ultra) {
+    top: 196px;
+  }
+
+  @include mq(xxxl) {
+    top: calc(16.42vh + 4px);
+
+    @media (min-height: 1195px) {
+      top: 196px;
+    }
+  }
+
+  @include mq(xxl) {
+    top: calc(16.42vh + 4px);
+
+    @media (min-height: 750px) {
+      top: calc(14vh + 4px);
+    }
+  }
+
+  @include mq(xl) {
+    top: calc(12vh + 4px);
+  }
+
+  @include mq(small) {
+    grid-template-columns: 1fr;
+  }
+
+  @include mq(xs) {
+    top: 44px;
+  }
+}
+
+.Menu__Left {
+  height: $main-spacing;
+  display: grid;
+  grid-template-columns: 13vw 1fr; //wartości do korekcji na GridHelper
+  background-color: var(--color-dark-grey);
+  // grid-auto-rows: $main-spacing;
+
+  @include mq(ultra) {
+    grid-template-columns: 10vw 1fr; //wartości do korekcji na GridHelper to jest margines który ma korespondować z buttonem kontakt tak jak w grid
+  }
+
+  @include mq(xxxl) {
+    grid-template-columns: 13.3vw 1fr; //wartości do korekcji na GridHelper to jest margines który ma korespondować z buttonem kontakt tak jak w grid
+  }
+
+  @media (max-width: 1680px) {
+    grid-template-columns: 6vw 1fr;
+  }
+
+  @include mq(xxl) {
+    grid-template-columns: 6vw 1fr; //wartości do korekcji na GridHelper to jest margines który ma korespondować z buttonem kontakt tak jak w grid
+  }
+
+  @include mq(xl) {
+    grid-template-columns: 1fr;
+  }
+
+  @include mq(xs) {
+    height: 80px;
+  }
+}
+
+.Menu__Left-Left {
+  //width: 100%; przecież ro robi grid ...
+  height: $main-spacing;
+  background-color: var(--color-dark-grey);
+
+  @include mq(xl) {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+/* --------------Nav------------- */
+
+/* .SMLLeft {} */
+
+.Nav {
+  //width: 100%; przecież ro robi grid ...
+  font-family: $font-mont;
+}
+
+.Nav__List {
+  width: 100%;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  @include mq(xs) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.Nav__Item {
+  width: 100%; //138px vs. 7.19vw;
+  height: $main-spacing - 4;
+  display: block;
+  text-align: left;
+  border-left-width: 1px;
+  border-left-color: var(--color-white);
+  margin-top: 2px;
+  margin-bottom: 2px;
+  /* margin-left: 20px; */
+  border-left-style: dotted;
+  background-color: var(--color-dark-grey);
+  cursor: pointer;
+
+  // * {
+  //     pointer-events: none; //helloroman myk i brak hover mi sie zrobiło ...
+  // }
+
+  &:last-child {
+    border-right-width: 1px;
+    border-right-color: var(--color-white);
+    border-right-style: dotted;
+
+    @include mq(xs) {
+      border-right: none;
+    }
+  }
+
+  @include mq(xs) {
+    border-bottom: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: var(--color-white);
+    border-left: none;
+  }
+}
+
+.Nav__Link {
+  display: block;
+  height: $main-spacing - 4;
+  text-decoration: none;
+  line-height: $main-spacing - 4;
+  padding-left: $main-spacing;
+  transition: 0.15s;
+
+  @include mq(xs) {
+    padding-left: 5px;
+  }
+
+  /* background-color: rgb(255, 0, 221); */
+  &:hover .Nav__Title {
+    color: var(--color-light-grey);
+    letter-spacing: 0px;
+  }
+}
+
+.Nav__Item--Active .Nav__Title {
+  color: var(--color-light-grey);
+}
+
+.Nav__Title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: var(--color-white);
+  text-transform: uppercase;
+  transition: 0.15s;
+}
+
+/* -----------------SMMiddle------------------- */
+
+.Menu__Middle {
+  height: $main-spacing;
+
+  @include mq(small) {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  //po raz pierwszy mam blad renderowania na firefox element po otwarciu menu przemieszcza sie 1px w dol podczas gdy powinniene byc nie ruchomy staly ... na chrome jest okey
+  //w tych dziwnych rozdzialkach sie tak dzieje tam gdzie sa inne proporcje ekranu niz 16:9 czy 16:10
+}
+
+/* -----------------SMRight------------------- */
+
+.Menu__Right {
+  //nic to nie zmienia
+  height: 5px;
+  background-color: var(--color-dark-grey);
+
+  @include mq(small) {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+// ------------------------------ zakonczenie
+
+.StripeGrey {
+  height: $main-spacing - 4px;
+  width: 15%;
+  background-color: var(--color-dark-grey);
+  position: absolute;
+  right: 0px;
+  top: 7px;
+
+  @media (max-width: 1680px) {
+    width: 10%;
+  }
+
+  @include mq(xl) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.Menu__Svg {
+  //ELEMENT TRAPEZ PROSTAKATNY PRZY MENU
+
+  height: $main-spacing;
+  width: 40px;
+  position: absolute;
+  right: 210px;
+  top: 5px;
+
+  @include mq(ultra) {
+    right: 210px;
+  }
+
+  @media (max-width: 1680px) {
+    right: 53px;
+  }
+
+  @include mq(xxl) {
+    right: 50px;
+  }
+
+  @include mq(big) {
+    right: 40px;
+  }
+
+  @include mq(xl) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.Menu__Skew {
+  //PIERWSZY KAPNIETY KWADRAT romb PRZY SVG
+
+  position: absolute;
+  right: 199px;
+  top: 5px;
+  width: $main-spacing / 1.8;
+  height: $main-spacing;
+  background-color: var(--color-main);
+  transform: skew(-30deg);
+
+  @include mq(ultra) {
+    right: 199px;
+  }
+
+  @media (max-width: 1680px) {
+    right: 40px;
+  }
+
+  @include mq(xxl) {
+    right: 38px;
+  }
+
+  @include mq(big) {
+    right: 28px;
+  }
+
+  @include mq(xl) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.Menu__SkewB {
+  // TO JASNE DRUGI WYDLURZONY Z NAPISEM
+
+  position: absolute;
+  right: -5px;
+  top: 5px;
+  width: 197px;
+  height: $main-spacing;
+  background-color: var(--color-main);
+  transform: skew(-30deg);
+  text-align: center;
+
+  @include mq(ultra) {
+    right: -5px;
+    width: 197px;
+  }
+
+  @media (max-width: 1680px) {
+    width: 37px;
+  }
+
+  @include mq(xxl) {
+    width: 35px;
+  }
+
+  @include mq(big) {
+    width: 25px;
+  }
+
+  @include mq(xl) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.Menu__SkewB h3 {
+  font-family: $font-audio;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: $main-spacing;
+  transform: skew(30deg);
+
+  @media (max-width: 1680px) {
+    display: none;
+    visibility: hidden;
+  }
+}

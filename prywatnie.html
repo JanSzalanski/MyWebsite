@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moja strona firmowo-domowa -beta</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baloo+2&family=Libre+Barcode+128+Text&family=Montserrat:wght@500;600;700;900&family=Source+Sans+Pro:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="~/../scss/main.css" />
+</head>
+
+<body>
+  <div class="WrapperBorder1"></div>
+  <div class="Wrapper">
+    <div class="GridHelper"></div>
+
+    <div class="PrywatniePicture"></div>
+
+    <div class="GreyTop"></div>
+
+    <header class="Header">
+      <section class="Header__Logo">
+        <div class="Header__Logo-Left">
+          <!--przy braku podobnej zawartości w Header__Logo-Right responsywność po 800px nie dziala rownomiernie...-->
+
+          <!-- <p>--Test-- <br>For now recomended resolution is: 1920 x 1080 px. </p> zakomentowanie h3 ponizej powoduje brak powrotu ze stref spokoju z animacja -->
+          <h3 class="Header__Logo-Left-H3">szalanski.eu</h3>
+        </div>
+
+        <div class="Header__Logo-Middle">
+          <div class="Header__Logo-Middle-Div">szalanski.eu</div>
+          <h1 class="Header__Logo-Middle-H1">szalanski<b>.</b>eu</h1>
+        </div>
+
+        <div class="Header__Logo-Right">
+          <div class="ornament1"></div>
+          <div class="ornament2"></div>
+          <div class="ornament3"></div>
+          <div class="ornament4"></div>
+          <!--  sociale ostatecznie tutaj nie wykorzystane
+                    <div class="Header__Logo-Right-Div1">
+
+                        <a href="https://www.linkedin.com/in/jan-szalanski/">
+                            <div class="socialL"></div>
+                        </a>
+
+                        <a href="https://www.youtube.com/channel/UCY59lj5rPEpNdXwBlK7uMnQ/about?view_as=subscriber">
+                            <div class="socialY"></div>
+                        </a>
+
+                        <a href="https://facebook.com">
+                            <div class="socialF"></div>
+                        </a>
+
+                    </div> -->
+        </div>
+      </section>
+
+      <section class="Contact">
+        <div class="Contact__Board">
+          <h2 class="Contact__Board-H2">kontakt</h2>
+
+          <form class="Contact__Form" action="kontakt.php" method="post">
+            <div class="Contact__Form-Name">
+              <input type="text" name="imie" placeholder="Imię *" maxlength="30" required="required" tabindex="1"
+                autocomplete="off" />
+            </div>
+
+            <div class="Contact__Form-Email">
+              <input type="email" name="emial" placeholder="E-mail *" maxlength="40" required="required" tabindex="2"
+                autocomplete="off" />
+            </div>
+
+            <div class="Contact__Form-Topic">
+              <input type="topic" name="temat" placeholder="Temat" maxlength="30" tabindex="3" autocomplete="off" />
+            </div>
+
+            <div class="Contact__Form-Submit">
+              <input type="submit" value="wyślij" tabindex="4" autocomplete="off" />
+            </div>
+
+            <div class="Contact__Form-Area">
+              <textarea class="Contact__Form-Textarea" name="message" id="message" cols="80" rows="5"
+                placeholder="Wiadomość *" maxlength="600" required="required" tabindex="5"></textarea>
+            </div>
+          </form>
+        </div>
+
+        <button class="Contact__BtnP">Kontakt</button>
+        <div class="Contact__Cross-V--BtnP"></div>
+        <div class="Contact__Cross-H--BtnP"></div>
+      </section>
+
+      <section class="Menu">
+        <div class="Menu__Left">
+          <div class="Menu__Left-Left"></div>
+
+          <nav class="Nav">
+            <!-- Od tego momentu zaczyna sie właściwa nawigacja  zmieniłem Bem na komponent od tego momentu-->
+
+            <ul class="Nav__List">
+              <li class="Nav__Item">
+                <a href="firma.html" class="Nav__Link">
+                    <p class="Nav__Title">O Firmie</p>
+                  </a>
+              </li>
+
+              <li class="Nav__Item">
+                <a href="praktyka.html" class="Nav__Link">
+                    <p class="Nav__Title">Praktyka</p>
+                  </a>
+              </li>
+
+              <li class="Nav__Item">
+                <a href="projekty.html" class="Nav__Link">
+                    <p class="Nav__Title">Projekty</p>
+                  </a>
+              </li>
+
+              <li class="Nav__Item">
+                <a href="prywatnie.html" class="Nav__Link">
+                    <p class="Nav__Title">Prywatnie</p>
+                  </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="Menu__Middle">
+          <svg class="Menu__Middle-Svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 20" width="60px"
+            height="20px">
+            <path class="cls-1" d="M0,0H60V5A22.26,22.26,0,0,0,47,9c-3,2-7,5-11,7a42.56,42.56,0,0,1-17,4H0Z" />
+          </svg>
+        </div>
+
+        <div class="Menu__Right"></div>
+
+        <div class="StripeGrey"></div>
+
+        <div class="Menu__Svg">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 40 20">
+            <polygon class="cls-2" points="40,0 0,0 0,20 27,20 	" />
+          </svg>
+        </div>
+
+        <div class="Menu__Skew"></div>
+
+        <div class="Menu__SkewB">
+          <h3>/ komunikacja kwantowa /</h3>
+        </div>
+      </section>
+    </header>
+
+    <div class="Troll">
+      <div class="GreyMiddleB Priv">
+
+        <div class="BackgroundGrey Priv"></div>
+        <div class="RedMask">
+          <h2>デーモン</h2>
+        </div>
+        <div class="Miara"></div>
+        <div class="WrapperTresc OMnie">
+          <h1 class="Tresc__H1 Priv">
+            PRIV - 05 o mnie / <span class="JapanFont">こじんてきにし</span>
+            <div class="Square Priv"></div>
+          </h1>
+
+          <div class="CornerTop Priv"></div>
+          <div class="CornerTopIn Priv"></div>
+          <div class="CornerBottomIn Priv"></div>
+          <div class="LineIn Priv"></div>
+          <div class="LineLeftIn Priv"></div>
+          <div class="CornerTopR Priv"></div>
+          <div class="LineCornerTR Priv"></div>
+          <div class="CornerBottom Priv"></div>
+          <div class="CornerBottomR Priv"></div>
+          <div class="Line Priv"></div>
+          <div class="LineLeft Priv"></div>
+          <div class="LineRight Priv"></div>
+          <div class="ShapeA Priv">
+            <div class="ShapeARect"></div>
+            <div class="ShapeBRect"></div>
+            <div class="ShapeCRect"></div>
+            <h3>|Description</h3>
+          </div>
+          <div class="RectangleA"></div>
+          <div class="LinesA"></div>
+          <div class="LinesB"></div>
+          <div class="RectangleTresc">
+            <div class="Background"></div>
+            <div class="BackgroundNoise"></div>
+            <div class="BackgroundGrid"></div>
+            <div class="BackgroundGardient"></div>
+            <div class="wrapperMnie">
+              <h3 class="NaglowekTresc Mnie">O mnie</h3>
+
+              <div class="maska Mnie">
+                <div class="ozdobnik Edu">
+                  <div class="geo begining"></div>
+                  <div class="geo"></div>
+                  <div class="geo"></div>
+                  <div class="geo"></div>
+                  <div class="geo"></div>
+                  <div class="geo"></div>
+                  <div class="geo"></div>
+                  <div class="geo"></div>
+                  <div class="geo"></div>
+                  <div class="geo"></div>
+                  <div class="geo"></div>
+                  <div class="geo"></div>
+                  <div class="geo"></div>
+                  <div class="geo"></div>
+                  <div class="geo end"></div>
+                </div>
+              </div>
+            </div>
+
+            <p class="OMnieP">
+              <br /><br /><br /><br />
+              Jest całkiem prawdopodobne, że jeśli przechodzisz tutaj na sam koniec. I w dodatku ma to miejsce po
+              przeczytaniu poprzednich działów - to możesz się zastanawiać, po co jeszcze rubryka o mnie? Mogłeś\aś
+              bowiem odnieść wrażenie, że napisałem o sobie dużo, co więcej to poczucie może spotęgowane o to że nie
+              miałeś\aś do czynienia ze stroną firmową? Zdecydowanie poprzednie cztery działy starałem się, aby
+              dotyczyły minie, jako osoby prowadzącej działalność gospodarczą i z tym związane zagadnienia. Przekaz miał
+              być inny niż to, co ja sam znajduję na podobnych stronach. Sam czasem odczuwałem delikatny zawód - kiedy
+              po raz kolejny widziałem niemal te same teksty nic niewnoszące a będące pasmem spektakularnych sukcesów i
+              samospełniających się wróżb. Często z przekazów takich, bowiem nie dowiaduje się nic, co by mnie tak
+              naprawdę interesowało - nie kryje się za tym ani człowiek ani bardzo często prawdziwa historia. Kolejna
+              kalka kalki opowieści z nibylandii za siedmiu wzgórz. Ja tutaj tego schematu nie chciałem powielać. Ile to
+              ja widziałem takich historii gdzie malutkie biznesy bardzo często jednoosobowe najwyżej kilku osobowe
+              prężyło swoje muskuły na swoich stronach www i materiałach reklamowych na nie wiadomo jakie korporacje. Z
+              ich stron wybijało szkło, chrom i marmury, wielkie biura, strzeliste wieżowce. Uśmiechnięty personel na
+              stokowych zdjęciach. Ponieważ ja mam nieco inne podejście do takich spraw i staram się trzeźwo patrzeć na
+              rzeczywistość i jej nie upiększać. Dlatego więc w zasadzie cała strona jest w pewnym sensie o mnie - tak
+              dokładnie miało być. Co do konceptu samej strony. To jest to takie zestawienie zdawać by się mogło
+              przypadkowego wątku niezwiązanego z biznesem z całą resztą. Stąd koncepcja żywiołów, jako spoiwo
+              zagadnień, nazw podstron oraz wglądu strony – jakaś luźna anegdota plus obok artykuł już dotykający
+              konkretów, ale dalej w formie raczej dialogu z Tobą (twarzą w twarz). Takiego jakbyśmy spotkali się na
+              kawie lub na ławce na przystanku autobusowym bez zbędnego napięcia i formalizmu. Tu jeśli się jeszcze
+              komuś nie skojarzyło to pamiętasz te scenę z filmu „Forest Gump” jak tytułowy bohater siedział na ławeczce
+              i rozmawiał ze starszą Panią?
+              Chyba wypadałoby powiedzieć kilka słów o sobie po powyższym przy długim wstępie, który na późniejszym
+              etapie trafi zapewne do części odnoszącej się w szczegółach do projektu tej strony. Wątek żywiołów nie
+              jest tak zupełnie „luźno” związany kryję się za nim pewna anegdota, ale nie będę jej teraz opisywał (może
+              zostawię tę anegdotę do naszego spotkania kiedyś twarzą w twarz). Mimo że symbolika zawarta na stronie ma
+              pewne znaczenie to muszę powiedzieć, że nie należę do grona osób, które zaczytują się w horoskopach czy
+              chadzają w foliowej czapce na głowię. Lubię delikatne odniesienia czy nawet ukryte przekazy, ale na
+              zasadzie ciekawostki i elementu dodającego jakiegoś dodatkowego kolorytu. Podobnie jak w naukach ścisłych,
+              jakimi są elektronika i informatyka tak w życiu prywatnym mam sporo różnych zainteresowań. Jedną z nich
+              jest jedzenie. A konkretniej to gotowanie i oczywiście wynikający z niego późniejszy rytuał celebrujący
+              włożony wcześniej wysiłek, czyli spożywanie ze smakiem. To czy smacznie gotuję to już muszą wypowiedzieć
+              się inni – ja natomiast to, co ugotuję zjadam z zadowoleniem :P.
+              Od dziecka obok zaciekawienia komputerami cały czas niesłabnące było u mnie zainteresowanie kosmosem,
+              gdzieś tam sympatia dla tej tematyki tliła się we mnie – nie było ona aż tak dominujące jak ta
+              komputerowa, ale występowało. Tak, więc nie powinno nikogo dziwić fakt, że na moim YouTube nie mogło
+              zabraknąć subskrypcji takich kanałów jak Astrofaza czy Astronarium. Ale nie tylko Internetem człowiek żyję
+              czasem nie zbyt często, co prawda, ale jednak jakaś książka z danej dziedziny wpadnie na warsztat. Nawet
+              tę formę nauki czy też rozrywki zaczynam bardzo mocno obecnie faworyzować i ją doceniać. Z całej tej
+              fascynacji kosmosem a uściślając astrofizyki zagadnieniem, które po prostu mnie zadziwia i ekscytuje i
+              jest takim języczkiem uwagi jest fizyka kwantowa. I to, że mamy w informatyce całą nową gałąź związana z
+              pojęciami kwantowymi chyba nie musze Tobie mówić, że sprawy nie ułatwia w tym, aby dać sobie spokój. Choć
+              uczciwie musze przyznać, że nie zbierałem tak szczęki z podłogi po tym jak zapoznałem się z budową
+              komputerów kwantowych, tak bardzo jak nie mogłem się nadziwić budowie i całemu przedsięwzięciu np.
+              wielkiego zderzacza hadronów w CERN. Podobnie projekty marsjańskich misji takich jak Perseverance czy
+              nowego kosmicznego teleskopu Jamesa Webba – mózg puchnie i do końca nie rozumie, ale krzyczy jak Neo
+              podczas
+              pierwszej wirtualnej nauki – jeszcze! To są takie tematy, które rozpalają moją wyobraźnie. No, ale dobra
+              żeby nie wyjść na totalnego nerda (choć myślę, że z osób które mnie dobrze znają chyba raczej im się nie
+              wpisuje w taki stereotyp) poza opisanymi „technologicznymi” dziedzinami to lubię jednak odskocznię w
+              postaci wyjścia na łono natury, pochodzenie po lesie w górach czy nad morzem nie ma znaczenie gdzie bo ja
+              w naturalnym dzikim środowisku dobrze się czuję i to bez względu czy świeci słońce i jest ciepło czy może
+              jednak pada i jest chłodniej. Śnieżna zima nawet trochę mroźna w lesie, który wygląda jak ten z „Opowieści
+              z Narni” to jest to, co ładuję moje baterie to jest to, co mnie kręci równie mocno, co cała ta
+              technologia. Może za wyjątkiem sytuacji, kiedy jestem wyrwany z mojej strefy komfortu i muszę w trybie
+              pilnym opuszczać dany rejon lasu jak np. stado dzików postanowiło, że się ze mną „zaprzyjaźni” no to wtedy
+              jest jak w akademii Pan Kleksa jak to tam śpiewali „kto spotyka w lesie dzika”? Wiem, wiem, że to jest tak
+              naprawdę wiersz Jan Brzechwy a nie piosenka z Pan Kleksa, ale takie zestawienie wydało mi się bardziej na
+              miejscu do takiej anegdoty. Czyli jednym słowem zagadnienia z tak zwanego bushcraftu czy nawet surviwalu
+              nie są mi obce. Dość powiedzieć, że troszkę interesuję się także tematyką wojskową (militariami) w
+              szczególności w kontekście bezpieczeństwa naszej ojczyzny a na to zagadnienie składa się całe spektrum
+              innych - od choćby geopolityka. Jak widzisz jest tego całkiem sporo i nie o wszystkim też tu chce pisać
+              niech będzie, że asa w rękawie należy zawsze sobie zostawić. Ale zupełnie wracając do technologii i to już
+              kończąc taką pasją niezwiązaną zawodowo i w zasadzie całkowicie nastawioną na rozrywkę na mój osobisty
+              „entertainment” było tworzenie muzyki. I to pisząc tworzenie mam na myśli tworzenie, czyli nie miksowanie
+              czy tworzenie nawet na zaawansowanych narzędziach, ale z gotowych sampli. Tylko wymyślanie melodii
+              przekładanie tego na różne brzmienia stworzone w na różnych syntezatorach i robienia całkowicie własnego
+              tracka. Niech za dobrą ilustrację posłuży Wam środowisko, w którym te moje muzyczki tworzyłem od zawszę
+              a jest nim Propellerheads Reason potężny DAW a raczej całe wirtualne studio
+              muzyczne. Pod spodem zamieszczam kilka moich utworów pochodzących z okresu mojej najintensywniejszej
+              twórczości
+              muzycznej.
+              Na koniec, jeśli dotrwałeś\aś do tego momentu to bardzo chce Ci podziękować za poświęcony mi czas i za
+              pobycie tutaj ze mną na mojej wirtualnej „ławeczce”. Trzymaj się!
+              <br><br>
+              <span>P.S. Jeśli znalazłeś jakieś błędy czy masz jakieś uwagi to bardzo proszę daj mi o tym
+                znać.</span>
+              <br><br>
+
+            </p>
+            <div class="Ekstra">
+              <iframe id="SoundCloud" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1264092838&color=%23fd0505&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+              <div
+                style="font-size: 12px; color: #fd0505;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                <!-- <a href="https://soundcloud.com/user-495341203" title="JMS" target="_blank" style="color: #fd0505; text-decoration: none;">JMS</a>
+                ·
+                <a href="https://soundcloud.com/user-495341203/sets/main-list" title="Main List" target="_blank" style="color: #fd0505; text-decoration: none;">Main List</a> -->
+              </div>
+            </div>
+            <div class="ShapeB Priv">
+              <h3>sektor /// a</h3>
+            </div>
+          </div>
+          <div class="ShapeC Priv"></div>
+          <div class="ShapeD Priv"></div>
+        </div>
+
+        <div class="WrapperTresc OMnie Edu">
+          <h1 class="Tresc__H1 Priv">
+            PRIV - 06 wykształcenie /
+            <span class="JapanFont">エディケー</span>
+            <div class="Square Priv"></div>
+          </h1>
+
+          <div class="CornerTop Priv"></div>
+          <div class="CornerTopIn Priv"></div>
+          <div class="CornerBottomIn Priv"></div>
+          <div class="LineIn Priv"></div>
+          <div class="LineLeftIn Priv"></div>
+          <div class="CornerTopR Priv"></div>
+          <div class="LineCornerTR Priv"></div>
+          <div class="CornerBottom Priv"></div>
+          <div class="CornerBottomR Priv"></div>
+          <div class="Line Priv Edu"></div>
+          <div class="LineLeft Priv"></div>
+          <div class="LineRight Priv"></div>
+          <div class="ShapeA Priv">
+            <div class="ShapeARect"></div>
+            <div class="ShapeBRect"></div>
+            <div class="ShapeCRect"></div>
+            <h3>|Description</h3>
+          </div>
+          <div class="RectangleA"></div>
+          <div class="LinesA"></div>
+          <div class="LinesB"></div>
+          <div class="RectangleTresc Edu">
+            <div class="Background"></div>
+            <div class="BackgroundNoise"></div>
+            <div class="japanlogo">
+              <svg viewBox="0 0 150 150">
+                <path class="logoPath"
+                  d="M74.9 135.4c-33.1 0-60-26.9-60-60s26.9-60 60-60c14.4 0 27.6 5.1 38 13.5 4.6 3.8 8.6 8.4 12 13.3 5.4 7.8 10 20.9 10 33.1 0 33-26.7 59.8-59.6 60"
+                  id="obrecz" transform="rotate(135 75 75)" />
+
+                <path class="logoPath"
+                  d="M74.9 135.4c-33.1 0-60-26.9-60-60s26.9-60 60-60c14.4 0 27.6 5.1 38 13.5 4.6 3.8 8.6 8.4 12 13.3 5.4 7.8 10 20.9 10 33.1 0 33-26.7 59.8-59.6 60"
+                  id="obrecz2" transform="rotate(230 75 75)" />
+
+                <circle cx="74.9" cy="75.4" r="52" fill="#d51309" />
+                <path class="japanWhite" d="M118.9 76.1v-.7c0-24.3-19.7-44-44-44s-44 19.7-44 44v.7h88z" />
+                <text y="0">
+                  <textPath class="textLogo" href="#obrecz">pjatk</textPath>
+                </text>
+                <text y="0">
+                  <textPath class="textLogo2" href="#obrecz2">ポーランド日本情報工科大学</textPath>
+                </text>
+              </svg>
+            </div>
+            <div class="BackgroundGrid"></div>
+            <div class="BackgroundGardient"></div>
+
+            <h2 class="HeaderStudia">POLSKO-JAPONSKA AKADEMIA TECHNIK KOMPUTEROWYCH</h2>
+            <h3 class="HeaderStudiaPod">Poprzednio: Polsko-Japońska Wyższa Szkoła Technik komputerowych</h3>
+            <p class="Studia">
+              Studia Inżynierskie (wieczorowe) - Wydział Informatyki - Katedra Multimediów <br />
+              Specjalizacja: Multimedia - Animacja 3D. <br />
+              <a class="linkdyplomowa" href="/assets/praca.pdf">Praca dyplomowa \</a>
+              <a class="linkdyplomowa" href="https://vimeo.com/szalanski">suplement</a>
+            </p>
+            <div class="maska Edu">
+              <div class="ozdobnik Edu">
+                <div class="geo begining"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo end"></div>
+              </div>
+            </div>
+            <h3 class="HeaderStudiaPod Tech">ZSEiL Technikum Elektroniczne Nr.3</h3>
+            <p class="Studia Tech">Specjalizacja: Systemy i sieci komputerowe. <br /></p>
+            <div class="maska Edu">
+              <div class="ozdobnik Edu">
+                <div class="geo begining"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo end"></div>
+              </div>
+            </div>
+            <h3 class="HeaderStudiaPod Tech">Kursy i certyfikaty</h3>
+            <p class="Studia Kursy">
+              MCSA: Windows Server 2012. <br /><br />
+              70-412: Configuring Advanced Windows Server 2012 (Szkolenie).
+              <br />
+              70-411: Administering Windows Server 2012 (Szkolenie).<br />
+              70-410: Installing and Configuring Windows Server 2012 (Szkolenie).<br />
+              <br />
+              Kaspersky Advnced Security For Windows Server (Szkolenie).
+            </p>
+
+            <div class="maska Edu">
+              <div class="ozdobnik Edu">
+                <div class="geo begining"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo end"></div>
+              </div>
+            </div>
+
+            <h3 class="HeaderStudiaPod Tech">Języki obce</h3>
+
+            <p class="Studia Jezyk">
+              Język angielski - zaawansowany. <br />
+              Język rosyjski - podstawy. <br />
+              Język niemiecki - podstawy. <br />
+            </p>
+
+            <div class="ShapeB Priv">
+              <h3>sektor /// b</h3>
+            </div>
+          </div>
+          <div class="ShapeC Priv"></div>
+          <div class="ShapeD Priv"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="Footer">
+      <section class="Footer__Nav">
+        <div class="Footer__Nav-Left"></div>
+
+        <div class="Footer__Nav-Middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 20" width="60px" height="20px">
+            <path class="cls-2" d="M0,0H60V5A22.26,22.26,0,0,0,47,9c-3,2-7,5-11,7a42.56,42.56,0,0,1-17,4H0Z" />
+          </svg>
+        </div>
+
+        <div class="Footer__Nav-Right">
+          <div class="Footer__Nav-Right-TitleP">
+            Panel Sterowania
+            <div class="Footer__Nav-Right-ArrowP">></div>
+          </div>
+
+          <div class="Footer__Nav-Right-BarsP">
+            <div class="Footer__Nav-Right-Bar1"></div>
+
+            <div class="Footer__Nav-Right-Bar2"></div>
+
+            <div class="Footer__Nav-Right-Bar3"></div>
+
+            <div class="Footer__Nav-Right-Bar4"></div>
+          </div>
+
+          <div class="Footer__Nav-Right-Space"></div>
+        </div>
+
+        <div class="ASMR"></div>
+      </section>
+
+      <section class="Footer__BottomSection">
+        <!-- <div class="Footer__BottomSection-MarginL"></div> -->
+
+        <div class="Footer__BottomSection-Left">
+          <div class="Footer__BottomSection-Left-Div2">
+            <h3 class="Footer__BottomSection-Left-h3P">2012 -2021 &copy; Wszelkie prawa zastrzeżone.</h3>
+          </div>
+
+          <div class="Footer__BottomSection-Left-Div1">
+            <h2 class="Footer__BottomSection-Left-h2P">szalanski.eu</h2>
+          </div>
+
+          <div class="QRKode Dark"></div>
+        </div>
+
+        <div class="Footer__BottomSection-Middle">
+          <div class="Footer__BottomSection-Middle-Div1">
+            <h2 class="Footer__BottomSection-Middle-h2P">
+              Informacja: Strona niniejsza wykorzystuje do prawidłowego działania pliki cookies
+              <a class="CookiesP" href="https://skrypt-cookies.pl/czym-sa-ciasteczka" target="_blank"
+                  >[ Więcej informacji ]</a>
+            </h2>
+          </div>
+        </div>
+
+        <div class="Footer__BottomSection-Right">
+          <div class="Footer__BottomSection-Right-P">
+            <div class="Footer__BottomSection-Right-Div1">
+              <h2 class="Footer__BottomSection-Right-h2P">
+                szalanski.eu <br />
+                Jan Szałański
+              </h2>
+            </div>
+
+            <div class="Footer__BottomSection-Right-Div2">
+              <h3 class="Footer__BottomSection-Right-h3P">
+                02-285 Warszawa <br />
+                Szyszkowa 46\13<br />
+                NIP: 5222739323 <br />REGON :1462757
+              </h3>
+            </div>
+
+            <div class="Footer__BottomSection-Right-Div3">
+              <h3 class="Footer__BottomSection-Right-h3BP">Polityka Prywatności</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="Footer__BottomSection-MarginR"></div> -->
+      </section>
+    </footer>
+  </div>
+
+  <script src="~/../js/prywatnie.js"></script>
+  <!-- <script src="~/../js/board.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,463 @@
+$color-blackAA: rgba(20, 20, 20, 0.2);
+$color-blackB: rgba(20, 200, 200, 0.2);
+
+.Contact {
+  position: absolute;
+  width: 120px;
+  height: $main-spacing;
+  right: 13.3vw;
+  top: calc(16.42vh + 9px);
+
+  @include mq(ultra) {
+    right: 256px;
+    top: 201px;
+  }
+
+  @include mq(xxxl) {
+    right: 13.3vw;
+    top: calc(16.42vh + 9px); //top: 163px;
+
+    @media (min-height: 1195px) {
+      top: 201px;
+    }
+  }
+
+  @media (max-width: 1680px) {
+    right: 6vw;
+  }
+
+  @include mq(xxl) {
+    right: 6vw;
+
+    @media (min-height: 750px) {
+      top: calc(14vh + 9px);
+    }
+  }
+
+  @include mq(xl) {
+    top: calc(12vh + 9px);
+    right: 0;
+  }
+
+  @media (max-width: 756px) {
+    //756 było .............
+    top: calc(12vh + 25px);
+  }
+
+  // @include mq(xs) {
+
+  //     top: calc(12vh + 85px);
+
+  // }
+
+  @include mq(xs) {
+    top: 125px;
+  }
+}
+
+.Contact__Board {
+  // visibility: hidden;
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 120px;
+  height: 20px;
+  background-color: var(--color-main1);
+  border-radius: 0px 0px 0px $main-spacing;
+  overflow: hidden;
+
+  &-H2 {
+    font-size: 2rem;
+    font-family: $font-mont;
+    color: var(--color-black);
+    line-height: 1.2;
+    text-align: left;
+    position: absolute;
+    left: $main-spacing * 2;
+    top: $main-spacing;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 500;
+
+    @include mq(xs) {
+      top: $main-spacing / 2;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.Contact__Board-Discover {
+  will-change: width, height, visibility;
+  animation: ContactShow 1.4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.Contact__Board-Hide {
+  will-change: width, height, visibility;
+  animation: ContactHide 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.Contact__Form {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.Contact__Form-Name {
+  position: absolute;
+  right: $main-spacing;
+  left: $main-spacing;
+  top: $main-spacing * 3;
+
+  & input {
+    width: 300px;
+    height: 3.6rem;
+    background-color: var(--color-main1);
+    border: 1px solid var(--color-black);
+    padding-left: $main-spacing;
+    font-weight: 500;
+    font-family: $font-source;
+    font-size: 1.8rem;
+    color: var(--color-black);
+
+    @include mq(xs) {
+      width: 100%;
+    }
+  }
+
+  @include mq(xs) {
+    top: $main-spacing * 2;
+  }
+
+  & input::placeholder {
+    color: var(--color-balck);
+    font-size: 1.6rem;
+    font-family: $font-source;
+    font-weight: 400;
+  }
+}
+
+.Contact__Form-Email {
+  position: absolute;
+  left: $main-spacing;
+  right: $main-spacing;
+  top: $main-spacing * 6;
+
+  & input {
+    width: 300px;
+    height: 3.6rem;
+    background-color: var(--color-main1);
+    border: 1px solid var(--color-black);
+    padding-left: $main-spacing;
+    font-weight: 500;
+    font-family: $font-source;
+    font-size: 1.8rem;
+    color: var(--color-black);
+
+    @include mq(xs) {
+      width: 100%;
+    }
+  }
+
+  @include mq(xs) {
+    top: $main-spacing * 4.5;
+  }
+
+  & input::placeholder {
+    color: var(--color-balck);
+    font-size: 1.6rem;
+    font-family: $font-source;
+    font-weight: 400;
+  }
+}
+
+.Contact__Form-Topic {
+  position: absolute;
+  left: $main-spacing;
+  right: $main-spacing;
+  top: $main-spacing * 9;
+
+  & input {
+    width: 300px;
+    height: 3.6rem;
+    background-color: var(--color-main1);
+    border: 1px solid var(--color-black);
+    padding-left: $main-spacing;
+    font-weight: 500;
+    font-family: $font-source;
+    font-size: 1.8rem;
+    color: var(--color-black);
+
+    @include mq(xs) {
+      width: 100%;
+    }
+  }
+
+  @include mq(xs) {
+    top: $main-spacing * 7;
+  }
+
+  & input::placeholder {
+    color: var(--color-balck);
+    font-size: 1.6rem;
+    font-family: $font-source;
+    font-weight: 400;
+  }
+}
+
+.Contact__Form-Submit {
+  position: absolute;
+  right: $main-spacing;
+
+  top: $main-spacing * 9;
+
+  & input {
+    height: 3.6rem;
+    width: 220px;
+    border: 1px solid var(--color-black);
+    background-color: var(--color-main1);
+    font-size: 1.4rem;
+    font-family: $font-mont;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.2s;
+
+    @media (max-width: 560px) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 560px) {
+    top: $main-spacing * 15;
+    left: $main-spacing;
+  }
+
+  @include mq(xs) {
+    bottom: $main-spacing;
+  }
+
+  & input:hover {
+    letter-spacing: 0.15em;
+  }
+}
+
+.Contact__Form-Area {
+  position: absolute;
+  left: $main-spacing;
+  top: $main-spacing * 12;
+  bottom: $main-spacing;
+  right: $main-spacing;
+
+  @media (max-width: 560px) {
+    top: $main-spacing * 12;
+    bottom: $main-spacing * 3;
+  }
+
+  @include mq(xs) {
+    top: $main-spacing * 9.5;
+    bottom: $main-spacing * 3.2;
+  }
+}
+
+#message {
+  height: 100%;
+  width: 100%;
+  resize: none;
+  font-weight: 500;
+  font-family: $font-source;
+  font-size: 1.6rem;
+  padding-top: $main-spacing / 2;
+  padding-left: $main-spacing;
+  border: 1px solid var(--color-black);
+  background-color: var(--color-main1);
+
+  &::placeholder {
+    color: var(--color-balck);
+    font-size: 1.6rem;
+    font-family: $font-source;
+    font-weight: 400;
+  }
+}
+
+//-----------------------Contact Button --------------------------------------------//
+
+.Contact__Cross-V--Btn {
+  z-index: 1;
+  position: absolute;
+  width: 2px;
+  height: $main-spacing / 2;
+  display: block;
+  background-color: var(--color-white);
+  left: 90%;
+  top: 50%;
+  transform: translate(0, -50%) rotateZ(0deg);
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.Contact__Cross-V--Btn-Active {
+  @extend .Contact__Cross-V--Btn;
+  background-color: var(--color-black);
+  transform: translate(0, -50%) rotateZ(45deg);
+}
+
+.Contact__Cross-V--BtnP {
+  @extend .Contact__Cross-V--Btn;
+  background-color: var(--color-dark-grey);
+}
+
+.Contact__Cross-H--Btn {
+  z-index: 1;
+  position: absolute;
+  width: 2px;
+  height: $main-spacing / 2;
+  display: block;
+  background-color: var(--color-white);
+  left: 90%;
+  top: 50%;
+  transform: translate(0, -50%) rotateZ(90deg);
+  transition: 0.3s;
+}
+
+.Contact__Cross-H--Btn-Active {
+  @extend .Contact__Cross-H--Btn;
+  background-color: var(--color-black);
+  transform: translate(0, -50%) rotateZ(135deg);
+}
+
+.Contact__Cross-H--BtnP {
+  @extend .Contact__Cross-H--Btn;
+  background-color: var(--color-dark-grey);
+}
+
+.Contact__Btn {
+  box-sizing: content-box;
+
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  z-index: 1;
+  border: none;
+  border-radius: 0px 0px 0px $main-spacing / 2;
+  background-color: var(--color-main);
+  width: 120px;
+  height: $main-spacing;
+  font-size: 1.1rem;
+  font-family: $font-mont;
+  font-weight: 600;
+  color: var(--color-white);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: var(--color-main1);
+    color: var(--color-black);
+    letter-spacing: 1.2px;
+    border-radius: 0px 0px 0px 5px;
+  }
+}
+
+.Contact__BtnP {
+  @extend .Contact__Btn;
+  color: var(--color-dark-grey);
+}
+
+.Contact__Btn:hover + .Contact__Cross-V--Btn {
+  background-color: var(--color-black);
+  transform: translate(0, -50%) rotateZ(90deg);
+}
+
+.Contact__Btn:hover ~ .Contact__Cross-H--Btn {
+  background-color: var(--color-black);
+  transform: translate(0, -50%) rotateZ(180deg);
+}
+
+$color-blackA: rgba(25, 25, 25, 0.5);
+
+.Contact__Btn-Active {
+  @extend .Contact__Btn;
+  background-color: var(--color-main1);
+  color: var(--color-black);
+  border-left: 1px $color-blackA dotted;
+  border-bottom: 1px $color-blackA dotted;
+  border-radius: 0px 0px 0px $main-spacing / 2;
+
+  &:hover {
+    border-radius: 0px 0px 0px $main-spacing / 2;
+    letter-spacing: 1.2px;
+  }
+}
+
+.Contact__Btn-Active:hover + .Contact__Cross-V--Btn-Active {
+  background-color: var(--color-black);
+  transform: translate(0, -50%) rotateZ(45deg);
+}
+
+.Contact__Btn-Active:hover ~ .Contact__Cross-H--Btn-Active {
+  background-color: var(--color-black);
+  transform: translate(0, -50%) rotateZ(135deg);
+}
+
+//------------------ Style przeglądarek elemetów form --------------------------------//
+
+//scroll bar rodziny chroma (webkit) jebany pseudo element z którym sa same problemy ...
+
+textarea::-webkit-scrollbar {
+  width: 0.7em;
+}
+
+textarea::-webkit-scrollbar {
+  width: 0.7em;
+}
+
+textarea::-webkit-scrollbar-track {
+  border: 1px solid darken($color-blackB, 50%);
+  background-color: darken($color-blackB, 20%);
+}
+
+textarea::-webkit-scrollbar-thumb {
+  border: 1px solid darken($color-blackB, 50%);
+  background-color: darken($color-blackB, 50%);
+}
+
+//input for webkit
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid var(--color-black);
+  -webkit-text-fill-color: var(--color-black);
+  -webkit-box-shadow: 0 0 0px 1000px var(--color-main1) inset; //to robi za kolor tła !!
+  box-shadow: 0 0 0px 1000px var(--color-main1) inset;
+  // transition: background-color 5000s ease-in-out 0s; - a to nie wiem co miało oszukiwać
+}
+
+//scroll bar rodziny mozilla
+
+textarea {
+  scrollbar-color: darken($color-blackB, 50%) darken($color-blackB, 20%);
+  scrollbar-width: thin;
+}
+
+.textarea-Discover {
+  will-change: scrollbar-width;
+  animation: niwelator 1.4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}

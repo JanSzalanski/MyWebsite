@@ -1,0 +1,822 @@
+//------------------------------------------- KONTAKT ----------------------------------------------------------------//
+
+//Animacja panelu Kontakt ...
+
+@keyframes ContactShow {
+  1% {
+    visibility: visible;
+    //scrollbar-width: none; - to nic tu nie daje ... ???
+  }
+
+  100% {
+    width: 712px;
+    height: 350px;
+    visibility: visible;
+  }
+}
+
+@keyframes ContactHide {
+  0% {
+    width: 712px;
+    height: 350px;
+    visibility: visible;
+  }
+
+  30% {
+    width: 712px;
+    height: 60px;
+  }
+
+  50% {
+    height: 60px;
+    width: 712px;
+  }
+
+  100% {
+    width: 120px;
+    height: 20px;
+    visibility: hide;
+  }
+}
+
+@include mq(small) {
+  @keyframes ContactShow {
+    1% {
+      visibility: visible;
+      //scrollbar-width: none; - to nic tu nie daje ... ???
+    }
+
+    100% {
+      width: 100vw;
+      height: 350px;
+      visibility: visible;
+    }
+  }
+
+  @keyframes ContactHide {
+    0% {
+      width: 100vw;
+      height: 350px;
+      visibility: visible;
+    }
+
+    30% {
+      width: 100vw;
+      height: 60px;
+    }
+
+    50% {
+      height: 60px;
+      width: 100vw;
+    }
+
+    100% {
+      width: 120px;
+      height: 20px;
+      visibility: hide;
+    }
+  }
+}
+
+//zapobiega powstawaniu bledu przy animacji textarea na firefox po dodaniu scroll bar na thin taki sam problem jest od samego poczatku na webkit bez wzgledu na parametry (tam jest pseudoelement) ...
+
+@keyframes niwelator {
+  99% {
+    scrollbar-width: none;
+  }
+
+  100% {
+    scrollbar-width: thin;
+  }
+}
+
+//-----------------------------------------------------------NAGŁÓWEK---------------------------------------------------------------//
+//Awangardowe rozwiązanie animacji glich dla loga
+//animacja glich nazwa firmy------------------------------------------
+
+// @keyframes glitch-animation-1 {
+//   $steps: randomNum(18, 24);
+
+//   @for $i from 0 through $steps {
+//     #{percentage($i*(1/$steps))} {
+//       clip: rect(random(150) + px, 420px, random(150) + px, 30px);
+//     }
+//   }
+// }
+
+// @keyframes glitch-animation-2 {
+//   $steps: randomNum(17, 23);
+
+//   @for $i from 0 through $steps {
+//     #{percentage($i*(1/$steps))} {
+//       clip: rect(random(150) + px, 420px, random(150) + px, 30px);
+//     }
+//   }
+// }
+
+//-----------------Animmacja całego nagłówka-------------------------//
+
+//---chowanie ...
+
+@include mq(ultra) {
+  @keyframes NaglowekOut {
+    100% {
+      transform: translateY(-172px);
+      //top: -172px; ruch do gory zwiekszony o 38px czyli polowe przestrzeni po zwiekszeniu wysokosci do 1080p dla rozdzielczosci 1080p+ ...
+    }
+  }
+}
+
+@include mq(xxxl) {
+  @keyframes NaglowekOut {
+    100% {
+      transform: translateY(calc(-16.42vh + 20px));
+      //top: -134px;
+    }
+  }
+
+  @media (min-height: 1195px) {
+    @keyframes NaglowekOut {
+      100% {
+        transform: translateY(-172px);
+        //top: -172px; ruch do gory zwiekszony o 38px czyli polowe przestrzeni po zwiekszeniu wysokosci do 1080p dla rozdzielczosci 1080p+ ...
+      }
+    }
+  }
+}
+
+@include mq(xxl) {
+  @media (min-height: 750px) {
+    @keyframes NaglowekOut {
+      100% {
+        transform: translateY(calc(-14vh + 20px));
+        //top: -134px;
+      }
+    }
+  }
+}
+
+@include mq(xl) {
+  @keyframes NaglowekOut {
+    100% {
+      transform: translateY(calc(-12vh + 20px));
+      //top: -172px; ruch do gory zwiekszony o 38px czyli polowe przestrzeni po zwiekszeniu wysokosci do 1080p dla rozdzielczosci 1080p+ ...
+    }
+  }
+}
+
+@include mq(xxs) {
+  @keyframes NaglowekOut {
+    100% {
+      transform: translateY(-40px);
+      //top: -172px; ruch do gory zwiekszony o 38px czyli polowe przestrzeni po zwiekszeniu wysokosci do 1080p dla rozdzielczosci 1080p+ ...
+    }
+  }
+}
+
+//------wysuwanie ...
+
+@include mq(ultra) {
+  @keyframes NaglowekDown {
+    0% {
+      transform: translateY(-172px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+
+@include mq(xxxl) {
+  @keyframes NaglowekDown {
+    0% {
+      transform: translateY(calc(-16.42vh + 20px));
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @media (min-height: 1195px) {
+    @keyframes NaglowekDown {
+      0% {
+        transform: translateY(-172px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+  }
+}
+
+@include mq(xxl) {
+  @media (min-height: 750px) {
+    @keyframes NaglowekDown {
+      0% {
+        transform: translateY(calc(-14vh + 20px));
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+  }
+}
+
+@include mq(xl) {
+  @keyframes NaglowekDown {
+    0% {
+      transform: translateY(calc(-12vh + 20px));
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+
+@include mq(xxs) {
+  @keyframes NaglowekDown {
+    0% {
+      transform: translateY(-40px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+
+// pojawianie i znikanie tej malutkiej nazwy ... dość prostackie ;)
+
+@keyframes nazwaPojawia {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes nazwaZnika {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+//-------------------------------------------------------------MiddleZone-------------------------------------------------------------------------//
+
+//To jest animacja tej szarej strefy (góra) przy grafice ten efekt jakby zmiany perspektywy kamery...
+
+@include mq(ultra) {
+  @keyframes TopZnika {
+    100% {
+      transform: translateY(-$main-spacing * 3);
+    }
+  }
+
+  @keyframes TopPojawia {
+    0% {
+      transform: translateY(-$main-spacing * 3);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+@include mq(xxxl) {
+  @keyframes TopZnika {
+    100% {
+      transform: translateY(-$main-spacing);
+    }
+  }
+
+  @keyframes TopPojawia {
+    0% {
+      transform: translateY(-$main-spacing);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+@include mq(xl) {
+  @keyframes TopZnika {
+    100% {
+      transform: translateY(-$main-spacing * 1.5);
+    }
+  }
+
+  @keyframes TopPojawia {
+    0% {
+      transform: translateY(-$main-spacing * 1.5);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+//To jest animacja tej szarej strefy przy grafice ten efekt jakby zmiany perspektywy kamery ....
+
+@include mq(ultra) {
+  @keyframes ArtykulZnika {
+    100% {
+      transform: translateY($main-spacing * 3);
+    }
+  }
+
+  @keyframes ArtykulPojawia {
+    0% {
+      transform: translateY($main-spacing * 3);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+@include mq(xxxl) {
+  @keyframes ArtykulZnika {
+    100% {
+      transform: translateY($main-spacing);
+    }
+  }
+
+  @keyframes ArtykulPojawia {
+    0% {
+      transform: translateY($main-spacing);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+@include mq(xxs) {
+  @keyframes ArtykulZnika {
+    100% {
+      transform: translateY(-$main-spacing * 2);
+    }
+  }
+
+  @keyframes ArtykulPojawia {
+    0% {
+      transform: translateY(-$main-spacing * 2);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+//pojawianie sie tekstu piosenki wieza babel ... piękny lecz nie ludzki ląd coraz dalej ...
+
+@keyframes WiezaBabelZnika {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes WiezaBabelPojawia {
+  100% {
+    opacity: 1;
+  }
+}
+
+//---------------------------------------------------------------------Komponent Beton News--------------------------------------------------------------------------------------//
+
+//jego naimacja przejazd do prawej i z powrotem ...
+
+@keyframes BetonZnika {
+  100% {
+    transform: translateX(180%); // osobliwa wartosc ... ?
+  }
+}
+
+@keyframes BetonPojawia {
+  0% {
+    transform: translateX(180%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+//-----------------------------------------------------------------------STOPKA----------------------------------------------------------------------------//
+
+//animacja całej stopy ...
+
+@include mq(ultra) {
+  @keyframes StopkaDown {
+    100% {
+      transform: translateY(192px);
+    }
+  }
+
+  @keyframes StopkaOut {
+    0% {
+      transform: translateY(192px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+@include mq(xxxl) {
+  @keyframes StopkaDown {
+    100% {
+      transform: translateY(16.42vh);
+    }
+  }
+
+  @keyframes StopkaOut {
+    0% {
+      transform: translateY(16.42vh);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @media (min-height: 1195px) {
+    @keyframes StopkaDown {
+      100% {
+        transform: translateY(192px);
+      }
+    }
+
+    @keyframes StopkaOut {
+      0% {
+        transform: translateY(192px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+@include mq(big) {
+  @keyframes StopkaDown {
+    100% {
+      transform: translateY(14vh);
+    }
+  }
+
+  @keyframes StopkaOut {
+    0% {
+      transform: translateY(14vh);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+
+@include mq(xl) {
+  @keyframes StopkaDown {
+    100% {
+      transform: translateY(12vh);
+    }
+  }
+
+  @keyframes StopkaOut {
+    0% {
+      transform: translateY(12vh);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+@include mq(xxs) {
+  @keyframes StopkaDown {
+    100% {
+      transform: translateY(40px);
+    }
+  }
+
+  @keyframes StopkaOut {
+    0% {
+      transform: translateY(40px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+//----------Animacja Menu ASMR.....
+
+@include mq(ultra) {
+  @keyframes ASMRUp {
+    100% {
+      transform: translateY(-130px);
+    }
+  }
+
+  @keyframes ASMRDown {
+    0% {
+      transform: translateY(-130px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+
+@include mq(xxxl) {
+  @keyframes ASMRUp {
+    100% {
+      transform: translateY(-130px);
+    }
+  }
+
+  @keyframes ASMRDown {
+    0% {
+      transform: translateY(-130px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+
+//---------------------------------------------------------------- Komponent Board ------------------------------------------------------------------//
+
+//prostackie znikanie i pojawianie ...
+
+@keyframes BoardZnika {
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes BoardPojawia {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+//Animacja artykulu z znacznika p - topornie rozwiazane ale działa ... :|
+
+@keyframes LeftToRight {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.4;
+  }
+
+  35% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  65% {
+    opacity: 0.2;
+  }
+
+  75% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(-61.5%);
+    opacity: 1;
+  }
+}
+
+@keyframes RightToLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+
+  25% {
+    opacity: 0.4;
+  }
+
+  35% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  65% {
+    opacity: 0.2;
+  }
+
+  75% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes opacityAnimo {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.4;
+  }
+
+  35% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  65% {
+    opacity: 0.2;
+  }
+
+  75% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes RightMoveArtykul {
+  100% {
+    transform: translateX(21.5%);
+  }
+}
+
+@keyframes LeftMoveArtykul {
+  100% {
+    transform: translateX(-21.5%);
+  }
+}
+
+@keyframes Rotate3DCube {
+  100% {
+    transform: translate3d(-50%, -50%, -20px) rotateY(360deg) rotateZ(360deg);
+  }
+}
+//-------------------------animacja w praktyce PicA i PicB scanline effect ----------------------------------------
+@keyframes scanline {
+  0% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(500%);
+  }
+}
+
+@keyframes textShadow {
+  0% {
+    text-shadow: 0.4389924193300864px 0 1px rgba(0, 30, 255, 0.3),
+      -0.4389924193300864px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+  }
+  5% {
+    text-shadow: 2.7928974010788217px 0 1px rgba(0, 30, 255, 0.3),
+      -2.7928974010788217px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+  }
+  10% {
+    text-shadow: 0.02956275843481219px 0 1px rgba(0, 30, 255, 0.3),
+      -0.02956275843481219px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+  }
+  15% {
+    text-shadow: 0.40218538552878136px 0 1px rgba(0, 30, 255, 0.3),
+      -0.40218538552878136px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+  }
+  20% {
+    text-shadow: 3.4794037899852017px 0 1px rgba(0, 30, 255, 0.3),
+      -3.4794037899852017px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+  }
+  25% {
+    text-shadow: 1.6125630401149584px 0 1px rgba(0, 30, 255, 0.3),
+      -1.6125630401149584px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+  }
+  30% {
+    text-shadow: 0.7015590085143956px 0 1px rgba(0, 30, 255, 0.3),
+      -0.7015590085143956px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+  }
+  35% {
+    text-shadow: 3.896914047650351px 0 1px rgba(0, 30, 255, 0.3),
+      -3.896914047650351px 0 1px rgba(255, 0, 80, 0.15), 0 0 3px;
+  }
+  40% {
+    text-shadow: 3.870905614848819px 0 1px rgba(0, 30, 255, 0.3),
+      -3.870905614848819px 0 1px rgba(255, 0, 80, 0.15), 0 0 3px;
+  }
+  45% {
+    text-shadow: 2.231056963361899px 0 1px rgba(0, 30, 255, 0.3),
+      -2.231056963361899px 0 1px rgba(255, 0, 80, 0.15), 0 0 3px;
+  }
+  50% {
+    text-shadow: 0.08084290417898504px 0 1px rgba(0, 30, 255, 0.3),
+      -0.08084290417898504px 0 1px rgba(255, 0, 80, 0.15), 0 0 3px;
+  }
+  55% {
+    text-shadow: 2.3758461067427543px 0 1px rgba(0, 30, 255, 0.3),
+      -2.3758461067427543px 0 1px rgba(255, 0, 80, 0.15), 0 0 3px;
+  }
+  60% {
+    text-shadow: 2.202193051050636px 0 1px rgba(0, 30, 255, 0.3),
+      -2.202193051050636px 0 1px rgba(255, 0, 80, 0.15), 0 0 3px;
+  }
+  65% {
+    text-shadow: 2.8638780614874975px 0 1px rgba(0, 30, 255, 0.3),
+      -2.8638780614874975px 0 1px rgba(255, 0, 80, 0.15), 0 0 3px;
+  }
+  70% {
+    text-shadow: 0.48874025155497314px 0 1px rgba(0, 30, 255, 0.3),
+      -0.48874025155497314px 0 1px rgba(255, 0, 80, 0.15), 0 0 3px;
+  }
+  75% {
+    text-shadow: 1.8948491305757957px 0 1px rgba(0, 30, 255, 0.3),
+      -1.8948491305757957px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+  }
+  80% {
+    text-shadow: 0.0833037308038857px 0 1px rgba(0, 30, 255, 0.3),
+      -0.0833037308038857px 0 1px rgba(255, 0, 80, 0.15), 0 0 3px;
+  }
+  85% {
+    text-shadow: 0.09769827255241735px 0 1px rgba(0, 30, 255, 0.3),
+      -0.09769827255241735px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+  }
+  90% {
+    text-shadow: 3.443339761481782px 0 1px rgba(0, 30, 255, 0.3),
+      -3.443339761481782px 0 1px rgba(255, 0, 80, 0.15), 0 0 3px;
+  }
+  95% {
+    text-shadow: 2.1841838852799786px 0 1px rgba(0, 30, 255, 0.3),
+      -2.1841838852799786px 0 1px rgba(255, 0, 80, 0.15), 0 0 3px;
+  }
+  100% {
+    text-shadow: 2.6208764473832513px 0 1px rgba(0, 30, 255, 0.3),
+      -2.6208764473832513px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+  }
+}
+
+@keyframes MaskMovment {
+  100% {
+    mask-position: 345px 0;
+  }
+}
+
+@keyframes DividerMovment {
+  100% {
+    transform: translate(336px, -75px); // odjac połowe szerokości dividera
+  }
+}
+
+@keyframes HandlerMovment {
+  100% {
+    transform: translate(345px, 0); // odjac połowe szerokości dividera
+  }
+}
