@@ -7960,7 +7960,7 @@ svg > rect {
 
 @media (max-width: 1366px) {
   .News__DivB {
-    left: 9%;
+    left: 9.4%;
     top: 33%;
   }
 }
@@ -7993,8 +7993,8 @@ svg > rect {
 
 @media (max-width: 480px) {
   .News__DivB {
-    left: 10%;
-    top: 87px;
+    left: 10.8%;
+    top: 88px;
     width: 118px;
     height: 28px;
   }
@@ -8018,18 +8018,19 @@ svg > rect {
 @media (max-width: 1366px) {
   .News__DivB-H2 {
     font-size: 2.4rem;
+    letter-spacing: 3px;
   }
 }
 
 @media (max-width: 1280px) {
   .News__DivB-H2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
 
 @media (max-width: 480px) {
   .News__DivB-H2 {
-    letter-spacing: 1px;
+    letter-spacing: 7px;
     font-size: 3.4rem;
   }
 }
@@ -10544,6 +10545,7 @@ svg > rect {
 
 @media (max-width: 1280px) {
   .Board, .Info, .InfoF, .BoardP .InfoP, .BoardPro .InfoPro, .Article, .Article__Overflow, .Article__Overflow-Pro {
+    left: 14.4%;
     top: 46%;
   }
 }

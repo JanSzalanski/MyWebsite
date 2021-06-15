@@ -401,7 +401,7 @@
   }
 
   @include mq(xl) {
-    left: 9%;
+    left: 9.4%;
     top: 33%;
 
     @media (min-height: 765px) {
@@ -424,8 +424,8 @@
   }
 
   @include mq(xs) {
-    left: 10%;
-    top: 87px; //bo div1 80 plus jego top 10 plus ten top 10
+    left: 10.8%;
+    top: 88px; //bo div1 80 plus jego top 10 plus ten top 10
     width: 118px;
     height: 28px;
     // border: 1px solid white;
@@ -448,14 +448,15 @@
 
   @include mq(xl) {
     font-size: 2.4rem;
+    letter-spacing: 3px;
   }
 
   @media (max-width: 1280px) {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   @include mq(xs) {
-    letter-spacing: 1px;
+    letter-spacing: 7px;
     font-size: 3.4rem;
   }
 }
