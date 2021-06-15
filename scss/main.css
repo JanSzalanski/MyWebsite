@@ -7857,7 +7857,7 @@ svg > rect {
   color: var(--color-main1);
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 55%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   display: block;
@@ -8012,6 +8012,7 @@ svg > rect {
   font-weight: 400;
   font-family: "Audiowide", cursive;
   opacity: 0.52;
+  letter-spacing: 2px;
 }
 
 @media (max-width: 1366px) {
