@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moja strona firmowo-domowa -beta</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baloo+2&family=Libre+Barcode+128+Text&family=Montserrat:wght@500;600;700;900&family=Source+Sans+Pro:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="~/../scss/main.css" />
-  </head>
 
-  <body>
-    <div class="WrapperBorder1"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moja strona firmowo-domowa -beta</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baloo+2&family=Libre+Barcode+128+Text&family=Montserrat:wght@500;600;700;900&family=Source+Sans+Pro:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="~/../scss/main.css" />
+</head>
 
-    <div class="Wrapper">
-      <div class="GridHelper"></div>
+<body>
+  <div class="WrapperBorder1"></div>
 
-      <div class="PraktykaPicture"></div>
+  <div class="Wrapper">
+    <div class="GridHelper"></div>
 
-      <div class="GreyTop"></div>
+    <div class="PraktykaPicture"></div>
 
-      <header class="Header">
-        <section class="Header__Logo">
-          <div class="Header__Logo-Left">
-            <!--przy braku podobnej zawartości w Header__Logo-Right responsywność po 800px nie dziala rownomiernie...-->
+    <div class="GreyTop"></div>
 
-            <!-- <p>--Test-- <br>For now recomended resolution is: 1920 x 1080 px. </p> zakomentowanie h3 ponizej powoduje brak powrotu ze stref spokoju z animacja -->
-          </div>
+    <header class="Header">
+      <section class="Header__Logo">
+        <div class="Header__Logo-Left">
+          <!--przy braku podobnej zawartości w Header__Logo-Right responsywność po 800px nie dziala rownomiernie...-->
 
-          <div class="Header__Logo-Middle">
-            <div class="Header__Logo-Middle-Div">szalanski.eu</div>
-            <h1 class="Header__Logo-Middle-H1">szalanski<b>.</b>eu</h1>
-          </div>
+          <!-- <p>--Test-- <br>For now recomended resolution is: 1920 x 1080 px. </p> zakomentowanie h3 ponizej powoduje brak powrotu ze stref spokoju z animacja -->
+        </div>
 
-          <div class="Header__Logo-Right">
-            <div class="ornament1"></div>
-            <div class="ornament2"></div>
-            <div class="ornament3"></div>
-            <div class="ornament4"></div>
-            <!--  sociale ostatecznie tutaj nie wykorzystane
+        <div class="Header__Logo-Middle">
+          <div class="Header__Logo-Middle-Div">szalanski.eu</div>
+          <h1 class="Header__Logo-Middle-H1">szalanski<b>.</b>eu</h1>
+        </div>
+
+        <div class="Header__Logo-Right">
+          <div class="ornament1"></div>
+          <div class="ornament2"></div>
+          <div class="ornament3"></div>
+          <div class="ornament4"></div>
+          <!--  sociale ostatecznie tutaj nie wykorzystane
                           <div class="Header__Logo-Right-Div1">
 
                               <a href="https://www.linkedin.com/in/jan-szalanski/">
@@ -55,365 +55,252 @@
                               </a>
 
                           </div> -->
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="Contact">
-          <div class="Contact__Board">
-            <h2 class="Contact__Board-H2">kontakt</h2>
+      <section class="Contact">
+        <div class="Contact__Board">
+          <h2 class="Contact__Board-H2">kontakt</h2>
 
-            <form
-              class="Contact__Form"
-              method="post"
-              action="https://formsubmit.io/send/5981d3f1-36af-4552-82fe-22b1e41c3af2"
-            >
-              <div class="Contact__Form-Name">
-                <input
-                  type="text"
-                  name="imie"
-                  placeholder="Imię *"
-                  maxlength="30"
-                  required="required"
-                  tabindex="1"
-                  autocomplete="off"
-                />
-              </div>
+          <form class="Contact__Form" method="post"
+            action="https://formsubmit.io/send/5981d3f1-36af-4552-82fe-22b1e41c3af2">
+            <div class="Contact__Form-Name">
+              <input type="text" name="imie" placeholder="Imię *" maxlength="30" required="required" tabindex="1"
+                autocomplete="off" />
+            </div>
 
-              <div class="Contact__Form-Email">
-                <input
-                  type="email"
-                  name="emial"
-                  placeholder="E-mail *"
-                  maxlength="40"
-                  required="required"
-                  tabindex="2"
-                  autocomplete="off"
-                />
-              </div>
+            <div class="Contact__Form-Email">
+              <input type="email" name="emial" placeholder="E-mail *" maxlength="40" required="required" tabindex="2"
+                autocomplete="off" />
+            </div>
 
-              <div class="Contact__Form-Topic">
-                <input
-                  type="topic"
-                  name="temat"
-                  placeholder="Temat"
-                  maxlength="30"
-                  tabindex="3"
-                  tabindex="3"
-                  autocomplete="off"
-                />
-              </div>
+            <div class="Contact__Form-Topic">
+              <input type="topic" name="temat" placeholder="Temat" maxlength="30" tabindex="3" tabindex="3"
+                autocomplete="off" />
+            </div>
 
-              <div class="Contact__Form-Submit">
-                <input type="submit" value="wyślij" tabindex="4" autocomplete="off" />
-              </div>
+            <div class="Contact__Form-Submit">
+              <input type="submit" value="wyślij" tabindex="4" autocomplete="off" />
+            </div>
 
-              <div class="Contact__Form-Area">
-                <textarea
-                  class="Contact__Form-Textarea"
-                  name="message"
-                  id="message"
-                  cols="80"
-                  rows="5"
-                  placeholder="Wiadomość *"
-                  maxlength="600"
-                  required="required"
-                  tabindex="5"
-                ></textarea>
-              </div>
+            <div class="Contact__Form-Area">
+              <textarea class="Contact__Form-Textarea" name="message" id="message" cols="80" rows="5"
+                placeholder="Wiadomość *" maxlength="600" required="required" tabindex="5"></textarea>
+            </div>
 
-              <input name="_redirect" type="hidden" id="name" value="https://szalanski.eu/praktyka.html" />
-            </form>
-          </div>
+            <input name="_redirect" type="hidden" id="name" value="https://szalanski.eu/praktyka.html" />
+          </form>
+        </div>
 
-          <button class="Contact__Btn">Kontakt</button>
-          <div class="Contact__Cross-V--Btn"></div>
-          <div class="Contact__Cross-H--Btn"></div>
-        </section>
+        <button class="Contact__Btn">Kontakt</button>
+        <div class="Contact__Cross-V--Btn"></div>
+        <div class="Contact__Cross-H--Btn"></div>
+      </section>
 
-        <section class="Menu">
-          <div class="Menu__Left">
-            <div class="Menu__Left-Left"></div>
+      <section class="Menu">
+        <div class="Menu__Left">
+          <div class="Menu__Left-Left"></div>
 
-            <nav class="Nav">
-              <!-- Od tego momentu zaczyna sie właściwa nawigacja  zmieniłem Bem na komponent od tego momentu-->
+          <nav class="Nav">
+            <!-- Od tego momentu zaczyna sie właściwa nawigacja  zmieniłem Bem na komponent od tego momentu-->
 
-              <ul class="Nav__List">
-                <li class="Nav__Item">
-                  <a href="firma.html" class="Nav__Link">
+            <ul class="Nav__List">
+              <li class="Nav__Item">
+                <a href="firma.html" class="Nav__Link">
                     <p class="Nav__Title">O Firmie</p>
                   </a>
-                </li>
+              </li>
 
-                <li class="Nav__Item">
-                  <a href="praktyka.html" class="Nav__Link">
+              <li class="Nav__Item">
+                <a href="praktyka.html" class="Nav__Link">
                     <p class="Nav__Title">Praktyka</p>
                   </a>
-                </li>
+              </li>
 
-                <li class="Nav__Item">
-                  <a href="projekty.html" class="Nav__Link">
+              <li class="Nav__Item">
+                <a href="projekty.html" class="Nav__Link">
                     <p class="Nav__Title">Projekty</p>
                   </a>
-                </li>
+              </li>
 
-                <li class="Nav__Item">
-                  <a href="prywatnie.html" class="Nav__Link">
+              <li class="Nav__Item">
+                <a href="prywatnie.html" class="Nav__Link">
                     <p class="Nav__Title">Prywatnie</p>
                   </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
-          <div class="Menu__Middle">
-            <svg
-              class="Menu__Middle-Svg"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 60 20"
-              width="60px"
-              height="20px"
-            >
-              <path class="cls-1" d="M0,0H60V5A22.26,22.26,0,0,0,47,9c-3,2-7,5-11,7a42.56,42.56,0,0,1-17,4H0Z" />
-            </svg>
-          </div>
+        <div class="Menu__Middle">
+          <svg class="Menu__Middle-Svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 20" width="60px"
+            height="20px">
+            <path class="cls-1" d="M0,0H60V5A22.26,22.26,0,0,0,47,9c-3,2-7,5-11,7a42.56,42.56,0,0,1-17,4H0Z" />
+          </svg>
+        </div>
 
-          <div class="Menu__Right"></div>
+        <div class="Menu__Right"></div>
 
-          <div class="StripeGrey"></div>
+        <div class="StripeGrey"></div>
 
-          <div class="Menu__Svg">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 40 20">
-              <polygon class="cls-2" points="40,0 0,0 0,20 27,20 	" />
-            </svg>
-          </div>
+        <div class="Menu__Svg">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 40 20">
+            <polygon class="cls-2" points="40,0 0,0 0,20 27,20 	" />
+          </svg>
+        </div>
 
-          <div class="Menu__Skew"></div>
+        <div class="Menu__Skew"></div>
 
-          <div class="Menu__SkewB">
-            <h3>/ komunikacja kwantowa /</h3>
-          </div>
-        </section>
-      </header>
+        <div class="Menu__SkewB">
+          <h3>/ komunikacja kwantowa /</h3>
+        </div>
+      </section>
+    </header>
 
-      <div class="Troll">
-        <div class="GreyMiddleB Praktyka">
-          <div class="BackgroundGrey"></div>
-          <div class="Miara"></div>
-          <!-- <div class="LineHelp"></div> -->
-          <!-- <div class="LineCross"></div> -->
-          <aside class="BoardP">
-            <div class="CanvasShadow"></div>
-            <div class="CanvasB"></div>
-            <div class="CanvasA"></div>
-            <div class="Canvas"></div>
+    <div class="Troll">
+      <div class="GreyMiddleB Praktyka">
+        <div class="BackgroundGrey"></div>
+        <div class="Miara"></div>
+        <!-- <div class="LineHelp"></div> -->
+        <!-- <div class="LineCross"></div> -->
+        <aside class="BoardP">
+          <div class="CanvasShadow"></div>
+          <div class="CanvasB"></div>
+          <div class="CanvasA"></div>
+          <div class="Canvas"></div>
 
-            <div class="Article">
-              <h2 class="Article__TytulBoczny">Pierwiastek \ Żywioł - <b class="Article__TytulBoczny-B">03</b></h2>
+          <div class="Article">
+            <h2 class="Article__TytulBoczny">Pierwiastek \ Żywioł - <b class="Article__TytulBoczny-B">03</b></h2>
 
-              <header class="Article__Naglowek">
-                <h2 class="Article__H2">Stabilność<span class="Article__H2-Span">| ziemia</span></h2>
-              </header>
+            <header class="Article__Naglowek">
+              <h2 class="Article__H2">Stabilność<span class="Article__H2-Span">| ziemia</span></h2>
+            </header>
 
-              <div class="Article__Overflow">
-                <article id="Article__Artykul-Two">
-                  <p id="Article__Artykul-Pro-Two">
-                    Jeżeli we współczesnym świecie stwierdziłem, że brakuje mi harmonii – to co dopiero można powiedzieć
-                    o stabilności - odkąd w 2020 roku pojawił się nam temat wiurusa? Pandemia, kolejny kryzys finansowy.
-                    Rynek zostaje powywracany na różne strony podbnie jak to miało miejsce 2008 roku, ale nie zupelnie
-                    tak samo - bo obok podbnej narracji mamy obecnie nowość w postaci lockdownu czyli resetu
-                    wszystkiego. No cóż chyba nawet największy optymista miałby problem z dopatrzeniem się stabilności w
-                    takiej sytuacji. Osobiście uważam, że nie ma co się obrażać na rzeczywistość- jest taka jaka jest, a
-                    jak śpiewał klasyk show must go on! Stabilność - co ja przez to rozumiem w odniesieniu do swojego
-                    biznesu, ale też czego sam był oczekiwał u innych? Po pierwsze stabilność wyrażona przez uczciwe
-                    określanie ceny sprzedawanego produktu czy usługi. Bez ukrytych kosztów, bez widełek,
-                  </p>
-                  <p id="Article__Artykul-Pro-Two-B">
-                    bez ściemniania i sztucznego obniżania ceny po to żeby tylko złowić rybkę i ją potem „umiejętnie
-                    zagospodarować”. Wydaje mi się, że lepiej jest spotkać się przedstawić cenę i ewentualnie nie dojść
-                    do porozumienia, uścisnąć sobie dłoń na zakończenie, niż potem mieć do siebie jakieś ukryte
-                    pretensje czy żal. Stabilizacja w uczciwym stawianiu sprawy, jak również nie podejmowanie się tematu
-                    gdzie od początku wiemy, że coś nie jest naszą mocną stroną. Zazwyczaj takie postępowanie kończy się
-                    kolejną dewastacją tej cechy w postaci niedotrzymanych terminów czy żenującej jakości produktu
-                    końcowego, mającej się nijak do początkowych zapewnień. O to jest skrócona definicja stabilności w
-                    relacjach firma-klient i vice versa, jaką ja sobie wyobrażam i jakiej staram się trzymać.
-                  </p>
-                </article>
-              </div>
-
-              <footer class="Article__Stopka">
-                <div class="Article__Corner">
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 12">
-                    <path d="M100,12H10C4.48,12,0,7.52,0,2V0h92L100,12z" />
-                  </svg>
-                </div>
-                <div class="Article__Buttons">
-                  <div data-index="" class="Article__Btn Article__Btn--active"></div>
-
-                  <div data-index="" class="Article__Btn-B Article__Btn--inactive"></div>
-                </div>
-              </footer>
-            </div>
-
-            <div class="DescryptionBtn">
-              <span class="DescryptionBtn__Span">D</span>
-              <p class="DescryptionBtn__P"><span>D</span>escription</p>
-              <div class="DescryptionBtn__Border"></div>
-            </div>
-
-            <div class="InfoP">
-              <header class="Info__Naglowek">
-                <h2 class="Info__H2">Ziemia<span class="Info__H2-Span">| stabilność</span></h2>
-              </header>
-
-              <article class="Info__Artykul">
-                <p class="Info__Artykul-P">
-                  Ziemia jest fundamentem pod trwałe osiągnięcia to żywioł potrzebny do realizacji planów. O osobach
-                  obdarzonych tym pierwiastkiem mówi się, że są ugruntowane i twardo stąpają po ziemi. Podobno, aby
-                  nadać realny kształt naszym planom, projektom, marzeniom - potrzebujemy dużo tego składnika w naszym
-                  usposobieniu. Ziemia sprowadza nas z powietrza i bujania w obłokach. Odpowiada za zmysł dotyku i
-                  kości. Ziemia jest najbardziej fizycznym (namacalnym) z żywiołów jest związana ze zdrowiem i siłą.
-                  Utożsamia solidność i wytrwałość, kojarzy się ze schronieniem (domem) i bezpieczeństwem. Przyjęte
-                  jest, że Ziemia to domena kobiet.
+            <div class="Article__Overflow">
+              <article id="Article__Artykul-Two">
+                <p id="Article__Artykul-Pro-Two">
+                  Jeżeli we współczesnym świecie stwierdziłem, że brakuje mi harmonii – to co dopiero można powiedzieć
+                  o stabilności - odkąd w 2020 roku pojawił się nam temat wiurusa? Pandemia, kolejny kryzys finansowy.
+                  Rynek zostaje powywracany na różne strony podbnie jak to miało miejsce 2008 roku, ale nie zupelnie
+                  tak samo - bo obok podbnej narracji mamy obecnie nowość w postaci lockdownu czyli resetu
+                  wszystkiego. No cóż chyba nawet największy optymista miałby problem z dopatrzeniem się stabilności w
+                  takiej sytuacji. Osobiście uważam, że nie ma co się obrażać na rzeczywistość- jest taka jaka jest, a
+                  jak śpiewał klasyk show must go on! Stabilność - co ja przez to rozumiem w odniesieniu do swojego
+                  biznesu, ale też czego sam był oczekiwał u innych? Po pierwsze stabilność wyrażona przez uczciwe
+                  określanie ceny sprzedawanego produktu czy usługi. Bez ukrytych kosztów, bez widełek,
+                </p>
+                <p id="Article__Artykul-Pro-Two-B">
+                  bez ściemniania i sztucznego obniżania ceny po to żeby tylko złowić rybkę i ją potem „umiejętnie
+                  zagospodarować”. Wydaje mi się, że lepiej jest spotkać się przedstawić cenę i ewentualnie nie dojść
+                  do porozumienia, uścisnąć sobie dłoń na zakończenie, niż potem mieć do siebie jakieś ukryte
+                  pretensje czy żal. Stabilizacja w uczciwym stawianiu sprawy, jak również nie podejmowanie się tematu
+                  gdzie od początku wiemy, że coś nie jest naszą mocną stroną. Zazwyczaj takie postępowanie kończy się
+                  kolejną dewastacją tej cechy w postaci niedotrzymanych terminów czy żenującej jakości produktu
+                  końcowego, mającej się nijak do początkowych zapewnień. O to jest skrócona definicja stabilności w
+                  relacjach firma-klient i vice versa, jaką ja sobie wyobrażam i jakiej staram się trzymać.
                 </p>
               </article>
             </div>
 
-            <div class="Button">></div>
-          </aside>
+            <footer class="Article__Stopka">
+              <div class="Article__Corner">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 12">
+                  <path d="M100,12H10C4.48,12,0,7.52,0,2V0h92L100,12z" />
+                </svg>
+              </div>
+              <div class="Article__Buttons">
+                <div data-index="" class="Article__Btn Article__Btn--active"></div>
 
-          <div class="WrapperTresc Opraktyce">
-            <h1 class="Tresc__H1">
-              PRA - 03 stabilność
-              <div class="Square"></div>
-            </h1>
+                <div data-index="" class="Article__Btn-B Article__Btn--inactive"></div>
+              </div>
+            </footer>
+          </div>
 
-            <div class="CornerTop"></div>
-            <div class="CornerTopIn"></div>
-            <div class="CornerTopR"></div>
-            <div class="LineCornerTR"></div>
-            <div class="CornerBottom"></div>
-            <div class="CornerBottomIn"></div>
-            <div class="CornerBottomR"></div>
-            <div class="Line"></div>
-            <div class="LineIn"></div>
-            <div class="LineLeft"></div>
-            <div class="LineLeftIn"></div>
-            <div class="LineRight"></div>
+          <div class="DescryptionBtn">
+            <span class="DescryptionBtn__Span">D</span>
+            <p class="DescryptionBtn__P"><span>D</span>escription</p>
+            <div class="DescryptionBtn__Border"></div>
+          </div>
 
-            <div class="ShapeA">
-              <div class="ShapeARect"></div>
-              <div class="ShapeBRect"></div>
-              <div class="ShapeCRect"></div>
-              <h3>|Description</h3>
+          <div class="InfoP">
+            <header class="Info__Naglowek">
+              <h2 class="Info__H2">Ziemia<span class="Info__H2-Span">| stabilność</span></h2>
+            </header>
+
+            <article class="Info__Artykul">
+              <p class="Info__Artykul-P">
+                Ziemia jest fundamentem pod trwałe osiągnięcia to żywioł potrzebny do realizacji planów. O osobach
+                obdarzonych tym pierwiastkiem mówi się, że są ugruntowane i twardo stąpają po ziemi. Podobno, aby
+                nadać realny kształt naszym planom, projektom, marzeniom - potrzebujemy dużo tego składnika w naszym
+                usposobieniu. Ziemia sprowadza nas z powietrza i bujania w obłokach. Odpowiada za zmysł dotyku i
+                kości. Ziemia jest najbardziej fizycznym (namacalnym) z żywiołów jest związana ze zdrowiem i siłą.
+                Utożsamia solidność i wytrwałość, kojarzy się ze schronieniem (domem) i bezpieczeństwem. Przyjęte
+                jest, że Ziemia to domena kobiet.
+              </p>
+            </article>
+          </div>
+
+          <div class="Button">></div>
+        </aside>
+
+        <div class="WrapperTresc Opraktyce">
+          <h1 class="Tresc__H1">
+            PRA - 03 stabilność
+            <div class="Square"></div>
+          </h1>
+
+          <div class="CornerTop"></div>
+          <div class="CornerTopIn"></div>
+          <div class="CornerTopR"></div>
+          <div class="LineCornerTR"></div>
+          <div class="CornerBottom"></div>
+          <div class="CornerBottomIn"></div>
+          <div class="CornerBottomR"></div>
+          <div class="Line"></div>
+          <div class="LineIn"></div>
+          <div class="LineLeft"></div>
+          <div class="LineLeftIn"></div>
+          <div class="LineRight"></div>
+
+          <div class="ShapeA">
+            <div class="ShapeARect"></div>
+            <div class="ShapeBRect"></div>
+            <div class="ShapeCRect"></div>
+            <h3>|Description</h3>
+          </div>
+
+          <div class="RectangleA"></div>
+          <div class="LinesA"></div>
+          <div class="LinesB"></div>
+
+          <div class="RectangleTresc">
+            <div class="Background"></div>
+            <div class="BackgroundNoise"></div>
+            <div class="BackgroundGrid"></div>
+            <div class="BackgroundGardient"></div>
+
+            <h3 class="NaglowekTresc">AAT Holding Sp.z.o.o.</h3>
+
+            <div class="maska">
+              <div class="ozdobnik">
+                <div class="geo begining"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo end"></div>
+              </div>
             </div>
 
-            <div class="RectangleA"></div>
-            <div class="LinesA"></div>
-            <div class="LinesB"></div>
-
-            <div class="RectangleTresc">
-              <div class="Background"></div>
-              <div class="BackgroundNoise"></div>
-              <div class="BackgroundGrid"></div>
-              <div class="BackgroundGardient"></div>
-
-              <h3 class="NaglowekTresc">AAT Holding Sp.z.o.o.</h3>
-
-              <div class="maska">
-                <div class="ozdobnik">
-                  <div class="geo begining"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo end"></div>
-                </div>
-              </div>
-
-              <p>
-                Po raz pierwszy podjołem zatrudnienie w polskiej firmie AAT Holding sp. z o. o. Jako młody chłopak po
-                technikum elektronicznym i student wieczorowy mogłem podjąć pracę na pełny etat w spółce, gdzie szukano
-                technika serwisu do naprawy wielu urządzeń elektronicznych. Świetnie się składało ja jeszcze świeży
-                adept technikum elektronicznego a tu od razu praca w zawodzie. Co prawda głównym powołaniem jakie mnie
-                przywiodło do owego technikum była informatyka i taki też był kierunek moich studiów. Natomiast uznałem,
-                że takie elektroniczne doświadczenie może tylko zaprocentować i sprawić, że będę jeszcze lepszym
-                specjalistą w przyszłej dowolnej specjalizacji informatycznej. Firma zajmowała się dystrybucją urządzeń
-                SSWiN czyli Systemów Sygnalizacji Włamania i Napadu. W siostrzanej firmie mieszczącej się w tym samym
-                budynku oferowano produkty pod marką własną z dziedziny CCTV czyli na polski - telewizji dozorowej. Moim
-                zadaniem postawionym przez Dyrektora miało być naprawianie asortymentu z jednej jaki i drugiej
-                dziedziny. Oraz jeśli podołam - udzielanie porad technicznych na temat oferowanych rozwiązań także
-                najlepiej z obydwu obszarów. Trochę mnie zdziwiło że nikt z wówczas pracujących serwisantów nie posiadał
-                tak szerokiego zakresu obowiązków – nie zastanawiałem się jednak nad tym długo i przeszedłem do
-                działania. Miałem to szczęście że w serwisie jak i w dziale technicznym pracowali zdolni ludzie daleko
-                bardziej zaawansowani elektronicy ode mnie - młodego adepta tej dziedziny. Jednak ta świadomość tylko
-                mnie mobilizowała do pracy nad swoimi umięjetnościami tak, aby z czasem strać się dorównywać tym właśnie
-                osobą. Takie okoliczności dawały możliwości uczenia się od lepszych od siebie co jest bardzo efektywne i
-                szalenie motywujące. Należy powiedzieć że asortyment firmy nie sprowadzał się do jednej marki własnej
-                telewizji i kilku marek z tzw. alarmówki o nie… cennik, który także stosunkowo dobrze znałem był całkiem
-                opasłym wydawnictwem własnym. Po za tym firma miała oddziały w Polsce jaki poszerzała swoje portfolio o
-                rynki zagraniczne. Jednym słowem z uwagi na wielkość firmy brygada w serwisie nie narzekała na pracę w
-                tym i ja. Po dwóch latach chyba na tyle dobrze wywiązywałem się z ambitnych założeń postawionych mojej
-                osobie, że z technika serwisu stałem się specjalistą do spraw serwisu i z tego co mi wiadomo żaden z
-                moich bardziej doświadczonych kolegów ze specjalizacji SSWiN lub CCTV nie zgłosił zastrzeżeń do takiego
-                całkiem szybkiego awansu ;)
-              </p>
-
-              <h3 class="NaglowekTresc">NSS Sp.z.o.o.</h3>
-
-              <div class="maska">
-                <div class="ozdobnik">
-                  <div class="geo begining"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo end"></div>
-                </div>
-              </div>
-              <p>
-                Po trzech i pół roku przeszedłem do firmy o podobnym profilu produktowym na podobne stanowisko tj.
-                specjalista ds. serwisu technicznego. Czyli znowu naprawa sprzętu z dwóch dziedzin SSWiN oraz CCTV. Tym
-                razem inne marki z nieco mniej opasłego cennika. Także do moich obowiązków należała pomoc techniczna na
-                miejscu i przez telefon. W tej firmie było to nawet bardziej obciążające, gdyż tutaj za moich czasów
-                dział techniczny nie występował był tylko serwis. Firma była dużo mniejsza jeśli chodzi o skład osobowy
-                jednak nie wiele mniejsza jeśli chodzi o asortyment. Ekstremalnie mniejsza jeśli chodzi o osoby
-                techniczne. Dość powiedzieć że było ich wówczas ze mną dokładnie trzy. Jeśli u osób które być może
-                trochę znają się na pracy serwisowej czy elektronika właśnie zrodziła się taka myśl ?- że co ja tam się
-                rozpisuje nad prostą pracą polegającą na demontażach i wymianach płyt głównych czy całych modułów . Otóż
-                od samego początku w tej firmie jaki opisywanej poprzednio było moim priorytetem (jak i niektórych
-                kolegów po fachu) - zdiagnozowanie usterki znalezienie uszkodzonych elementów i ich wymiana. Mówiąc
-                krótko jak najefektywniejsze podejścia do kwestii naprawy pod względem koszt\efekt (a jeszcze krócej nie
-                iść na łatwiznę). Czyli robienie czegoś więcej niż tylko sprawny montaż-demontaż wyuczonego asortymentu.
-                Nie zrażała mnie nawet wymiana układów scalonych bga. Rozpoznanie niektórych usterek z czasem doszło do
-                takiego poziomu, że uszkodzone element\ty potrafiliśmy precyzyjnie rozpoznać w danym produkcie na
-                podstawie samego dźwięku jaki się z niego wydobywał (taki był przerób). A w niektórych przepadkach nawet
-                - uszkodzenie rozpoznawaliśmy (z całkiem dużo dozą prawdopodobieństwa) po dochodzącym z wnętrza
-                przedmiotu zapachu tak nie przewidziało się Tobie po zapachu ... Lub co było już sztuką prostszą na sam
-                dotyk też mogło się obejść bez patrzenia. Czyli innymi słowy i z małym przymrużeniem oka – w wąskim
-                gronie mogliśmy urządzać zawody prestidigitatorskie z napraw elektroniki przy zasłoniętych oczach :)
-                <br />
-                Czy to był wysoki poziom czy nie – to już pozostawiam Twojej ocenie?
-              </p>
-
-<<<<<<< HEAD
             <p>
               Po raz pierwszy podjołem zatrudnienie w polskiej firmie AAT Holding sp. z o. o. Jako młody chłopak po
               technikum elektronicznym i student wieczorowy mogłem podjąć pracę na pełny etat w spółce, gdzie szukano
@@ -461,380 +348,404 @@
                 <div class="geo"></div>
                 <div class="geo"></div>
                 <div class="geo end"></div>
-=======
-              <h3 class="NaglowekTresc">freelancer</h3>
-
-              <div class="maska">
-                <div class="ozdobnik">
-                  <div class="geo begining"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo end"></div>
-                </div>
->>>>>>> dcd931190a257826219ea63e8d96a688ef6ed2e1
-              </div>
-              <p>
-                Kolejny rok zwiastował zmiany - za nie długo miałem mierzyć się tematem obrony pracy dyplomowej na
-                studiach. Powoli więc obierałem kierunek na stricte informatyczne klimaty. Tak więc kolejne 2 lata to
-                praca głównie jako freelancer w grafice komputerowej ale nie tylko. Trochę to był czas chwytania się
-                różnych projektów, eksperymentowania co ostatecznie było dobrą zaprawą przed rozpoczęciem działalności
-                na którą zdecyduje się w przeciągu następnych dwóch lat. Mogę tylko dodać że w tym okresie zdarzyło mi
-                się pracować jako grafik 3d przy reklamach do telewizji.
-              </p>
-
-              <div class="BorderPic">
-                <div class="PicA">
-                  <div class="Scanline"></div>
-                  <div class="Winieta"></div>
-                </div>
-                <div class="UnderSvg"></div>
-                <svg class="svgPic">
-                  <defs>
-                    <mask id="mask">
-                      <rect x="0" y="0" height="100%" width="100%" />
-                      <text x="75%" y="50%" text-anchor="middle">KADR</text>
-                    </mask>
-                  </defs>
-                  <rect x="0" y="0" height="100%" width="100%" />
-                </svg>
-                <h2>Skrzydełko czy nóżka</h2>
-                <h1>Skrzydełko czy nóżka</h1>
-              </div>
-
-              <div class="ShapeB">
-                <h3>sektor /// a</h3>
               </div>
             </div>
+            <p>
+              Po trzech i pół roku przeszedłem do firmy o podobnym profilu produktowym na podobne stanowisko tj.
+              specjalista ds. serwisu technicznego. Czyli znowu naprawa sprzętu z dwóch dziedzin SSWiN oraz CCTV. Tym
+              razem inne marki z nieco mniej opasłego cennika. Także do moich obowiązków należała pomoc techniczna na
+              miejscu i przez telefon. W tej firmie było to nawet bardziej obciążające, gdyż tutaj za moich czasów
+              dział techniczny nie występował był tylko serwis. Firma była dużo mniejsza jeśli chodzi o skład osobowy
+              jednak nie wiele mniejsza jeśli chodzi o asortyment. Ekstremalnie mniejsza jeśli chodzi o osoby
+              techniczne. Dość powiedzieć że było ich wówczas ze mną dokładnie trzy. Jeśli u osób które być może
+              trochę znają się na pracy serwisowej czy elektronika właśnie zrodziła się taka myśl ?- że co ja tam się
+              rozpisuje nad prostą pracą polegającą na demontażach i wymianach płyt głównych czy całych modułów . Otóż
+              od samego początku w tej firmie jaki opisywanej poprzednio było moim priorytetem (jak i niektórych
+              kolegów po fachu) - zdiagnozowanie usterki znalezienie uszkodzonych elementów i ich wymiana. Mówiąc
+              krótko jak najefektywniejsze podejścia do kwestii naprawy pod względem koszt\efekt (a jeszcze krócej nie
+              iść na łatwiznę). Czyli robienie czegoś więcej niż tylko sprawny montaż-demontaż wyuczonego asortymentu.
+              Nie zrażała mnie nawet wymiana układów scalonych bga. Rozpoznanie niektórych usterek z czasem doszło do
+              takiego poziomu, że uszkodzone element\ty potrafiliśmy precyzyjnie rozpoznać w danym produkcie na
+              podstawie samego dźwięku jaki się z niego wydobywał (taki był przerób). A w niektórych przepadkach nawet
+              - uszkodzenie rozpoznawaliśmy (z całkiem dużo dozą prawdopodobieństwa) po dochodzącym z wnętrza
+              przedmiotu zapachu tak nie przewidziało się Tobie po zapachu ... Lub co było już sztuką prostszą na sam
+              dotyk też mogło się obejść bez patrzenia. Czyli innymi słowy i z małym przymrużeniem oka – w wąskim
+              gronie mogliśmy urządzać zawody prestidigitatorskie z napraw elektroniki przy zasłoniętych oczach :)
+              <br />
+            </p>
 
-            <div class="ShapeC"></div>
-            <div class="ShapeD"></div>
+            <h3 class="NaglowekTresc">freelancer</h3>
+
+            <div class="maska">
+              <div class="ozdobnik">
+                <div class="geo begining"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo end"></div>
+              </div>
+            </div>
+            <p>
+              Kolejny rok zwiastował zmiany - za nie długo miałem mierzyć się tematem obrony pracy dyplomowej na
+              studiach. Powoli więc obierałem kierunek na stricte informatyczne klimaty. Tak więc kolejne 2 lata to
+              praca głównie jako freelancer w grafice komputerowej ale nie tylko. Trochę to był czas chwytania się
+              różnych projektów, eksperymentowania co ostatecznie było dobrą zaprawą przed rozpoczęciem działalności
+              na którą zdecyduje się w przeciągu następnych dwóch lat. Mogę tylko dodać że w tym okresie zdarzyło mi
+              się pracować jako grafik 3d przy reklamach do telewizji.
+            </p>
+
+            <div class="BorderPic">
+              <div class="PicA">
+                <div class="Scanline"></div>
+                <div class="Winieta"></div>
+              </div>
+              <div class="UnderSvg"></div>
+              <svg class="svgPic">
+                <defs>
+                  <mask id="mask">
+                    <rect x="0" y="0" height="100%" width="100%" />
+                    <text x="75%" y="50%" text-anchor="middle">KADR</text>
+                  </mask>
+                </defs>
+                <rect x="0" y="0" height="100%" width="100%" />
+              </svg>
+              <h2>Skrzydełko czy nóżka</h2>
+              <h1>Skrzydełko czy nóżka</h1>
+            </div>
+
+            <div class="ShapeB">
+              <h3>sektor /// a</h3>
+            </div>
           </div>
 
-          <div class="WrapperTrescB OpraktyceB">
-            <div class="CornerTopB"></div>
-            <div class="CornerTopInB"></div>
-            <div class="CornerTopBL"></div>
-            <div class="LineCornerTBL"></div>
-            <div class="CornerBottomB"></div>
-            <div class="CornerBottomInB"></div>
-            <div class="CornerBottomBL"></div>
-            <div class="LineB"></div>
-            <div class="LineInB"></div>
-            <div class="LineLeftB"></div>
-            <div class="LineRightIn"></div>
-            <div class="LineRightB"></div>
+          <div class="ShapeC"></div>
+          <div class="ShapeD"></div>
+        </div>
 
-            <div class="ShapeBA">
-              <div class="ShapeBARect"></div>
-              <div class="ShapeBBRect"></div>
-              <div class="ShapeBCRect"></div>
-              <h3>Continued</h3>
-            </div>
+        <div class="WrapperTrescB OpraktyceB">
+          <div class="CornerTopB"></div>
+          <div class="CornerTopInB"></div>
+          <div class="CornerTopBL"></div>
+          <div class="LineCornerTBL"></div>
+          <div class="CornerBottomB"></div>
+          <div class="CornerBottomInB"></div>
+          <div class="CornerBottomBL"></div>
+          <div class="LineB"></div>
+          <div class="LineInB"></div>
+          <div class="LineLeftB"></div>
+          <div class="LineRightIn"></div>
+          <div class="LineRightB"></div>
 
-            <div class="RectangleA"></div>
-            <div class="LinesA"></div>
-            <div class="LinesBB"></div>
-
-            <div class="RectangleTresc">
-              <div class="Background"></div>
-              <div class="BackgroundNoise"></div>
-              <div class="BackgroundGrid"></div>
-              <div class="BackgroundGardient"></div>
-              <h3 class="NaglowekTresc">Sąd Rejonowy dla Warszawy Żoliborza</h3>
-
-              <div class="maska">
-                <div class="ozdobnik">
-                  <div class="geo begining"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo end"></div>
-                </div>
-              </div>
-              <p>
-                Jako już „dyplomowany” informatyk zacząłem pracę w Sądzie Rejonowym dla Warszawy Żoliborza. W obiegowej
-                opinii funkcjonuje przekonanie, że praca w instytucji państwowej to jedynie picie kawy od 8 do 16. Nie
-                kończenie - a z pewnością nie dla osoby technicznej jednej z trzech lub częściej dwóch. Bo dokoła
-                czekają na nią takie atrakcje jak między innymi ponad 400 użytkowników przeszło 300 maszyn i cała
-                infrastruktura, czyli sieci, bazy danych, serwery. O specjalizowanym oprogramowaniu resortowym nawet nie
-                będę wspominał, bo można by napisać na te temat powieść i to nie koniecznie romantyczną. W publicznym
-                sektorze jest się specjalistą od wszystkiego. Można by rzec, że jest się człowiekiem od administrowania
-                systemami Windows Server (całego ich spektrum), zarządzania bazami SQL, po przez nadzorowanie sieci aż
-                po bycie guru od Worda i Excela. Jedno, czego być może było najmniej, jeśli chodzi o informatyczne
-                zajęcia w takim miejscu jak Sądy to programowanie - przynajmniej nie w opisywanych przeze mnie (nie
-                licząc oczywiście zapytań SQL i okazjonalnego skryptowania). Człowiek orkiestra pierwsza, jaki druga
-                linia wsparcia, informatyk z help deska żeby zaraz przemienić się w administratora systemów czy sieci, a
-                w między czasie robi się za admina od baz danych i tak w cały czas. Tu nie ma specjalistów w białych
-                kołnierzykach tu trzeba być tęgą głową (z grubą skórą), która nie boi się zakasać rękawy i czasami
-                ubrudzić ręce. Co dzień byłem na pierwszej linii frontu po to, aby cały ten nie mały przybytek spod
-                znaku „ślepej niewiasty”, jako tako funkcjonował. Dni spokojne były rzadkością i najczęściej oznaczały
-                przysłowiową ciszę przed burzą. W 2012 roku przechodzę na własną działalność i od tej pory na podstawie
-                faktur rozliczam moją współpracę z Sądem. W tym czasie zrealizowałem na rzecz Żoliborskiego Sądu sporo
-                dodatkowych projektów, które opisałem na sąsiedniej stronie i do lektury, których gorąco zachęcam.
-              </p>
-
-              <h3 class="NaglowekTresc">Sąd Rejonowy dla Warszawy Woli</h3>
-
-              <div class="maska">
-                <div class="ozdobnik">
-                  <div class="geo begining"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo end"></div>
-                </div>
-              </div>
-              <p>
-                Po około 3 i pół roku przechodę do sąsiedniego Sądu Rejonowego dla Warszawy Woli, który funkcjonował w
-                ramach tego samego obiektu. Nowe miejsce charakteryzowała nieco większa liczba użytkowników i sprzętu
-                oraz liczniejsza infrastruktura sieciowa i serwerowa. Skomplikowanie której było też minimalnie większe
-                chociażby z uwagi na występowanie UTM. Sprawy miały się dodatkowo utrudnić, bo całe sądownictwo czekało
-                wdrożenie dodatkowego systemu informatycznego do rejestracji rozpraw jak również wirtualizacja już
-                istniejącego środowiska za pomocą Vmware. Oczywiście póżniejsza wirtualizacja zasobów serwerowych nie
-                spowodowało, że serwery sprzętowe przestały być przydatne. Może najstarsze egzemplarze czekała w końcu
-                zasłużona emerytura, ale to, co reprezentowało sobą jakąkolwiek moc obliczeniową zawszę mogło liczyć na
-                znalezienie jakiegoś nowego i przydatnego zastosowania. Brygada tęgich głów liczyła tutaj stale cztery
-                osoby (choć z pewnym zastrzeżeniem). Mogę napisać, że obowiązki i realia pracy tutaj były bliźniaczo
-                podobne do tych już opisanych w poprzednim sądzie. Tyle tylko, że tutaj wszystkiego było ciut więcej jak
-                również sama sieć była wewdług mnie bardziej przekombinowana - ale spokojnie za mojej urzędowania doszło
-                do jej zastąpienia nową "lepszą". W tym sądzie także udało mi się zrealizować kilka dodatkowych
-                projektów. Już na koniec, jako ciekawostkę dla tego etapu mojej ścieżki zawodowej mogę dodać, że w 2018
-                roku dostąpiłem zaszczytu zostania pracownikiem Ministerstwa Sprawiedliwości a konkretnie Departamentu
-                Informatyzacji i Rejestrów Sądowych.
-              </p>
-
-              <div class="BorderPic">
-                <div class="PicB">
-                  <div class="Scanline"></div>
-                  <div class="Winieta"></div>
-                </div>
-                <div class="UnderSvgB"></div>
-                <svg class="svgPic">
-                  <defs>
-                    <mask id="mask">
-                      <rect x="0" y="0" height="100%" width="100%" />
-                      <text x="75%" y="50%" text-anchor="middle">KADR</text>
-                    </mask>
-                  </defs>
-                  <rect x="0" y="0" height="100%" width="100%" />
-                </svg>
-                <h2>Miś</h2>
-                <h1>Miś</h1>
-              </div>
-
-              <div class="ShapeBB">
-                <h3>sektor /// b</h3>
-              </div>
-            </div>
-
-            <div class="ShapeBC"></div>
-            <div class="ShapeBD"></div>
+          <div class="ShapeBA">
+            <div class="ShapeBARect"></div>
+            <div class="ShapeBBRect"></div>
+            <div class="ShapeBCRect"></div>
+            <h3>Continued</h3>
           </div>
 
-          <aside class="BoardMobo Praktyka">
-            <div class="CanvasShadowM"></div>
+          <div class="RectangleA"></div>
+          <div class="LinesA"></div>
+          <div class="LinesBB"></div>
 
-            <div class="CanvasBM"></div>
+          <div class="RectangleTresc">
+            <div class="Background"></div>
+            <div class="BackgroundNoise"></div>
+            <div class="BackgroundGrid"></div>
+            <div class="BackgroundGardient"></div>
+            <h3 class="NaglowekTresc">Sąd Rejonowy dla Warszawy Żoliborza</h3>
 
-            <div class="CanvasAM"></div>
-
-            <div class="CanvasM Firma"></div>
-
-            <div class="BMWrap__articles-container">
-              <div class="BMWrap__article-container BMWrap__article-container--second">
-                <div class="BMWrap__background--second Praktyka"></div>
-
-                <h2 class="BMWrap__header BMWrap__header--second">Ziemia <span>| stabilność</span></h2>
-
-                <p class="BMWrap__Info">
-                  Ziemia jest fundamentem pod trwałe osiągnięcia to żywioł potrzebny do realizacji planów. O osobach
-                  obdarzonych tym pierwiastkiem mówi się, że są ugruntowane i twardo stąpają po ziemi. Podobno, aby
-                  nadać realny kształt naszym planom, projektom, marzeniom - potrzebujemy dużo tego składnika w naszym
-                  usposobieniu. Ziemia sprowadza nas z powietrza i bujania w obłokach. Odpowiada za zmysł dotyku i
-                  kości. Ziemia jest najbardziej fizycznym (namacalnym) z żywiołów jest związana ze zdrowiem i siłą.
-                  Utożsamia solidność i wytrwałość, kojarzy się ze schronieniem (domem) i bezpieczeństwem. Przyjęte
-                  jest, że Ziemia to domena kobiet.
-                </p>
+            <div class="maska">
+              <div class="ozdobnik">
+                <div class="geo begining"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo end"></div>
               </div>
-              <div class="BMWrap__article-container BMWrap__article-container--first">
-                <div class="BMWrap__background--first"></div>
+            </div>
+            <p>
+              Jako już „dyplomowany” informatyk zacząłem pracę w Sądzie Rejonowym dla Warszawy Żoliborza. W obiegowej
+              opinii funkcjonuje przekonanie, że praca w instytucji państwowej to jedynie picie kawy od 8 do 16. Nie
+              kończenie - a z pewnością nie dla osoby technicznej jednej z trzech lub częściej dwóch. Bo dokoła
+              czekają na nią takie atrakcje jak między innymi ponad 400 użytkowników przeszło 300 maszyn i cała
+              infrastruktura, czyli sieci, bazy danych, serwery. O specjalizowanym oprogramowaniu resortowym nawet nie
+              będę wspominał, bo można by napisać na te temat powieść i to nie koniecznie romantyczną. W publicznym
+              sektorze jest się specjalistą od wszystkiego. Można by rzec, że jest się człowiekiem od administrowania
+              systemami Windows Server (całego ich spektrum), zarządzania bazami SQL, po przez nadzorowanie sieci aż
+              po bycie guru od Worda i Excela. Jedno, czego być może było najmniej, jeśli chodzi o informatyczne
+              zajęcia w takim miejscu jak Sądy to programowanie - przynajmniej nie w opisywanych przeze mnie (nie
+              licząc oczywiście zapytań SQL i okazjonalnego skryptowania). Człowiek orkiestra pierwsza, jaki druga
+              linia wsparcia, informatyk z help deska żeby zaraz przemienić się w administratora systemów czy sieci, a
+              w między czasie robi się za admina od baz danych i tak w cały czas. Tu nie ma specjalistów w białych
+              kołnierzykach tu trzeba być tęgą głową (z grubą skórą), która nie boi się zakasać rękawy i czasami
+              ubrudzić ręce. Co dzień byłem na pierwszej linii frontu po to, aby cały ten nie mały przybytek spod
+              znaku „ślepej niewiasty”, jako tako funkcjonował. Dni spokojne były rzadkością i najczęściej oznaczały
+              przysłowiową ciszę przed burzą. W 2012 roku przechodzę na własną działalność i od tej pory na podstawie
+              faktur rozliczam moją współpracę z Sądem. W tym czasie zrealizowałem na rzecz Żoliborskiego Sądu sporo
+              dodatkowych projektów, które opisałem na sąsiedniej stronie i do lektury, których gorąco zachęcam.
+            </p>
 
-                <h2 class="BMWrap__header BMWrap__header--first">Stabilność <span>| ziemia</span></h2>
-                <div class="BMWrap__Overflow">
-                  <div class="BMWrap__paragraphs">
-                    <p class="BMWrap__paragraphA">
-                      Jeżeli we współczesnym świecie stwierdziłem, że brakuje mi harmonii – to co dopiero można
-                      powiedzieć o stabilności - odkąd w 2020 roku pojawił się nam temat wirusa? Pandemia, kolejny
-                      kryzys finansowy. Rynek zostaje powywracany na różne strony podbnie jak to miało miejsce 2008
-                      roku, ale nie zupelnie tak samo - bo obok podbnej narracji mamy obecnie nowość w postaci lockdownu
-                      czyli resetu wszystkiego. No cóż chyba nawet największy optymista miałby problem z dopatrzeniem
-                      się stabilności w takiej sytuacji. Osobiście uważam, że nie ma co się obrażać na rzeczywistość-
-                      jest taka jaka jest, a jak śpiewał klasyk show must go on! Stabilność - co ja przez to rozumiem w
-                      odniesieniu do swojego biznesu, ale też czego sam był oczekiwał u innych? Po pierwsze stabilność
-                      wyrażona przez uczciwe określanie ceny sprzedawanego produktu czy usługi.Bez ukrytych kosztów, bez
-                      widełek,
-                    </p>
+            <h3 class="NaglowekTresc">Sąd Rejonowy dla Warszawy Woli</h3>
 
-                    <p class="BMWrap__paragraphB">
-                      bez ściemniania i sztucznego obniżania ceny po to żeby tylko złowić rybkę i ją potem „umiejętnie
-                      zagospodarować”. Wydaje mi się, że lepiej jest spotkać się przedstawić cenę i ewentualnie nie
-                      dojść do porozumienia, uścisnąć sobie dłoń na zakończenie, niż potem mieć do siebie jakieś ukryte
-                      pretensje czy żal. Stabilizacja w uczciwym stawianiu sprawy, jak również nie podejmowanie się
-                      tematu gdzie od początku wiemy, że coś nie jest naszą mocną stroną. Zazwyczaj takie postępowanie
-                      kończy się kolejną dewastacją tej cechy w postaci niedotrzymanych terminów czy żenującej jakości
-                      produktu końcowego, mającej się nijak do początkowych zapewnień. O to jest skrócona definicja
-                      stabilności w relacjach firma-klient i vice versa, jaką ja sobie wyobrażam i jakiej staram się
-                      trzymać.
-                    </p>
-                  </div>
-                </div>
+            <div class="maska">
+              <div class="ozdobnik">
+                <div class="geo begining"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo end"></div>
+              </div>
+            </div>
+            <p>
+              Po około 3 i pół roku przechodę do sąsiedniego Sądu Rejonowego dla Warszawy Woli, który funkcjonował w
+              ramach tego samego obiektu. Nowe miejsce charakteryzowała nieco większa liczba użytkowników i sprzętu
+              oraz liczniejsza infrastruktura sieciowa i serwerowa. Skomplikowanie której było też minimalnie większe
+              chociażby z uwagi na występowanie UTM. Sprawy miały się dodatkowo utrudnić, bo całe sądownictwo czekało
+              wdrożenie dodatkowego systemu informatycznego do rejestracji rozpraw jak również wirtualizacja już
+              istniejącego środowiska za pomocą Vmware. Oczywiście póżniejsza wirtualizacja zasobów serwerowych nie
+              spowodowało, że serwery sprzętowe przestały być przydatne. Może najstarsze egzemplarze czekała w końcu
+              zasłużona emerytura, ale to, co reprezentowało sobą jakąkolwiek moc obliczeniową zawszę mogło liczyć na
+              znalezienie jakiegoś nowego i przydatnego zastosowania. Brygada tęgich głów liczyła tutaj stale cztery
+              osoby (choć z pewnym zastrzeżeniem). Mogę napisać, że obowiązki i realia pracy tutaj były bliźniaczo
+              podobne do tych już opisanych w poprzednim sądzie. Tyle tylko, że tutaj wszystkiego było ciut więcej jak
+              również sama sieć była wewdług mnie bardziej przekombinowana - ale spokojnie za mojej urzędowania doszło
+              do jej zastąpienia nową "lepszą". W tym sądzie także udało mi się zrealizować kilka dodatkowych
+              projektów. Już na koniec, jako ciekawostkę dla tego etapu mojej ścieżki zawodowej mogę dodać, że w 2018
+              roku dostąpiłem zaszczytu zostania pracownikiem Ministerstwa Sprawiedliwości a konkretnie Departamentu
+              Informatyzacji i Rejestrów Sądowych.
+            </p>
 
-                <div class="BMWrap__Corner">
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 12">
-                    <path d="M100,12H10C4.48,12,0,7.52,0,2V0h92L100,12z" />
-                  </svg>
-                </div>
-                <div class="BMWrap__Buttons">
-                  <div data-index="" class="BMWrap__Btn BMWrap__Btn--active"></div>
+            <div class="BorderPic">
+              <div class="PicB">
+                <div class="Scanline"></div>
+                <div class="Winieta"></div>
+              </div>
+              <div class="UnderSvgB"></div>
+              <svg class="svgPic">
+                <defs>
+                  <mask id="mask">
+                    <rect x="0" y="0" height="100%" width="100%" />
+                    <text x="75%" y="50%" text-anchor="middle">KADR</text>
+                  </mask>
+                </defs>
+                <rect x="0" y="0" height="100%" width="100%" />
+              </svg>
+              <h2>Miś</h2>
+              <h1>Miś</h1>
+            </div>
 
-                  <div data-index="" class="BMWrap__Btn-B"></div>
+            <div class="ShapeBB">
+              <h3>sektor /// b</h3>
+            </div>
+          </div>
+
+          <div class="ShapeBC"></div>
+          <div class="ShapeBD"></div>
+        </div>
+
+        <aside class="BoardMobo Praktyka">
+          <div class="CanvasShadowM"></div>
+
+          <div class="CanvasBM"></div>
+
+          <div class="CanvasAM"></div>
+
+          <div class="CanvasM Firma"></div>
+
+          <div class="BMWrap__articles-container">
+            <div class="BMWrap__article-container BMWrap__article-container--second">
+              <div class="BMWrap__background--second Praktyka"></div>
+
+              <h2 class="BMWrap__header BMWrap__header--second">Ziemia <span>| stabilność</span></h2>
+
+              <p class="BMWrap__Info">
+                Ziemia jest fundamentem pod trwałe osiągnięcia to żywioł potrzebny do realizacji planów. O osobach
+                obdarzonych tym pierwiastkiem mówi się, że są ugruntowane i twardo stąpają po ziemi. Podobno, aby
+                nadać realny kształt naszym planom, projektom, marzeniom - potrzebujemy dużo tego składnika w naszym
+                usposobieniu. Ziemia sprowadza nas z powietrza i bujania w obłokach. Odpowiada za zmysł dotyku i
+                kości. Ziemia jest najbardziej fizycznym (namacalnym) z żywiołów jest związana ze zdrowiem i siłą.
+                Utożsamia solidność i wytrwałość, kojarzy się ze schronieniem (domem) i bezpieczeństwem. Przyjęte
+                jest, że Ziemia to domena kobiet.
+              </p>
+            </div>
+            <div class="BMWrap__article-container BMWrap__article-container--first">
+              <div class="BMWrap__background--first"></div>
+
+              <h2 class="BMWrap__header BMWrap__header--first">Stabilność <span>| ziemia</span></h2>
+              <div class="BMWrap__Overflow">
+                <div class="BMWrap__paragraphs">
+                  <p class="BMWrap__paragraphA">
+                    Jeżeli we współczesnym świecie stwierdziłem, że brakuje mi harmonii – to co dopiero można
+                    powiedzieć o stabilności - odkąd w 2020 roku pojawił się nam temat wirusa? Pandemia, kolejny
+                    kryzys finansowy. Rynek zostaje powywracany na różne strony podbnie jak to miało miejsce 2008
+                    roku, ale nie zupelnie tak samo - bo obok podbnej narracji mamy obecnie nowość w postaci lockdownu
+                    czyli resetu wszystkiego. No cóż chyba nawet największy optymista miałby problem z dopatrzeniem
+                    się stabilności w takiej sytuacji. Osobiście uważam, że nie ma co się obrażać na rzeczywistość-
+                    jest taka jaka jest, a jak śpiewał klasyk show must go on! Stabilność - co ja przez to rozumiem w
+                    odniesieniu do swojego biznesu, ale też czego sam był oczekiwał u innych? Po pierwsze stabilność
+                    wyrażona przez uczciwe określanie ceny sprzedawanego produktu czy usługi.Bez ukrytych kosztów, bez
+                    widełek,
+                  </p>
+
+                  <p class="BMWrap__paragraphB">
+                    bez ściemniania i sztucznego obniżania ceny po to żeby tylko złowić rybkę i ją potem „umiejętnie
+                    zagospodarować”. Wydaje mi się, że lepiej jest spotkać się przedstawić cenę i ewentualnie nie
+                    dojść do porozumienia, uścisnąć sobie dłoń na zakończenie, niż potem mieć do siebie jakieś ukryte
+                    pretensje czy żal. Stabilizacja w uczciwym stawianiu sprawy, jak również nie podejmowanie się
+                    tematu gdzie od początku wiemy, że coś nie jest naszą mocną stroną. Zazwyczaj takie postępowanie
+                    kończy się kolejną dewastacją tej cechy w postaci niedotrzymanych terminów czy żenującej jakości
+                    produktu końcowego, mającej się nijak do początkowych zapewnień. O to jest skrócona definicja
+                    stabilności w relacjach firma-klient i vice versa, jaką ja sobie wyobrażam i jakiej staram się
+                    trzymać.
+                  </p>
                 </div>
               </div>
-              <div class="BMWrap__handle">
-                <!-- <div class="BMWrap__handle-ArrowL">&lt;</div>
+
+              <div class="BMWrap__Corner">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 12">
+                  <path d="M100,12H10C4.48,12,0,7.52,0,2V0h92L100,12z" />
+                </svg>
+              </div>
+              <div class="BMWrap__Buttons">
+                <div data-index="" class="BMWrap__Btn BMWrap__Btn--active"></div>
+
+                <div data-index="" class="BMWrap__Btn-B"></div>
+              </div>
+            </div>
+            <div class="BMWrap__handle">
+              <!-- <div class="BMWrap__handle-ArrowL">&lt;</div>
 
               <div class="BMWrap__handle-ArrowR">></div> -->
-              </div>
             </div>
+          </div>
 
-            <div class="BMWrap__divider">
-              <div class="BMWrap__divider_outline"></div>
-              <div class="BMWrap__divider_dot">D</div>
-              <span class="BMWrap__divider_span">escription</span>
-            </div>
-          </aside>
-        </div>
+          <div class="BMWrap__divider">
+            <div class="BMWrap__divider_outline"></div>
+            <div class="BMWrap__divider_dot">D</div>
+            <span class="BMWrap__divider_span">escription</span>
+          </div>
+        </aside>
       </div>
-
-      <footer class="Footer">
-        <section class="Footer__Nav">
-          <div class="Footer__Nav-Left"></div>
-
-          <div class="Footer__Nav-Middle">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 20" width="60px" height="20px">
-              <path class="cls-2" d="M0,0H60V5A22.26,22.26,0,0,0,47,9c-3,2-7,5-11,7a42.56,42.56,0,0,1-17,4H0Z" />
-            </svg>
-          </div>
-
-          <div class="Footer__Nav-Right">
-            <div class="Footer__Nav-Right-Title">
-              Panel dodatków
-              <div class="Footer__Nav-Right-Arrow">></div>
-            </div>
-
-            <div class="Footer__Nav-Right-Bars">
-              <div class="Footer__Nav-Right-Bar1"></div>
-
-              <div class="Footer__Nav-Right-Bar2"></div>
-
-              <div class="Footer__Nav-Right-Bar3"></div>
-
-              <div class="Footer__Nav-Right-Bar4"></div>
-            </div>
-
-            <div class="Footer__Nav-Right-Space"></div>
-          </div>
-
-          <div class="ASMR"></div>
-        </section>
-
-        <section class="Footer__BottomSection">
-          <!-- <div class="Footer__BottomSection-MarginL"></div> -->
-
-          <div class="Footer__BottomSection-Left">
-            <div class="Footer__BottomSection-Left-Div2">
-              <h3 class="Footer__BottomSection-Left-h3">2012 - 2021 &copy; Wszelkie prawa zastrzeżone.</h3>
-            </div>
-
-            <div class="Footer__BottomSection-Left-Div1">
-              <h2 class="Footer__BottomSection-Left-h2">szalanski.eu</h2>
-            </div>
-
-            <div class="QRKode"></div>
-          </div>
-
-          <div class="Footer__BottomSection-Middle">
-            <div class="Footer__BottomSection-Middle-Div1">
-              <h2 class="Footer__BottomSection-Middle-h2">
-                Informacja: Strona niniejsza wykorzystuje do prawidłowego działania pliki cookies
-                <a class="Cookies" href="https://skrypt-cookies.pl/czym-sa-ciasteczka" target="_blank"
-                  >[ Więcej informacji ]</a
-                >
-              </h2>
-            </div>
-          </div>
-
-          <div class="Footer__BottomSection-Right">
-            <div class="Footer__BottomSection-Right-P">
-              <div class="Footer__BottomSection-Right-Div1">
-                <h2 class="Footer__BottomSection-Right-h2">
-                  szalanski.eu <br />
-                  Jan Szałański
-                </h2>
-              </div>
-
-              <div class="Footer__BottomSection-Right-Div2">
-                <h3 class="Footer__BottomSection-Right-h3">
-                  02-285 Warszawa <br />
-                  Szyszkowa 46\13<br />
-                  NIP: 5222739323 <br />REGON :1462757
-                </h3>
-              </div>
-
-              <div class="Footer__BottomSection-Right-Div3">
-                <h3 class="Footer__BottomSection-Right-h3B">Polityka Prywatności</h3>
-              </div>
-            </div>
-          </div>
-
-          <!-- <div class="Footer__BottomSection-MarginR"></div> -->
-        </section>
-      </footer>
     </div>
 
-    <script src="~/../js/praktyka.js"></script>
-    <script src="~/../js/boardMobo.js"></script>
-    <script src="~/../js/board.js"></script>
-  </body>
+    <footer class="Footer">
+      <section class="Footer__Nav">
+        <div class="Footer__Nav-Left"></div>
+
+        <div class="Footer__Nav-Middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 20" width="60px" height="20px">
+            <path class="cls-2" d="M0,0H60V5A22.26,22.26,0,0,0,47,9c-3,2-7,5-11,7a42.56,42.56,0,0,1-17,4H0Z" />
+          </svg>
+        </div>
+
+        <div class="Footer__Nav-Right">
+          <div class="Footer__Nav-Right-Title">
+            Panel dodatków
+            <div class="Footer__Nav-Right-Arrow">></div>
+          </div>
+
+          <div class="Footer__Nav-Right-Bars">
+            <div class="Footer__Nav-Right-Bar1"></div>
+
+            <div class="Footer__Nav-Right-Bar2"></div>
+
+            <div class="Footer__Nav-Right-Bar3"></div>
+
+            <div class="Footer__Nav-Right-Bar4"></div>
+          </div>
+
+          <div class="Footer__Nav-Right-Space"></div>
+        </div>
+
+        <div class="ASMR"></div>
+      </section>
+
+      <section class="Footer__BottomSection">
+        <!-- <div class="Footer__BottomSection-MarginL"></div> -->
+
+        <div class="Footer__BottomSection-Left">
+          <div class="Footer__BottomSection-Left-Div2">
+            <h3 class="Footer__BottomSection-Left-h3">2012 - 2021 &copy; Wszelkie prawa zastrzeżone.</h3>
+          </div>
+
+          <div class="Footer__BottomSection-Left-Div1">
+            <h2 class="Footer__BottomSection-Left-h2">szalanski.eu</h2>
+          </div>
+
+          <div class="QRKode"></div>
+        </div>
+
+        <div class="Footer__BottomSection-Middle">
+          <div class="Footer__BottomSection-Middle-Div1">
+            <h2 class="Footer__BottomSection-Middle-h2">
+              Informacja: Strona niniejsza wykorzystuje do prawidłowego działania pliki cookies
+              <a class="Cookies" href="https://skrypt-cookies.pl/czym-sa-ciasteczka" target="_blank"
+                  >[ Więcej informacji ]</a>
+            </h2>
+          </div>
+        </div>
+
+        <div class="Footer__BottomSection-Right">
+          <div class="Footer__BottomSection-Right-P">
+            <div class="Footer__BottomSection-Right-Div1">
+              <h2 class="Footer__BottomSection-Right-h2">
+                szalanski.eu <br />
+                Jan Szałański
+              </h2>
+            </div>
+
+            <div class="Footer__BottomSection-Right-Div2">
+              <h3 class="Footer__BottomSection-Right-h3">
+                02-285 Warszawa <br />
+                Szyszkowa 46\13<br />
+                NIP: 5222739323 <br />REGON :1462757
+              </h3>
+            </div>
+
+            <div class="Footer__BottomSection-Right-Div3">
+              <h3 class="Footer__BottomSection-Right-h3B">Polityka Prywatności</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="Footer__BottomSection-MarginR"></div> -->
+      </section>
+    </footer>
+  </div>
+
+  <script src="~/../js/praktyka.js"></script>
+  <script src="~/../js/boardMobo.js"></script>
+  <script src="~/../js/board.js"></script>
+</body>
+
 </html>
