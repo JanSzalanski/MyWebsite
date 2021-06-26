@@ -15,7 +15,7 @@ const logo = document.querySelector(".Header__Logo-Middle-Div");
 let root = document.documentElement;
 
 const colorsOfTheNight = () => {
-  root.style.setProperty("--color-main", "#a8a888");
+  root.style.setProperty("--color-main", "#a8a8a8");
   root.style.setProperty("--color-main1A", "#e4e4e4");
   root.style.setProperty("--color-main1AA", "#fd050599");
   root.style.setProperty("--color-main1", "#fd0505");
