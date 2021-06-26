@@ -8,12 +8,11 @@ const PanelASMR = document.querySelector(".Footer__Nav"); //yep
 const StrzalkaAsmr = document.querySelector(".Footer__Nav-Right-ArrowP"); //yep
 
 const items = document.querySelectorAll(".Nav__Item");
-const itemsParent = document.querySelector(".Nav__List"); 
+const itemsParent = document.querySelector(".Nav__List");
 
 const logo = document.querySelector(".Header__Logo-Middle-Div");
 
 let root = document.documentElement;
-
 
 const colorsOfTheNight = () => {
   root.style.setProperty("--color-main", "#a8a8a8");
@@ -32,9 +31,7 @@ const comeBack = () => {
 };
 
 const getActiveItem = () => {
-  return Array.from(items).findIndex((item) =>
-    getActiveItem.classList.contains("Nav-Item--Active")
-  );
+  return Array.from(items).findIndex((item) => getActiveItem.classList.contains("Nav-Item--Active"));
 };
 
 const activateItem = (e) => {
