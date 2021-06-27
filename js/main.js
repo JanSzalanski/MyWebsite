@@ -49,6 +49,10 @@ const logo = document.querySelector(".Header__Logo-Middle-Div");
 
 // colorsOfTheNight();
 
+function onSubmit(token) {
+  document.getElementById("demo-form").submit();
+}
+
 const comeBack = () => {
   return window.open("index.html", "_self");
 };

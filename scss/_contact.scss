@@ -216,7 +216,7 @@ $color-blackB: rgba(20, 200, 200, 0.2);
 
   top: $main-spacing * 9;
 
-  & input {
+  & button {
     height: 3.6rem;
     width: 220px;
     border: 1px solid var(--color-black);
@@ -372,12 +372,12 @@ $color-blackB: rgba(20, 200, 200, 0.2);
   color: var(--color-dark-grey);
 }
 
-.Contact__Btn:hover + .Contact__Cross-V--Btn {
+.Contact__Btn:hover+.Contact__Cross-V--Btn {
   background-color: var(--color-black);
   transform: translate(0, -50%) rotateZ(90deg);
 }
 
-.Contact__Btn:hover ~ .Contact__Cross-H--Btn {
+.Contact__Btn:hover~.Contact__Cross-H--Btn {
   background-color: var(--color-black);
   transform: translate(0, -50%) rotateZ(180deg);
 }
@@ -398,12 +398,12 @@ $color-blackA: rgba(25, 25, 25, 0.5);
   }
 }
 
-.Contact__Btn-Active:hover + .Contact__Cross-V--Btn-Active {
+.Contact__Btn-Active:hover+.Contact__Cross-V--Btn-Active {
   background-color: var(--color-black);
   transform: translate(0, -50%) rotateZ(45deg);
 }
 
-.Contact__Btn-Active:hover ~ .Contact__Cross-H--Btn-Active {
+.Contact__Btn-Active:hover~.Contact__Cross-H--Btn-Active {
   background-color: var(--color-black);
   transform: translate(0, -50%) rotateZ(135deg);
 }
