@@ -480,8 +480,10 @@ textarea {
   animation-fill-mode: forwards;
 }
 
-.error {
 
-  color: black;
+.error {
+  position: absolute;
+  margin-top: 3px;
+  color: white;
 
 }

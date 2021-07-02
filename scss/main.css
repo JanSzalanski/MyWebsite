@@ -2826,7 +2826,9 @@ textarea {
 }
 
 .error {
-  color: black;
+  position: absolute;
+  margin-top: 3px;
+  color: white;
 }
 
 .GreyTop {
