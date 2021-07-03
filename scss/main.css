@@ -2826,7 +2826,6 @@ textarea {
 }
 
 .error {
-  position: absolute;
   margin-top: 3px;
   color: white;
 }
