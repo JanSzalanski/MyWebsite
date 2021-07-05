@@ -7,11 +7,8 @@
 I estimate that the project is 75% completed in relation to all my assumptions for it (When it landed on github).
 The technologies practiced are HTML, CSS (SCSS), JavaScript, PHP, (BEM) methodology.
 
-<<<<<<< HEAD
 zmiana nr 1 test checkout*
 
 zmiana nr 2 test checkout*
 
-=======
->>>>>>> parent of 5125f4b (added for test 1)
 [szalanski.eu](https://szalanski.eu)
