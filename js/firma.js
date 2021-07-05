@@ -10,7 +10,6 @@ const StrzalkaAsmr = document.querySelector(".Footer__Nav-Right-Arrow"); //yep
 const items = document.querySelectorAll(".Nav__Item");
 const itemsParent = document.querySelector(".Nav__List");
 
-const logo = document.querySelector(".Header__Logo-Middle-Div");
 
 let root = document.documentElement;
 
@@ -28,9 +27,6 @@ const colorsOfTheNight = () => {
 
 colorsOfTheNight();
 
-const comeBack = () => {
-  return window.open("index.html", "_self");
-};
 
 const getActiveItem = () => {
   return Array.from(items).findIndex((item) =>
@@ -97,8 +93,6 @@ function WyjazdContact() {
     ContactBoard.classList.add("Contact__Board-Hide");
   }
 }
-
-logo.addEventListener("click", comeBack);
 
 itemsParent.addEventListener("click", activateItem);
 // itemsParent.addEventListener("touchend", activateItem);

@@ -34,7 +34,6 @@ const ogienS3M = document.querySelector(".CanvasShadowM");
 const items = document.querySelectorAll(".Nav__Item");
 const itemsParent = document.querySelector(".Nav__List");
 
-const logo = document.querySelector(".Header__Logo-Middle-Div");
 
 // let root = document.documentElement;
 
@@ -52,10 +51,6 @@ const logo = document.querySelector(".Header__Logo-Middle-Div");
 function onSubmit(token) {
   document.getElementById("demo-form").submit();
 }
-
-const comeBack = () => {
-  return window.open("index.html", "_self");
-};
 
 const getActiveItem = () => {
   return Array.from(items).findIndex((item) => getActiveItem.classList.contains("Nav-Item--Active"));
@@ -243,8 +238,6 @@ function OddechStrony() {
     wiezaBabel4.classList.add("GreyMiddle__P--Hide");
   }
 }
-
-logo.addEventListener("click", comeBack);
 
 itemsParent.addEventListener("click", activateItem);
 // itemsParent.addEventListener("mouseover", hoverItem);
