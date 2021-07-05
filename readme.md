@@ -9,4 +9,6 @@ The technologies practiced are HTML, CSS (SCSS), JavaScript, PHP, (BEM) methodol
 
 zmiana nr 1 test checkout*
 
+zmiana nr 2 test checkout*
+
 [szalanski.eu](https://szalanski.eu)
