@@ -12,3 +12,4 @@ The technologies practiced are HTML, CSS (SCSS), JavaScript, PHP, (BEM) methodol
 [szalanski.eu](https://szalanski.eu)
 
 testing new clone repository...
+no włąśnie coś nie działa w overview
