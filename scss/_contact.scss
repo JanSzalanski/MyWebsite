@@ -483,12 +483,14 @@ textarea {
 .error-top {
   position: absolute;
   left: 0;
-  top: -$main-spacing;
-  margin-top: 3px;
-  color: white;
+  top: -17px;
+  // margin-top: 3px;
+  color: black;
+  font-size: 1.2rem;
 }
 
 .error-bottom {
   margin-top: 3px;
   color: white;
+  font-size: 1.2rem;
 }
