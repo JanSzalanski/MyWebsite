@@ -51,7 +51,8 @@ $color-blackB: rgba(20, 200, 200, 0.2);
   // }
 
   @include mq(xs) {
-    top: 125px;
+    z-index: 1;
+    top: 0px;
   }
 }
 
@@ -502,6 +503,10 @@ textarea {
 .grecaptcha-badge {
   @include mq(xxxl) {
     bottom: 19.5% !important;
+  }
+
+  @include mq(xs) {
+    bottom: 57% !important;
   }
 
 }

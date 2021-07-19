@@ -233,6 +233,7 @@ $grey-help: #8d8d8d;
     font-weight: 400;
     letter-spacing: normal;
 
+
     @include mq(ultra) {
       line-height: 192px;
     }
@@ -268,6 +269,8 @@ $grey-help: #8d8d8d;
     }
 
     @include mq(xs) {
+      padding-left: $main-spacing / 2;
+      text-align: left;
       font-size: 2rem;
       line-height: $main-spacing * 2;
     }
@@ -313,6 +316,7 @@ $grey-help: #8d8d8d;
   font-weight: 400;
   letter-spacing: normal;
   cursor: pointer;
+  background-color: yellowgreen;
 
   border: 1px dashed rgba(255, 255, 255, 0.1);
 
@@ -330,6 +334,14 @@ $grey-help: #8d8d8d;
 
   @include mq(small) {
     font-size: 2.6rem;
+  }
+
+  @include mq(xs) {
+    padding-left: $main-spacing / 2;
+    padding-right: $main-spacing / 2;
+    transform: translate(0, -50%);
+    left: 0;
+    font-size: 2rem;
   }
 }
 

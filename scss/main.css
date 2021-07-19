@@ -2285,7 +2285,8 @@ body {
 
 @media (max-width: 480px) {
   .Contact {
-    top: 125px;
+    z-index: 1;
+    top: 0px;
   }
 }
 
@@ -2847,6 +2848,12 @@ textarea {
   }
 }
 
+@media (max-width: 480px) {
+  .grecaptcha-badge {
+    bottom: 57% !important;
+  }
+}
+
 .GreyTop {
   display: block;
   position: absolute;
@@ -3202,6 +3209,8 @@ textarea {
 
 @media (max-width: 480px) {
   .Header__Logo-Middle-H1 {
+    padding-left: 10px;
+    text-align: left;
     font-size: 2rem;
     line-height: 40px;
   }
@@ -3245,6 +3254,7 @@ textarea {
   font-weight: 400;
   letter-spacing: normal;
   cursor: pointer;
+  background-color: yellowgreen;
   border: 1px dashed rgba(255, 255, 255, 0.1);
 }
 
@@ -3269,6 +3279,17 @@ textarea {
 @media (max-width: 640px) {
   .Header__Logo-Middle-Div {
     font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Header__Logo-Middle-Div {
+    padding-left: 10px;
+    padding-right: 10px;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    left: 0;
+    font-size: 2rem;
   }
 }
 
