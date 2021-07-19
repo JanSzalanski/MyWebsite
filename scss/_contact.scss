@@ -506,7 +506,8 @@ textarea {
   }
 
   @include mq(xs) {
-    display: hidden !important;
+
+    z-index: -1;
 
   }
 
