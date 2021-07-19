@@ -2850,7 +2850,7 @@ textarea {
 
 @media (max-width: 480px) {
   .grecaptcha-badge {
-    bottom: 57% !important;
+    display: hidden !important;
   }
 }
 
