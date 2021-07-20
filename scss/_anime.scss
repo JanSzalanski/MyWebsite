@@ -42,38 +42,45 @@
 @include mq(small) {
   @keyframes ContactShow {
     1% {
-      visibility: visible;
+      // visibility: hidden;
+      transform: translateY(0);
+      transform: translateX(0);
+
       //scrollbar-width: none; - to nic tu nie daje ... ???
     }
 
+    80% {
+      transform: translateX(0);
+      transform: translateY(380px);
+    }
+
     100% {
-      width: 100vw;
-      height: 380px;
+
+
+
+      transform: translate(calc(-100vw + 120px), 380px);
       visibility: visible;
     }
   }
 
   @keyframes ContactHide {
     0% {
-      width: 100vw;
-      height: 380px;
+
+      transform: translate(calc(-100vw + 120px), 380px);
       visibility: visible;
     }
 
-    30% {
-      width: 100vw;
-      height: 60px;
+    20% {
+      transform: translateX(0);
+      transform: translateY(380px);
     }
 
-    50% {
-      height: 60px;
-      width: 100vw;
-    }
+    50% {}
 
     100% {
-      width: 120px;
-      height: 20px;
-      visibility: hide;
+
+      transform: translateY(0px);
+      // visibility: hidden;
     }
   }
 }
