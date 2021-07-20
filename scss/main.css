@@ -567,62 +567,78 @@ textarea {
 @media (max-width: 640px) {
   @-webkit-keyframes ContactShow {
     1% {
-      visibility: visible;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    80% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      -webkit-transform: translateY(380px);
+              transform: translateY(380px);
     }
     100% {
-      width: 100vw;
-      height: 380px;
+      -webkit-transform: translate(calc(-100vw + 120px), 380px);
+              transform: translate(calc(-100vw + 120px), 380px);
       visibility: visible;
     }
   }
   @keyframes ContactShow {
     1% {
-      visibility: visible;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    80% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      -webkit-transform: translateY(380px);
+              transform: translateY(380px);
     }
     100% {
-      width: 100vw;
-      height: 380px;
+      -webkit-transform: translate(calc(-100vw + 120px), 380px);
+              transform: translate(calc(-100vw + 120px), 380px);
       visibility: visible;
     }
   }
   @-webkit-keyframes ContactHide {
     0% {
-      width: 100vw;
-      height: 380px;
+      -webkit-transform: translate(calc(-100vw + 120px), 380px);
+              transform: translate(calc(-100vw + 120px), 380px);
       visibility: visible;
     }
-    30% {
-      width: 100vw;
-      height: 60px;
+    20% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      -webkit-transform: translateY(380px);
+              transform: translateY(380px);
     }
     50% {
-      height: 60px;
-      width: 100vw;
     }
     100% {
-      width: 120px;
-      height: 20px;
-      visibility: hide;
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
     }
   }
   @keyframes ContactHide {
     0% {
-      width: 100vw;
-      height: 380px;
+      -webkit-transform: translate(calc(-100vw + 120px), 380px);
+              transform: translate(calc(-100vw + 120px), 380px);
       visibility: visible;
     }
-    30% {
-      width: 100vw;
-      height: 60px;
+    20% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      -webkit-transform: translateY(380px);
+              transform: translateY(380px);
     }
     50% {
-      height: 60px;
-      width: 100vw;
     }
     100% {
-      width: 120px;
-      height: 20px;
-      visibility: hide;
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
     }
   }
 }
@@ -2301,6 +2317,15 @@ body {
   overflow: hidden;
 }
 
+@media (max-width: 480px) {
+  .Contact__Board {
+    width: 100vw;
+    height: 380px;
+    top: -380px;
+    right: calc(-100vw + 120px);
+  }
+}
+
 .Contact__Board-H2 {
   font-size: 2rem;
   font-family: "Montserrat", sans-serif;
@@ -2839,6 +2864,13 @@ textarea {
   color: black;
   font-size: 0.9rem;
   text-transform: uppercase;
+}
+
+@media (max-width: 480px) {
+  .error-top {
+    font-size: 0.8rem;
+    top: -12px;
+  }
 }
 
 .error-bottom {

@@ -67,6 +67,13 @@ $color-blackB: rgba(20, 200, 200, 0.2);
   border-radius: 0px 0px 0px $main-spacing;
   overflow: hidden;
 
+  @include mq(xs) {
+    width: 100vw;
+    height: 380px;
+    top: -380px;
+    right: calc(-100vw + 120px);
+  }
+
   &-H2 {
     font-size: 2rem;
     font-family: $font-mont;
@@ -493,6 +500,11 @@ textarea {
   color: black;
   font-size: 0.9rem;
   text-transform: uppercase;
+
+  @include mq(xs) {
+    font-size: 0.8rem;
+    top: -12px;
+  }
 }
 
 .error-bottom {
@@ -510,7 +522,9 @@ textarea {
   }
 
   @include mq(xs) {
+
     display: none;
+
   }
 }
 
