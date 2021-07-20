@@ -571,7 +571,7 @@ textarea {
     }
     100% {
       width: 100vw;
-      height: 350px;
+      height: 380px;
       visibility: visible;
     }
   }
@@ -581,14 +581,14 @@ textarea {
     }
     100% {
       width: 100vw;
-      height: 350px;
+      height: 380px;
       visibility: visible;
     }
   }
   @-webkit-keyframes ContactHide {
     0% {
       width: 100vw;
-      height: 350px;
+      height: 380px;
       visibility: visible;
     }
     30% {
@@ -608,7 +608,7 @@ textarea {
   @keyframes ContactHide {
     0% {
       width: 100vw;
-      height: 350px;
+      height: 380px;
       visibility: visible;
     }
     30% {
@@ -2655,6 +2655,12 @@ body {
   font-weight: 400;
 }
 
+@media (max-width: 480px) {
+  #message {
+    height: 96px;
+  }
+}
+
 .Contact__Cross-V--Btn, .Contact__Cross-V--Btn-Active, .Contact__Cross-V--BtnP {
   z-index: 1;
   position: absolute;
@@ -2850,7 +2856,27 @@ textarea {
 
 @media (max-width: 480px) {
   .grecaptcha-badge {
-    z-index: -1;
+    display: none;
+  }
+}
+
+.captcha {
+  display: none;
+}
+
+.captcha a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 480px) {
+  .captcha {
+    left: 20px;
+    right: 20px;
+    bottom: 10px;
+    display: block;
+    position: absolute;
+    color: rgba(0, 0, 0, 0.5);
   }
 }
 

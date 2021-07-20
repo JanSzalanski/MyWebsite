@@ -303,6 +303,10 @@ $color-blackB: rgba(20, 200, 200, 0.2);
     font-family: $font-source;
     font-weight: 400;
   }
+
+  @include mq(xs) {
+    height: 96px;
+  }
 }
 
 //-----------------------Contact Button --------------------------------------------//
@@ -506,9 +510,28 @@ textarea {
   }
 
   @include mq(xs) {
+    display: none;
+  }
+}
 
-    z-index: -1;
+// captcha terms for mobile
+.captcha {
 
+  display: none;
+
+  & a {
+    text-decoration: none;
+    color: black;
   }
 
+  @include mq(xs) {
+
+    left: $main-spacing;
+    right: $main-spacing;
+    bottom: $main-spacing / 2;
+    display: block;
+    position: absolute;
+
+    color: rgba(0, 0, 0, .5);
+  }
 }
