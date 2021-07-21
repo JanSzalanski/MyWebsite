@@ -2868,7 +2868,7 @@ textarea {
 
 @media (max-width: 480px) {
   .error-top {
-    font-size: 0.8rem;
+    font-size: 0.80rem;
     top: -12px;
   }
 }
@@ -7987,7 +7987,7 @@ svg > rect {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   display: block;
-  font-size: 7.2rem;
+  font-size: 5.8rem;
   font-weight: 400;
   font-family: "Audiowide", cursive;
   opacity: 0.5;
@@ -8018,7 +8018,7 @@ svg > rect {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   display: block;
-  font-size: 7.2rem;
+  font-size: 5.8rem;
   font-weight: 400;
   font-family: "Audiowide", cursive;
   background: url("../assets/Dust.webp") no-repeat;
@@ -8472,12 +8472,12 @@ svg > rect {
 
 .News__Article-Content {
   display: block;
-  font-size: 1.7em;
+  font-size: 1.5em;
   font-family: "VT323", monospace;
   text-transform: uppercase;
   font-weight: 400;
   color: var(--color-main1);
-  line-height: 1.2;
+  line-height: 1.1;
   text-align: left;
   -webkit-animation: textShadow 2s infinite;
           animation: textShadow 2s infinite;

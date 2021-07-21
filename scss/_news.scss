@@ -317,6 +317,7 @@
     height: 74px;
     // border: 1px white solid;
   }
+
 }
 
 .News__Div-H1 {
@@ -326,7 +327,7 @@
   top: 55%;
   transform: translate(-50%, -50%);
   display: block;
-  font-size: 7.2rem;
+  font-size: 5.8rem;
   font-weight: 400;
   font-family: $font-audio;
   opacity: 0.5;
@@ -350,7 +351,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
   display: block;
-  font-size: 7.2rem;
+  font-size: 5.8rem;
   font-weight: 400;
   font-family: $font-audio;
   background: url("../assets/Dust.webp") no-repeat;
@@ -717,13 +718,13 @@
 
 .News__Article-Content {
   display: block;
-  font-size: 1.7em;
+  font-size: 1.5em;
   font-family: $font-binar;
   text-transform: uppercase;
 
   font-weight: 400;
   color: var(--color-main1);
-  line-height: 1.2;
+  line-height: 1.1;
   text-align: left;
   animation: textShadow 2s infinite;
 
