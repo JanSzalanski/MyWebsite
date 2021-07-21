@@ -377,8 +377,8 @@
 .News__DivB {
   position: absolute;
   left: 7.5%;
-  top: 28.5%;
-  width: 90px;
+  top: 27.5%;
+  width: 94px;
   height: 30px;
 
   @media (max-width: 1680px) {
@@ -440,11 +440,11 @@
   top: 50%;
   transform: translate(-50%, -50%);
   display: block;
-  font-size: 2.6rem;
+  font-size: 2.9rem;
   font-weight: 400;
   font-family: $font-audio;
   opacity: 0.52;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 
 
   @include mq(xl) {
@@ -469,7 +469,8 @@
   top: 50%;
   transform: translate(-50%, -50%);
   display: block;
-  font-size: 2.6rem;
+  letter-spacing: 3px;
+  font-size: 2.9rem;
   font-weight: 400;
   font-family: $font-audio;
   background: url("../assets/Dust.webp") no-repeat;
