@@ -7929,6 +7929,12 @@ svg > rect {
   }
 }
 
+@media (max-width: 1366px) {
+  .News__Div {
+    top: 9%;
+  }
+}
+
 @media (max-width: 1280px) {
   .News__Div {
     left: 9%;
@@ -7945,13 +7951,13 @@ svg > rect {
 @media (max-width: 1280px) and (min-height: 650px) {
   .News__Div {
     left: 9.3%;
-    top: 13%;
+    top: 12%;
   }
 }
 
 @media (max-width: 1280px) and (min-height: 880px) {
   .News__Div {
-    top: 14%;
+    top: 13%;
     left: 9.2%;
   }
 }
@@ -7973,7 +7979,7 @@ svg > rect {
 @media (max-width: 480px) {
   .News__Div {
     left: 10%;
-    top: 12px;
+    top: 5px;
     width: 116px;
     height: 74px;
   }
@@ -7993,21 +7999,15 @@ svg > rect {
   opacity: 0.5;
 }
 
-@media (max-width: 1366px) {
-  .News__Div-H1 {
-    font-size: 7rem;
-  }
-}
-
 @media (max-width: 1280px) {
   .News__Div-H1 {
-    font-size: 6rem;
+    font-size: 4.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .News__Div-H1 {
-    font-size: 10rem;
+    font-size: 7.5rem;
   }
 }
 
@@ -8028,21 +8028,15 @@ svg > rect {
   background-clip: text;
 }
 
-@media (max-width: 1366px) {
-  .News__Div-H1-Dust {
-    font-size: 7rem;
-  }
-}
-
 @media (max-width: 1280px) {
   .News__Div-H1-Dust {
-    font-size: 6rem;
+    font-size: 4.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .News__Div-H1-Dust {
-    font-size: 10rem;
+    font-size: 7.5rem;
   }
 }
 
@@ -8086,7 +8080,7 @@ svg > rect {
 
 @media (max-width: 1366px) {
   .News__DivB {
-    left: 9.4%;
+    left: 9%;
     top: 33%;
   }
 }
@@ -8104,9 +8098,15 @@ svg > rect {
   }
 }
 
-@media (max-width: 1280px) and (min-height: 815px) {
+@media (max-width: 1280px) and (min-height: 650px) {
   .News__DivB {
     top: 31%;
+  }
+}
+
+@media (max-width: 1280px) and (min-height: 815px) {
+  .News__DivB {
+    top: 30%;
   }
 }
 
@@ -8120,7 +8120,7 @@ svg > rect {
 @media (max-width: 480px) {
   .News__DivB {
     left: 10.8%;
-    top: 88px;
+    top: 80px;
     width: 118px;
     height: 28px;
   }
@@ -8141,16 +8141,10 @@ svg > rect {
   letter-spacing: 3px;
 }
 
-@media (max-width: 1366px) {
-  .News__DivB-H2 {
-    font-size: 2.4rem;
-    letter-spacing: 3px;
-  }
-}
-
 @media (max-width: 1280px) {
   .News__DivB-H2 {
     font-size: 2.2rem;
+    letter-spacing: 4px;
   }
 }
 
@@ -8180,9 +8174,10 @@ svg > rect {
   background-clip: text;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1280px) {
   .News__DivB-H2-Dust {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
+    letter-spacing: 4px;
   }
 }
 
