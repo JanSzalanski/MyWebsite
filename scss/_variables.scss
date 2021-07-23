@@ -85,7 +85,7 @@
   --HeightOPraktyceA: 1920px; //90
 
   @media (max-width: 1920px) {
-    --HeightOPraktyceA: 1900px;
+    --HeightOPraktyceA: 1880px;
   }
 
   @media (max-width: 1680px) {
@@ -113,7 +113,7 @@
   --HeightOPraktyceB: 1550px; //140
 
   @media (max-width: 1920px) {
-    --HeightOPraktyceB: 1510px;
+    --HeightOPraktyceB: 1490px;
   }
 
   @media (max-width: 1680px) {
@@ -137,7 +137,7 @@
   }
 
   @media (max-width: 480px) {
-    --HeightOPraktyceB: 1610px; //-70px     
+    --HeightOPraktyceB: 1610px; //-70px
   }
 
   //---------------------projekty var--------------------------------//
@@ -326,20 +326,13 @@ text {
   fill: var(--color-black);
 }
 
-$font-mont: "Montserrat",
-sans-serif;
-$font-audio: "Audiowide",
-cursive;
-$font-source: "Source Sans Pro",
-sans-serif;
-$font-barcode: "Libre Barcode 128",
-cursive;
-$font-baloo: "Baloo 2",
-cursive;
-$font-binar: "VT323",
-monospace;
-$font-japan: "OPTIOpus",
-sans-serif;
+$font-mont: "Montserrat", sans-serif;
+$font-audio: "Audiowide", cursive;
+$font-source: "Source Sans Pro", sans-serif;
+$font-barcode: "Libre Barcode 128", cursive;
+$font-baloo: "Baloo 2", cursive;
+$font-binar: "VT323", monospace;
+$font-japan: "OPTIOpus", sans-serif;
 
 $base-font-size: 10px;
 $max-width: 1920px;
@@ -348,25 +341,36 @@ $border-radius: 15px;
 $border-radius-min: 5px;
 $main-spacing: 20px;
 
-$breakpoints: (xxs: (max-width: 360px,
+$breakpoints: (
+  xxs: (
+    max-width: 360px,
   ),
-  xs: (max-width: 480px,
+  xs: (
+    max-width: 480px,
   ),
-  small: (max-width: 640px,
+  small: (
+    max-width: 640px,
   ),
-  medium: (max-width: 800px,
+  medium: (
+    max-width: 800px,
   ),
-  large: (max-width: 1024px,
+  large: (
+    max-width: 1024px,
   ),
-  xl: (max-width: 1366px,
+  xl: (
+    max-width: 1366px,
   ),
-  big: (max-width: 1440px,
+  big: (
+    max-width: 1440px,
   ),
-  xxl: (max-width: 1600px,
+  xxl: (
+    max-width: 1600px,
   ),
-  xxxl: (max-width: 1920px,
+  xxxl: (
+    max-width: 1920px,
   ),
-  ultra: (min-width: 1921px,
+  ultra: (
+    min-width: 1921px,
   ),
 );
 
