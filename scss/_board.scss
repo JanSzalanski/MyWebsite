@@ -218,7 +218,6 @@ $width-btn: 115px;
 }
 
 .DescryptionBtn__P {
-
   // display: inline-block;
   @include mq(xs) {
     font-size: 0.9rem;
@@ -243,10 +242,7 @@ $width-btn: 115px;
   transition: 0.3s;
 
   & span {
-    color: rgba(0,
-        0,
-        0,
-        0); //alpha po to żęby D tam było ale nie widoczne dla utrzymania proporcji contentu
+    color: rgba(0, 0, 0, 0); //alpha po to żęby D tam było ale nie widoczne dla utrzymania proporcji contentu
   }
 }
 
@@ -370,8 +366,7 @@ $width-btn: 115px;
   border: solid 1px var(--color-main3);
   border-top: none;
   border-right: none;
-  transition: background-color 500ms ease-in-out,
-  clip-path 500ms ease-in-out;
+  transition: background-color 500ms ease-in-out, clip-path 500ms ease-in-out;
   transform: translate(0, 0);
 
   &__Naglowek {
@@ -521,15 +516,17 @@ $width-btn: 115px;
   }
 }
 
-.DescryptionBtn:hover+.Info {
+.DescryptionBtn:hover + .Info {
   background-color: var(--color-main2);
-  background-image: linear-gradient(to top,
+  background-image: linear-gradient(
+      to top,
       rgba(0, 0, 0, 0) 0%,
       rgba(20, 20, 20, 0.6) 10%,
       rgba(25, 25, 25, 0.75) 27%,
       var(--color-main1A) 48%,
       var(--color-main1) 75%,
-      #ff7700e5 97%),
+      #ff7700e5 97%
+    ),
     url("../assets/lawa.webp");
   will-change: clip-path;
   clip-path: circle(70%);
@@ -625,11 +622,7 @@ $width-btn: 115px;
   position: absolute;
   left: 0;
   top: 0;
-  background-image: linear-gradient(0deg,
-      $color-grey1 0%,
-      $color-grey1 70%,
-      $color-grey2 85%,
-      $color-grey3 98%);
+  background-image: linear-gradient(0deg, $color-grey1 0%, $color-grey1 70%, $color-grey2 85%, $color-grey3 98%);
   border: solid 1px lighten($color-grey1, 20%);
   border-top: none;
   border-right: none;
@@ -1360,9 +1353,7 @@ $width-btn: 115px;
   height: $height-board;
   border-radius: $border-radius;
   transform: skew(-2deg, -2deg);
-  background-image: linear-gradient(0deg,
-    var(--color-main4) 0%,
-    var(--color-main1) 100%);
+  background-image: linear-gradient(0deg, var(--color-main4) 0%, var(--color-main1) 100%);
   transition: 0.3s;
 
   &--Hide {
@@ -1391,13 +1382,10 @@ $width-btn: 115px;
   position: absolute;
   left: 4px;
   bottom: 4px;
-  border-radius: $border-radius+2;
+  border-radius: $border-radius + 2;
   transform: skew(-3deg, -3deg);
-  background-image: linear-gradient(0deg,
-    rgba(0, 0, 0, 0) 0%,
-    var(--color-main1) 100%);
-  box-shadow: inset 1px 1px 4px rgba(255, 255, 255, 0.7),
-  inset -1px -1px 4px rgba(0, 0, 0, 0.8); // --------------------bevel & emboss//
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, var(--color-main1) 100%);
+  box-shadow: inset 1px 1px 4px rgba(255, 255, 255, 0.7), inset -1px -1px 4px rgba(0, 0, 0, 0.8); // --------------------bevel & emboss//
   opacity: 0.55;
   // z-index: -1;
 }
@@ -1419,13 +1407,10 @@ $width-btn: 115px;
   position: absolute;
   left: 8px;
   bottom: 8px;
-  border-radius: $border-radius+4;
+  border-radius: $border-radius + 4;
   transform: skew(-4deg, -4deg);
-  background-image: linear-gradient(0deg,
-    rgba(0, 0, 0, 0) 0%,
-    var(--color-main1) 100%);
-  box-shadow: inset 2px 2px 6px rgba(255, 255, 255, 0.7),
-  inset -2px -2px 6px rgba(0, 0, 0, 0.8); // --------------------bevel & emboss//
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, var(--color-main1) 100%);
+  box-shadow: inset 2px 2px 6px rgba(255, 255, 255, 0.7), inset -2px -2px 6px rgba(0, 0, 0, 0.8); // --------------------bevel & emboss//
   opacity: 0.55;
   // z-index: -2;
 }
@@ -1745,15 +1730,17 @@ $width-btn: 115px;
   @extend .Info;
 }
 
-.DescryptionBtn:hover+.InfoF {
+.DescryptionBtn:hover + .InfoF {
   background-color: var(--color-main2);
-  background-image: linear-gradient(to top,
+  background-image: linear-gradient(
+      to top,
       rgba(255, 255, 255, 0.4) 0%,
       rgba(0, 0, 0, 0.2) 15%,
       rgba(25, 25, 25, 0.3) 27%,
       #00d9ffda 60%,
       #00d9ffda 80%,
-      #0066ff 97%),
+      #0066ff 97%
+    ),
     url("../assets/lod.webp");
   will-change: clip-path;
   clip-path: circle(70%);
@@ -1768,15 +1755,17 @@ $width-btn: 115px;
     @extend .Info;
   }
 
-  .DescryptionBtn:hover+.InfoP {
+  .DescryptionBtn:hover + .InfoP {
     background-color: var(--color-main2);
-    background-image: linear-gradient(to top,
+    background-image: linear-gradient(
+        to top,
         rgba(25, 25, 25, 0.7) 3%,
         rgba(25, 25, 25, 0.4) 10%,
         rgba(25, 25, 25, 0.4) 15%,
         var(--color-main3) 27%,
         var(--color-main2) 70%,
-        var(--color-main1A) 90%),
+        var(--color-main1A) 90%
+      ),
       url("../assets/ziemiaSatur.webp");
     will-change: clip-path;
     clip-path: circle(70%);
@@ -1790,15 +1779,17 @@ $width-btn: 115px;
     @extend .Info;
   }
 
-  .DescryptionBtn:hover+.InfoPro {
+  .DescryptionBtn:hover + .InfoPro {
     background-color: var(--color-main2);
-    background-image: linear-gradient(to top,
+    background-image: linear-gradient(
+        to top,
         rgba(55, 55, 55, 0.5) 10%,
         rgba(0, 0, 0, 0.5) 18%,
         rgba(200, 200, 200, 0.85) 30%,
         rgba(200, 200, 200, 0.85) 75%,
         rgba(255, 255, 255, 0.4) 80%,
-        #005558aa 90%),
+        #005558aa 90%
+      ),
       url("../assets/powietrze.webp");
     will-change: clip-path;
     clip-path: circle(70%);

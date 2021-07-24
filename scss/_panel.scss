@@ -1,0 +1,56 @@
+$width-board: var(--board-width);
+
+.Panel {
+  position: absolute;
+  top: 5px;
+  left: calc(20.6% + var(--board-width) + 5px);
+  height: 120px;
+  width: 660px;
+  background-color: var(--color-dark-grey);
+  border: 1px solid black;
+  border-radius: 8px;
+
+  &__Border1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 8px;
+
+    & h3 {
+      position: absolute;
+      left: $main-spacing;
+      margin-right: 5px;
+      z-index: 0;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.35);
+      //   background-color: var(--color-dark-grey);
+      margin-top: -5px;
+      padding-left: 3px;
+      padding-right: 3px;
+    }
+  }
+}
+
+.H3bgc {
+  position: absolute;
+  left: 12px;
+  margin-top: -5px;
+  border: 1px red solid;
+  width: 90px;
+  height: 10px;
+  background-color: var(--color-dark-grey);
+}
+.PanelInnerShadow {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 8px;
+
+  box-shadow: inset 0px 0px 7px 5px rgba(0, 0, 0, 0.35);
+  z-index: 2;
+}
