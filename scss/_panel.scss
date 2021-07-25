@@ -6,7 +6,7 @@ $width-board: var(--board-width);
   left: calc(20.6% + var(--board-width) + 5px);
   height: 120px;
   width: 660px;
-  background-color: var(--color-dark-grey);
+  background-color: #222;
   border: 1px solid black;
   border-radius: 8px;
 
@@ -28,7 +28,7 @@ $width-board: var(--board-width);
       text-transform: uppercase;
       font-size: 0.8rem;
       color: rgba(255, 255, 255, 0.35);
-      background-color: var(--color-dark-grey);
+      background-color: #222;
       margin-top: -5px;
       padding-left: 3px;
       padding-right: 3px;
@@ -36,15 +36,7 @@ $width-board: var(--board-width);
   }
 }
 
-.H3bgc {
-  position: absolute;
-  left: 12px;
-  margin-top: -5px;
-  border: 1px red solid;
-  width: 90px;
-  height: 10px;
-  background-color: var(--color-dark-grey);
-}
+//wszystko pod nim do działania wymaga wyższego z-index niż cień...
 .PanelInnerShadow {
   position: absolute;
   top: 30px;
@@ -59,4 +51,60 @@ $width-board: var(--board-width);
   left: calc(63.5% - 5px);
   transform: translateX(-50%);
   width: 655px;
+}
+
+input[type="radio"] {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  width: 70px;
+  height: 20px;
+  margin: 10px;
+  outline: none;
+  background: #222;
+  -webkit-appearance: none;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: -4px -4px 12px rgba(255, 255, 255, 0.2), 4px 4px 7px rgba(0, 0, 0, 0.8),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.2), inset 2px 2px 5px rgba(0, 0, 0, 1), 0 0 0 3px #292929;
+  transition: 0.5s;
+}
+
+input[type="radio"]:checked {
+  background: var(--color-main1);
+}
+
+input[type="radio"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 20px;
+  background: linear-gradient(to top, #000, #555);
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px #232323;
+  transform: scale(0.98, 0.96);
+  transition: 0.5s;
+}
+input[type="radio"]:checked::before {
+  left: 20px;
+}
+
+input[type="radio"]::after {
+  content: "";
+  position: absolute;
+  left: 35px;
+  top: calc(50% - 2px);
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #555;
+  transition: 0.5s;
+}
+
+input[type="radio"]:checked::after {
+  left: calc(35px + 20px);
+  background: var(--color-main1);
+  box-shadow: 0 0 5px var(--color-main1), 0 0 10px var(--color-main1), 0 0 15px var(--color-main1);
 }
