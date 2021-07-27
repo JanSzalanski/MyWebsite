@@ -65,6 +65,36 @@ $width-board: var(--board-width);
       padding-right: 3px;
     }
   }
+
+  &__Sociale {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    right: $main-spacing;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    border: 3px double rgba(0, 0, 0, 0.4);
+    width: calc(100% - 230px);
+    height: calc(100% - 30px);
+    background-color: #222;
+    outline-width: 1px;
+    box-shadow: inset 0px -1px 0px 0px #222, inset 0px -2px 0px 0px rgba(0, 0, 0, 0.4);
+
+    & h2 {
+      position: absolute;
+      color: rgba(0, 0, 0, 0.55);
+      background-color: #222;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      right: $main-spacing;
+      bottom: 0;
+      transform: translateY(50%);
+      padding-left: 3px;
+      padding-right: 3px;
+    }
+  }
 }
 
 //wszystko pod nim do działania wymaga wyższego z-index niż cień...
@@ -105,7 +135,7 @@ $width-board: var(--board-width);
     // border: 1px yellow solid;
     margin-left: $main-spacing / 2;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.3);
   }
@@ -174,4 +204,27 @@ input:checked[type="checkbox"]:after {
   left: calc(20px + 28px);
   background: red;
   box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.4), 0 0 1px red, 0 0 3px red, 0 0 5px red;
+}
+
+.DecorLine {
+  height: calc(100% - 4px);
+  border-left: 1px solid #222;
+
+  transform: rotateZ(20deg);
+
+  box-shadow: -1px 0px 0px 0px #222, -2px 0px 0px 0px var(--color-main), 1px 0px 0px 0px #222,
+    2px 0px 0px 0px var(--color-main);
+  opacity: 0.7;
+}
+
+.GitHub {
+  width: 25%;
+}
+
+.Linked {
+  width: 30%;
+}
+
+.vimeo {
+  width: 25%;
 }

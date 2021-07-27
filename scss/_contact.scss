@@ -402,12 +402,12 @@ $color-blackB: rgba(20, 200, 200, 0.2);
   color: var(--color-dark-grey);
 }
 
-.Contact__Btn:hover+.Contact__Cross-V--Btn {
+.Contact__Btn:hover + .Contact__Cross-V--Btn {
   background-color: var(--color-black);
   transform: translate(0, -50%) rotateZ(90deg);
 }
 
-.Contact__Btn:hover~.Contact__Cross-H--Btn {
+.Contact__Btn:hover ~ .Contact__Cross-H--Btn {
   background-color: var(--color-black);
   transform: translate(0, -50%) rotateZ(180deg);
 }
@@ -428,12 +428,12 @@ $color-blackA: rgba(25, 25, 25, 0.5);
   }
 }
 
-.Contact__Btn-Active:hover+.Contact__Cross-V--Btn-Active {
+.Contact__Btn-Active:hover + .Contact__Cross-V--Btn-Active {
   background-color: var(--color-black);
   transform: translate(0, -50%) rotateZ(45deg);
 }
 
-.Contact__Btn-Active:hover~.Contact__Cross-H--Btn-Active {
+.Contact__Btn-Active:hover ~ .Contact__Cross-H--Btn-Active {
   background-color: var(--color-black);
   transform: translate(0, -50%) rotateZ(135deg);
 }
@@ -502,7 +502,7 @@ textarea {
   text-transform: uppercase;
 
   @include mq(xs) {
-    font-size: 0.80rem;
+    font-size: 0.8rem;
     top: -12px;
   }
 }
@@ -514,24 +514,20 @@ textarea {
   text-transform: uppercase;
 }
 
-
-//google captcha 
+//google captcha
 .grecaptcha-badge {
-  @include mq(xxxl) {
-    bottom: 19.5% !important;
-  }
-
-  @include mq(xs) {
-
-    display: none;
-
-  }
+  display: none;
 }
 
 // captcha terms for mobile
 .captcha {
-
-  display: none;
+  font-size: 1.2rem;
+  right: 120px;
+  top: 0;
+  display: block;
+  z-index: 1;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.5);
 
   & a {
     text-decoration: none;
@@ -539,13 +535,12 @@ textarea {
   }
 
   @include mq(xs) {
-
     left: $main-spacing;
     right: $main-spacing;
-    bottom: $main-spacing / 2;
+    top: calc(100% - 10px);
     display: block;
     position: absolute;
 
-    color: rgba(0, 0, 0, .5);
+    color: rgba(0, 0, 0, 0.5);
   }
 }
