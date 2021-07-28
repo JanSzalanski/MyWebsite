@@ -14,6 +14,13 @@
   --color-white: white;
   --color-black: black;
 
+  //panel colors
+  --color-panel-grey: #222;
+  --color-panel-mainA: rgb(59, 13, 13);
+  --color-panel-mainB: rgb(51, 27, 27);
+  --color-panel-mainC: rgba(94, 21, 21, 0.4);
+  --color-panel-mainD: rgba(18, 5, 5, 0.8);
+
   --board-width: 438px;
   --board-height: 360px;
 
@@ -299,11 +306,11 @@
 }
 
 .logo1 {
-  fill: rgba(255, 255, 255, 0.4);
+  fill: rgb(255, 255, 255);
 }
 
 .logo2 {
-  fill: rgba(255, 255, 255, 0.4);
+  fill: rgb(255, 255, 255);
 }
 .logo2font {
   font-family: "LucidaConsole";
@@ -311,7 +318,7 @@
 }
 
 .logo3 {
-  fill: rgba(255, 255, 255, 0.4);
+  fill: rgb(255, 255, 255);
 }
 
 .japanRed {
