@@ -24,7 +24,7 @@ const colorsOfTheNight = () => {
   root.style.setProperty("--color-main5", "#0066ff");
   root.style.setProperty("--color-panel-mainA", "rgb(13, 43, 59)");
   root.style.setProperty("--color-panel-mainB", "rgb(27, 43, 51)");
-  root.style.setProperty("--color-panel-mainC", "rgba(21, 43, 94, 0.3)");
+  root.style.setProperty("--color-panel-mainC", "rgba(21, 43, 94, 0.2)");
   root.style.setProperty("--color-panel-mainD", "rgba(5, 13, 18, 0.8)");
 };
 

@@ -22,14 +22,16 @@ const colorsOfTheNight = () => {
   root.style.setProperty("--color-main4", "#ffc800");
   root.style.setProperty("--color-main4A", "#ffc8007e");
   root.style.setProperty("--color-main5", "#ad8e00");
+  root.style.setProperty("--color-panel-mainA", "rgb(13, 59, 13)");
+  root.style.setProperty("--color-panel-mainB", "rgb(27, 51, 27)");
+  root.style.setProperty("--color-panel-mainC", "rgba(21, 94, 21, 0.1)");
+  root.style.setProperty("--color-panel-mainD", "rgba(5, 18, 5, 0.8)");
 };
 
 colorsOfTheNight();
 
 const getActiveItem = () => {
-  return Array.from(items).findIndex((item) =>
-    getActiveItem.classList.contains("Nav-Item--Active")
-  );
+  return Array.from(items).findIndex((item) => getActiveItem.classList.contains("Nav-Item--Active"));
 };
 
 const activateItem = (e) => {
@@ -91,7 +93,6 @@ function WyjazdContact() {
     ContactBoard.classList.add("Contact__Board-Hide");
   }
 }
-
 
 itemsParent.addEventListener("click", activateItem);
 // itemsParent.addEventListener("touchend", activateItem);
