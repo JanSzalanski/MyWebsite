@@ -22,14 +22,16 @@ const colorsOfTheNight = () => {
   root.style.setProperty("--color-main4", "#005558");
   root.style.setProperty("--color-main4A", "#0055587e");
   root.style.setProperty("--color-main5", "#004d27");
+  root.style.setProperty("--color-panel-mainA", "rgb(55, 13, 59)");
+  root.style.setProperty("--color-panel-mainB", "rgb(51, 27, 51)");
+  root.style.setProperty("--color-panel-mainC", "rgba(92, 21, 94, 0.2)");
+  root.style.setProperty("--color-panel-mainD", "rgba(18, 5, 18, 0.8)");
 };
 
 colorsOfTheNight();
 
 const getActiveItem = () => {
-  return Array.from(items).findIndex((item) =>
-    getActiveItem.classList.contains("Nav-Item--Active")
-  );
+  return Array.from(items).findIndex((item) => getActiveItem.classList.contains("Nav-Item--Active"));
 };
 
 const activateItem = (e) => {
