@@ -10,7 +10,6 @@ const StrzalkaAsmr = document.querySelector(".Footer__Nav-Right-Arrow"); //yep
 const items = document.querySelectorAll(".Nav__Item");
 const itemsParent = document.querySelector(".Nav__List");
 
-
 let root = document.documentElement;
 
 const colorsOfTheNight = () => {
@@ -23,15 +22,16 @@ const colorsOfTheNight = () => {
   root.style.setProperty("--color-main4", "#01b070");
   root.style.setProperty("--color-main4A", "#01b0707e");
   root.style.setProperty("--color-main5", "#0066ff");
+  root.style.setProperty("--color-panel-mainA", "rgb(13, 43, 59)");
+  root.style.setProperty("--color-panel-mainB", "rgb(27, 43, 51)");
+  root.style.setProperty("--color-panel-mainC", "rgba(21, 43, 94, 0.3)");
+  root.style.setProperty("--color-panel-mainD", "rgba(5, 13, 18, 0.8)");
 };
 
 colorsOfTheNight();
 
-
 const getActiveItem = () => {
-  return Array.from(items).findIndex((item) =>
-    getActiveItem.classList.contains("Nav-Item--Active")
-  );
+  return Array.from(items).findIndex((item) => getActiveItem.classList.contains("Nav-Item--Active"));
 };
 
 const activateItem = (e) => {
