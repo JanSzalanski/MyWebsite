@@ -519,11 +519,11 @@ textarea {
   display: none;
 }
 
-// captcha terms for mobile
-.captcha {
+.Captcha {
+  visibility: hidden;
   font-size: 1.2rem;
-  right: 120px;
-  top: 0;
+  right: $main-spacing;
+  bottom: -15px;
   display: block;
   z-index: 1;
   position: absolute;
@@ -532,6 +532,7 @@ textarea {
   & a {
     text-decoration: none;
     color: black;
+    font-weight: 500;
   }
 
   @include mq(xs) {
@@ -540,7 +541,19 @@ textarea {
     top: calc(100% - 10px);
     display: block;
     position: absolute;
-
     color: rgba(0, 0, 0, 0.5);
   }
+}
+
+.Captcha-Discover {
+  animation: CaptchaShow 1.4s;
+  animation-delay: 1.6s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.Captcha-Hide {
+  animation: CaptchaHide 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }

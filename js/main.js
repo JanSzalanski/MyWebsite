@@ -1,3 +1,4 @@
+const capcha = document.querySelector(".Captcha");
 const AsmrBtn = document.querySelector(".Footer__Nav-Right-Title"); //check
 const PanelASMR = document.querySelector(".Footer__Nav"); //check
 const StrzalkaAsmr = document.querySelector(".Footer__Nav-Right-Arrow"); //check
@@ -33,7 +34,6 @@ const ogienS3M = document.querySelector(".CanvasShadowM");
 
 const items = document.querySelectorAll(".Nav__Item");
 const itemsParent = document.querySelector(".Nav__List");
-
 
 // let root = document.documentElement;
 
@@ -99,6 +99,8 @@ function WyjazdContact() {
     CrossV.classList.remove("Contact__Cross-V--Btn");
     ContactBtn.textContent = "Zamknij";
     ContactBoard.classList.add("Contact__Board-Discover");
+    capcha.classList.remove("Captcha-Hide");
+    capcha.classList.add("Captcha-Discover");
   } else if (ContactBoard.classList.contains("Contact__Board-Discover")) {
     ContactBtn.removeEventListener("click", WyjazdContact);
     setTimeout(() => {
@@ -114,6 +116,8 @@ function WyjazdContact() {
     CrossV.classList.add("Contact__Cross-V--Btn");
     ContactBtn.textContent = "Kontakt";
     ContactBoard.classList.remove("Contact__Board-Discover");
+    capcha.classList.remove("Captcha-Discover");
+    capcha.classList.add("Captcha-Hide");
     ContactBoard.classList.add("Contact__Board-Hide");
   }
 }
