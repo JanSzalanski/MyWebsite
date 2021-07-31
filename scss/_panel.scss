@@ -115,39 +115,74 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   }
 }
 
+// .Panel:before {
+//   content: "";
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   height: calc(100% + 6px);
+//   width: calc(100% + 6px);
+//   border-left: 2px solid rgba(255, 255, 255, 0.1);
+//   border-top: 1px solid rgba(255, 255, 255, 0.55);
+//   border-radius: 8px;
+// }
+
+// .Panel:after {
+//   content: "";
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   height: calc(100% + 6px);
+//   width: calc(100% + 6px);
+//   border-right: 1px solid rgba(0, 0, 0, 0.3);
+//   border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+//   border-radius: 8px;
+// }
+
 .ScrewA {
   width: 10px;
   height: 10px;
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: 9px;
+  top: 9px;
+  border-radius: 50%;
+  transform: rotateZ(-7deg);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6), inset 1px 1px 1px 1px rgba(255, 255, 255, 0.35);
 }
 
 .ScrewB {
   width: 10px;
   height: 10px;
   position: absolute;
-  right: 10px;
-  top: 10px;
-  transform: rotateZ(30deg);
+  right: 9px;
+  top: 9px;
+  transform: rotateZ(-5deg);
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6), inset 1px 1px 1px 1px rgba(255, 255, 255, 0.3);
 }
 
 .ScrewC {
   width: 10px;
   height: 10px;
   position: absolute;
-  right: 10px;
-  bottom: 10px;
-  transform: rotateZ(45deg);
+  right: 9px;
+  bottom: 9px;
+  transform: rotateZ(5deg);
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6), inset 1px 1px 1px 1px rgba(255, 255, 255, 0.2);
 }
 
 .ScrewD {
   width: 10px;
   height: 10px;
   position: absolute;
-  left: 10px;
-  bottom: 10px;
-  transform: rotateZ(70deg);
+  left: 9px;
+  bottom: 9px;
+  // transform: rotateZ(70deg);
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6), inset 1px 1px 1px 1px rgba(255, 255, 255, 0.2);
 }
 
 //wszystko pod nim do działania wymaga wyższego z-index niż cień...
@@ -246,7 +281,7 @@ input[type="checkbox"]:before {
   transition: 0.5s;
 }
 
-input:checked[type="checkbox"]::before {
+input:checked[type="checkbox"]:before {
   box-shadow: 0 0 0 2px var(--color-panel-mainA), inset 0 0 3px 3px var(--color-panel-mainB),
     inset 0 0 4px 4px var(--color-panel-mainC);
   left: 20px;
