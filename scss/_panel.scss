@@ -3,19 +3,30 @@ $light-grey: rgba(255, 255, 255, 0.25);
 $mid-grey: #444;
 $dark-grey: rgba(0, 0, 0, 0.4);
 
-.Panel {
+.PanelWrapper {
   position: absolute;
-  top: 5px;
-  left: calc(20.6% + var(--board-width) + 5px);
+  top: 50%;
   height: 120px;
   width: 660px;
-  background-color: var(--color-panel-grey);
-  border: 1px solid var(--color-black);
-  border-radius: 8px;
+  left: calc(20.6% + var(--board-width) + 5px);
+  transform: translateY(-50%);
 
   @include mq(xxl) {
+    width: 630px;
     left: calc(14.5% + var(--board-width) + 5px);
   }
+}
+
+.Panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-panel-grey);
+  border: 3px ridge var(--color-main1);
+  border-radius: 8px;
 
   &__Border1 {
     z-index: 0;
@@ -104,17 +115,56 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   }
 }
 
+.ScrewA {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.ScrewB {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transform: rotateZ(30deg);
+}
+
+.ScrewC {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  transform: rotateZ(45deg);
+}
+
+.ScrewD {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  transform: rotateZ(70deg);
+}
+
 //wszystko pod nim do działania wymaga wyższego z-index niż cień...
 .PanelInnerShadow {
+  // border: greenyellow 1px solid;
   position: absolute;
-  top: 30px;
-  left: calc(20.6% + var(--board-width) + 5px);
-  height: 120px;
-  width: 660px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // transform: translateY(-50%);
+  height: 100%;
+  width: 100%;
   border-radius: 8px;
-  box-shadow: inset 0px 0px 12px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 0px 15px 3px rgba(0, 0, 0, 0.75);
 
   @include mq(xxl) {
+    width: 630px;
     left: calc(14.5% + var(--board-width) + 5px);
   }
 }
@@ -123,6 +173,10 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   left: calc(63.5% - 5px);
   transform: translateX(-50%);
   width: 655px;
+}
+
+.Panel.RevB {
+  transform: translate(-50%, -50%);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
