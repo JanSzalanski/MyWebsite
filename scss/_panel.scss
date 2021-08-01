@@ -115,31 +115,19 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   }
 }
 
-// .Panel:before {
-//   content: "";
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   height: calc(100% + 6px);
-//   width: calc(100% + 6px);
-//   border-left: 2px solid rgba(255, 255, 255, 0.1);
-//   border-top: 1px solid rgba(255, 255, 255, 0.55);
-//   border-radius: 8px;
-// }
-
-// .Panel:after {
-//   content: "";
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   height: calc(100% + 6px);
-//   width: calc(100% + 6px);
-//   border-right: 1px solid rgba(0, 0, 0, 0.3);
-//   border-bottom: 1px solid rgba(0, 0, 0, 0.6);
-//   border-radius: 8px;
-// }
+.PanelBorderShadow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: calc(100% + 6px);
+  width: calc(100% + 6px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.4);
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  border-right: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
 
 .ScrewA {
   width: 10px;
@@ -149,7 +137,18 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   top: 9px;
   border-radius: 50%;
   transform: rotateZ(-7deg);
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6), inset 1px 1px 1px 1px rgba(255, 255, 255, 0.35);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6);
+
+  &__Head {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(farthest-corner at 8px 8px, #111 0%, rgb(71, 61, 61) 100%);
+  }
 }
 
 .ScrewB {
@@ -158,9 +157,20 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   position: absolute;
   right: 9px;
   top: 9px;
-  transform: rotateZ(-5deg);
   border-radius: 50%;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6), inset 1px 1px 1px 1px rgba(255, 255, 255, 0.3);
+  transform: rotateZ(14deg);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6);
+
+  &__Head {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(farthest-corner at 8px 8px, #111 0%, rgb(71, 61, 61) 100%);
+  }
 }
 
 .ScrewC {
@@ -169,20 +179,37 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   position: absolute;
   right: 9px;
   bottom: 9px;
-  transform: rotateZ(5deg);
   border-radius: 50%;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6), inset 1px 1px 1px 1px rgba(255, 255, 255, 0.2);
+  transform: rotateZ(-15deg);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6);
+
+  &__Head {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(farthest-corner at 8px 8px, #111 0%, rgb(71, 61, 61) 100%);
+  }
 }
 
-.ScrewD {
-  width: 10px;
-  height: 10px;
+.SvgwrapperA {
   position: absolute;
-  left: 9px;
-  bottom: 9px;
-  // transform: rotateZ(70deg);
-  border-radius: 50%;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6), inset 1px 1px 1px 1px rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.SvgwrapperB {
+  @extend .SvgwrapperA;
+}
+
+.SvgwrapperC {
+  @extend .SvgwrapperA;
 }
 
 //wszystko pod nim do działania wymaga wyższego z-index niż cień...
