@@ -266,6 +266,10 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   border: 3px ridge var(--color-main2);
 }
 
+.RevPriv {
+  border: 3px ridge var(--color-main);
+}
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 .Panel__Btn {
@@ -368,6 +372,17 @@ input:checked[type="checkbox"]:after {
 
   box-shadow: -1px 0px 0px 0px var(--color-panel-grey), -2px 0px 0px 0px var(--color-main),
     1px 0px 0px 0px var(--color-panel-grey), 2px 0px 0px 0px var(--color-main);
+  opacity: 0.7;
+}
+
+.DecorLineB {
+  height: calc(100% - 4px);
+  border-left: 1px solid var(--color-panel-grey);
+
+  transform: rotateZ(20deg);
+
+  box-shadow: -1px 0px 0px 0px var(--color-panel-grey), -2px 0px 0px 0px var(--color-main1),
+    1px 0px 0px 0px var(--color-panel-grey), 2px 0px 0px 0px var(--color-main1);
   opacity: 0.7;
 }
 
