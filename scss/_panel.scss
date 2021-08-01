@@ -259,12 +259,11 @@ $dark-grey: rgba(0, 0, 0, 0.4);
 
 .RevB {
   left: calc(63.5% - 5px);
-  transform: translateX(-50%);
-  width: 655px;
+  transform: translate(-50%, -50%);
 }
 
-.Panel.RevB {
-  transform: translate(-50%, -50%);
+.RevFirma {
+  border: 3px ridge var(--color-main2);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
