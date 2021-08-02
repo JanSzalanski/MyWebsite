@@ -46,7 +46,8 @@
   }
 
   @media (max-width: 1680px) {
-    right: 20.5%;
+    width: 41.5%;
+    right: 15.5%;
     bottom: 132px;
 
     @media (min-height: 1045px) {
@@ -62,7 +63,6 @@
   @include mq(xxl) {
     right: 16.7%;
     bottom: 195px;
-    width: 41.5%;
 
     @media (min-height: 750px) {
       bottom: 60px;
@@ -749,7 +749,7 @@
   align-items: center;
 
   @media (max-width: 1680px) {
-    width: 350px;
+    width: 370px;
   }
 
   @include mq(xxl) {

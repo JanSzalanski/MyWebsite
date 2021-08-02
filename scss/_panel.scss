@@ -11,7 +11,12 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   left: calc(20.6% + var(--board-width) + 5px);
   transform: translateY(-50%);
 
+  @media (max-width: 1680px) {
+    width: 630px;
+  }
+
   @include mq(xxl) {
+    width: 660px;
     left: calc(14.5% + var(--board-width) + 5px);
   }
 
@@ -265,9 +270,13 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   left: calc(63.5% - 5px);
   transform: translate(-50%, -50%);
 
-  @media (max-width: 1536px) {
-    left: calc(14.5% + var(--board-width) + 5px);
+  @media (max-width: 1680px) {
+    left: calc(22.1% + var(--board-width));
     transform: translate(0, -50%);
+  }
+
+  @include mq(xxl) {
+    left: calc(14.5% + var(--board-width) + 5px);
   }
 }
 
@@ -275,9 +284,13 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   left: calc(63.5% - 5px);
   transform: translate(-50%, -50%);
 
+  @media (max-width: 1680px) {
+    left: 42.6%;
+    transform: translate(0, -50%);
+  }
+
   @include mq(xxl) {
     left: 39%;
-    transform: translate(0, -50%);
   }
 
   @media (max-width: 1536px) {
