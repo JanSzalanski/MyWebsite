@@ -6,7 +6,7 @@
   background-position: center;
   border-radius: $border-radius;
   position: absolute;
-  right: 21.6%;
+  right: 22%;
   width: 36.5%;
   height: 300px;
   bottom: 150px;
@@ -60,9 +60,9 @@
   }
 
   @include mq(xxl) {
-    right: 14.5%;
+    right: 16.7%;
     bottom: 195px;
-    width: 44%;
+    width: 41.5%;
 
     @media (min-height: 750px) {
       bottom: 60px;
@@ -84,32 +84,40 @@
 
   @media (max-width: 1536px) {
     right: 20.3%;
-    bottom: 60px;
+    bottom: 45px;
     width: 42.5%;
 
-    @media (min-height: 850px) {
-      bottom: 104px;
+    @media (min-height: 725px) {
+      bottom: 60px;
     }
 
-    @media (min-height: 920px) {
-      bottom: 150px;
+    @media (min-height: 860px) {
+      bottom: 95px;
     }
 
-    @media (min-height: 1100px) {
-      bottom: 35%;
-    }
+    // @media (min-height: 850px) {
+    //   bottom: 104px;
+    // }
 
-    @media (min-height: 1200px) {
-      bottom: 50%;
-    }
+    // @media (min-height: 920px) {
+    //   bottom: 150px;
+    // }
 
-    @media (min-height: 1300px) {
-      bottom: 55%;
-    }
+    // @media (min-height: 1100px) {
+    //   bottom: 35%;
+    // }
 
-    @media (min-height: 1400px) {
-      bottom: 60%;
-    }
+    // @media (min-height: 1200px) {
+    //   bottom: 50%;
+    // }
+
+    // @media (min-height: 1300px) {
+    //   bottom: 55%;
+    // }
+
+    // @media (min-height: 1400px) {
+    //   bottom: 60%;
+    // }
   }
 
   @include mq(big) {
@@ -246,7 +254,7 @@
 
 .News__Div {
   position: absolute;
-  left: 7%;
+  left: 8%;
   top: 10%;
   width: 92px;
   height: 60px;
@@ -362,7 +370,7 @@
 
 .News__DivB {
   position: absolute;
-  left: 7.5%;
+  left: 8%;
   top: 27.5%;
   width: 94px;
   height: 30px;
@@ -483,7 +491,7 @@
   color: var(--color-main1);
   text-align: left;
   position: absolute;
-  left: 16.8%;
+  left: 17.5%;
   top: 20%;
   font-weight: 900;
   transform: rotatez(-90deg);
@@ -554,7 +562,7 @@
   }
 
   @include mq(xxl) {
-    width: calc(27.5% + 3px);
+    width: calc(24% + 3px);
   }
 
   @media (max-width: 1536px) {
@@ -614,8 +622,8 @@
   }
 
   @include mq(xxl) {
-    width: 72.5%;
-    left: 27.5%;
+    width: 76%;
+    left: 24%;
   }
 
   @media (max-width: 1536px) {
@@ -1010,10 +1018,14 @@
   }
 
   @media (max-width: 1536px) {
-    height: 47%;
+    height: 48%;
+
+    @media (min-height: 725px) {
+      height: 47%;
+    }
 
     @media (min-height: 860px) {
-      height: 40%;
+      height: 41%;
     }
   }
 

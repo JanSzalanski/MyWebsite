@@ -12,8 +12,11 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   transform: translateY(-50%);
 
   @include mq(xxl) {
-    width: 630px;
     left: calc(14.5% + var(--board-width) + 5px);
+  }
+
+  @media (max-width: 1536px) {
+    width: 605px;
   }
 }
 
@@ -111,6 +114,9 @@ $dark-grey: rgba(0, 0, 0, 0.4);
       transform: translateY(50%);
       padding-left: 3px;
       padding-right: 3px;
+    }
+    @media (max-width: 1536px) {
+      width: calc(100% - 225px);
     }
   }
 }
@@ -252,14 +258,31 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   box-shadow: inset 0px 0px 15px 3px rgba(0, 0, 0, 0.75);
 
   @include mq(xxl) {
-    width: 630px;
-    left: calc(14.5% + var(--board-width) + 5px);
   }
 }
 
 .RevB {
   left: calc(63.5% - 5px);
   transform: translate(-50%, -50%);
+
+  @media (max-width: 1536px) {
+    left: calc(14.5% + var(--board-width) + 5px);
+    transform: translate(0, -50%);
+  }
+}
+
+.RevC {
+  left: calc(63.5% - 5px);
+  transform: translate(-50%, -50%);
+
+  @include mq(xxl) {
+    left: 39%;
+    transform: translate(0, -50%);
+  }
+
+  @media (max-width: 1536px) {
+    left: 40.8%;
+  }
 }
 
 .RevFirma {
