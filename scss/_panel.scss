@@ -23,6 +23,10 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   @media (max-width: 1536px) {
     width: 605px;
   }
+
+  @include mq(xl) {
+    left: calc(14.6% + var(--board-width) + 5px);
+  }
 }
 
 .Panel {
@@ -299,6 +303,10 @@ $dark-grey: rgba(0, 0, 0, 0.4);
 
   @include mq(big) {
     left: 38.1%;
+  }
+
+  @include mq(xl) {
+    left: 35.8%;
   }
 }
 

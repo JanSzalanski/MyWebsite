@@ -86,7 +86,6 @@ $width-btn: 115px;
   @include mq(xl) {
     left: 14.6%;
     top: 47%;
-    width: 360px;
     height: 300px;
 
     @media (min-height: 765px) {
