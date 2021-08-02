@@ -121,8 +121,8 @@
   }
 
   @include mq(big) {
-    right: 13%;
-    width: 47%;
+    right: 15.8%;
+    width: 44%;
     // bottom: 150px;
 
     @media (min-height: 1081px) {
@@ -726,7 +726,12 @@
     font-size: 1.3rem;
   }
 
+  @include mq(big) {
+    line-height: 1.4;
+  }
+
   @media (max-width: 1152px) {
+    line-height: 1.2;
     font-size: 1.2rem;
   }
 
@@ -761,7 +766,7 @@
   }
 
   @include mq(big) {
-    width: 380px;
+    width: 340px;
   }
 
   @include mq(xl) {

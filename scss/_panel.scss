@@ -296,6 +296,10 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   @media (max-width: 1536px) {
     left: 40.8%;
   }
+
+  @include mq(big) {
+    left: 38.1%;
+  }
 }
 
 .RevFirma {
