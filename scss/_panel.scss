@@ -32,6 +32,11 @@ $dark-grey: rgba(0, 0, 0, 0.4);
     width: 552px;
     left: calc(14.6% + var(--board-width));
   }
+
+  @media (max-width: 1152px) {
+    width: 525px;
+    left: calc(12.6% + var(--board-width));
+  }
 }
 
 .Panel {
@@ -139,6 +144,10 @@ $dark-grey: rgba(0, 0, 0, 0.4);
 
     @media (max-width: 1280px) {
       width: calc(100% - 215px);
+    }
+
+    @media (max-width: 1152px) {
+      width: calc(100% - 210px);
     }
   }
 }
@@ -300,6 +309,10 @@ $dark-grey: rgba(0, 0, 0, 0.4);
     left: 66.75%;
     transform: translate(-50%, -50%);
   }
+
+  @media (max-width: 1152px) {
+    left: 69.5%;
+  }
 }
 
 .RevC {
@@ -329,6 +342,10 @@ $dark-grey: rgba(0, 0, 0, 0.4);
 
   @media (max-width: 1280px) {
     left: 36.7%;
+  }
+
+  @media (max-width: 1152px) {
+    left: 33.2%;
   }
 }
 
@@ -432,6 +449,10 @@ input[type="checkbox"]:before {
     border-radius: 9px;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  @media (max-width: 1152px) {
+    left: 1px;
   }
 }
 

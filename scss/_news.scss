@@ -208,7 +208,7 @@
   @media (max-width: 1152px) {
     bottom: 75px;
     height: 260px;
-    right: 12.5%;
+    right: 10.5%;
 
     @media (min-height: 860px) {
       height: 285px;
@@ -530,7 +530,7 @@
   }
 
   @media (max-width: 1152px) {
-    left: 21%;
+    left: 20%;
   }
 
   @include mq(large) {
@@ -730,7 +730,7 @@
   }
 
   @media (max-width: 1152px) {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.2;
   }
 
