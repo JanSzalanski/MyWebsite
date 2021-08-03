@@ -159,6 +159,8 @@
   }
 
   @media (max-width: 1280px) {
+    right: 14.1%;
+    width: 46%;
     height: 260px;
     bottom: 65px;
 
@@ -282,26 +284,22 @@
   }
 
   @include mq(xl) {
-    left: 7%;
+    left: 5%;
     top: 9%;
   }
 
   @media (max-width: 1280px) {
-    left: 9%;
+    left: 7%;
+    top: 10%;
 
     @media (min-height: 620px) {
-      left: 9.3%;
-      top: 12%;
-    }
-
-    @media (min-height: 650px) {
-      left: 9.3%;
+      left: 7.3%;
       top: 12%;
     }
 
     @media (min-height: 880px) {
-      top: 13%;
-      left: 9.2%;
+      top: 14%;
+      left: 7.2%;
     }
   }
 
@@ -398,24 +396,24 @@
   }
 
   @include mq(xl) {
-    left: 7%;
-    top: 33%;
+    left: 5.2%;
+    top: 32.5%;
 
     @media (min-height: 765px) {
-      top: 32%;
+      top: 31.5%;
     }
   }
 
   @media (max-width: 1280px) {
     top: 33%;
-    left: 9.5%;
+    left: 7.5%;
 
     @media (min-height: 650px) {
       top: 31%;
     }
 
     @media (min-height: 815px) {
-      top: 30%;
+      top: 31%;
     }
   }
 
@@ -517,17 +515,17 @@
   }
 
   @include mq(xl) {
-    top: 22%;
-    left: 18.5%;
+    top: 22.7%;
+    left: 16.5%;
 
     @media (min-height: 765px) {
-      top: 21%;
+      top: 21.5%;
     }
   }
 
   @media (max-width: 1280px) {
-    left: 19%;
-    top: 24%;
+    left: 17.5%;
+    top: 25%;
     font-size: 2rem;
   }
 
@@ -775,7 +773,7 @@
   }
 
   @media (max-width: 1280px) {
-    width: 340px;
+    width: 320px;
   }
 
   @media (max-width: 1152px) {
