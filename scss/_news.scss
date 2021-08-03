@@ -217,6 +217,8 @@
   }
 
   @include mq(large) {
+    right: 9.9%;
+    width: 48.7%;
     height: 240px;
     bottom: 62px;
 
@@ -735,7 +737,7 @@
   }
 
   @include mq(large) {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   @include mq(xs) {
@@ -778,10 +780,6 @@
 
   @media (max-width: 1152px) {
     width: 270px;
-  }
-
-  @include mq(large) {
-    width: 250px;
   }
 
   @include mq(xs) {

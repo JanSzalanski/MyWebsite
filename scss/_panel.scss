@@ -37,6 +37,10 @@ $dark-grey: rgba(0, 0, 0, 0.4);
     width: 525px;
     left: calc(12.6% + var(--board-width));
   }
+
+  @include mq(large) {
+    width: 495px;
+  }
 }
 
 .Panel {
@@ -313,6 +317,10 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   @media (max-width: 1152px) {
     left: 69.5%;
   }
+
+  @include mq(large) {
+    left: 69%;
+  }
 }
 
 .RevC {
@@ -346,6 +354,10 @@ $dark-grey: rgba(0, 0, 0, 0.4);
 
   @media (max-width: 1152px) {
     left: 33.2%;
+  }
+
+  @include mq(large) {
+    left: 35.2%;
   }
 }
 
@@ -453,6 +465,10 @@ input[type="checkbox"]:before {
 
   @media (max-width: 1152px) {
     left: 1px;
+  }
+
+  @include mq(large) {
+    left: 2px;
   }
 }
 
