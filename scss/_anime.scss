@@ -880,3 +880,19 @@
     visibility: hidden;
   }
 }
+
+@include mq(xs) {
+  @keyframes CaptchaShow {
+    100% {
+      transform: translateY(-26px);
+      visibility: visible;
+    }
+  }
+
+  @keyframes CaptchaHide {
+    100% {
+      transform: translateY(26px);
+      visibility: hidden;
+    }
+  }
+}
