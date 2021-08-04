@@ -41,6 +41,14 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   @include mq(large) {
     width: 495px;
   }
+
+  @include mq(xs) {
+    width: calc(100vw - 10px);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 180px;
+  }
 }
 
 .Panel {
@@ -100,6 +108,16 @@ $dark-grey: rgba(0, 0, 0, 0.4);
       width: 160px;
     }
 
+    @include mq(xs) {
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: row;
+      width: calc(100% - 40px);
+      height: 46px;
+      top: $main-spacing;
+      transform: translateY(0);
+    }
+
     & h2 {
       position: absolute;
       color: rgba(0, 0, 0, 0.55);
@@ -142,6 +160,7 @@ $dark-grey: rgba(0, 0, 0, 0.4);
       padding-left: 3px;
       padding-right: 3px;
     }
+
     @media (max-width: 1536px) {
       width: calc(100% - 225px);
     }
@@ -152,6 +171,14 @@ $dark-grey: rgba(0, 0, 0, 0.4);
 
     @media (max-width: 1152px) {
       width: calc(100% - 210px);
+    }
+
+    @include mq(xs) {
+      width: calc(100% - 40px);
+      height: 80px;
+      top: 41.2%;
+      left: 50%;
+      transform: translate(-50%, 0);
     }
   }
 }
@@ -321,6 +348,13 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   @include mq(large) {
     left: 69%;
   }
+
+  @include mq(xs) {
+    width: calc(100vw - 10px);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .RevC {
@@ -359,6 +393,13 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   @include mq(large) {
     left: 35.2%;
   }
+
+  @include mq(xs) {
+    width: calc(100vw - 10px);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .RevFirma {
@@ -395,7 +436,13 @@ $dark-grey: rgba(0, 0, 0, 0.4);
     color: $light-grey;
   }
 
-  @media (max-width: 1280px) {
+  @include mq(xs) {
+    width: 36%;
+    height: 100%;
+  }
+
+  @include mq(xxs) {
+    width: 50%;
   }
 }
 

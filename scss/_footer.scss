@@ -98,6 +98,10 @@
   @include mq(ultra) {
     bottom: 64px; //196px - 130 - 2
   }
+
+  @include mq(xs) {
+    height: 190px;
+  }
 }
 
 .Footer__Nav-Left {

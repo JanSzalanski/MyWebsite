@@ -556,6 +556,7 @@
 }
 
 @include mq(xxxl) {
+  //dlaczego dla 1920px jest to i bez zmian?
   @keyframes ASMRUp {
     100% {
       transform: translateY(-130px);
@@ -565,6 +566,25 @@
   @keyframes ASMRDown {
     0% {
       transform: translateY(-130px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+
+@include mq(xs) {
+  //dlaczego dla 1920px jest to i bez zmian?
+  @keyframes ASMRUp {
+    100% {
+      transform: translateY(-190px);
+    }
+  }
+
+  @keyframes ASMRDown {
+    0% {
+      transform: translateY(-190px);
     }
 
     100% {
