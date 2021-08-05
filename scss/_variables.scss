@@ -69,10 +69,10 @@
 
   //---------------------firma var--------------------------------//
 
-  --HeightOfirmie: 1870px;
+  --HeightOfirmie: 1840px;
 
   @media (max-width: 1920px) {
-    --HeightOfirmie: 1860px;
+    --HeightOfirmie: 1840px;
   }
 
   @media (max-width: 1680px) {
@@ -80,19 +80,19 @@
   }
 
   @media (max-width: 1536px) {
-    --HeightOfirmie: 1790px; //-60px
+    --HeightOfirmie: 1760px; //-60px
   }
 
-  @media (max-width: 1366px) {
-    --HeightOfirmie: 1750px; //-70px
+  @media (max-width: 1440px) {
+    --HeightOfirmie: 1960px;
   }
 
   @media (max-width: 1280px) {
-    --HeightOfirmie: 1750px; //-50px
+    --HeightOfirmie: 1960px; //-50px
   }
 
   @media (max-width: 1024px) {
-    --HeightOfirmie: 1930px; //+60px
+    --HeightOfirmie: 2120px; //+60px
   }
 
   @media (max-width: 480px) {

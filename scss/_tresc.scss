@@ -344,8 +344,10 @@ $WtrescC: 1000px;
   height: 7px;
   left: -62px;
   top: 50%;
-  transform: translate(0,
-      -50%); // o to jest troche zaskakujaca wartosc bo -63 powodowalo faktyczne optyczne wyposrodkowanie elementu a to niby ma byc padding plus border ???
+  transform: translate(
+    0,
+    -50%
+  ); // o to jest troche zaskakujaca wartosc bo -63 powodowalo faktyczne optyczne wyposrodkowanie elementu a to niby ma byc padding plus border ???
 
   display: flex;
   justify-content: space-around;
@@ -1037,7 +1039,8 @@ $WtrescC: 1000px;
   bottom: 90px + $main-spacing / 2;
   border-left: 2px var(--color-main2) solid;
 
-  @include mq(xs) {}
+  @include mq(xs) {
+  }
 }
 
 .CornerTop {
@@ -1661,7 +1664,7 @@ svg rect {
   mask: url(#mask);
 }
 
-svg>rect {
+svg > rect {
   fill: var(--color-main2);
 }
 
@@ -1694,7 +1697,7 @@ svg>rect {
     // display: block;
     text-indent: 3rem;
     font-family: $font-source;
-    line-height: 1.3;
+    line-height: 1.4;
     font-size: 1.4rem;
     font-weight: 400;
     color: var(--color-white);
@@ -1713,9 +1716,8 @@ svg>rect {
       font-size: 1.2rem;
     }
 
-    @include mq(xl) {
-      font-size: 1.2rem;
-      line-height: 1.5rem;
+    @include mq(big) {
+      font-size: 1.3rem;
     }
 
     @include mq(xs) {
@@ -1790,7 +1792,7 @@ svg>rect {
     top: 0;
   }
 
-  & p+p {
+  & p + p {
     // drugi pragraph pod ozdobnikiem
     // dolny pasragraph mieszczacy poza szczelina
     padding-top: 11px;
@@ -1857,7 +1859,7 @@ svg>rect {
   border: 1px solid rgba(255, 255, 255, 0.25);
   background-color: rgba(47, 54, 52, 0.199);
 
-  @media (max-width:1680px) {
+  @media (max-width: 1680px) {
     width: 44%;
     right: 45px;
   }
@@ -1906,11 +1908,13 @@ svg>rect {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg,
-      rgba(255, 255, 255, 0.08) 0%,
-      rgba(0, 0, 0, 0.18) 10%,
-      rgba(0, 0, 0, 0.18) 90%,
-      rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(0, 0, 0, 0.18) 10%,
+    rgba(0, 0, 0, 0.18) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .Background {
