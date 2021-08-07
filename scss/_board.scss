@@ -488,6 +488,7 @@ $width-btn: 115px;
       @media (max-width: 1280px) {
         @media (min-height: 815px) {
           font-size: 1.2rem;
+          line-height: 1.3;
         }
       }
 
@@ -1209,7 +1210,7 @@ $width-btn: 115px;
 
   @include mq(large) {
     font-size: 1.1rem;
-    line-height: 1.2;
+    line-height: 1.1;
     top: 12px;
     left: 5px;
   }
@@ -1261,7 +1262,7 @@ $width-btn: 115px;
 
   @include mq(large) {
     font-size: 1.1rem;
-    line-height: 1.2;
+    line-height: 1.1;
     top: 12px;
     left: 5px;
   }
