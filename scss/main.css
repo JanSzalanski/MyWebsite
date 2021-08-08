@@ -226,7 +226,7 @@ textarea:focus {
 
 @media (max-width: 480px) {
   :root {
-    --HeightOPraktyceB: 1560px;
+    --HeightOPraktyceB: 1555px;
   }
 }
 
@@ -328,7 +328,7 @@ textarea:focus {
 
 @media (max-width: 480px) {
   :root {
-    --HeightOMnie: 2260px;
+    --HeightOMnie: 2210px;
   }
 }
 

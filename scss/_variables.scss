@@ -161,7 +161,7 @@
   }
 
   @media (max-width: 480px) {
-    --HeightOPraktyceB: 1560px; //-70px
+    --HeightOPraktyceB: 1555px; //-70px
   }
 
   //---------------------projekty var--------------------------------//
@@ -265,7 +265,7 @@
   }
 
   @media (max-width: 480px) {
-    --HeightOMnie: 2260px;
+    --HeightOMnie: 2210px;
   }
 
   //////////////////////////////////////////Edu/////////////////////////////////////
@@ -304,31 +304,21 @@
   fill: var(--color-main);
 }
 
-.st0 {
-  // fill: #1877F2;
-}
+
 
 .st1 {
   // fill: #FFFFFF;
   fill: none;
 }
 
-.st2 {
-  // fill: #FF0000;
-}
 
 .st3 {
   // fill: #FFFFFF;
   fill: var(--color-dark-grey);
 }
 
-.st4 {
-  // fill: #282828;
-}
 
-.st5 {
-  // fill: #FFFFFF;
-}
+
 
 .st6 {
   fill: none;
