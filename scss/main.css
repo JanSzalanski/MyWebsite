@@ -142,7 +142,7 @@ textarea:focus {
 
 @media (max-width: 480px) {
   :root {
-    --HeightOfirmie: 2250px;
+    --HeightOfirmie: 2000px;
   }
 }
 
@@ -184,7 +184,7 @@ textarea:focus {
 
 @media (max-width: 480px) {
   :root {
-    --HeightOPraktyceA: 2100px;
+    --HeightOPraktyceA: 2000px;
   }
 }
 
@@ -226,7 +226,7 @@ textarea:focus {
 
 @media (max-width: 480px) {
   :root {
-    --HeightOPraktyceB: 1610px;
+    --HeightOPraktyceB: 1530px;
   }
 }
 
@@ -262,7 +262,7 @@ textarea:focus {
 
 @media (max-width: 480px) {
   :root {
-    --HeightOprojektach: 1000px;
+    --HeightOprojektach: 980px;
   }
 }
 
@@ -328,7 +328,7 @@ textarea:focus {
 
 @media (max-width: 480px) {
   :root {
-    --HeightOMnie: 2570px;
+    --HeightOMnie: 2240px;
   }
 }
 
