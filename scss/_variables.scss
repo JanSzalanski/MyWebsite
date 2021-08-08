@@ -34,6 +34,7 @@
   @media (max-width: 1024px) {
     --board-width: 300px;
   }
+
   --board-height: 360px;
 
   --arrow-shadow: 12px;
@@ -69,10 +70,10 @@
 
   //---------------------firma var--------------------------------//
 
-  --HeightOfirmie: 1840px;
+  --HeightOfirmie: 1760px;
 
   @media (max-width: 1920px) {
-    --HeightOfirmie: 1840px;
+    --HeightOfirmie: 1760px;
   }
 
   @media (max-width: 1680px) {
@@ -101,10 +102,10 @@
 
   //---------------------praktyka var--------------------------------//
 
-  --HeightOPraktyceA: 1920px; //90
+  --HeightOPraktyceA: 1880px; //90
 
   @media (max-width: 1920px) {
-    --HeightOPraktyceA: 1910px;
+    --HeightOPraktyceA: 1840px;
   }
 
   @media (max-width: 1680px) {
@@ -133,10 +134,10 @@
 
   ///////////////////////B///////////////////////
 
-  --HeightOPraktyceB: 1550px; //140
+  --HeightOPraktyceB: 1480px; //140
 
   @media (max-width: 1920px) {
-    --HeightOPraktyceB: 1505px;
+    --HeightOPraktyceB: 1450px;
   }
 
   @media (max-width: 1680px) {
@@ -165,7 +166,7 @@
 
   //---------------------projekty var--------------------------------//
 
-  --HeightOprojektach: 960px; // nowa wartość
+  --HeightOprojektach: 930px; // nowa wartość
 
   @media (max-width: 1680px) {
     --HeightOprojektach: 1010px; //60px
@@ -221,10 +222,10 @@
 
   //------------------------------------------------------------Omnie-----------------------------------------------------------//
 
-  --HeightOMnie: 1250px;
+  --HeightOMnie: 1165px;
 
   @media (max-width: 1920px) {
-    --HeightOMnie: 1190px;
+    --HeightOMnie: 1135px;
   }
 
   @media (max-width: 1680px) {
@@ -236,7 +237,7 @@
   }
 
   @media (max-width: 1536px) {
-    --HeightOMnie: 1150px;
+    --HeightOMnie: 1100px;
   }
 
   @media (max-width: 1440px) {
@@ -336,6 +337,7 @@
 .logo2 {
   fill: rgb(255, 255, 255);
 }
+
 .logo2font {
   font-family: "LucidaConsole";
   font-size: 10px;
@@ -373,13 +375,20 @@ text {
   fill: var(--color-black);
 }
 
-$font-mont: "Montserrat", sans-serif;
-$font-audio: "Audiowide", cursive;
-$font-source: "Source Sans Pro", sans-serif;
-$font-barcode: "Libre Barcode 128", cursive;
-$font-baloo: "Baloo 2", cursive;
-$font-binar: "VT323", monospace;
-$font-japan: "OPTIOpus", sans-serif;
+$font-mont: "Montserrat",
+sans-serif;
+$font-audio: "Audiowide",
+cursive;
+$font-source: "Source Sans Pro",
+sans-serif;
+$font-barcode: "Libre Barcode 128",
+cursive;
+$font-baloo: "Baloo 2",
+cursive;
+$font-binar: "VT323",
+monospace;
+$font-japan: "OPTIOpus",
+sans-serif;
 
 $base-font-size: 10px;
 $max-width: 1920px;
@@ -388,36 +397,25 @@ $border-radius: 15px;
 $border-radius-min: 5px;
 $main-spacing: 20px;
 
-$breakpoints: (
-  xxs: (
-    max-width: 360px,
+$breakpoints: (xxs: (max-width: 360px,
   ),
-  xs: (
-    max-width: 480px,
+  xs: (max-width: 480px,
   ),
-  small: (
-    max-width: 640px,
+  small: (max-width: 640px,
   ),
-  medium: (
-    max-width: 800px,
+  medium: (max-width: 800px,
   ),
-  large: (
-    max-width: 1024px,
+  large: (max-width: 1024px,
   ),
-  xl: (
-    max-width: 1366px,
+  xl: (max-width: 1366px,
   ),
-  big: (
-    max-width: 1440px,
+  big: (max-width: 1440px,
   ),
-  xxl: (
-    max-width: 1600px,
+  xxl: (max-width: 1600px,
   ),
-  xxxl: (
-    max-width: 1920px,
+  xxxl: (max-width: 1920px,
   ),
-  ultra: (
-    min-width: 1921px,
+  ultra: (min-width: 1921px,
   ),
 );
 

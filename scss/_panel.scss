@@ -319,13 +319,16 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   border-radius: 8px;
   box-shadow: inset 0px 0px 15px 3px rgba(0, 0, 0, 0.75);
 
-  @include mq(xxl) {
-  }
+  @include mq(xxl) {}
 }
 
 .RevB {
-  left: calc(63.5% - 5px);
+  left: calc(64% - 5px);
   transform: translate(-50%, -50%);
+
+  @include mq(xxxl) {
+    left: calc(63.5% - 5px);
+  }
 
   @media (max-width: 1680px) {
     left: calc(22.1% + var(--board-width));
@@ -358,7 +361,7 @@ $dark-grey: rgba(0, 0, 0, 0.4);
 }
 
 .RevC {
-  left: calc(63.5% - 5px);
+  left: calc(63.3% - 5px);
   transform: translate(-50%, -50%);
 
   @media (max-width: 1680px) {
@@ -523,6 +526,7 @@ input:checked[type="checkbox"]:before {
   box-shadow: 0 0 0 2px var(--color-panel-mainA), inset 0 0 3px 3px var(--color-panel-mainB),
     inset 0 0 4px 4px var(--color-panel-mainC);
   left: 20px;
+
   @media (max-width: 1280px) {
     left: 18px;
     box-shadow: 0 0 0 1px var(--color-panel-mainA), inset 0 0 3px 3px var(--color-panel-mainB),
