@@ -1714,7 +1714,7 @@ svg>rect {
     }
 
     @include mq(big) {
-      font-size: 1.3rem;
+      line-height: 1.2;
     }
 
     @include mq(xs) {

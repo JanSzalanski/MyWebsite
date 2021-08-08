@@ -112,31 +112,31 @@ textarea:focus {
 
 @media (max-width: 1680px) {
   :root {
-    --HeightOfirmie: 1980px;
+    --HeightOfirmie: 1890px;
   }
 }
 
 @media (max-width: 1536px) {
   :root {
-    --HeightOfirmie: 1760px;
+    --HeightOfirmie: 1680px;
   }
 }
 
 @media (max-width: 1440px) {
   :root {
-    --HeightOfirmie: 1960px;
+    --HeightOfirmie: 1620px;
   }
 }
 
 @media (max-width: 1280px) {
   :root {
-    --HeightOfirmie: 1960px;
+    --HeightOfirmie: 1615px;
   }
 }
 
 @media (max-width: 1024px) {
   :root {
-    --HeightOfirmie: 2120px;
+    --HeightOfirmie: 1770px;
   }
 }
 
@@ -154,31 +154,31 @@ textarea:focus {
 
 @media (max-width: 1680px) {
   :root {
-    --HeightOPraktyceA: 2130px;
+    --HeightOPraktyceA: 2040px;
   }
 }
 
 @media (max-width: 1536px) {
   :root {
-    --HeightOPraktyceA: 1850px;
+    --HeightOPraktyceA: 1780px;
   }
 }
 
 @media (max-width: 1440px) {
   :root {
-    --HeightOPraktyceA: 2060px;
+    --HeightOPraktyceA: 1710px;
   }
 }
 
 @media (max-width: 1366px) {
   :root {
-    --HeightOPraktyceA: 1810px;
+    --HeightOPraktyceA: 1710px;
   }
 }
 
 @media (max-width: 1024px) {
   :root {
-    --HeightOPraktyceA: 2180px;
+    --HeightOPraktyceA: 1800px;
   }
 }
 
@@ -196,31 +196,31 @@ textarea:focus {
 
 @media (max-width: 1680px) {
   :root {
-    --HeightOPraktyceB: 1630px;
+    --HeightOPraktyceB: 1560px;
   }
 }
 
 @media (max-width: 1536px) {
   :root {
-    --HeightOPraktyceB: 1420px;
+    --HeightOPraktyceB: 1380px;
   }
 }
 
 @media (max-width: 1440px) {
   :root {
-    --HeightOPraktyceB: 1560px;
+    --HeightOPraktyceB: 1340px;
   }
 }
 
 @media (max-width: 1366px) {
   :root {
-    --HeightOPraktyceB: 1550px;
+    --HeightOPraktyceB: 1340px;
   }
 }
 
 @media (max-width: 1024px) {
   :root {
-    --HeightOPraktyceB: 1640px;
+    --HeightOPraktyceB: 1390px;
   }
 }
 
@@ -232,7 +232,7 @@ textarea:focus {
 
 @media (max-width: 1680px) {
   :root {
-    --HeightOprojektach: 1010px;
+    --HeightOprojektach: 990px;
   }
 }
 
@@ -244,13 +244,13 @@ textarea:focus {
 
 @media (max-width: 1440px) {
   :root {
-    --HeightOprojektach: 980px;
+    --HeightOprojektach: 840px;
   }
 }
 
 @media (max-width: 1366px) {
   :root {
-    --HeightOprojektach: 980px;
+    --HeightOprojektach: 850px;
   }
 }
 
@@ -274,25 +274,25 @@ textarea:focus {
 
 @media (max-width: 1680px) {
   :root {
-    --HeightOMnie: 1335px;
+    --HeightOMnie: 1265px;
   }
 }
 
 @media (max-width: 1600px) {
   :root {
-    --HeightOMnie: 1390px;
+    --HeightOMnie: 1315px;
   }
 }
 
 @media (max-width: 1536px) {
   :root {
-    --HeightOMnie: 1100px;
+    --HeightOMnie: 1095px;
   }
 }
 
 @media (max-width: 1440px) {
   :root {
-    --HeightOMnie: 1360px;
+    --HeightOMnie: 1100px;
   }
 }
 
@@ -304,25 +304,25 @@ textarea:focus {
 
 @media (max-width: 1366px) {
   :root {
-    --HeightOMnie: 1430px;
+    --HeightOMnie: 1150px;
   }
 }
 
 @media (max-width: 1280px) {
   :root {
-    --HeightOMnie: 1500px;
+    --HeightOMnie: 1210px;
   }
 }
 
 @media (max-width: 1200px) {
   :root {
-    --HeightOMnie: 1410px;
+    --HeightOMnie: 1285px;
   }
 }
 
 @media (max-width: 1152px) {
   :root {
-    --HeightOMnie: 1670px;
+    --HeightOMnie: 1330px;
   }
 }
 
@@ -335,6 +335,12 @@ textarea:focus {
 @media (max-width: 1440px) {
   :root {
     --HeightEdu: 660px;
+  }
+}
+
+@media (max-width: 1280px) {
+  :root {
+    --HeightEdu: 640px;
   }
 }
 
@@ -7201,7 +7207,7 @@ svg > rect {
 
 @media (max-width: 1440px) {
   .RectangleTresc p {
-    font-size: 1.3rem;
+    line-height: 1.2;
   }
 }
 
@@ -10611,13 +10617,13 @@ svg > rect {
 
 @media (max-width: 1600px) {
   .RevB {
-    left: calc(14.5% + var(--board-width) + 5px);
+    left: calc(15.1% + var(--board-width));
   }
 }
 
 @media (max-width: 1280px) {
   .RevB {
-    left: 67.1%;
+    left: 66.8%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
@@ -10625,13 +10631,13 @@ svg > rect {
 
 @media (max-width: 1152px) {
   .RevB {
-    left: 70%;
+    left: 69.6%;
   }
 }
 
 @media (max-width: 1024px) {
   .RevB {
-    left: 69.5%;
+    left: 69%;
   }
 }
 
@@ -10685,19 +10691,19 @@ svg > rect {
 
 @media (max-width: 1280px) {
   .RevC {
-    left: 37.3%;
+    left: 36.8%;
   }
 }
 
 @media (max-width: 1152px) {
   .RevC {
-    left: 33.8%;
+    left: 34%;
   }
 }
 
 @media (max-width: 1024px) {
   .RevC {
-    left: 35.7%;
+    left: 35.2%;
   }
 }
 
