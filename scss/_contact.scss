@@ -509,10 +509,10 @@ textarea {
 
 .error-topB {
   @extend .error-top;
-  top: -20px;
+  top: -22px;
 
   @include mq(xs) {
-    top: -16px;
+    top: -18px;
   }
 }
 
