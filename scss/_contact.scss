@@ -507,6 +507,15 @@ textarea {
   }
 }
 
+.error-topB {
+  @extend .error-top;
+  top: -20px;
+
+  @include mq(xs) {
+    top: -16px;
+  }
+}
+
 .error-bottom {
   margin-top: 3px;
   color: white;
