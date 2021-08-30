@@ -3,8 +3,6 @@ $light-grey: rgba(255, 255, 255, 0.25);
 $mid-grey: #444;
 $dark-grey: rgba(0, 0, 0, 0.4);
 
-//$light-grey: rgba(255, 255, 255, 0.25);$mid-grey: #444;$dark-grey: rgba(0, 0, 0, 0.4);
-
 .PanelWrapper {
   position: absolute;
   top: 50%;
@@ -321,8 +319,7 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   border-radius: 8px;
   box-shadow: inset 0px 0px 15px 3px rgba(0, 0, 0, 0.75);
 
-  @include mq(xxl) {
-  }
+  @include mq(xxl) {}
 }
 
 .RevB {
