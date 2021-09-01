@@ -1,6 +1,8 @@
 <?php
 
- header('Location: index.php');
+session_start(); 
+
+header('Location: index.php');
 
 ?>  
 
@@ -13,6 +15,8 @@
     <title>Kontakt</title>
 </head>
 <body>
+
+
 
     
 </body>
