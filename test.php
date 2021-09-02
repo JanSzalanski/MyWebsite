@@ -2,7 +2,7 @@
 
 session_start(); 
 
-define('SITE_KEY', '6Lepfl4bAAAAAZl0yxb7VBFTiDGP-ECA7-'); #gitignore 
+define('SITE_KEY', '6Lepfl4bAAAAAZl0yxb7VBFTGP-ECA7-'); #gitignore 
 
 ?>  
 
