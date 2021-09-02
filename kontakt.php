@@ -3,7 +3,6 @@
 session_start(); 
 
 header('Location: index.php');
-define('SITE_KEY', '6Lepfl4bAAAAAZl0yxb7VBFTiDGP-ECA7-');.
 
 ?>  
 
