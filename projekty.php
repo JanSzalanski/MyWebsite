@@ -1,3 +1,39 @@
+<?php
+
+ session_start();
+
+
+ if(isset($_SESSION['podstrona']))
+ {
+    switch ($_SESSION['podstrona'])
+    {
+      case "index":
+        unset($_SESSION['podstrona']);
+        break;
+
+      case "firma":
+        unset($_SESSION['podstrona']);
+        break;
+
+      case "praktyka":
+        unset($_SESSION['podstrona']);
+        break;
+
+      case "prywatnie":
+        unset($_SESSION['podstrona']);
+        break;
+
+      default:
+        $_SESSION['podstrona']="projekty";
+        break;
+    }
+
+  } 
+
+  $_SESSION['podstrona']="projekty";
+
+?>
+
 
 
 <!DOCTYPE html>
@@ -15,27 +51,29 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prywatnie</title> 
+  <title>Projekty</title> 
   <link
     href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baloo+2&family=Libre+Barcode+128+Text&family=Montserrat:wght@500;600;700;900&family=Source+Sans+Pro:wght@300;400&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="~/../scss/main.css" />
-  <script src="https://www.google.com/recaptcha/api.js?render="></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=<?PHP echo SITE_KEY; ?>"></script>
 </head>
 
 <body>
   <div class="WrapperBorder1"></div>
+
   <div class="Wrapper">
     <div class="GridHelper"></div>
 
-    <div class="PrywatniePicture"></div>
+    <div class="ProjektyPicture"></div>
 
     <div class="GreyTop"></div>
 
     <header class="Header">
       <section class="Header__Logo">
+
         <div class="Header__Logo-Left">
-        </div> 
+        </div>
 
         <div class="Header__Logo-Middle">
 
@@ -63,24 +101,53 @@
         <div class="Contact__Board">
           <h2 class="Contact__Board-H2">kontakt</h2>
 
-          <form class="Contact__Form" method="post" action="">
+          <form class="Contact__Form" method="post" action="kontakt.php">
 
             <!-- ---------------------------------------------------IMIE *------------------------------------------------------------->
-            <div class="Contact__Form-Name"> 
+            <div class="Contact__Form-Name">
+
+              <?php  
+              if (isset($_SESSION['e_imie'] )){
+                    echo '<div class="error-top">'.$_SESSION['e_imie'].'</div>';                      
+              }
+              ?>   
 
               <input type="text" name="imie" placeholder="Imię *" maxlength="30" tabindex="1"
-                autocomplete="off" value=""/> 
+                autocomplete="off" value="<?php 
+                if(isset($_SESSION['fr_imie']))
+                {
+                  echo $_SESSION['fr_imie'];
+                  
+                }
+                ?>"/> 
             </div>
             <!-- ---------------------------------------------------EMAIL *------------------------------------------------------------->
             <div class="Contact__Form-Email">
 
+              <?php  
+                if (isset($_SESSION['e_email'] )){
+                    echo '<div class="error-top">'.$_SESSION['e_email'].'</div>';                     
+                } 
+              ?> 
+
               <input type="email" name="email" placeholder="E-mail *" maxlength="40"  tabindex="2"
-                autocomplete="off" value=""/>   
+                autocomplete="off" value="<?php 
+                if(isset($_SESSION['fr_email']))
+                {
+                  echo $_SESSION['fr_email'];
+                  
+                }
+                ?>"/>   
             </div>
             <!-- ---------------------------------------------------TEMAT------------------------------------------------------------->
             <div class="Contact__Form-Topic">
               <input type="topic" name="temat" placeholder="Temat" maxlength="30" tabindex="3" tabindex="3"
-                autocomplete="off" value=""/>
+                autocomplete="off" value="<?php 
+                if(isset($_SESSION['fr_temat']))
+                {
+                  echo $_SESSION['fr_temat'];    
+                }
+                ?>"/>
             </div>
             <!-- ---------------------------------------------------Captcha respnse---------------------------------------------------------->    
 
@@ -91,6 +158,19 @@
 
             <!-- ---------------------------------------------------SUBMIT *---------------------------------------------------------->      
             <div class="Contact__Form-Submit">
+              <?php 
+              if(isset($_SESSION['sukces']))
+              {
+                
+                echo '<div class="error-topB">'.$_SESSION['sukces'].'</div>';   
+                unset($_SESSION['sukces']);               
+              } 
+              else if(isset($_SESSION['e_boot']))
+              {
+                echo '<div class="error-topB">'.$_SESSION['e_boot'].'</div>';   
+                unset($_SESSION['e_boot']);               
+                } 
+              ?> 
               
               <input type="submit" value="wyślij" tabindex="4" autocomplete="off" />
   
@@ -98,9 +178,21 @@
 
             <!-- ---------------------------------------------------WIADOMOSC *---------------------------------------------------------->
             <div class="Contact__Form-Area">
+
+                 <?php  
+                if (isset($_SESSION['e_message'] )){
+                    echo '<div class="error-top">'.$_SESSION['e_message'].'</div>';   
+                                  
+                }
+              ?> 
     
               <textarea class="Contact__Form-Textarea" name="message" id="message" cols="80" rows="5"
-                placeholder="Treść wiadomości *" maxlength="600" tabindex="5"></textarea>  
+                placeholder="Treść wiadomości *" maxlength="600" tabindex="5"><?php 
+                if(isset($_SESSION['fr_wiadomosc']))
+                {
+                  echo $_SESSION['fr_wiadomosc'];
+                  
+                }?></textarea>  
 
             </div>  
 
@@ -111,20 +203,20 @@
             </div> 
 
           </form>
-        </div>
+        </div> 
 
-        <button class="Contact__BtnP">Kontakt</button>
-        <div class="Contact__Cross-V--BtnP"></div>
-        <div class="Contact__Cross-H--BtnP"></div>
+        <button class="Contact__Btn">Kontakt</button>
+        <div class="Contact__Cross-V--Btn"></div>
+        <div class="Contact__Cross-H--Btn"></div>
       </section>
 
       <section class="Menu">
         <div class="Menu__Left">
           <div class="Menu__Left-Left"></div>
- 
+
           <nav class="Nav">
             <!-- Od tego momentu zaczyna sie właściwa nawigacja  zmieniłem Bem na komponent od tego momentu-->
-
+ 
             <ul class="Nav__List">
               <li class="Nav__Item">
                 <a href="firma.php" class="Nav__Link">
@@ -173,43 +265,126 @@
         <div class="Menu__Skew"></div>
 
         <div class="Menu__SkewB">
-          <h3><b>/ komunikacja kwantowa /</b></h3> 
+          <h3>/ komunikacja kwantowa /</h3>
         </div>
       </section>
     </header>
 
     <div class="Troll">
-      <div class="GreyMiddleB Priv">
-
-        <div class="BackgroundGrey Priv"></div>
-        <div class="RedMask">
-          <h2>デーモン</h2>
-        </div>
+      <div class="GreyMiddleB Projekty">
+        <div class="BackgroundGrey"></div>
         <div class="Miara"></div>
-        <div class="WrapperTresc OMnie">
-          <h1 class="Tresc__H1 Priv">
-            PRIV - 05 o mnie / <span class="JapanFont">こじんてきにし</span>
-            <div class="Square Priv"></div>
+
+        <aside class="BoardPro">
+          <div class="CanvasShadow"></div>
+          <div class="CanvasB"></div>
+          <div class="CanvasA"></div>
+          <div class="Canvas"></div>
+
+          <div class="Article">
+            <h2 class="Article__TytulBoczny-Pro">Pierwiastek \ Żywioł - <b class="Article__TytulBoczny-B">04</b></h2>
+
+            <header class="Article__Naglowek">
+              <h2 class="Article__H2">Wyobraźnia<span class="Article__H2-Span">| powietrze</span></h2>
+            </header>
+
+            <div class="Article__Overflow-Pro">
+              <article id="Article__Artykul-Pro">
+                <p id="Article__Artykul-Pro-A">
+                  Wyobraźnia czy znasz kogoś, kto mówiłby o sobie, że jest jej pozbawiony albo, że u niego ona kuleje? Chciałem zacząć ten przypis, że czego, jak czego, ale wyobraźni to mi nie brakuje i to już od najmłodszych lat - trochę nie skromnie z resztą. Tyle tylko, że to tak naprawdę cecha naszego gatunku - zdolność do wyobrażania sobie różnych rzeczy niemających w ogóle lub jeszcze miejsca. Snucie wizji, marzenia czy planowanie to wszystko zasługa wyobraźni. Co prawda manie prześladowcze i teorie spiskowe są także wynikiem rozbudowanej (zaburzonej) wyobraźni, ale jak wszystko także i to posiada dwie strony medalu. Bo można wyobrażać sobie wielkie rzeczy marzyć o nich, ale tylko poprzestawać na górnolotnych planach bez ich realizacji - wtedy mawiamy, że ktoś buja w obłokach. Pewnie można by to robić z mniejszym rozmachem, ale metodycznie realizować owe wizje
+                </p>
+
+                <p id="Article__Artykul-Pro-B">
+                  z czasem nadając im stopniowo realnych kształtów. Niektórzy nawet marzą w ten sposób z wielkim rozmachem i co ciekawe czasami z sukcesami?! Dzięki temu ludzie np. wynoszą na orbitę okołoziemską astronautów za pomocą rakiety wielokrotnego użytku. Może akurat ten przykład to nie zasługa jednego człowieka, ale całego zespołu, który ten niepokorny marzyciel zgromadził tak, aby wspólnymi siłami nadać materialny wymiar ich marzeniu. Lata osiemdziesiąte dwudziestego wieku - druga ich połowa, a raczej ich końcówka. Nieduży pokoik w kamienicy na warszawskim Grochowie. Wieczór pomieszczenie wypełnia ciepłe niezbyt mocne, przyjemne światło pochodzące z tzw. nocnej lampki. Lokum rozświetla jeszcze w mniejszym stopniu blask czarno-białego telewizora, na którym coś tam leci. Na jednej z wersalek siedzi sobie chłopiec zapatrzony w jakąś książeczkę.
+                </p>
+
+                <p id="Article__Artykul-Pro-C">
+                  Z zapartym tchem ogląda on tom - przegląda kartka po kartce już od dobrej godziny. W jego okolicy jest kilka zabawek, miśki, klocki, bączek. Pomimo tego dziecko wpatruje się w książkę, ta ma jednak jakieś takie grube stronice w dodatku są one czarne? To jednak nie przeszkadza, żeby smyk mimo jeszcze innych lokatorów i czasami niemałego zgiełku panującego w koło, nawet na chwilę nie oderwał rozświetlonych oczu od czarnego albumu. Malec jest jak zahipnotyzowany można by rzec, że wręcz nieobecny w tym czasie i przestrzeni. Owa zaklęta księga jest to klaser a w nim dziesiątki kolorowych znaczków. Na każdej ze stron są różne kolekcje tworzące tematyczne zbiory. Pogrupowane są tam pociągi, samoloty, statki, zwierzęta, motyle, dinozaury i wiele, wiele innych. Chłopiec siedzi i ogląda je wszystkie bardzo powoli, podziwiając mnogość kształtów i kolorów.
+                </p>
+
+                <p id="Article__Artykul-Pro-D">
+                  Do każdej serii za każdym razem snuje w myślach nową historię czy pasjonującą przygodę. Czasami zastanawia się nad tym, co to za statek, co to za przedmiot czy miejsce itd. Jednak jego wyobraźnia najbardziej pracuje przy jednej z nich. Wtedy ciekawość jest największa i w głowie chłopca rodzi się najwięcej pytań. Są to znaczki inne niż wszystkie, są większe od pozostałych, na ich powierzchni nie ma śladów po pieczątkach. Są one zgrupowane zdaje się w kompletną kolekcje ta zaś tworzy pewien kształt odmienny od prostokątów czy kwadratów, tak jak ma to miejsce przy innych zbiorach. Bez wątpienia ten komplet odróżnia się od pozostałych jest absolutnie wyjątkowy - a przynajmniej mały marzyciel tak o nim myśli, tak go postrzega. Ilustracje na znaczkach są jakby nie z tego świata, kolorystyka jest spójna, a zarazem różnorodna.
+                </p> 
+
+                <p id="Article__Artykul-Pro-E">
+                  Też sama grafika jest przedstawiona odmiennie niż na innych miniaturach jest ona bowiem obrócona o 90 stopni, co sprawia, że poprawnie usytuowany znaczek nie jest już zwyczajnym kwadratem a rombem. W zasadzie każdy aspekt kolekcji jest niekonwencjonalny, niebanalny i wyjątkowy. Co ona przedstawia? Widać na niej pojazdy i statki kosmiczne na tle innych niż nasz światów, które dodatkowo okraszone są powyginanymi przestrzenie siatkami. Ta geometria nadaje im dodatkowego magicznego charakteru powodując u młodego podróżnika wręcz zadumę... Chłopiec często pyta starszego brata o ten właśnie zbiór - co to, co się na nich znajduje, cóż to za siatka? W odpowiedzi słyszy… to są znaczki komputerowe tzn. jest na nich grafika, która powstała na komputerze. Na komputerze Ooo?!  
+                </p>
+              </article>
+            </div>
+
+            <footer class="Article__Stopka">
+              <div class="Article__Corner">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 12">
+                  <path d="M100,12H10C4.48,12,0,7.52,0,2V0h92L100,12z" />
+                </svg>
+              </div>
+
+              <div class="Article__Buttons">
+                <div data-index="" class="Article__Btn Article__Btn--active"></div>
+
+                <div data-index="" class="Article__Btn-B Article__Btn--inactive"></div>
+
+                <div data-index="" class="Article__Btn-C Article__Btn--inactive"></div>
+
+                <div data-index="" class="Article__Btn-D Article__Btn--inactive"></div>
+
+                <div data-index="" class="Article__Btn-E Article__Btn--inactive"></div>
+              </div>
+            </footer>
+          </div>
+
+          <div class="DescryptionBtn">
+            <span class="DescryptionBtn__Span Pro">D</span>
+            <p class="DescryptionBtn__P Pro"><span>D</span>escription</p>
+            <div class="DescryptionBtn__Border Pro"></div>
+          </div>
+
+          <div class="InfoPro">
+            <header class="Info__Naglowek">
+              <h2 class="Info__H2 Pro">Powietrze<span class="Info__H2-Span Pro">| wyobraźnia</span></h2>
+            </header>
+
+            <article class="Info__Artykul">
+              <p class="Info__Artykul-P Pro">
+                Powietrze to niezależność, swoboda i wolność. To nasze marzenia i źródło inspiracji. To ten
+                pierwiastek jest odpowiedzialny za nowe pomysły i idee. Kojarzy się ze snami, myślami i wizjami. Jest
+                pierwiastkiem najmniej namacalnym i jest kojarzony, jako męska cecha. Powietrze to zdolność analizy,
+                przestrzennego, abstrakcyjnego i niezależnego myślenia. A co za tym idzie pozwala wychodzić poza
+                utarte schematy. Jest ekspansywne nadaje kierunek i popycha nas do nieskrępowanego działania. Zmysły
+                to oczywiście węch i słuch, cześć ciała to płuca (cały układ oddechowy). Składnik będący w opozycji do
+                ziemi.
+              </p>
+            </article>
+          </div>
+
+          <div class="Button">></div>
+          <div class="Button2">&lt</div>
+        </aside>
+
+        <div class="WrapperTresc Oprojektach">
+          <h1 class="Tresc__H1">
+            PRO - 04 wyobraźnia
+            <div class="Square"></div>
           </h1>
 
-          <div class="CornerTop Priv"></div>
-          <div class="CornerTopIn Priv"></div>
-          <div class="CornerBottomIn Priv"></div>
-          <div class="LineIn Priv"></div>
-          <div class="LineLeftIn Priv"></div>
-          <div class="CornerTopR Priv"></div>
-          <div class="LineCornerTR Priv"></div>
-          <div class="CornerBottom Priv"></div>
-          <div class="CornerBottomR Priv"></div>
-          <div class="Line Priv"></div>
-          <div class="LineLeft Priv"></div>
-          <div class="LineRight Priv"></div>
-          <div class="ShapeA Priv">
+          <div class="CornerTop"></div>
+          <div class="CornerTopIn"></div>
+          <div class="CornerTopR"></div>
+          <div class="LineCornerTR"></div>
+          <div class="CornerBottom"></div>
+          <div class="CornerBottomIn"></div>
+          <div class="CornerBottomR"></div>
+          <div class="Line"></div>
+          <div class="LineIn"></div>
+          <div class="LineLeft"></div>
+          <div class="LineLeftIn"></div>
+          <div class="LineRight"></div>
+          <div class="ShapeA">
             <div class="ShapeARect"></div>
             <div class="ShapeBRect"></div>
             <div class="ShapeCRect"></div>
             <h3>|Description</h3>
-          </div> 
+          </div>
           <div class="RectangleA"></div>
           <div class="LinesA"></div>
           <div class="LinesB"></div>
@@ -218,173 +393,134 @@
             <div class="BackgroundNoise"></div>
             <div class="BackgroundGrid"></div>
             <div class="BackgroundGardient"></div>
-            <div class="wrapperMnie">
-              <h3 class="NaglowekTresc Mnie">O mnie</h3>
 
-              <div class="maska Mnie">
-                <div class="ozdobnik Edu">
-                  <div class="geo begining"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div> 
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo"></div>
-                  <div class="geo end"></div>
-                </div>
+            <h3 class="NaglowekTresc">Dodatkowe projekty zrealizowane dla instytucji publicznych.</h3>
+
+            <div class="maska">
+              <div class="ozdobnik">
+                <div class="geo begining"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo end"></div>
               </div>
             </div>
-
-            <p class="OMnieP">
-              <br /><br /><br /><br />
-                  Jest całkiem prawdopodobne, że jeśli przechodzisz tutaj na sam koniec. I w dodatku ma to miejsce po przeczytaniu poprzednich działów - to możesz się zastanawiać, po co jeszcze rubryka o mnie? Mogłeś\aś bowiem odnieść wrażenie, że napisałem o sobie dużo, co więcej to poczucie może być spotęgowane o to, że nie miałeś\aś do czynienia ze stroną firmową? Zdecydowanie poprzednie cztery działy starałem się, aby dotyczyły mojej osoby prowadzącej działalność gospodarczą i z tym związane zagadnienia. Przekaz miał być inny niż to, co ja sam znajduję na podobnych stronach. Osobiście czasem odczuwam delikatny zawód - kiedy po raz kolejny widzę niemal te same teksty nic niewnoszące a będące pasmem spektakularnych sukcesów i samospełniających się wróżb. Często z przekazów takich nie dowiaduje się nic, co by mnie tak naprawdę interesowało - nie kryje się za tym ani człowiek, ani bardzo często prawdziwa historia. Kolejna kalka kalki opowieści z niby-landii za siedmiu wzgórz. Ja tutaj tego schematu nie chciałem powielać. Sporo się już naoglądałem takich historii gdzie malutkie biznesy bardzo często jednoosobowe lub kilkuosobowe prężyło swoje wizerunkowe muskuły na swoich stronach www i materiałach reklamowych na nie wiadomo jakie korporacje. Z ich stron wybijało szkło, chrom i marmury, wielkie biura, strzeliste wieżowce. Uśmiechnięty personel na stokowych zdjęciach. Ponieważ ja mam nieco inne podejście do takich spraw i staram się trzeźwo patrzeć na rzeczywistość i jej nie upiększać. Dlatego postanowiłem, że w zasadzie cała strona będzie w pewnym sensie na mój temat, przedstawiona w możliwie szczery i obiektywny sposób. Co do konceptu samej strony. To jest to takie zestawienie wydawać by się mogło przypadkowego wątku niezwiązanego z biznesem z całą resztą. Stąd koncepcja żywiołów, jako spoiwo zagadnień, nazw podstron oraz wglądu strony – jakaś luźna anegdota plus obok artykuł już dotykający konkretów, ale dalej w formie raczej dialogu z Tobą (twarzą w twarz). Takiego jakbyśmy spotkali się na kawie lub na ławce na przystanku autobusowym bez zbędnego napięcia i formalizmu. Tu, jeśli się jeszcze Tobie nie skojarzyło czy pamiętasz taką scenę z filmu „Forest Gump”, jak tytułowy bohater siedział na ławeczce i rozmawiał ze starszą Panią? Dobrze chyba wypadałoby powiedzieć kilka słów o sobie po powyższym przy długim wstępie. Wątek żywiołów nie jest tak zupełnie „luźno” związany, kryję się za nim pewna anegdota, ale nie będę jej teraz opisywał. Mimo że symbolika zawarta na stronie ma pewne znaczenie, to muszę powiedzieć, że nie należę do grona osób, które zaczytują się w horoskopach. Ja zwyczajnie lubię delikatne odniesienia czy nawet ukryte przekazy, ale na zasadzie ciekawostki i elementu dodającego jakiegoś dodatkowego kolorytu. Podobnie jak w naukach ścisłych, jakimi są elektronika i informatyka tak w życiu prywatnym mam sporo różnych zainteresowań. Jedną z nich jest jedzenie. A konkretniej to gotowanie i oczywiście wynikający z niego późniejszy rytuał celebrujący włożony wcześniej wysiłek, czyli spożywanie ze smakiem. To czy smacznie gotuję to już muszą wypowiedzieć się inni – ja natomiast to, co ugotuję zjadam z zadowoleniem. Od dziecka obok zaciekawienia komputerami cały czas niesłabnące było zainteresowanie kosmosem, gdzieś tam sympatia dla tej tematyki tliła się w podświadomości – nie była ona aż tak dominująca, jak ta komputerowa, ale występowała. Tak, więc nie powinien nikogo dziwić fakt, że na moim YouTube nie mogło zabraknąć subskrypcji takich kanałów jak Astrofaza czy Astronarium. Jednak nie samym Internetem człowiek żyję czasem nie zbyt często, co prawda, ale jakaś książka z danej dziedziny wpadnie na warsztat. Nawet tę formę nauki czy też relaksu zaczynam bardzo mocno obecnie doceniać. Z całej tej fascynacji kosmosem a uściślając astrofizyki zagadnieniami, które po prostu mnie zadziwiają - są te do opisu, których używane są zasady mechaniki kwantowej. I to, że mamy w informatyce całą nową gałąź związana z pojęciami kwantowymi chyba niemusze Tobie mówić, że sprawy nie ułatwia w tym, aby dać sobie spokój z choćby hobbistycznym eksplorowaniem tych tematów. Jedynym biegunem, który mógłby w najbliższej przyszłości zmienić kierunek tego zainteresowania, jest inny równie abstrakcyjny byt. Tym razem tematyka nie ma źródeł „kosmicznych”, jest pewną ewolucją i mariażem zagadnień ze świata finansów i informatyki a mowa oczywiście o technologiach blockchain i NFT. Tak więc to są takie tematy, które rozpalają moją wyobraźnię. No, ale dobra, żeby nie wyjść na totalnego nerda (choć myślę, że bliskim znajomym nie kojarzę się w ten sposób?) poza opisanymi „technologicznymi” dziedzinami lubię jeszcze odskocznię w postaci wyjścia na łono natury, pochodzenie po lesie w górach czy nad morzem nie ma znaczenie gdzie i w jakich warunkach - czy świeci słońce i jest ciepło, czy może jednak pada i jest chłodniej. Może być śnieżna zima nawet trochę mroźna w lesie, który wygląda jak ten z „Opowieści z Narni”, to jest to co ładuje moje baterie, co kręci równie mocno, co cała wymieniona technika. Może z wyjątkiem sytuacji, kiedy jestem wyrwany ze strefy komfortu i muszę w trybie pilnym opuszczać dany rejon lasu, bo stado dzików postanowiło, że się ze mną „zaprzyjaźni”. Dlatego zagadnienia z tak zwanego bushcraftu czy nawet surviwalu nie są mi obce, gdyż one w naturalny sposób wplatają się w czas spędzany na wolnym powietrzu pośród przyrody. Jak widzisz, jest tego całkiem sporo i nie o wszystkim też tu napisałem wiadomo jakiegoś asa w rękawie należy zawsze sobie pozostawić. Na sam koniec nie mogłem nie pozwolić sobie na umieszczenie małego wycinka ze strefy twórczości. Bo jako taki komputerowiec w pewnym etapie mojej przygody z multimediami bardzo dużo frajdy sprawiało mi tworzenie własnej muzyki. I pisząc tworzenie, mam na myśli faktycznie tworzenie. Czyli niemiksowanie czy aranżowanie nawet na zaawansowanych narzędziach i z gotowych sampli. Tylko komponowanie melodii przekładanie tego na różne brzmienia stworzone na rozmaitych syntezatorach. A następnie robienie całkowicie własnego utworu. Bardzo często przy tym wzorowałem się na moich ulubionych wykonawcach. Dlatego pod spodem zamieszczam kilka moich utworów pochodzących z tego okresu. Uff, jeśli dobrnęłaś albo dobrnołeś do tego momentu to chce Ci podziękować za spędzony tutaj ze mną czas - na tej wirtualnej „ławeczce”. Pozdrawiam i trzymaj się!  
-              <br><br> 
-
-              <span>P.S. Jeśli znalazłeś jakieś błędy czy masz jakieś uwagi, to proszę daj mi o tym znać.</span>
-
-              <br><br>
-
+            <p>
+              Instalacja systemu sygnalizacji włamania i napadu SSWiN dla Kuratorów Karnych w budynku B Sądu
+              Rejonowego dla Warszawy Woli – system przewodowy. <br /><br />
+              Instalacja systemu sygnalizacji włamania i napadu SSWiN dla Kuratorów Rodzinnych w budynku D Sądu
+              Rejonowego dla Warszawy Woli – system bezprzewodowy. <br /><br />
+              Instalacja systemu telewizji dozorowej CCTV dla Czytelni Akt Sądu Rejonowego dla Warszawy
+              Woli. 
+              <br /><br />
+              Zorganizowanie szkolenia w Apelacji Białostockiej dotyczące usługi „Elektroniczne Potwierdzenie Odbioru”
+              oraz późniejsze wdrożenie jej na terenie Sądu Rejonowego dla Warszawy Woli, oraz późniejsza administracja
+              i obsługa (SQL). 
             </p>
-            <div class="Ekstra">
-              <iframe id="SoundCloud" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1264092838&color=%23fd0505&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-              <div
-                style="font-size: 12px; color: #fd0505;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-                <!-- <a href="https://soundcloud.com/user-495341203" title="JMS" target="_blank" style="color: #fd0505; text-decoration: none;">JMS</a>
-                ·
-                <a href="https://soundcloud.com/user-495341203/sets/main-list" title="Main List" target="_blank" style="color: #fd0505; text-decoration: none;">Main List</a> -->
+            <div class="maska">
+              <div class="ozdobnik">
+                <div class="geo begining"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo end"></div>
               </div>
             </div>
-            <div class="ShapeB Priv">
+            <p>
+              Kompleksowe czyszczenie i konserwacja sprzętu komputerowego w całym Sądzie Rejonowym dla Warszawy
+              Żoliborza ok. 250 zestawów. <br /><br />
+              Przeprowadzenie konserwacji głównej serwerowni Sądu Rejonowego dla Warszawy Żoliborza wraz z
+              optymalizacją istniejącej infrastruktury. <br /><br />
+              Zorganizowanie i przeprowadzenie szkoleń z podstaw MS Excel 2010 dla 30 osób z kadry kierowniczej w
+              trzech grupach - po dwa dni szkoleniowe dla każdej z grup.<br /><br />
+              Instalacja powiadomienia głosowego dla Czytelni Akt wraz z integracją z istniejącym systemem kolejkowym.
+              <br /><br />
+              Pilotażowe wdrożenie na terenie Sądów i testowanie oprogramowania do zamiany mowy na tekst.<br /><br />
+              Kompleksowe czyszczenie i konserwacja sprzętu komputerowego w całym Sądzie ok. 220 zestawów. 
+            </p>
+
+            <div class="maska">
+              <div class="ozdobnik">
+                <div class="geo begining"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo end"></div>
+              </div>
+            </div>
+
+            <div class="ShapeB">
               <h3>sektor /// a</h3>
             </div>
           </div>
-          <div class="ShapeC Priv"></div>
-          <div class="ShapeD Priv"></div>
+          <div class="ShapeC"></div>
+          <div class="ShapeD"></div>
         </div>
 
-        <div class="WrapperTresc OMnie Edu">
-          <h1 class="Tresc__H1 Priv">
-            PRIV - 06 wykształcenie /
-            <span class="JapanFont">エディケー</span>
-            <div class="Square Priv"></div>
-          </h1>
+        <div class="WrapperTrescC OprojektachB">
+          <div class="CornerTopB"></div>
+          <div class="CornerTopInB"></div>
+          <div class="CornerTopBL"></div>
+          <div class="LineCornerTBL"></div>
+          <div class="CornerBottomB"></div>
+          <div class="CornerBottomInB"></div>
+          <div class="CornerBottomBL"></div>
+          <div class="LineB"></div>
+          <div class="LineInB"></div>
+          <div class="LineLeftB"></div>
+          <div class="LineRightIn"></div>
+          <div class="LineRightB"></div>
 
-          <div class="CornerTop Priv"></div>
-          <div class="CornerTopIn Priv"></div>
-          <div class="CornerBottomIn Priv"></div>
-          <div class="LineIn Priv"></div>
-          <div class="LineLeftIn Priv"></div>
-          <div class="CornerTopR Priv"></div>
-          <div class="LineCornerTR Priv"></div>
-          <div class="CornerBottom Priv"></div>
-          <div class="CornerBottomR Priv"></div>
-          <div class="Line Priv Edu"></div>
-          <div class="LineLeft Priv"></div>
-          <div class="LineRight Priv"></div>
-          <div class="ShapeA Priv">
-            <div class="ShapeARect"></div>
-            <div class="ShapeBRect"></div>
-            <div class="ShapeCRect"></div>
-            <h3>|Description</h3>
+          <div class="ShapeBA">
+            <div class="ShapeBARect"></div>
+            <div class="ShapeBBRect"></div>
+            <div class="ShapeBCRect"></div>
+            <h3>Continued</h3>
           </div>
+
           <div class="RectangleA"></div>
           <div class="LinesA"></div>
           <div class="LinesB"></div>
-          <div class="RectangleTresc Edu">
+
+          <div class="RectangleTresc">
             <div class="Background"></div>
             <div class="BackgroundNoise"></div>
-            <div class="japanlogo">
-              <svg viewBox="0 0 150 150">
-                <path class="logoPath"
-                  d="M74.9 135.4c-33.1 0-60-26.9-60-60s26.9-60 60-60c14.4 0 27.6 5.1 38 13.5 4.6 3.8 8.6 8.4 12 13.3 5.4 7.8 10 20.9 10 33.1 0 33-26.7 59.8-59.6 60"
-                  id="obrecz" transform="rotate(135 75 75)" />
-
-                <path class="logoPath"
-                  d="M74.9 135.4c-33.1 0-60-26.9-60-60s26.9-60 60-60c14.4 0 27.6 5.1 38 13.5 4.6 3.8 8.6 8.4 12 13.3 5.4 7.8 10 20.9 10 33.1 0 33-26.7 59.8-59.6 60"
-                  id="obrecz2" transform="rotate(230 75 75)" />
-
-                <circle cx="74.9" cy="75.4" r="52" fill="#d51309" />
-                <path class="japanWhite" d="M118.9 76.1v-.7c0-24.3-19.7-44-44-44s-44 19.7-44 44v.7h88z" />
-                <text y="0">
-                  <textPath class="textLogo" href="#obrecz">pjatk</textPath>
-                </text>
-                <text y="0">
-                  <textPath class="textLogo2" href="#obrecz2">ポーランド日本情報工科大学</textPath>
-                </text>
-              </svg>
-            </div>
             <div class="BackgroundGrid"></div>
             <div class="BackgroundGardient"></div>
 
-            <h2 class="HeaderStudia">POLSKO-JAPONSKA AKADEMIA TECHNIK KOMPUTEROWYCH</h2>
-            <h3 class="HeaderStudiaPod">Poprzednio: Polsko-Japońska Wyższa Szkoła Technik komputerowych</h3>
-            <p class="Studia">
-              Studia Inżynierskie (wieczorowe) - Wydział Informatyki - Katedra Multimediów <br />
-              Specjalizacja: Multimedia - Animacja 3D. <br />
-              <a class="linkdyplomowa" href="/assets/praca.pdf">Praca dyplomowa \</a>
-              <a class="linkdyplomowa" href="https://vimeo.com/szalanski">suplement</a>
-            </p>
-            <div class="maska Edu">
-              <div class="ozdobnik Edu">
-                <div class="geo begining"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo end"></div>
-              </div>
-            </div>
-            <h3 class="HeaderStudiaPod Tech">ZSEiL Technikum Elektroniczne Nr.3</h3>
-            <p class="Studia Tech">Specjalizacja: Systemy i sieci komputerowe. <br /></p>
-            <div class="maska Edu">
-              <div class="ozdobnik Edu">
-                <div class="geo begining"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo"></div>
-                <div class="geo end"></div>
-              </div>
-            </div>
-            <h3 class="HeaderStudiaPod Tech">Kursy i certyfikaty</h3>
-            <p class="Studia Kursy">
-              MCSA: Windows Server 2012. <br /><br />
-              70-412: Configuring Advanced Windows Server 2012.
-              <br />
-              70-411: Administering Windows Server 2012.<br />
-              70-410: Installing and Configuring Windows Server 2012.<br />
-              <br />
-              Kaspersky Advnced Security For Windows Server.
-            </p>
-
-            <div class="maska Edu">
-              <div class="ozdobnik Edu">
+            <h3 class="NaglowekTresc">Projekt tej strony w szczegółach.</h3>
+            <div class="maska">
+              <div class="ozdobnik">
                 <div class="geo begining"></div>
                 <div class="geo"></div>
                 <div class="geo"></div>
@@ -403,21 +539,118 @@
               </div>
             </div>
 
-            <h3 class="HeaderStudiaPod Tech">Języki obce</h3>
+            <p>Dział w opracowaniu ...</p>
 
-            <p class="Studia Jezyk">
-              Język angielski - zaawansowany. <br />
-              Język rosyjski - podstawy. <br />
-              Język niemiecki - podstawy. <br />
-            </p>
+            <div class="maska">
+              <div class="ozdobnik">
+                <div class="geo begining"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo end"></div>
+              </div>
+            </div>
 
-            <div class="ShapeB Priv">
+            <div class="ShapeBB">
               <h3>sektor /// b</h3>
             </div>
           </div>
-          <div class="ShapeC Priv"></div>
-          <div class="ShapeD Priv"></div>
+
+          <div class="ShapeBC"></div>
+          <div class="ShapeBD"></div>
         </div>
+
+        <aside class="BoardMobo Projekty">
+          <div class="CanvasShadowM"></div>
+
+          <div class="CanvasBM"></div>
+
+          <div class="CanvasAM"></div>
+
+          <div class="CanvasM Firma"></div> 
+
+          <div class="BMWrap__articles-container">
+            <div class="BMWrap__article-container BMWrap__article-container--second">
+              <div class="BMWrap__background--second Projekty"></div>
+
+              <h2 class="BMWrap__header BMWrap__header--second">Powietrze<span>| wyobraźnia</span></h2>
+
+              <p class="BMWrap__Info">
+                Powietrze to niezależność, swoboda i wolność. To nasze marzenia i źródło inspiracji. To ten
+                pierwiastek jest odpowiedzialny za nowe pomysły i idee. Łączony jest ze snami, myślami i wizjami. Jest
+                pierwiastkiem najmniej namacalnym i kojarzony jest, jako męska cecha. Powietrze to zdolność analizy,
+                przestrzennego, abstrakcyjnego i niezależnego myślenia. A co za tym idzie pozwala wychodzić poza
+                utarte schematy. Jest ekspansywne nadaje kierunek i popycha nas do nieskrępowanego działania. Zmysły
+                to oczywiście węch i słuch, cześć ciała to płuca (cały układ oddechowy). Składnik będący w opozycji do
+                ziemi.
+              </p>
+            </div>
+            <div class="BMWrap__article-container BMWrap__article-container--first">
+              <div class="BMWrap__background--first"></div>
+
+              <h2 class="BMWrap__header BMWrap__header--first">Wyobraźnia <span>| powietrze</span></h2>
+              <div class="BMWrap__Overflow">
+                <div class="BMWrap__paragraphs Projekty">
+                  <p class="BMWrap__paragraphA Projekty">
+                    Wyobraźnia czy znasz kogoś, kto mówiłby o sobie, że jest jej pozbawiony albo, że u niego ona kuleje? Chciałem zacząć ten przypis, że czego, jak czego, ale wyobraźni to mi nie brakuje i to już od najmłodszych lat - trochę nie skromnie z resztą. Tyle tylko, że to tak naprawdę cecha naszego gatunku - zdolność do wyobrażania sobie różnych rzeczy niemających w ogóle lub jeszcze miejsca. Snucie wizji, marzenia czy planowanie to wszystko zasługa wyobraźni. Co prawda manie prześladowcze i teorie spiskowe są także wynikiem rozbudowanej (zaburzonej) wyobraźni, ale jak wszystko także i to posiada dwie strony medalu. Bo można wyobrażać sobie wielkie rzeczy marzyć o nich, ale tylko poprzestawać na górnolotnych planach bez ich realizacji - wtedy mawiamy, że ktoś buja w obłokach. Pewnie można by to robić z mniejszym rozmachem, ale metodycznie realizować owe wizje
+                  </p>
+
+                  <p class="BMWrap__paragraphB Projekty">
+                    z czasem nadając im stopniowo realnych kształtów. Niektórzy nawet marzą w ten sposób z wielkim rozmachem i co ciekawe czasami z sukcesami?! Dzięki temu ludzie np. wynoszą na orbitę okołoziemską astronautów za pomocą rakiety wielokrotnego użytku. Może akurat ten przykład to nie zasługa jednego człowieka, ale całego zespołu, który ten niepokorny marzyciel zgromadził tak, aby wspólnymi siłami nadać materialny wymiar ich marzeniu. Lata osiemdziesiąte dwudziestego wieku - druga ich połowa, a raczej ich końcówka. Nieduży pokoik w kamienicy na warszawskim Grochowie. Wieczór pomieszczenie wypełnia ciepłe niezbyt mocne, przyjemne światło pochodzące z tzw. nocnej lampki. Lokum rozświetla jeszcze w mniejszym stopniu blask czarno-białego telewizora, na którym coś tam leci. Na jednej z wersalek siedzi sobie chłopiec zapatrzony w jakąś książeczkę. 
+                  </p>
+
+                  <p class="BMWrap__paragraphC Projekty">
+                    Z zapartym tchem ogląda on tom - przegląda kartka po kartce już od dobrej godziny. W jego okolicy jest kilka zabawek, miśki, klocki, bączek. Pomimo tego dziecko wpatruje się w książkę, ta ma jednak jakieś takie grube stronice w dodatku są one czarne? To jednak nie przeszkadza, żeby smyk mimo jeszcze innych lokatorów i czasami niemałego zgiełku panującego w koło, nawet na chwilę nie oderwał rozświetlonych oczu od czarnego albumu. Malec jest jak zahipnotyzowany można by rzec, że wręcz nieobecny w tym czasie i przestrzeni. Owa zaklęta księga jest to klaser a w nim dziesiątki kolorowych znaczków. Na każdej ze stron są różne kolekcje tworzące tematyczne zbiory. Pogrupowane są tam pociągi, samoloty, statki, zwierzęta, motyle, dinozaury i wiele, wiele innych. Chłopiec siedzi i ogląda je wszystkie bardzo powoli, podziwiając mnogość kształtów i kolorów.
+                  </p>
+
+                  <p class="BMWrap__paragraphD Projekty">
+                    Do każdej serii za każdym razem snuje w myślach nową historię czy pasjonującą przygodę. Czasami zastanawia się nad tym, co to za statek, co to za przedmiot czy miejsce itd. Jednak jego wyobraźnia najbardziej pracuje przy jednej z nich. Wtedy ciekawość jest największa i w głowie chłopca rodzi się najwięcej pytań. Są to znaczki inne niż wszystkie, są większe od pozostałych, na ich powierzchni nie ma śladów po pieczątkach. Są one zgrupowane zdaje się w kompletną kolekcje ta zaś tworzy pewien kształt odmienny od prostokątów czy kwadratów, tak jak ma to miejsce przy innych zbiorach. Bez wątpienia ten komplet odróżnia się od pozostałych jest absolutnie wyjątkowy - a przynajmniej mały marzyciel tak o nim myśli, tak go postrzega. Ilustracje na znaczkach są jakby nie z tego świata, kolorystyka jest spójna, a zarazem różnorodna.
+                  </p>
+
+                  <p class="BMWrap__paragraphE Projekty">
+                    Też sama grafika jest przedstawiona odmiennie niż na innych miniaturach jest ona bowiem obrócona o 90 stopni, co sprawia, że poprawnie usytuowany znaczek nie jest już zwyczajnym kwadratem a rombem. W zasadzie każdy aspekt kolekcji jest niekonwencjonalny, niebanalny i wyjątkowy. Co ona przedstawia? Widać na niej pojazdy i statki kosmiczne na tle innych niż nasz światów, które dodatkowo okraszone są powyginanymi przestrzenie siatkami. Ta geometria nadaje im dodatkowego magicznego charakteru powodując u młodego podróżnika wręcz zadumę... Chłopiec często pyta starszego brata o ten właśnie zbiór - co to, co się na nich znajduje, cóż to za siatka? W odpowiedzi słyszy… to są znaczki komputerowe tzn. jest na nich grafika, która powstała na komputerze. Na komputerze Ooo?! 
+                  </p>
+                </div>
+              </div>
+              <div class="BMWrap__Corner">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 12">
+                  <path d="M100,12H10C4.48,12,0,7.52,0,2V0h92L100,12z" />
+                </svg>
+              </div>
+              <div class="BMWrap__Buttons Projekty">
+                <div data-index="" class="BMWrap__Btn BMWrap__Btn--active"></div>
+
+                <div data-index="" class="BMWrap__Btn-B"></div>
+                <div data-index="" class="BMWrap__Btn-C"></div>
+
+                <div data-index="" class="BMWrap__Btn-D"></div>
+
+                <div data-index="" class="BMWrap__Btn-E"></div>
+              </div>
+            </div>
+            <div class="BMWrap__handle">
+              <!-- <div class="BMWrap__handle-ArrowL">&lt;</div>
+
+              <div class="BMWrap__handle-ArrowR">></div> -->
+            </div>
+          </div>
+
+          <div class="BMWrap__divider">
+            <div class="BMWrap__divider_outline"></div>
+            <div class="BMWrap__divider_dot">D</div>
+            <span class="BMWrap__divider_span">escription</span>
+          </div>
+        </aside>
       </div>
     </div>
 
@@ -432,12 +665,12 @@
         </div>
 
         <div class="Footer__Nav-Right">
-          <div class="Footer__Nav-Right-TitleP">
+          <div class="Footer__Nav-Right-Title">
             Panel dodatków
-            <div class="Footer__Nav-Right-ArrowP">></div>
+            <div class="Footer__Nav-Right-Arrow">></div>
           </div>
 
-          <div class="Footer__Nav-Right-BarsP">
+          <div class="Footer__Nav-Right-Bars">
             <div class="Footer__Nav-Right-Bar1"></div>
 
             <div class="Footer__Nav-Right-Bar2"></div>
@@ -452,9 +685,9 @@
 
         <div class="ASMR">
           
-          <div class="PanelWrapper RevC">
+          <div class="PanelWrapper RevB">
 
-            <div class="Panel RevPriv"> 
+            <div class="Panel">
               <div class="Panel__Border1">
                 <h3>Panel Dodatków</h3>  
             </div> 
@@ -607,7 +840,7 @@
                         </svg>
                 </div> 
 
-                <div class="DecorLineB"></div>
+                <div class="DecorLine"></div>
 
                 <div class="Linked">
                       <svg version="1.1" id="Layer_1" x="0px" y="0px"
@@ -660,7 +893,7 @@
                       </svg>
                 </div>
 
-                <div class="DecorLineB"></div>
+                <div class="DecorLine"></div>
 
                 <div class="vimeo">
                       
@@ -717,21 +950,21 @@
 
         <div class="Footer__BottomSection-Left">
           <div class="Footer__BottomSection-Left-Div2">
-            <h3 class="Footer__BottomSection-Left-h3P">2012 -2021 &copy; Wszelkie prawa zastrzeżone.</h3>
+            <h3 class="Footer__BottomSection-Left-h3">2012 - 2021 &copy; Wszelkie prawa zastrzeżone.</h3>
           </div>
 
           <div class="Footer__BottomSection-Left-Div1">
-            <h2 class="Footer__BottomSection-Left-h2P">szalanski.eu</h2>
+            <h2 class="Footer__BottomSection-Left-h2">szalanski.eu</h2>
           </div>
 
-          <div class="QRKode Dark"></div>
+          <div class="QRKode"></div>
         </div>
 
         <div class="Footer__BottomSection-Middle">
           <div class="Footer__BottomSection-Middle-Div1">
-            <h2 class="Footer__BottomSection-Middle-h2P">
+            <h2 class="Footer__BottomSection-Middle-h2">
               Informacja: Strona niniejsza wykorzystuje do prawidłowego działania pliki cookies
-              <a class="CookiesP" href="https://skrypt-cookies.pl/czym-sa-ciasteczka" target="_blank"
+              <a class="Cookies" href="https://skrypt-cookies.pl/czym-sa-ciasteczka" target="_blank"
                   >[ Więcej informacji ]</a>
             </h2>
           </div>
@@ -740,14 +973,14 @@
         <div class="Footer__BottomSection-Right">
           <div class="Footer__BottomSection-Right-P">
             <div class="Footer__BottomSection-Right-Div1">
-              <h2 class="Footer__BottomSection-Right-h2P">
+              <h2 class="Footer__BottomSection-Right-h2">
                 szalanski.eu <br />
                 Jan Szałański
               </h2>
             </div>
 
             <div class="Footer__BottomSection-Right-Div2">
-              <h3 class="Footer__BottomSection-Right-h3P">
+              <h3 class="Footer__BottomSection-Right-h3">
                 02-285 Warszawa <br />
                 Szyszkowa 46\13<br />
                 NIP: 5222739323 <br />REGON :1462757
@@ -755,7 +988,7 @@
             </div>
 
             <div class="Footer__BottomSection-Right-Div3">
-              <h3 class="Footer__BottomSection-Right-h3BP">Polityka Prywatności</h3>
+              <h3 class="Footer__BottomSection-Right-h3B">Polityka Prywatności</h3>
             </div>
           </div>
         </div>
@@ -765,18 +998,19 @@
     </footer>
   </div>
 
-  <script src="~/../js/prywatnie.js"></script>
-  <!-- <script src="~/../js/board.js"></script> -->
+  <script src="~/../js/projekty.js"></script>
+  <script src="~/../js/boardMobo.js"></script>
+  <script src="~/../js/boardPro.js"></script>
 
   <script>
     grecaptcha.ready(function(){
-      grecaptcha.execute('', {action: 'homepage'}).then(function(token){
+      grecaptcha.execute('<?php echo SITE_KEY; ?>', {action: 'homepage'}).then(function(token){
         document.getElementById('g-recaptcha-response').value=token;
             
       });
     });
   </script> 
-  
+
 </body>
 
 </html>
