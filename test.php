@@ -2,8 +2,9 @@
 
 session_start(); 
 
-define('SITE_KEY', '6Lepfl4bAAAAAZl0yxb7VBFTGP-ECA7-'); #gitignore 
+header('Location: index.php'); #gitignore 
 
+define('SITE_KEY', '6Lepfl4bAAAAAZl0yxb7VBFTGP-ECA7-'); #gitignore 
 ?>  
 
 
