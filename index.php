@@ -1,9 +1,6 @@
 <?php
 
  session_start();
-//  6LcsFZcbAAAAAKErwzG0vm0Dl7mZcRA3vUKnJTbt   local
-
-
 
 
   if(isset($_SESSION['podstrona']))
@@ -42,7 +39,7 @@
   
 <head>
   
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics --> 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9V3BR8P7WK"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
