@@ -1,8 +1,42 @@
-<!DOCTYPE html> 
-<html lang="pl"> 
-  
+<?php
+
+  session_start();
+
+
+  if(isset($_SESSION['podstrona']))
+  {
+   switch ($_SESSION['podstrona'])
+   {
+      case "index":
+        unset($_SESSION['podstrona']);
+        break;
+
+      case "praktyka":
+        unset($_SESSION['podstrona']);
+        break;
+
+      case "projekty":
+        unset($_SESSION['podstrona']);
+        break;
+
+      case "prywatnie":
+        unset($_SESSION['podstrona']);
+        break;
+
+      default:
+        $_SESSION['podstrona']="firma";
+        break;
+   } 
+ }
+
+ $_SESSION['podstrona']="firma";
+
+?>
+
+<!DOCTYPE html>
+<html lang="pl">
+
 <head>
-  
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9V3BR8P7WK"></script>
   <script>
@@ -14,39 +48,27 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Strona główna</title> 
+  <title>O Firmie</title>  
   <link
-    href="https://fonts.googleapis.com/css2?family=Audiowide&family=VT323&family=Baloo+2&family=Libre+Barcode+128&family=Montserrat:wght@500;600;700;900&family=Source+Sans+Pro:wght@300;400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baloo+2&family=Libre+Barcode+128+Text&family=Montserrat:wght@500;600;700;900&family=Source+Sans+Pro:wght@300;400&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="~/../scss/main.css" /> 
-  <script src="https://www.google.com/recaptcha/api.js?render="></script>
+  <link rel="stylesheet" href="~/../scss/main.css" />
+  <script src="https://www.google.com/recaptcha/api.js?render=<?PHP echo SITE_KEY; ?>"></script>
 </head>
 
 <body>
+
   <div class="WrapperBorder1"></div>
-
   <div class="Wrapper">
-    <!-- <div class="GridHelper"></div> -->
+    <div class="GridHelper"></div>
 
-    <div class="MainPicture">
-      <svg id="MeButton" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85.94 124.6" width="86px"
-        height="125px">
-        <a class="MeButton-Link" href="#">
-            <path
-              class="MeButton-Shape"
-              d="M1001.65,589.17c-5.32-4.52-9.76-14.06-17.37-13.87a22.08,22.08,0,0,0-9.67-.46,15.53,15.53,0,0,1-3.68-1.19,9.55,9.55,0,0,0-.68-2.93c3.73-.82,5.42-6.07,2.94-9.09.3-2.52,2.75-5.16,1.6-7.58,1.23-7-1-13.63-8.16-15.85-11-2.26-22.4,4.6-21.93,16.68-.2,5.1,3.15,10,3.14,14.91a14.83,14.83,0,0,1-2.18,3.18c-4.52.9-11.13.31-15.12,3.43-3.21,2.64-6.88,5.55-7.3,10-1.91,2.32-4.27,4.9-4.55,8-3.55,7.85,8.72,8.62,13.51,10.63,0,.12,0,.24,0,.38-.42,5.41.42,11.33.08,17,.56,5.18-3,9.75-2,14.33a10.67,10.67,0,0,0,.44,5.58c-1,3.41,2.16,7,4.63,8.94,7.09,12.53,24.94,12.59,37.22,9.08,8.49,1.84,16.94-14.91,15.85-22.35.1-5.55,2.69-10.34,2.21-16,.22-7.37,1.68-14.4-.86-21.7,3.4-.9,6-2,9.4-1.8C1004.63,598.53,1005.46,591.36,1001.65,589.17Z"
-              transform="translate(-918.06 -537.77)"
-            />
-          </a> 
-      </svg>
-    </div>
+    <div class="FirmaPicture"></div>
 
     <div class="GreyTop"></div>
 
     <header class="Header">
       <section class="Header__Logo">
         <div class="Header__Logo-Left">
-          <h3 class="Header__Logo-Left-H3">szalanski.eu</h3>
         </div>
 
         <div class="Header__Logo-Middle">
@@ -59,7 +81,6 @@
         </div>
 
         <div class="Header__Logo-Right">
-
           <div class="ornament1"></div>
           <div class="ornament2"></div>
           <div class="ornament3"></div>
@@ -72,27 +93,53 @@
         <div class="Contact__Board">
           <h2 class="Contact__Board-H2">kontakt</h2>
 
-          <form class="Contact__Form" method="post" action="">
+          <form class="Contact__Form" method="post" action="kontakt.php">
 
             <!-- ---------------------------------------------------IMIE *------------------------------------------------------------->
             <div class="Contact__Form-Name">
- 
+
+              <?php  
+              if (isset($_SESSION['e_imie'] )){
+                    echo '<div class="error-top">'.$_SESSION['e_imie'].'</div>';                      
+              }
+              ?>   
 
               <input type="text" name="imie" placeholder="Imię *" maxlength="30" tabindex="1"
-                autocomplete="off" value=""/> 
+                autocomplete="off" value="<?php 
+                if(isset($_SESSION['fr_imie']))
+                {
+                  echo $_SESSION['fr_imie'];
+                  
+                }
+                ?>"/> 
             </div>
             <!-- ---------------------------------------------------EMAIL *------------------------------------------------------------->
             <div class="Contact__Form-Email">
 
-        
+              <?php  
+                if (isset($_SESSION['e_email'] )){
+                    echo '<div class="error-top">'.$_SESSION['e_email'].'</div>';                     
+                } 
+              ?> 
 
               <input type="email" name="email" placeholder="E-mail *" maxlength="40"  tabindex="2"
-                autocomplete="off" value=""/>   
+                autocomplete="off" value="<?php 
+                if(isset($_SESSION['fr_email']))
+                {
+                  echo $_SESSION['fr_email'];
+                  
+                }
+                ?>"/>   
             </div>
             <!-- ---------------------------------------------------TEMAT------------------------------------------------------------->
             <div class="Contact__Form-Topic">
               <input type="topic" name="temat" placeholder="Temat" maxlength="30" tabindex="3" tabindex="3"
-                autocomplete="off" value=""/>
+                autocomplete="off" value="<?php 
+                if(isset($_SESSION['fr_temat']))
+                {
+                  echo $_SESSION['fr_temat'];    
+                }
+                ?>"/>
             </div>
             <!-- ---------------------------------------------------Captcha respnse---------------------------------------------------------->    
 
@@ -103,7 +150,20 @@
 
             <!-- ---------------------------------------------------SUBMIT *---------------------------------------------------------->      
             <div class="Contact__Form-Submit">
-              
+              <?php 
+              if(isset($_SESSION['sukces']))
+              {
+                
+                echo '<div class="error-topB">'.$_SESSION['sukces'].'</div>';   
+                unset($_SESSION['sukces']);               
+              } 
+              else if(isset($_SESSION['e_boot']))
+              {
+                echo '<div class="error-topB">'.$_SESSION['e_boot'].'</div>';   
+                unset($_SESSION['e_boot']);               
+                } 
+              ?> 
+               
               <input type="submit" value="wyślij" tabindex="4" autocomplete="off" />
   
             </div>
@@ -111,13 +171,23 @@
             <!-- ---------------------------------------------------WIADOMOSC *---------------------------------------------------------->
             <div class="Contact__Form-Area">
 
-        
+                 <?php  
+                if (isset($_SESSION['e_message'] )){
+                    echo '<div class="error-top">'.$_SESSION['e_message'].'</div>';   
+                                  
+                }
+              ?> 
     
               <textarea class="Contact__Form-Textarea" name="message" id="message" cols="80" rows="5"
-                placeholder="Treść wiadomości *" maxlength="600" tabindex="5" ></textarea> 
-
+                placeholder="Treść wiadomości *" maxlength="600" tabindex="5"><?php 
+                if(isset($_SESSION['fr_wiadomosc']))
+                {
+                  echo $_SESSION['fr_wiadomosc'];
+                  
+                }?></textarea>  
+ 
             </div> 
-
+            
             <div class="Captcha">
               This site is protected by reCAPTCHA and the Google
               <a href="https://policies.google.com/privacy">Privacy Policy</a> and
@@ -149,7 +219,7 @@
               <li class="Nav__Item">
                 <a href="praktyka.php" class="Nav__Link">
                     <p class="Nav__Title">Praktyka</p>
-                  </a>
+                  </a> 
               </li>
 
               <li class="Nav__Item">
@@ -192,157 +262,253 @@
       </section>
     </header>
 
-    <div class="GreyMiddle">
-      <div class="BackgroundGrey"></div>
-      <div class="Miara"></div>
-      <div class="GreyMiddle__Div">
-        <p class="GreyMiddle__P1">
-          Świat się wokół nas wciąż mniejszy staje,<br />
-          Kontynenty na odległość dłoni są,<br />
-          Samoloty jak z dziecinnych bajek,<br />
-          Ponad głową coraz szybciej niebo tną.
-        </p>
+    <div class="Troll">
+      <div class="GreyMiddleB Firma">
+        <div class="BackgroundGrey"></div>
+        <div class="Miara"></div>
 
-        <p class="GreyMiddle__P2">
-          Ludzie wciąż wędrują wielkim, głośnym stadem,<br />
-          Z pomieszania mowy słychać jeden głos <br />
-          Zbudowano drugą, większą Wieże Babel,<br />
-          Kto pamięta tamtej, pierwszej wieży los?
-        </p>
+        <aside class="BoardF">
+          <div class="CanvasShadow"></div>
+          <div class="CanvasB"></div>
+          <div class="CanvasA"></div>
+          <div class="Canvas"></div>
 
-        <p class="GreyMiddle__P3">
-          Świat się kurczy jak przekłuty balon,<br />
-          Człowiek też maleje szybko razem z nim,<br />
-          Przerażony swą niewielką skalą,<br />
-          Coraz bardziej samotnieje w tłumie tym.
-        </p>
+          <div class="Article">
+            <h2 class="Article__TytulBoczny">Pierwiastek \ Żywioł - <b class="Article__TytulBoczny-B">02</b></h2>
 
-        <p class="GreyMiddle__P4">
-          Stąd ucieczki nieprzytomne pustą drogą,<br />
-          Jakby gdzieś coś za
-          <a class="LinkZmiennicy" href="http://www.youtube.com/watch?v=4hqFPNSyMhM" target="_blank">zakrętem</a>
-          było tam…<br />
-          I te wiersze napisane dla nikogo,<br />
-          I te płótna pełne nostalgicznych plam...
-        </p>
-      </div>
+            <header class="Article__Naglowek">
+              <h2 class="Article__H2">Harmonia<span class="Article__H2-Span">| woda</span></h2>
+            </header>
 
-      <aside class="BoardMobo Index">
-        <div class="CanvasShadowM"></div>
+            <div class="Article__Overflow">
+              <article id="Article__Artykul-Two">
+                <p id="Article__Artykul-Pro-Two">
+                  Dawno, dawno temu w odległej galaktyce… była sobie harmonia. Mam nieodparte wrażenie, że w otaczającym nas świecie to zjawisko, to słowo, jest coraz rzadziej spotykane, że powoli staje się archaizmem. Gdzie i w czym można teraz znaleźć odrobinę harmonii, wyważenia, stonowania, balansu czy dobrego smaku? Wszystko tylko więcej, szybciej, bardziej, mocniej, lepiej, na wczoraj i od zaraz. Dlatego uważam, że to dobre słowo klucz w zakładce o firmie? Nie twierdzę, że ja i moja firma to uosobienie i wzorcowy przykład harmonii - choć bardzo bym sobie tego życzył. To pojęcie wydało mi się nad wyraz na miejscu w odniesieniu do żywiołu wody, który uznałem, że będzie przewodnim dla tej podstrony. Jest to również coś, co ja chciałbym odnajdować we wszystkich moich działaniach i to nie jedynie tych związanych ze sferą czysto biznesową.
+                </p>
+                <p id="Article__Artykul-Pro-Two-B">
+                  Dlatego pracuję nad tym, żeby jednak ta utopijna i mityczna cecha, ten biały jednorożec coraz częściej bywał gościem otaczającej mnie rzeczywistości. Myślę, że znalezienie tej harmonii, tego złotego środka pomiędzy pracą i działaniem a czasem przeznaczonym na odpoczynek i relaks lub po prostu na inne zajęcia, (bo przecież można odpoczywać aktywnie) czy zwyczajnie na życie prywatne to jest to, o czym dziś większość z nas kompletnie zapomniała. Zatraciliśmy tę umiejętność lub co gorsza - nigdy jej nie doświadczyliśmy, będąc tym samym pozbawionym płynącej z niej nauki. Równowaga w każdej dziedzinie życia, w każdej motywacji, postępowaniu, czy nawet postrzeganiu różnych spraw jest tym, czego sobie i Tobie życzę, na co dzień… nie od święta… i nie na pokaz... 
+                </p>
+              </article>
+            </div>
 
-        <div class="CanvasBM"></div>
+            <footer class="Article__Stopka">
+              <div class="Article__Corner">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 12">
+                  <path d="M100,12H10C4.48,12,0,7.52,0,2V0h92L100,12z" />
+                </svg>
+              </div>
+              <div class="Article__Buttons">
+                <div data-index="" class="Article__Btn Article__Btn--active"></div>
 
-        <div class="CanvasAM"></div>
-
-        <div class="CanvasM"></div>
-
-        <div class="BMWrap__articles-container">
-          <div class="BMWrap__article-container BMWrap__article-container--second">
-            <div class="BMWrap__background--second"></div>
-
-            <h2 class="BMWrap__header BMWrap__header--second">Ogień <span>| działanie</span></h2>
-
-            <p class="BMWrap__Info">
-              Symbolizuje zapał i nowe pomysły. Może być przejawem entuzjazmu i energii do działania. Jest
-              odzwierciedleniem kreatywności i weny. Ogień to przemiana, transformacja ale też destrukcja.
-              Przypuszczalnie prowadzi do odrodzenia i odbudowania może jednak pozostawić tylko popiół i zgliszcza.
-              Uznawany głównie za męski pierwiastek. Ogień rządzi zmysłem wzroku i głową. To żywioł namiętności, w
-              wierzeniach i religiach postrzegany, jako boska iskra \ pierwiastek \ dar.
-            </p>
+                <div data-index="" class="Article__Btn-B Article__Btn--inactive"></div>
+              </div>
+            </footer>
           </div>
-          <div class="BMWrap__article-container BMWrap__article-container--first">
-            <div class="BMWrap__background--first"></div>
 
-            <h2 class="BMWrap__header BMWrap__header--first">Działanie <span>| ogień</span></h2>
-            <div class="BMWrap__Overflow">
-              <div class="BMWrap__paragraphs"> 
-                <p class="BMWrap__paragraphA">
-                  Pewnego razu pomyślałem sobie - że byłoby czymś ciekawym zbudowanie własnej strony internetowej. Czyli od podstaw przejść przez cały ten proces, który jak się okazuje, obecnie wymaga znajomości, co najmniej trzech technologii. A są nimi - równie stary, co sam Internet język znaczników HTML, nieco młodszy i odpowiedzialny za sferę wyglądu CSS - znany jako kaskadowe arkusze stylów. Oraz najmłodsza w rodzinie, ale już w pełni dojrzała JavaScript - będąca językiem programowania. Uznałem, że takie zadanie to dobre i praktyczne ćwiczenie dla kogoś związanego z IT. Myślę sobie, zobaczę w ten sposób, jak obecnie wygląda taka specjalizacja i jak powinno produkować się dziś, nowoczesną witrynę internetową. A to, czego się nauczę w trakcie, być może, okaże się wartościową umiejętnością. Oczywiści argumentów, które przychodziły mi wówczas do głowy, było znacznej więcej.
-                </p>
+          <div class="DescryptionBtn">
+            <span class="DescryptionBtn__Span">D</span>
+            <p class="DescryptionBtn__P"><span>D</span>escription</p>
+            <div class="DescryptionBtn__Border"></div>
+          </div>
 
-                <p class="BMWrap__paragraphB">
-                    Większość z nich postrzegałem pozytywnie. Liczyłem między innymi na to, że jak już trochę zaznajomię się z tematyką, to będzie to po prostu dobra zabawa. Jednak chyba kluczowym powodem była myśl - że ja, jako taki geek od IT, nie mogę przecież poprzestać tylko, na założeniu kilku kont na popularnych serwisach społecznościowych? W tej kwestii powinienem wymagać od siebie nieco więcej, niż to, co takie witryny mają do zaoferowania przeciętnemu Kowalskiemu. W grę nie wchodziło też wykorzystanie generatorów stron www czy jakiś gotowych szablonów. Interesował mnie własny serwer, własna domena, oraz możliwie jak najlepsze opanowanie wymienionych wcześniej technologii. Żadnej drogi na skróty.<br> Jak pomyślałem, tak zrobiłem! Zatem jest mi teraz tym bardziej miło, powitać Cię tutaj!
-                </p>
+          <div class="InfoF">
+            <header class="Info__Naglowek">
+              <h2 class="Info__H2">Woda<span class="Info__H2-Span">| harmonia</span></h2>
+            </header>
+
+            <article class="Info__Artykul">
+              <p class="Info__Artykul-P">
+                Woda to intuicja i wrażliwość. Jest płynna, a zatem również zmienna i może być przez to
+                nieprzewidywalna. To umiejętność płynięcia z nurtem życia. Według wierzeń brak tego składnika to
+                problemy z zrelaksowaniem i wyciszeniem, to ciągłe odczuwanie napięcia. Uznawana głównie za żeński
+                pierwiastek. Jest symbolem życia - poszukiwania w kosmosie właśnie w niej dopatrują się jego oznak.
+                Woda rządzi zmysłem smaku i brzuchem. Element przeciwstawny do ognia.
+              </p>
+            </article>
+          </div>
+
+          <div class="Button">></div>
+        </aside>
+
+        <div class="WrapperTresc Ofirmie">
+          <h1 class="Tresc__H1">
+            FIRMA - 02 harmonia
+            <div class="Square"></div>
+          </h1>
+
+          <div class="CornerTop"></div>
+          <div class="CornerTopIn"></div>
+          <div class="CornerTopR"></div>
+          <div class="LineCornerTR"></div>
+          <div class="CornerBottom"></div>
+          <div class="CornerBottomIn"></div>
+          <div class="CornerBottomR"></div>
+          <div class="Line"></div>
+          <div class="LineIn"></div>
+          <div class="LineLeft"></div>
+          <div class="LineLeftIn"></div>
+          <div class="LineRight"></div>
+          <div class="ShapeA">
+            <div class="ShapeARect"></div>
+            <div class="ShapeBRect"></div>
+            <div class="ShapeCRect"></div>
+            <h3>|Description</h3>
+          </div>
+          <div class="RectangleA OFirmie"></div>
+          <div class="LinesA OFirmie"></div>
+          <div class="LinesB OFirmie"></div>
+          <div class="RectangleTresc OFirmie">
+            <div class="Background"></div>
+            <div class="BackgroundNoise"></div>
+            <div class="BackgroundGrid"></div>
+            <div class="BackgroundGardient"></div>
+
+            <h3 class="NaglowekTresc OFirmie">szalanski.eu</h3>
+
+            <div class="maska">
+              <div class="ozdobnik">
+                <div class="geo begining"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo end"></div>
+              </div>
+            </div>
+            <p class="OFirmie">
+              Rok 2012 był przełomowym okresem w podejmowanych przeze mnie działaniach biznesowych. W tym właśnie czasie będąc zatrudnionym w instytucji publicznej, pewne okoliczności poniekąd wymusiły na mnie – rejestracje działalności gospodarczej. Mimo że uważałem, że to nie ten czas i nie do końca właściwy pomysł na siebie - to mimo wszystko podjąłem wyzwanie i założyłem firmę. Pomyślałem sobie - dobra jak nie teraz to, kiedy - przecież okoliczności nigdy nie są idealne? Zobaczymy, co ma być, to będzie? I tak oto zacząłem świadczyć usługi informatyczne na rzecz sądu na zasadach outsourcingu. Zobowiązanie to faktycznie sprowadzało się do wsparcia przez pełen etat, będąc zarazem nie tylko szeregowym informatykiem, ale i administratorem a czasem i elektrykiem w jednej osobie. Oczywiście taki jedynie charakter pracy nie pokrywał się z moimi ambicjami. Z czasem w miarę swoich sił i umiejętności starałem się poszerzać swoją działalność - próbować nowych rzeczy, badać rynek i reagować elastycznie do potrzeb. Na przestrzeni lat zdobyłem dzięki temu sporo różnych kompetencji. Nieocenione jest także doświadczanie wyniesione z kooperacji właśnie z instytucjami publicznymi, które w odróżnieniu od sektora prywatnego rządzą się specyficznymi zasadami. Najbardziej jednak cenię sobie osoby, z którymi miałem przyjemność współpracować w ramach mojej skromnej firmy przy różnych projektach. Być może było tak, dlatego że zawszę do kooperacji, udawało mi się zachęcić osoby zdolne, zaangażowane i zdyscyplinowane. Wydaje mi się, że to jest taka złota zasada dobrze funkcjonujących biznesów - mieć to szczęście, aby mimo jak się zdaje posiadanego własnego wachlarza kompetencji otaczać się osobami jeszcze bardziej utalentowanymi.
+            </p>
+            <div class="maska">
+              <div class="ozdobnik">
+                <div class="geo begining"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo end"></div>
               </div>
             </div>
 
-            <div class="BMWrap__Corner">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 12">
-                <path d="M100,12H10C4.48,12,0,7.52,0,2V0h92L100,12z" />
-              </svg>
-            </div>
-            <div class="BMWrap__Buttons">
-              <div data-index="" class="BMWrap__Btn BMWrap__Btn--active"></div>
+            <p class="OFirmie">
+              Tak, więc jeśli chcesz nawiązać kontakt z osobą, która jest informatykiem i ma pojęcie o elektronice albo na odwrót mocno siedzi w elektronice i kojarzy zagadnienia informatyczne - to śmiało nie krępuj się. Jeśli jakimś cudem to by było za mało dla Ciebie i masz specyficzne wymagania takie jak np. że osoba taka dodatkowo powinna mieć pojęcie o sieciach albo być za pan brat z multimediami a w szczególności z grafiką 3d. Albo szukasz kogoś, kto miał do czynienia z różnymi bazami danych z naciskiem na SQL i administrował różnymi systemami. (niestety nie linuks\unix). Gdyby i to było mało, bo szukasz kogoś, kto programuje, a do tego zajmuję web developingiem choćby hobbistycznie. To proszę, sprawdzamy. Co prawda do tej pory moja ścieżka nie była typowo programistyczna, ale teraz staram się to nadrobić - na początek za pomocą front-endu webowego gdzie używam Java Skrypt, czego dowodem niech będzie ta strona. Dodatkowo rozglądam się za innym językiem programowania jednym lub dwoma, które warto znać i aktywnie wykorzystywać. Można by zauważyć, że idę w kierunku jakiegoś informatycznego asa? Takiego, jakiego wiele osób wyobraża sobie myśląc o tym gościu w okularach i flanelowej koszuli w kratę. Nie zdając sobie przy tym sprawy, że w IT są różne dziedziny a w nich kategorie, podkategorie i specjalizacje a tam frameworki, biblioteki itd. Sam często śmiałem się z właśnie takiego wyobrażenia informatyka, który wszystko ogarnie co tylko "Pani Basi" przyjdzie do głowy. Wracając do samej idei - to tak przeszła mi taka myśl przez głowę - jeśli by dodać do tej listy linuksa, komputery kwantowe oraz szczyptę security ;) <br>
+              Oczywiście znawcy tematu stwierdzą teraz, że to nie możliwe - nie można być specjalistą z tylu działów i z tak rozległej dyscypliny ?! A ja na to - pewnie że nie ! I nie o to mi chodzi, ale bycie zaznajomionym z tyloma obszarami i kojarzenie wielu tak różnorodnych wątków to już coś! Bo należy pamiętać, że z niektórymi zagadnieniami będę jeno zaznajomiony, ale w pewnych mogę być całkiem mocny. Poza tym uczciwie muszę przyznać, że to nie jest kwestia wyłącznie jakiegoś długoterminowego planu na siebie i biznes. Ale także wynik okoliczności, na które trzeba było i nadal trzeba reagować. Słowem podsumowania – chcesz nawiązać współpracę z osobą myślącą analitycznie, która nie nastawia się na z góry ustalone i znane rozwiązania? I osoba taka powinna być w stanie i chcieć się nauczyć dowolnego nowego zagadnienia i nie zawaha się przy tym pójść drogą inną niż znane ścieżki i utarte schematy?! To bardzo proszę w górnym prawym rogu, masz przycisk kontakt, kursorem myszy najedź na niego i naciśnij… <br><br>
+              Ps. Żeby nie było, nie widzę nic złego w utartych schematach - ba! Nie widzę też nic złego w drodze na skróty pod warunkiem, że efekt będzie taki, jak oczekiwano.
+            </p>
 
-              <div data-index="" class="BMWrap__Btn-B"></div>
+            <div class="maska">
+              <div class="ozdobnik">
+                <div class="geo begining"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div> 
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo"></div>
+                <div class="geo end"></div>
+              </div>
+            </div>
+
+            <div class="pictureFirma">
+              <img src="./assets/FirmaJaA.webp" alt="męszczyzna w czarnej koszuli na tle serwerów \ napisów" srcset=""
+                draggable="false" />
+            </div>
+
+            <div class="ShapeB modF">
+              <h3 class="modF">sektor /// a</h3>
             </div>
           </div>
-          <div class="BMWrap__handle">
-            <!-- <div class="BMWrap__handle-ArrowL">&lt;</div>
+          <div class="ShapeC OFirmie"></div>
+          <div class="ShapeD"></div>
+        </div>
+
+        <aside class="BoardMobo Firma">
+          <div class="CanvasShadowM"></div>
+
+          <div class="CanvasBM"></div>
+
+          <div class="CanvasAM"></div>
+
+          <div class="CanvasM Firma"></div>
+
+          <div class="BMWrap__articles-container">
+            <div class="BMWrap__article-container BMWrap__article-container--second">
+              <div class="BMWrap__background--second Firma"></div>
+
+              <h2 class="BMWrap__header BMWrap__header--second">Woda <span>| harmonia</span></h2>
+
+              <p class="BMWrap__Info">
+                Woda to intuicja i wrażliwość. Jest płynna, a zatem również zmienna i może być przez to
+                nieprzewidywalna. To umiejętność płynięcia z nurtem życia. Według wierzeń brak tego składnika to
+                problemy z zrelaksowaniem i wyciszeniem, to ciągłe odczuwanie napięcia. Uznawana głównie za żeński
+                pierwiastek. Jest symbolem życia - poszukiwania w kosmosie właśnie w niej dopatrują się jego oznak.
+                Woda rządzi zmysłem smaku i brzuchem. Element przeciwstawny do ognia.
+              </p>
+            </div>
+            <div class="BMWrap__article-container BMWrap__article-container--first">
+              <div class="BMWrap__background--first"></div>
+
+              <h2 class="BMWrap__header BMWrap__header--first">Harmonia <span>| woda</span></h2>
+              <div class="BMWrap__Overflow">
+                <div class="BMWrap__paragraphs">
+                  <p class="BMWrap__paragraphA"> 
+                    Dawno, dawno temu w odległej galaktyce… była sobie harmonia. Mam nieodparte wrażenie, że w otaczającym nas świecie to zjawisko, to słowo, jest coraz rzadziej spotykane, że powoli staje się archaizmem. Gdzie i w czym można teraz znaleźć odrobinę harmonii, wyważenia, stonowania, balansu czy dobrego smaku? Wszystko tylko więcej, szybciej, bardziej, mocniej, lepiej, na wczoraj i od zaraz. Dlatego uważam, że to dobre słowo klucz w zakładce o firmie? Nie twierdzę, że ja i moja firma to uosobienie i wzorcowy przykład harmonii - choć bardzo bym sobie tego życzył. To pojęcie wydało mi się nad wyraz na miejscu w odniesieniu do żywiołu wody, który uznałem, że będzie przewodnim dla tej podstrony. Jest to również coś, co ja chciałbym odnajdować we wszystkich moich działaniach i to nie jedynie tych związanych ze sferą czysto biznesową.
+                  </p>
+
+                  <p class="BMWrap__paragraphB">
+                    Dlatego pracuję nad tym, żeby jednak ta utopijna i mityczna cecha, ten biały jednorożec coraz częściej bywał gościem otaczającej mnie rzeczywistości. Myślę, że znalezienie tej harmonii, tego złotego środka pomiędzy pracą i działaniem a czasem przeznaczonym na odpoczynek i relaks lub po prostu na inne zajęcia, (bo przecież można odpoczywać aktywnie) czy zwyczajnie na życie prywatne to jest to, o czym dziś większość z nas kompletnie zapomniała. Zatraciliśmy tę umiejętność lub co gorsza - nigdy jej nie doświadczyliśmy, będąc tym samym pozbawionym płynącej z niej nauki. Równowaga w każdej dziedzinie życia, w każdej motywacji, postępowaniu, czy nawet postrzeganiu różnych spraw jest tym, czego sobie i Tobie życzę, na co dzień… nie od święta… i nie na pokaz...
+                  </p>
+                </div>
+              </div>
+
+              <div class="BMWrap__Corner">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 12">
+                  <path d="M100,12H10C4.48,12,0,7.52,0,2V0h92L100,12z" />
+                </svg>
+              </div>
+              <div class="BMWrap__Buttons">
+                <div data-index="" class="BMWrap__Btn BMWrap__Btn--active"></div>
+
+                <div data-index="" class="BMWrap__Btn-B"></div>
+              </div>
+            </div>
+            <div class="BMWrap__handle">
+              <!-- <div class="BMWrap__handle-ArrowL">&lt;</div>
 
               <div class="BMWrap__handle-ArrowR">></div> -->
-          </div>
-        </div>
-
-        <div class="BMWrap__divider">
-          <div class="BMWrap__divider_outline"></div>
-          <div class="BMWrap__divider_dot">D</div>
-          <span class="BMWrap__divider_span">escription</span> 
-        </div>
-      </aside>
-
-      <div class="News">
-        <div class="sectorI">
-          <h1 class="sectorI-h1">INFO - 01 działanie</h1>
-          <div class="sectorI-box"></div>
-        </div>
-
-        <div class="News__Div">
-          <h1 class="News__Div-H1">02</h1>
-          <h1 class="News__Div-H1-Dust">02</h1>
-        </div>
-
-        <div class="News__DivB">
-          <h2 class="News__DivB-H2">2021</h2>
-          <h2 class="News__DivB-H2-Dust">2021</h2>
-        </div>
-
-        <div class="News__DivC"></div>
-
-        <div class="News__Title">News</div>
-
-        <article class="News__Article">
-          <div class="ScanlineI"></div>
-          <div class="Container__Cube">
-            <div class="Cube">
-              <div class="CubeFace Front"></div>
-              <div class="Mid">
-                <p>!</p>
-              </div>
-              <div class="CubeFace Back"></div>
-              <div class="CubeFace Left"></div>
-              <div class="CubeFace Right"></div>
-              <div class="CubeFace Top"></div>
-              <div class="CubeFace Bottom"></div>
             </div>
           </div>
-          <div class="News__Article-Div">
-            <p class="News__Article-Content">
-            Z niekrytym zadowoleniem chciałbym ogłosić ukończenie przeze mnie funkcjonalności formularza w całości z wykorzystaniem języka PHP.
-             Formularz został zabezpieczony po przez walidacje i sanityzacje kodu po stronie serwera - jak również nad wszystkim dodatkowo czuwa system reCAPTCHA v3. 
-            </p>
-          </div>
-        </article>
 
-        <div class="News__Code">
-          <div class="ScanlineI"></div>
-          <h3 class="News__Code-H3">
-            01062021
-            <div class="CodeBelow">
-              <h3>18/07/2021</h3>
-            </div>
-          </h3> 
-        </div>
+          <div class="BMWrap__divider">
+            <div class="BMWrap__divider_outline"></div>
+            <div class="BMWrap__divider_dot">D</div>
+            <span class="BMWrap__divider_span">escription</span>
+          </div>
+        </aside>
       </div>
     </div>
 
@@ -377,9 +543,9 @@
 
         <div class="ASMR">
 
-          <div class="PanelWrapper">
+          <div class="PanelWrapper RevB">
 
-            <div class="Panel">
+            <div class="Panel RevFirma">
               <div class="Panel__Border1">
                 <h3>Panel Dodatków</h3>  
             </div> 
@@ -634,8 +800,8 @@
           </div>
   
         </div> 
-     
-        </section>
+
+      </section>
 
       <section class="Footer__BottomSection">
         <!-- <div class="Footer__BottomSection-MarginL"></div> -->
@@ -688,87 +854,21 @@
         <!-- <div class="Footer__BottomSection-MarginR"></div> -->
       </section>
     </footer>
-
-    <aside class="Board">
-      <div class="CanvasShadow"></div>
-      <div class="CanvasB"></div>
-      <div class="CanvasA"></div>
-      <div class="Canvas"></div>
-
-      <div class="Article">
-        <h2 class="Article__TytulBoczny">Pierwiastek \ Żywioł - <b class="Article__TytulBoczny-B">01</b></h2>
-
-        <header class="Article__Naglowek">
-          <h2 class="Article__H2">Działanie<span class="Article__H2-Span">| ogień</span></h2>
-        </header>
-
-        <div class="Article__Overflow">
-          <article id="Article__Artykul-Two">
-            <p id="Article__Artykul-Pro-Two">
-              Pewnego razu pomyślałem sobie - że byłoby czymś ciekawym zbudowanie własnej strony internetowej. Czyli od podstaw przejść przez cały ten proces, który jak się okazuje, obecnie wymaga znajomości, co najmniej trzech technologii. A są nimi - równie stary, co sam Internet język znaczników HTML, nieco młodszy i odpowiedzialny za sferę wyglądu CSS - znany jako kaskadowe arkusze stylów. Oraz najmłodsza w rodzinie, ale już w pełni dojrzała JavaScript - będąca językiem programowania. Uznałem, że takie zadanie to dobre i praktyczne ćwiczenie dla kogoś związanego z IT. Myślę sobie, zobaczę w ten sposób, jak obecnie wygląda taka specjalizacja i jak powinno produkować się dziś, nowoczesną witrynę internetową. A to, czego się nauczę w trakcie, być może, okaże się wartościową umiejętnością. Oczywiści argumentów, które przychodziły mi wówczas do głowy, było znacznej więcej.
-            </p>
-            <p id="Article__Artykul-Pro-Two-B">
-              Większość z nich postrzegałem pozytywnie. Liczyłem między innymi na to, że jak już trochę zaznajomię się z tematyką, to będzie to po prostu dobra zabawa. Jednak chyba kluczowym powodem była myśl - że ja, jako taki geek od IT, nie mogę przecież poprzestać tylko, na założeniu kilku kont na popularnych serwisach społecznościowych? W tej kwestii powinienem wymagać od siebie nieco więcej, niż to, co takie witryny mają do zaoferowania przeciętnemu Kowalskiemu. W grę nie wchodziło też wykorzystanie generatorów stron www czy jakiś gotowych szablonów. Interesował mnie własny serwer, własna domena, oraz możliwie jak najlepsze opanowanie wymienionych wcześniej technologii. Żadnej drogi na skróty.<br> Jak pomyślałem, tak zrobiłem! Zatem jest mi teraz tym bardziej miło, powitać Cię tutaj!  
-            </p>
-          </article>
-        </div>
-
-        <footer class="Article__Stopka">
-          <div class="Article__Corner">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 12">
-              <path d="M100,12H10C4.48,12,0,7.52,0,2V0h92L100,12z" />
-            </svg>
-          </div>
-          <div class="Article__Buttons">
-            <div data-index="" class="Article__Btn Article__Btn--active"></div>
-
-            <div data-index="" class="Article__Btn-B Article__Btn--inactive"></div>
-          </div>
-        </footer>
-      </div>
-
-      <div class="DescryptionBtn">
-        <span class="DescryptionBtn__Span">D</span>
-        <p class="DescryptionBtn__P"><span>D</span>escription</p>
-        <div class="DescryptionBtn__Border"></div>
-      </div>
-
-      <div class="Info">
-        <header class="Info__Naglowek">
-          <h2 class="Info__H2">Ogień<span class="Info__H2-Span">| działanie</span></h2>
-        </header>
-
-        <article class="Info__Artykul">
-          <p class="Info__Artykul-P">
-            Symbolizuje zapał i nowe pomysły. Może być przejawem entuzjazmu i energii do działania. Jest
-            odzwierciedleniem kreatywności i weny. Ogień to przemiana, transformacja ale też destrukcja.
-            Przypuszczalnie prowadzi do odrodzenia i odbudowania może jednak pozostawić tylko popiół i zgliszcza.
-            Uznawany głównie za męski pierwiastek. Ogień rządzi zmysłem wzroku i głową. To żywioł namiętności, w
-            wierzeniach i religiach postrzegany, jako boska iskra \ pierwiastek \ dar.
-          </p>
-        </article>
-      </div>
-
-      <div class="Button">></div>
-    </aside>
-
-    <div class="Border"></div>
   </div>
 
-  <script src="~/../js/board.js"></script>
+  <script src="~/../js/firma.js"></script>
   <script src="~/../js/boardMobo.js"></script>
-  <script src="~/../js/main.js"></script>
+  <script src="~/../js/board.js"></script>
 
-  <script defer type="text/javascript" > 
+  <script>
     grecaptcha.ready(function(){
-      grecaptcha.execute('', {action: 'homepage'}).then(function(token){
+      grecaptcha.execute('<?php echo SITE_KEY; ?>', {action: 'homepage'}).then(function(token){
         document.getElementById('g-recaptcha-response').value=token;
             
       });
     });
-    
   </script>
- 
+
 </body>
 
-</html> 
+</html>
