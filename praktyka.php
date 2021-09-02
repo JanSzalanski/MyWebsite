@@ -1,3 +1,42 @@
+<?php
+
+ session_start();
+
+
+
+   if(isset($_SESSION['podstrona']))
+   {
+    switch ($_SESSION['podstrona'])
+    {
+      case "index":
+        unset($_SESSION['podstrona']);
+        break;
+
+      case "firma":
+        unset($_SESSION['podstrona']);
+        break;
+
+      case "projekty":
+        unset($_SESSION['podstrona']);
+        break;
+
+      case "prywatnie":
+        unset($_SESSION['podstrona']);
+        break;
+
+      default:
+      $_SESSION['podstrona']="praktyka";
+      break;
+
+    }
+
+  }
+
+  $_SESSION['podstrona']="praktyka";
+
+?>
+
+ 
 
 <!DOCTYPE html>
 <html lang="pl">
@@ -19,7 +58,7 @@
     href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baloo+2&family=Libre+Barcode+128+Text&family=Montserrat:wght@500;600;700;900&family=Source+Sans+Pro:wght@300;400&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="~/../scss/main.css" />
-  <script src="https://www.google.com/recaptcha/api.js?render="></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=<?PHP echo SITE_KEY; ?>"></script>
 </head>
 
 <body>
@@ -77,24 +116,53 @@
         <div class="Contact__Board">
           <h2 class="Contact__Board-H2">kontakt</h2>
 
-          <form class="Contact__Form" method="post" action="">
+          <form class="Contact__Form" method="post" action="kontakt.php">
 
             <!-- ---------------------------------------------------IMIE *------------------------------------------------------------->
             <div class="Contact__Form-Name">
 
+              <?php  
+              if (isset($_SESSION['e_imie'] )){
+                    echo '<div class="error-top">'.$_SESSION['e_imie'].'</div>';                      
+              }
+              ?>   
+
               <input type="text" name="imie" placeholder="Imię *" maxlength="30" tabindex="1"
-                autocomplete="off" value=""/> 
+                autocomplete="off" value="<?php 
+                if(isset($_SESSION['fr_imie']))
+                {
+                  echo $_SESSION['fr_imie'];
+                  
+                }
+                ?>"/> 
             </div>
             <!-- ---------------------------------------------------EMAIL *------------------------------------------------------------->
             <div class="Contact__Form-Email">
 
+              <?php  
+                if (isset($_SESSION['e_email'] )){
+                    echo '<div class="error-top">'.$_SESSION['e_email'].'</div>';                     
+                } 
+              ?> 
+
               <input type="email" name="email" placeholder="E-mail *" maxlength="40"  tabindex="2"
-                autocomplete="off" value=""/>   
+                autocomplete="off" value="<?php 
+                if(isset($_SESSION['fr_email']))
+                {
+                  echo $_SESSION['fr_email'];
+                  
+                }
+                ?>"/>   
             </div>
             <!-- ---------------------------------------------------TEMAT------------------------------------------------------------->
             <div class="Contact__Form-Topic">
               <input type="topic" name="temat" placeholder="Temat" maxlength="30" tabindex="3" tabindex="3"
-                autocomplete="off" value=""/>
+                autocomplete="off" value="<?php 
+                if(isset($_SESSION['fr_temat']))
+                {
+                  echo $_SESSION['fr_temat'];    
+                }
+                ?>"/>
             </div>
             <!-- ---------------------------------------------------Captcha respnse---------------------------------------------------------->    
 
@@ -105,6 +173,19 @@
 
             <!-- ---------------------------------------------------SUBMIT *---------------------------------------------------------->      
             <div class="Contact__Form-Submit">
+              <?php 
+              if(isset($_SESSION['sukces']))
+              {
+                
+                echo '<div class="error-topB">'.$_SESSION['sukces'].'</div>';   
+                unset($_SESSION['sukces']);               
+              } 
+              else if(isset($_SESSION['e_boot']))
+              {
+                echo '<div class="error-topB">'.$_SESSION['e_boot'].'</div>';   
+                unset($_SESSION['e_boot']);               
+                } 
+              ?> 
               
               <input type="submit" value="wyślij" tabindex="4" autocomplete="off" />
   
@@ -112,9 +193,21 @@
 
             <!-- ---------------------------------------------------WIADOMOSC *---------------------------------------------------------->
             <div class="Contact__Form-Area">
+
+                 <?php  
+                if (isset($_SESSION['e_message'] )){
+                    echo '<div class="error-top">'.$_SESSION['e_message'].'</div>';   
+                                  
+                }
+              ?> 
     
               <textarea class="Contact__Form-Textarea" name="message" id="message" cols="80" rows="5"
-                placeholder="Treść wiadomości *" maxlength="600" tabindex="5"></textarea>  
+                placeholder="Treść wiadomości *" maxlength="600" tabindex="5"><?php 
+                if(isset($_SESSION['fr_wiadomosc']))
+                {
+                  echo $_SESSION['fr_wiadomosc'];
+                  
+                }?></textarea>  
 
             </div>  
 
@@ -929,7 +1022,7 @@
 
   <script>
     grecaptcha.ready(function(){
-      grecaptcha.execute('', {action: 'homepage'}).then(function(token){
+      grecaptcha.execute('<?php echo SITE_KEY; ?>', {action: 'homepage'}).then(function(token){
         document.getElementById('g-recaptcha-response').value=token;
             
       });
