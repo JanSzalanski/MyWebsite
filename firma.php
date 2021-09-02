@@ -857,7 +857,7 @@
   </div>
 
   <script src="~/../js/firma.js"></script>
-  <script src="~/../js/boardMobo.js"></script>
+  <script src="~/../js/boardMobo.js"></script> 
   <script src="~/../js/board.js"></script>
 
   <script>
