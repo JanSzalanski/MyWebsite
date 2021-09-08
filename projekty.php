@@ -447,7 +447,7 @@
               </div>
             </div>
             <p>
-              Kompleksowe czyszczenie i konserwacja sprzętu komputerowego w całym Sądzie Rejonowym dla Warszawy
+              Konserwacja sprzętu komputerowego w całym Sądzie Rejonowym dla Warszawy
               Żoliborza ok. 250 zestawów. <br /><br />
               Przeprowadzenie konserwacji głównej serwerowni Sądu Rejonowego dla Warszawy Żoliborza wraz z
               optymalizacją istniejącej infrastruktury. <br /><br />
@@ -456,7 +456,7 @@
               Instalacja powiadomienia głosowego dla Czytelni Akt wraz z integracją z istniejącym systemem kolejkowym.
               <br /><br />
               Pilotażowe wdrożenie na terenie Sądów i testowanie oprogramowania do zamiany mowy na tekst.<br /><br />
-              Kompleksowe czyszczenie i konserwacja sprzętu komputerowego w całym Sądzie ok. 220 zestawów. 
+              Konserwacja sprzętu komputerowego w całym Sądzie ok. 220 zestawów. 
             </p>
 
             <div class="maska">
