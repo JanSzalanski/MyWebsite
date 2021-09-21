@@ -342,16 +342,14 @@
 
               <br><br>
 
-            </p>
+            </p>  
             <div class="Ekstra">
-              <iframe id="SoundCloud" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1264092838&color=%23fd0505&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-              <div
-                style="font-size: 12px; color: #fd0505;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-                <!-- <a href="https://soundcloud.com/user-495341203" title="JMS" target="_blank" style="color: #fd0505; text-decoration: none;">JMS</a>
-                ·
-                <a href="https://soundcloud.com/user-495341203/sets/main-list" title="Main List" target="_blank" style="color: #fd0505; text-decoration: none;">Main List</a> -->
-              </div>
+              <iframe width="100%" height="400" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1264092838&color=%23e90505&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+
+              <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                <a href="https://soundcloud.com/user-495341203" title="JMS" target="_blank" style="color: #cccccc; text-decoration: none;">JMS</a> · 
+                <a href="https://soundcloud.com/user-495341203/sets/main-list" title="Main List" target="_blank" style="color: #cccccc; text-decoration: none;">Main List</a>
+              </div> 
             </div>
             <div class="ShapeB Priv">
               <h3>sektor /// a</h3>
