@@ -222,38 +222,38 @@
 
   //------------------------------------------------------------Omnie-----------------------------------------------------------//
 
-  --HeightOMnie: 1165px;
+  --HeightOMnie: 1205px;
 
   @media (max-width: 1920px) {
-    --HeightOMnie: 1135px;
+    --HeightOMnie: 1180px;
   }
 
   @media (max-width: 1680px) {
-    --HeightOMnie: 1265px; //20px
+    --HeightOMnie: 1305px; //20px
   }
 
   @media (max-width: 1600px) {
-    --HeightOMnie: 1315px; //20px
+    --HeightOMnie: 1355px; //20px
   }
 
   @media (max-width: 1536px) {
-    --HeightOMnie: 1095px;
+    --HeightOMnie: 1155px;
   }
 
   @media (max-width: 1440px) {
-    --HeightOMnie: 1100px; //20px
-  }
-
-  @media (max-width: 1400px) {
-    --HeightOMnie: 1275px; //20px
-  }
-
-  @media (max-width: 1366px) {
     --HeightOMnie: 1150px; //20px
   }
 
+  @media (max-width: 1400px) {
+    --HeightOMnie: 1180px; //20px
+  }
+
+  @media (max-width: 1366px) {
+    --HeightOMnie: 1195px; //20px
+  }
+
   @media (max-width: 1280px) {
-    --HeightOMnie: 1210px;
+    --HeightOMnie: 1270px;
   }
 
   @media (max-width: 1200px) {
@@ -261,7 +261,7 @@
   }
 
   @media (max-width: 1152px) {
-    --HeightOMnie: 1330px;
+    --HeightOMnie: 1385px;
   }
 
   @media (max-width: 480px) {
