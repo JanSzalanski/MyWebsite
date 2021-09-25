@@ -15,7 +15,7 @@
   --color-black: black;
 
   //panel colors
-  --color-panel-grey: #222;
+  --color-panel-grey: rgb(193, 193, 193); //#222
   --color-panel-mainA: rgb(59, 13, 13);
   --color-panel-mainB: rgb(51, 27, 27);
   --color-panel-mainC: rgba(94, 21, 21, 0.4);
@@ -319,11 +319,11 @@
 }
 
 .logo1 {
-  fill: rgb(255, 255, 255);
+  fill: rgb(0, 0, 0);
 }
 
 .logo2 {
-  fill: rgb(255, 255, 255);
+  fill: rgb(0, 0, 0);
 }
 
 .logo2font {
@@ -332,7 +332,7 @@
 }
 
 .logo3 {
-  fill: rgb(255, 255, 255);
+  fill: rgb(0, 0, 0);
 }
 
 .japanRed {
