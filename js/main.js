@@ -39,23 +39,12 @@ const btnTrybNocny = document.querySelector(".BtnTrybNocny");
 const btnDzwieki = document.querySelector(".BtnDzwieki");
 let root = document.documentElement;
 
-// let root = document.documentElement;
-
-// const colorsOfTheNight = () => {
-
-//     root.style.setProperty('--color-main', "#8a0212");
-//     root.style.setProperty('--color-main1A', "#ff0000cc");
-//     root.style.setProperty('--color-main1', "#ff0100");
-//     root.style.setProperty('--color-main2', "#ff7700");
-//     root.style.setProperty('--color-main3', "#ffc800");
-// }
-
-// colorsOfTheNight();
-
 const TrybNocny = (e) => {
   if (e.target.checked === true) {
     console.log(e);
     root.style.setProperty("--color-panel-grey", "#222");
+    root.style.setProperty("--color-light-grey", "#3f3f3f");
+    root.style.setProperty("--color-light-greyTop", "#696969");
     root.style.setProperty("--color-social", "rgb(255,255,255)");
     root.style.setProperty(
       "--color-screw",
@@ -67,6 +56,8 @@ const TrybNocny = (e) => {
     );
   } else {
     root.style.setProperty("--color-panel-grey", "rgb(193, 193, 193)");
+    root.style.setProperty("--color-light-grey", "#8d8d8d");
+    root.style.setProperty("--color-light-greyTop", "#b3b3b3");
     root.style.setProperty("--color-social", "rgb(0,0,0)");
     root.style.setProperty(
       "--color-screw",
