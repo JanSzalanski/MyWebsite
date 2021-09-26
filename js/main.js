@@ -35,6 +35,10 @@ const ogienS3M = document.querySelector(".CanvasShadowM");
 const items = document.querySelectorAll(".Nav__Item");
 const itemsParent = document.querySelector(".Nav__List");
 
+const btnTrybNocny = document.querySelector(".BtnTrybNocny");
+const btnDzwieki = document.querySelector(".BtnDzwieki");
+let root = document.documentElement;
+
 // let root = document.documentElement;
 
 // const colorsOfTheNight = () => {
@@ -47,6 +51,23 @@ const itemsParent = document.querySelector(".Nav__List");
 // }
 
 // colorsOfTheNight();
+
+const TrybNocny = (e) => {
+  if (e.target.checked === true) {
+    console.log(e);
+    root.style.setProperty("--color-panel-grey", "#222");
+    root.style.setProperty(
+      "--shadow",
+      "inset 0 0 0 1px rgba(34, 34, 34, 1), 0 0 0px 1px rgba(34, 34, 34, 0.5),-4px -5px 12px rgba(255, 255, 255, 0.2), 4px 5px 16px rgba(0, 0, 0, 1), 0px -3px 2px rgba(255, 255, 255, 0.15),0px 3px 2px rgba(0, 0, 0, 0.45), inset -5px -5px 12px rgba(0, 0, 0, 0.5), inset 5px 5px 12px rgba(0, 0, 0, 1)"
+    );
+  } else {
+    root.style.setProperty("--color-panel-grey", "rgb(193, 193, 193)");
+    root.style.setProperty(
+      "--shadow",
+      " inset 0 0 0 1px rgba(204, 204, 204, 0.5), 0 0 0px 1px rgba(204, 204, 204, 0.65),-4px -5px 12px rgb(255, 255, 255), 2px 5px 15px rgba(0, 0, 0, 1), 0px -3px 2px rgba(255, 255, 255, 0.15),0px 3px 2px rgba(255, 255, 255, 0.95), inset -5px -5px 12px rgba(0, 0, 0, 0.35),inset 5px 5px 12px rgba(0, 0, 0, 0.6)"
+    );
+  }
+};
 
 function onSubmit(token) {
   document.getElementById("demo-form").submit();
@@ -255,3 +276,5 @@ AsmrBtn.addEventListener("click", WyjazdASMR);
 
 MeLink.addEventListener("click", OddechStrony);
 //MeLink.addEventListener("touchend", OddechStrony);
+
+btnTrybNocny.addEventListener("click", TrybNocny);

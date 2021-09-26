@@ -21,12 +21,14 @@
   --color-panel-mainC: rgba(94, 21, 21, 0.4);
   --color-panel-mainD: rgba(18, 5, 5, 0.8);
 
-  --shadow-white: inset 0 0 0 1px rgba(204, 204, 204, 0.5), 0 0 0px 1px rgba(204, 204, 204, 0.65),
+  --shadow: inset 0 0 0 1px rgba(204, 204, 204, 0.5), 0 0 0px 1px rgba(204, 204, 204, 0.65),
     -4px -5px 12px rgb(255, 255, 255), 2px 5px 15px rgba(0, 0, 0, 1), 0px -3px 2px rgba(255, 255, 255, 0.15),
     0px 3px 2px rgba(255, 255, 255, 0.95), inset -5px -5px 12px rgba(0, 0, 0, 0.35),
     inset 5px 5px 12px rgba(0, 0, 0, 0.6);
 
-  --shadow-black: inset 0 0 0 1px;
+  --shadow-black: inset 0 0 0 1px rgba(34, 34, 34, 1), 0 0 0px 1px rgba(34, 34, 34, 0.5),
+    -4px -5px 12px rgba(255, 255, 255, 0.2), 4px 5px 16px rgba(0, 0, 0, 1), 0px -3px 2px rgba(255, 255, 255, 0.15),
+    0px 3px 2px rgba(0, 0, 0, 0.45), inset -5px -5px 12px rgba(0, 0, 0, 0.5), inset 5px 5px 12px rgba(0, 0, 0, 1);
 
   --board-width: 438px;
 
