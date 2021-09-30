@@ -41,7 +41,9 @@ let root = document.documentElement;
 
 const sprawdzanieTrybuNocnego = () => {
   if (sessionStorage.getItem("night")) {
-    btnTrybNocny.checked = true;
+    if (btnTrybNocny.checked === false) {
+      btnTrybNocny.checked = true;
+    }
     root.style.setProperty("--color-panel-grey", "#222");
     root.style.setProperty("--color-light-grey", "#3f3f3f");
     root.style.setProperty("--color-light-greyTop", "#696969");
