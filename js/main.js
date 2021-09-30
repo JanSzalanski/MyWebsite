@@ -39,9 +39,9 @@ const btnTrybNocny = document.querySelector(".BtnTrybNocny");
 const btnDzwieki = document.querySelector(".BtnDzwieki");
 let root = document.documentElement;
 
-const TrybNocny = (e) => {
-  if (e.target.checked === true) {
-    console.log(e);
+const sprawdzanieTrybuNocnego = () => {
+  if (sessionStorage.getItem("night")) {
+    btnTrybNocny.checked = true;
     root.style.setProperty("--color-panel-grey", "#222");
     root.style.setProperty("--color-light-grey", "#3f3f3f");
     root.style.setProperty("--color-light-greyTop", "#696969");
@@ -55,6 +55,28 @@ const TrybNocny = (e) => {
       "inset 0 0 0 1px rgba(34, 34, 34, 1), 0 0 0px 1px rgba(34, 34, 34, 0.5),-4px -5px 12px rgba(255, 255, 255, 0.2), 4px 5px 16px rgba(0, 0, 0, 1), 0px -3px 2px rgba(255, 255, 255, 0.15),0px 3px 2px rgba(0, 0, 0, 0.45), inset -5px -5px 12px rgba(0, 0, 0, 0.5), inset 5px 5px 12px rgba(0, 0, 0, 1)"
     );
   } else {
+    return;
+  }
+};
+sprawdzanieTrybuNocnego();
+
+const TrybNocny = (e) => {
+  if (e.target.checked === true) {
+    sessionStorage.setItem("night", "true");
+    root.style.setProperty("--color-panel-grey", "#222");
+    root.style.setProperty("--color-light-grey", "#3f3f3f");
+    root.style.setProperty("--color-light-greyTop", "#696969");
+    root.style.setProperty("--color-social", "rgb(255,255,255)");
+    root.style.setProperty(
+      "--color-screw",
+      "radial-gradient(farthest-corner at 8px 8px, #111 0%, rgb(71, 61, 61) 100%)"
+    );
+    root.style.setProperty(
+      "--shadow",
+      "inset 0 0 0 1px rgba(34, 34, 34, 1), 0 0 0px 1px rgba(34, 34, 34, 0.5),-4px -5px 12px rgba(255, 255, 255, 0.2), 4px 5px 16px rgba(0, 0, 0, 1), 0px -3px 2px rgba(255, 255, 255, 0.15),0px 3px 2px rgba(0, 0, 0, 0.45), inset -5px -5px 12px rgba(0, 0, 0, 0.5), inset 5px 5px 12px rgba(0, 0, 0, 1)"
+    );
+  } else {
+    sessionStorage.removeItem("night");
     root.style.setProperty("--color-panel-grey", "rgb(193, 193, 193)");
     root.style.setProperty("--color-light-grey", "#8d8d8d");
     root.style.setProperty("--color-light-greyTop", "#b3b3b3");
