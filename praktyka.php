@@ -2,6 +2,7 @@
 
  session_start();
 
+ define('SITE_KEY', '6LebJj4cAAAAANAWmxMIJzZZHrZwe7hkiMmngexV'); #gitignore
 
 
    if(isset($_SESSION['podstrona']))
