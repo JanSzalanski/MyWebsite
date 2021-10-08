@@ -376,19 +376,19 @@
           <div class="LineLeftIn"></div>
           <div class="LineRight"></div>
 
-          <div class="ShapeA">
+          <div class="ShapeA Light">
             <div class="ShapeARect"></div>
             <div class="ShapeBRect"></div>
             <div class="ShapeCRect"></div>
             <h3>|Description</h3>
           </div>
 
-          <div class="RectangleA"></div>
-          <div class="LinesA"></div>
-          <div class="LinesB"></div>
+          <div class="RectangleA Light"></div>
+          <div class="LinesA Light"></div>
+          <div class="LinesB Light"></div>
 
-          <div class="RectangleTresc">
-            <div class="Background"></div>
+          <div class="RectangleTresc Light">
+            <div class="Background Light"></div>
             <div class="BackgroundNoise"></div>
             <div class="BackgroundGrid"></div>
             <div class="BackgroundGardient"></div>
@@ -469,31 +469,19 @@
               Kolejny rok zwiastował zmiany - niebawem miałem zmierzyć się tematem obrony pracy dyplomowej. Powoli więc obierałem kierunek na stricte informatyczne klimaty. Tak więc kolejne 2 lata to praca głównie jako freelancer w grafice komputerowej, ale nie tylko. Trochę to był czas chwytania się różnych projektów, eksperymentowania co ostatecznie było dobrą zaprawą przed rozpoczęciem działalności, na którą zdecyduje się w przeciągu następnych dwóch lat. Mogę tylko dodać, że w tym okresie zdarzyło mi się pracować jako grafik 3d przy reklamach do telewizji.
             </p>
 
-            <div class="BorderPic">
+            <div class="BorderPic Light">
               <div class="PicA">
                 <div class="Scanline"></div>
                 <div class="Winieta"></div>
               </div>
-              <div class="UnderSvg"></div>
-              <svg class="svgPic">
-                <defs>
-                  <mask id="mask">
-                    <rect x="0" y="0" height="100%" width="100%" />
-                    <text x="75%" y="50%" text-anchor="middle">KADR</text>
-                  </mask>
-                </defs>
-                <rect x="0" y="0" height="100%" width="100%" />
-              </svg>
-              <h2>Skrzydełko czy nóżka</h2>
-              <h1>Skrzydełko czy nóżka</h1>
             </div>
 
-            <div class="ShapeB">
+            <div class="ShapeB Light">
               <h3>sektor /// a</h3>
             </div>
           </div>
 
-          <div class="ShapeC"></div>
+          <div class="ShapeC Light"></div>
           <div class="ShapeD"></div>
         </div>
 
@@ -511,19 +499,19 @@
           <div class="LineRightIn"></div>
           <div class="LineRightB"></div>
 
-          <div class="ShapeBA">
+          <div class="ShapeBA Light">
             <div class="ShapeBARect"></div>
-            <div class="ShapeBBRect"></div>
+            <div class="ShapeBBRect"></div> 
             <div class="ShapeBCRect"></div>
             <h3>Continued</h3>
           </div>
 
-          <div class="RectangleA"></div>
-          <div class="LinesA"></div>
-          <div class="LinesB"></div>
+          <div class="RectangleA Light"></div>
+          <div class="LinesA Light"></div>
+          <div class="LinesB Light"></div>
 
-          <div class="RectangleTresc">
-            <div class="Background"></div>
+          <div class="RectangleTresc Light">
+            <div class="Background Light"></div>
             <div class="BackgroundNoise"></div>
             <div class="BackgroundGrid"></div>
             <div class="BackgroundGardient"></div>
@@ -577,31 +565,19 @@
               Po około 3 i pół roku przechodzę do sąsiedniego Sądu Rejonowego dla Warszawy Woli, który funkcjonował w ramach tego samego obiektu. Nowe miejsce charakteryzowała nieco większa liczba użytkowników i sprzętu oraz liczniejsza infrastruktura sieciowa i serwerowa. Skomplikowanie której było też minimalnie większe, chociażby z uwagi na występowanie UTM. Sprawy miały się dodatkowo utrudnić, bo całe sądownictwo czekało wdrożenie dodatkowego systemu informatycznego do rejestracji rozpraw, jak również wirtualizacja już istniejącego środowiska za pomocą Vmware. Oczywiście późniejsza wirtualizacja zasobów serwerowych nie spowodowało, że serwery sprzętowe przestały być przydatne. Może najstarsze egzemplarze czekała w końcu zasłużona emerytura, ale to, co reprezentowało sobą jakąkolwiek moc obliczeniową, zawszę mogło liczyć na znalezienie jakiegoś nowego i przydatnego zastosowania. Brygada tęgich głów liczyła tutaj stale cztery osoby (choć z pewnym zastrzeżeniem). Mogę napisać, że obowiązki i realia pracy tutaj były bliźniaczo podobne do tych już opisanych w poprzednim sądzie. Tyle tylko, że tutaj wszystkiego było ciut więcej, jak również sama sieć była według mnie bardziej przekombinowana - ale spokojnie za mojego urzędowania doszło do jej zastąpienia nową „lepszą”. W tym sądzie także udało mi się zrealizować kilka dodatkowych projektów. Już na koniec, jako ciekawostkę dla tego etapu mojej ścieżki zawodowej mogę dodać, że w 2018 roku w Ministerstwie Sprawiedliwości moja osoba zostaje wybrana na administratora usług sieciowych (Departament Informatyzacji i Rejestrów Sądowych).
             </p> 
 
-            <div class="BorderPic">
+            <div class="BorderPic Light">
               <div class="PicB">
                 <div class="Scanline"></div>
                 <div class="Winieta"></div>
               </div>
-              <div class="UnderSvgB"></div>
-              <svg class="svgPic">
-                <defs>
-                  <mask id="mask">
-                    <rect x="0" y="0" height="100%" width="100%" />
-                    <text x="75%" y="50%" text-anchor="middle">KADR</text>
-                  </mask>
-                </defs>
-                <rect x="0" y="0" height="100%" width="100%" />
-              </svg>
-              <h2>Miś</h2>
-              <h1>Miś</h1>
             </div>
 
-            <div class="ShapeBB">
+            <div class="ShapeBB Light">
               <h3>sektor /// b</h3>
             </div>
           </div>
 
-          <div class="ShapeBC"></div>
+          <div class="ShapeBC Light"></div>
           <div class="ShapeBD"></div>
         </div>
 
