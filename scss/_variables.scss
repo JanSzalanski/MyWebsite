@@ -15,6 +15,11 @@
   --color-white: white;
   --color-black: black;
 
+  //light version
+
+  --color-main1AL: #e4e4e4;
+  --color-main2L: #a8a8a8;
+
   //panel colors
   --color-panel-grey: rgb(193, 193, 193); //#222
   --color-panel-mainA: rgb(59, 13, 13);
@@ -543,7 +548,7 @@ $breakpoints: (
     url('../fonts/source-sans-pro-v13-latin-ext_latin-regular.woff2') format('woff2'),
 
     url('../fonts/source-sans-pro-v13-latin-ext_latin-regular.woff') format('woff');
-
+ 
 }
 
 */

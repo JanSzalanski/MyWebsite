@@ -349,17 +349,17 @@
           <div class="LineLeft"></div>
           <div class="LineLeftIn"></div>
           <div class="LineRight"></div>
-          <div class="ShapeA">
+          <div class="ShapeA Light">
             <div class="ShapeARect"></div>
             <div class="ShapeBRect"></div>
             <div class="ShapeCRect"></div>
             <h3>|Description</h3>
           </div>
-          <div class="RectangleA OFirmie"></div>
-          <div class="LinesA OFirmie"></div>
-          <div class="LinesB OFirmie"></div>
-          <div class="RectangleTresc OFirmie">
-            <div class="Background"></div>
+          <div class="RectangleA OFirmie Light"></div>
+          <div class="LinesA OFirmie Light"></div>
+          <div class="LinesB OFirmie Light"></div>
+          <div class="RectangleTresc OFirmie Light">
+            <div class="Background Light"></div>
             <div class="BackgroundNoise"></div>
             <div class="BackgroundGrid"></div>
             <div class="BackgroundGardient"></div>
@@ -439,11 +439,11 @@
                 draggable="false" />
             </div>
 
-            <div class="ShapeB modF">
-              <h3 class="modF">sektor /// a</h3>
+            <div class="ShapeB modF Light">
+              <h3 class="modF Light">sektor /// a</h3>
             </div>
           </div>
-          <div class="ShapeC OFirmie"></div>
+          <div class="ShapeC OFirmie Light"></div> 
           <div class="ShapeD"></div>
         </div>
 

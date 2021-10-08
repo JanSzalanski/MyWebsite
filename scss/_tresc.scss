@@ -1263,6 +1263,10 @@ $WtrescC: 1000px;
   }
 }
 
+.ShapeA.Light {
+  background-color: var(--color-main1AL);
+}
+
 .ShapeBA {
   position: absolute;
   left: 50%;
@@ -1296,6 +1300,10 @@ $WtrescC: 1000px;
       letter-spacing: 6px;
     }
   }
+}
+
+.ShapeBA.Light {
+  background-color: var(--color-main1AL);
 }
 
 .ShapeARect {
@@ -1379,6 +1387,10 @@ $WtrescC: 1000px;
   }
 }
 
+.RectangleA.Light {
+  background-color: var(--color-main2L);
+}
+
 .LinesA {
   position: absolute;
   left: 50%;
@@ -1396,6 +1408,11 @@ $WtrescC: 1000px;
   }
 }
 
+.LinesA.Light {
+  border-top: solid 5px var(--color-main2L);
+  border-bottom: solid 3px var(--color-main2L);
+}
+
 .LinesB {
   position: absolute;
   left: $main-spacing;
@@ -1407,6 +1424,10 @@ $WtrescC: 1000px;
   &.OFirmie {
     border-top: solid 1px var(--color-main2);
   }
+}
+
+.LinesB.Light {
+  border-top: solid 1px var(--color-main2L);
 }
 
 .BorderPic {
@@ -1439,6 +1460,10 @@ $WtrescC: 1000px;
     height: 200px;
     bottom: calc(40px + 200px);
   }
+}
+
+.BorderPic.Light {
+  background-color: var(--color-main2L);
 }
 
 .PicA {
@@ -1523,33 +1548,33 @@ $WtrescC: 1000px;
   opacity: 0;
 }
 
-.UnderSvg {
-  position: absolute;
-  left: 1.5%;
-  bottom: 1.5%;
-  height: 2.9rem;
-  width: 85%;
-  background-color: rgba(0, 0, 0, 0.3);
-  clip-path: polygon(0 0, 97% 0, 100% 40%, 100% 100%, 0 100%);
-  backdrop-filter: blur(5px);
+// .UnderSvg {
+//   position: absolute;
+//   left: 1.5%;
+//   bottom: 1.5%;
+//   height: 2.9rem;
+//   width: 85%;
+//   background-color: rgba(0, 0, 0, 0.3);
+//   clip-path: polygon(0 0, 97% 0, 100% 40%, 100% 100%, 0 100%);
+//   backdrop-filter: blur(5px);
 
-  @include mq(xs) {
-    width: 87%;
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: none;
-  }
-}
+//   @include mq(xs) {
+//     width: 87%;
+//     background-color: rgba(0, 0, 0, 0.6);
+//     backdrop-filter: none;
+//   }
+// }
 
-.UnderSvgB {
-  @extend .UnderSvg;
+// .UnderSvgB {
+//   @extend .UnderSvg;
 
-  width: 50%;
-  clip-path: polygon(0 0, 92% 0, 100% 40%, 100% 100%, 0 100%);
+//   width: 50%;
+//   clip-path: polygon(0 0, 92% 0, 100% 40%, 100% 100%, 0 100%);
 
-  @include mq(xs) {
-    width: 45%;
-  }
-}
+//   @include mq(xs) {
+//     width: 45%;
+//   }
+// }
 
 .BorderPic h1 {
   position: absolute;
@@ -1614,50 +1639,50 @@ $WtrescC: 1000px;
 
 //-----------------------------------------SVG-------------------------------//
 
-.svgPic {
-  position: absolute;
-  left: 0%;
-  bottom: 1%;
-  transform: translate(0%, -50%);
-  font-family: $font-audio;
-  font-size: 2.8rem;
-  font-weight: 700;
-  // text-transform: uppercase;
-  width: 30%;
-  height: 2.2rem;
-  line-height: 2.2rem;
-  letter-spacing: 1px;
+// .svgPic {
+//   position: absolute;
+//   left: 0%;
+//   bottom: 1%;
+//   transform: translate(0%, -50%);
+//   font-family: $font-audio;
+//   font-size: 2.8rem;
+//   font-weight: 700;
+//   // text-transform: uppercase;
+//   width: 30%;
+//   height: 2.2rem;
+//   line-height: 2.2rem;
+//   letter-spacing: 1px;
 
-  @media (max-width: 1680px) {
-    font-size: 2.4rem;
-  }
+//   @media (max-width: 1680px) {
+//     font-size: 2.4rem;
+//   }
 
-  @include mq(xs) {
-    bottom: -1%;
-    font-size: 1.8rem;
-  }
-}
+//   @include mq(xs) {
+//     bottom: -1%;
+//     font-size: 1.8rem;
+//   }
+// }
 
-.svgPic text {
-  font-family: $font-audio;
-  transform: translate(0%, 37.5%);
+// .svgPic text {
+//   font-family: $font-audio;
+//   transform: translate(0%, 37.5%);
 
-  @media (max-width: 1680px) {
-    transform: translate(0%, 25%);
-  }
+//   @media (max-width: 1680px) {
+//     transform: translate(0%, 25%);
+//   }
 
-  @media (max-width: 1536px) {
-    transform: translate(-3%, 24%);
-  }
+//   @media (max-width: 1536px) {
+//     transform: translate(-3%, 24%);
+//   }
 
-  @include mq(large) {
-    transform: translate(-7%, 24%);
-  }
+//   @include mq(large) {
+//     transform: translate(-7%, 24%);
+//   }
 
-  @include mq(xs) {
-    transform: translate(-10%, 10%);
-  }
-}
+//   @include mq(xs) {
+//     transform: translate(-10%, 10%);
+//   }
+// }
 
 svg rect {
   fill: white;
@@ -1818,6 +1843,13 @@ svg > rect {
   }
 }
 
+.RectangleTresc.Light {
+  border: 1px solid var(--color-main2L);
+  & p {
+    color: var(--color-black);
+  }
+}
+
 .NaglowekTresc {
   position: relative;
   margin: $main-spacing;
@@ -1841,12 +1873,16 @@ svg > rect {
   }
 
   &.OFirmie {
-    color: var(--color-main1);
+    color: var(--color-main2);
   }
 
   &.Mnie {
     color: var(--color-white);
   }
+}
+
+.NaglowekTresc.Light {
+  color: var(--color-white);
 }
 
 .Ekstra {
@@ -1927,6 +1963,10 @@ svg > rect {
   @include mq(xs) {
     display: none;
   }
+}
+
+.Background.Light {
+  background-color: var(--color-main2L);
 }
 
 .BackgroundNoise {
@@ -2059,6 +2099,16 @@ svg > rect {
   }
 }
 
+.ShapeB.Light {
+  background-color: var(--color-main1AL);
+
+  & h3 {
+    &.modF {
+      color: var(--color-black);
+    }
+  }
+}
+
 .ShapeBB {
   position: absolute;
   bottom: 0;
@@ -2087,6 +2137,10 @@ svg > rect {
     line-height: 2rem;
     letter-spacing: 1px;
   }
+}
+
+.ShapeBB.Light {
+  background-color: var(--color-main1AL);
 }
 
 .topStrip {
@@ -2137,6 +2191,11 @@ svg > rect {
   }
 }
 
+.ShapeC.Light {
+  background-color: var(--color-main1AL);
+  opacity: 1;
+}
+
 .ShapeBC {
   position: absolute;
   left: 50%;
@@ -2147,6 +2206,11 @@ svg > rect {
   background-color: var(--color-main2);
   clip-path: polygon(0 50%, 68% 50%, 70% 100%, 98% 100%, 100% 50%, 100% 0, 0 0);
   opacity: 0.6;
+}
+
+.ShapeBC.Light {
+  background-color: var(--color-main1AL);
+  opacity: 1;
 }
 
 .ShapeD {
