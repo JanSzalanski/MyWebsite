@@ -380,17 +380,17 @@
           <div class="LineLeft"></div>
           <div class="LineLeftIn"></div>
           <div class="LineRight"></div>
-          <div class="ShapeA">
+          <div class="ShapeA Light">
             <div class="ShapeARect"></div>
             <div class="ShapeBRect"></div>
             <div class="ShapeCRect"></div>
             <h3>|Description</h3>
           </div>
-          <div class="RectangleA"></div>
-          <div class="LinesA"></div>
-          <div class="LinesB"></div>
-          <div class="RectangleTresc">
-            <div class="Background"></div>
+          <div class="RectangleA Light"></div>
+          <div class="LinesA Light"></div>
+          <div class="LinesB Light"></div>
+          <div class="RectangleTresc Light">
+            <div class="Background Light"></div>
             <div class="BackgroundNoise"></div>
             <div class="BackgroundGrid"></div>
             <div class="BackgroundGardient"></div>
@@ -480,11 +480,11 @@
               </div>
             </div>
 
-            <div class="ShapeB">
+            <div class="ShapeB Light">
               <h3>sektor /// a</h3>
             </div>
           </div>
-          <div class="ShapeC"></div>
+          <div class="ShapeC Light"></div>
           <div class="ShapeD"></div>
         </div>
 
@@ -502,19 +502,19 @@
           <div class="LineRightIn"></div>
           <div class="LineRightB"></div>
 
-          <div class="ShapeBA">
+          <div class="ShapeBA Light">
             <div class="ShapeBARect"></div>
             <div class="ShapeBBRect"></div>
             <div class="ShapeBCRect"></div>
             <h3>Continued</h3>
           </div>
 
-          <div class="RectangleA"></div>
-          <div class="LinesA"></div>
-          <div class="LinesB"></div>
+          <div class="RectangleA Light"></div>
+          <div class="LinesA Light"></div>
+          <div class="LinesB Light"></div>
 
-          <div class="RectangleTresc">
-            <div class="Background"></div>
+          <div class="RectangleTresc Light">
+            <div class="Background Light"></div>
             <div class="BackgroundNoise"></div>
             <div class="BackgroundGrid"></div>
             <div class="BackgroundGardient"></div>
@@ -562,12 +562,12 @@
               </div>
             </div>
 
-            <div class="ShapeBB">
+            <div class="ShapeBB Light">
               <h3>sektor /// b</h3>
             </div>
           </div>
 
-          <div class="ShapeBC"></div>
+          <div class="ShapeBC Light"></div>
           <div class="ShapeBD"></div>
         </div>
 
