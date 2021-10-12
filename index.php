@@ -467,7 +467,7 @@
 
             <div class="Panel">
               <div class="Panel__Border1">
-                <h3>Panel Dodatków</h3>  
+                <h3>/// Panel Dodatków PD-1000E \\\</h3>  
             </div> 
             
             <div class="PanelBorderShadow"></div> 
@@ -578,6 +578,11 @@
 
                     </div>
 
+              </div>
+
+              <div  id="kolory">
+                <input type="checkbox"/> 
+                <h3 class="Kolory">Kolory</h3> 
               </div>
 
               <div class="Panel__Sociale"> 

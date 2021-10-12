@@ -653,12 +653,15 @@
                     </div>
 
                     <div class="Panel__Btn">
-
                       <input type="checkbox" name="Panel__Sterowanie_btn" class="BtnDzwieki"/>
                       <h3 class="Dzwieki">Dźwięki</h3>
-
                     </div>
 
+              </div>
+
+              <div  id="kolory">
+                <input type="checkbox"/> 
+                <h3 class="Kolory">Kolory</h3> 
               </div>
 
               <div class="Panel__Sociale"> 
