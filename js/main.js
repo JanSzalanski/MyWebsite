@@ -48,7 +48,11 @@ const sprawdzanieTrybuNocnego = () => {
     }
     btnKolory.classList.toggle("night");
     root.style.setProperty("--color-panel-font", "#666");
+    root.style.setProperty("--color-panel-fontA", "rgba(102,102,102,.3");
     root.style.setProperty("--color-panel-grey", "#222");
+    root.style.setProperty("--color-panel-grey2", "#222");
+    root.style.setProperty("--color-panel-grey3", "rgb(40,40,40)");
+    root.style.setProperty("--color-panel-grey4", "#444");
     root.style.setProperty("--color-light-grey", "#3f3f3f");
     root.style.setProperty("--color-light-greyTop", "#696969");
     root.style.setProperty("--color-social", "rgb(255,255,255)");
@@ -71,7 +75,11 @@ const TrybNocny = (e) => {
     sessionStorage.setItem("night", "true");
     btnKolory.classList.toggle("night");
     root.style.setProperty("--color-panel-font", "#666");
+    root.style.setProperty("--color-panel-fontA", "rgba(102,102,102,.3");
     root.style.setProperty("--color-panel-grey", "#222");
+    root.style.setProperty("--color-panel-grey2", "#222");
+    root.style.setProperty("--color-panel-grey3", "rgb(40,40,40)");
+    root.style.setProperty("--color-panel-grey4", "#333");
     root.style.setProperty("--color-light-grey", "#3f3f3f");
     root.style.setProperty("--color-light-greyTop", "#696969");
     root.style.setProperty("--color-social", "rgb(255,255,255)");
@@ -86,8 +94,12 @@ const TrybNocny = (e) => {
   } else {
     sessionStorage.removeItem("night");
     btnKolory.classList.toggle("night");
-    root.style.setProperty("--color-panel-font", "#222");
+    root.style.setProperty("--color-panel-font", "rgb(53,53,53)");
+    root.style.setProperty("--color-panel-fontA", "rgba(34,34,34,.3");
     root.style.setProperty("--color-panel-grey", "rgb(193, 193, 193)");
+    root.style.setProperty("--color-panel-grey2", "#444");
+    root.style.setProperty("--color-panel-grey3", "#333");
+    root.style.setProperty("--color-panel-grey4", "#333");
     root.style.setProperty("--color-light-grey", "#8d8d8d");
     root.style.setProperty("--color-light-greyTop", "#b3b3b3");
     root.style.setProperty("--color-social", "rgb(0,0,0)");

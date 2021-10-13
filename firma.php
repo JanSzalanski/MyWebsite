@@ -548,7 +548,7 @@
 
             <div class="Panel RevFirma">
               <div class="Panel__Border1">
-                <h3>Panel Dodatków</h3>  
+                <h3>/// Panel Dodatków ///</h3>   
             </div> 
             
             <div class="PanelBorderShadow"></div> 

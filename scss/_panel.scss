@@ -81,13 +81,22 @@ $scss-grey: rgb(193, 193, 193);
       left: $main-spacing;
       margin-right: 5px;
       text-transform: uppercase;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       color: $light-grey;
       background-color: var(--color-panel-grey);
       margin-top: -5px;
       padding-left: 3px;
       padding-right: 3px;
       transition: 0.5s;
+    }
+
+    & h3.MadeIn {
+      transform: translateY(-50%) rotate(-90deg);
+      font-size: 0.7rem;
+      width: 74px;
+      top: 54%;
+      // border: 1px solid black;
+      left: calc(100% - 43px);
     }
   }
 
@@ -316,7 +325,7 @@ $scss-grey: rgb(193, 193, 193);
 }
 
 //wszystko pod nim do działania wymaga wyższego z-index niż cień...
-.PanelInnerShadow {
+.PanelInnerContent {
   // border: greenyellow 1px solid;
   position: absolute;
   top: 50%;
@@ -326,7 +335,19 @@ $scss-grey: rgb(193, 193, 193);
   height: calc(100% + 2px);
   width: calc(100% + 2px);
   border-radius: 5px;
+  // box-shadow: inset 0px 0px 15px 3px rgba(0, 0, 0, 0.75);
+}
+
+.InnerShadow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: calc(100% + 2px);
+  width: calc(100% + 2px);
+  border-radius: 5px;
   box-shadow: inset 0px 0px 15px 3px rgba(0, 0, 0, 0.75);
+  pointer-events: none;
 }
 
 .RevB {
@@ -425,7 +446,7 @@ $scss-grey: rgb(193, 193, 193);
 .Panel__Btn {
   // text-align: left;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   position: relative;
   width: 100%;
@@ -437,12 +458,19 @@ $scss-grey: rgb(193, 193, 193);
     width: 50%;
     height: $main-spacing;
     line-height: $main-spacing;
-    margin-left: $main-spacing / 2;
+    // margin-left: $main-spacing / 4;
     text-transform: uppercase;
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    font-family: $font-audio;
+    font-weight: bold;
     color: var(--color-panel-font);
     letter-spacing: 1px;
+    border: 1px solid var(--color-panel-fontA);
+    text-align: center;
+    border-left: none;
+    border-right: none;
+    border-top: none;
   }
 
   @include mq(xs) {
@@ -473,8 +501,9 @@ $scss-grey: rgb(193, 193, 193);
     line-height: 15px;
     margin-left: 0;
     text-transform: uppercase;
+    font-family: $font-audio;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: bold;
     color: var(--color-panel-font);
     letter-spacing: 1px;
     transform: translate(-50%, -50%) rotatez(-90deg);
@@ -573,15 +602,12 @@ $scss-grey: rgb(193, 193, 193);
 
 input[type="checkbox"] {
   //obwiednia i środek
-  // border: 1px cyan solid;
-  margin-left: $main-spacing / 2;
+  margin-left: 3px;
   position: relative;
-  // top: 50%;
-  // transform: translateY(-50%);
   width: 60px;
   height: 20px;
   outline: none;
-  background: #444;
+  background: var(--color-panel-grey2);
   appearance: none;
   cursor: pointer;
   border-radius: 10px;
@@ -624,9 +650,9 @@ input[type="checkbox"]:before {
   left: 0px;
   width: 40px;
   height: 19px;
-  background: linear-gradient(to top, var(--color-black), $mid-grey);
+  background: linear-gradient(to top, var(--color-black), var(--color-panel-grey4));
   border-radius: 10px;
-  box-shadow: 0 0 0 1px #111, inset 0 0 3px 3px #333;
+  box-shadow: 0 0 0 1px #111, inset 0 0 3px 3px var(--color-panel-grey3);
   transform: scale(0.9, 0.84);
   transition: 0.5s;
 

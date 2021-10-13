@@ -23,6 +23,7 @@ const sprawdzanieTrybuNocnego = () => {
       btnTrybNocny.checked = true;
     }
     btnKolory.classList.toggle("night");
+    root.style.setProperty("--color-panel-font", "#666");
     root.style.setProperty("--color-panel-grey", "#222");
     root.style.setProperty("--color-light-grey", "#3f3f3f");
     root.style.setProperty("--color-light-greyTop", "#696969");
@@ -45,6 +46,7 @@ const TrybNocny = (e) => {
   if (e.target.checked === true) {
     sessionStorage.setItem("night", "true");
     btnKolory.classList.toggle("night");
+    root.style.setProperty("--color-panel-font", "#666");
     root.style.setProperty("--color-panel-grey", "#222");
     root.style.setProperty("--color-light-grey", "#3f3f3f");
     root.style.setProperty("--color-light-greyTop", "#696969");
@@ -60,6 +62,7 @@ const TrybNocny = (e) => {
   } else {
     sessionStorage.removeItem("night");
     btnKolory.classList.toggle("night");
+    root.style.setProperty("--color-panel-font", "#222");
     root.style.setProperty("--color-panel-grey", "rgb(193, 193, 193)");
     root.style.setProperty("--color-light-grey", "#8d8d8d");
     root.style.setProperty("--color-light-greyTop", "#b3b3b3");

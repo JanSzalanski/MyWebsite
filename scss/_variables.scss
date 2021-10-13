@@ -21,8 +21,12 @@
   --color-main2L: #a8a8a8;
 
   //panel colors
-  --color-panel-font: #222;
+  --color-panel-font: rgb(53, 53, 53);
+  --color-panel-fontA: rgba(34, 34, 34, 0.3);
   --color-panel-grey: rgb(193, 193, 193); //#222
+  --color-panel-grey2: #444;
+  --color-panel-grey3: #333;
+  --color-panel-grey4: #444;
   --color-panel-mainA: rgb(59, 13, 13);
   --color-panel-mainB: rgb(51, 27, 27);
   --color-panel-mainC: rgba(94, 21, 21, 0.4);
@@ -42,10 +46,10 @@
   }
 
   --color-screw: radial-gradient(farthest-corner at 8px 8px, #222 0%, rgb(177, 156, 156) 100%);
-
+  // shadow black nie wiem gdzie on jest i co robi
   --shadow-black: inset 0 0 0 1px rgba(34, 34, 34, 1), 0 0 0px 1px rgba(34, 34, 34, 0.5),
     -4px -5px 12px rgba(255, 255, 255, 0.2), 4px 5px 16px rgba(0, 0, 0, 1), 0px -3px 2px rgba(255, 255, 255, 0.15),
-    0px 3px 2px rgba(0, 0, 0, 0.45), inset -5px -5px 12px rgba(0, 0, 0, 0.5), inset 5px 5px 12px rgba(0, 0, 0, 1);
+    0px 3px 2px rgba(0, 0, 0, 0.45), inset -5px -5px 12px rgba(0, 0, 0, 0.8), inset 5px 5px 12px rgba(0, 0, 0, 1);
 
   --board-width: 438px;
 
