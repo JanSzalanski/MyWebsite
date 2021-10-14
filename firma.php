@@ -641,14 +641,14 @@
 
             </div>
 
-            <div class="PanelInnerShadow">
+            <div class="PanelInnerContent">
 
               <div class="Panel__Sterowanie"> 
 
                     <h2 class="Sterowanie">Sterowanie</h2> 
 
                     <div class="Panel__Btn">
-                      <input type="checkbox" name="Panel__Sterowanie_btn" class="BtnTrybNocny"/>
+                      <input type="checkbox" name="Panel__Sterowanie_btn" class="BtnTrybNocny" />  
                       <h3 class="TrybNocny">Tryb Nocny</h3>
                     </div>
 
@@ -800,6 +800,7 @@
               </div>
 
             </div>
+            <div class="InnerShadow"></div>
 
           </div>
   

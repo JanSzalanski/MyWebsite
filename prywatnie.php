@@ -639,7 +639,7 @@
 
             </div>
 
-            <div class="PanelInnerShadow">
+             <div class="PanelInnerContent">
 
               <div class="Panel__Sterowanie"> 
 
@@ -800,6 +800,7 @@
               </div>
 
             </div>
+            <div class="InnerShadow"></div>
 
           </div>
   
