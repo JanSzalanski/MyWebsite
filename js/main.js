@@ -52,7 +52,7 @@ const sprawdzanieTrybuNocnego = () => {
     root.style.setProperty("--color-panel-grey", "#222");
     root.style.setProperty("--color-panel-grey2", "#222");
     root.style.setProperty("--color-panel-grey3", "rgb(40,40,40)");
-    root.style.setProperty("--color-panel-grey4", "#444");
+    root.style.setProperty("--color-panel-grey4", "#333");
     root.style.setProperty("--color-light-grey", "#3f3f3f");
     root.style.setProperty("--color-light-greyTop", "#696969");
     root.style.setProperty("--color-social", "rgb(255,255,255)");
@@ -99,7 +99,7 @@ const TrybNocny = (e) => {
     root.style.setProperty("--color-panel-grey", "rgb(193, 193, 193)");
     root.style.setProperty("--color-panel-grey2", "#444");
     root.style.setProperty("--color-panel-grey3", "#333");
-    root.style.setProperty("--color-panel-grey4", "#333");
+    root.style.setProperty("--color-panel-grey4", "#444");
     root.style.setProperty("--color-light-grey", "#8d8d8d");
     root.style.setProperty("--color-light-greyTop", "#b3b3b3");
     root.style.setProperty("--color-social", "rgb(0,0,0)");

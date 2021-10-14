@@ -24,7 +24,11 @@ const sprawdzanieTrybuNocnego = () => {
     }
     btnKolory.classList.toggle("night");
     root.style.setProperty("--color-panel-font", "#666");
+    root.style.setProperty("--color-panel-fontA", "rgba(102,102,102,.3");
     root.style.setProperty("--color-panel-grey", "#222");
+    root.style.setProperty("--color-panel-grey2", "#222");
+    root.style.setProperty("--color-panel-grey3", "rgb(40,40,40)");
+    root.style.setProperty("--color-panel-grey4", "#333");
     root.style.setProperty("--color-light-grey", "#3f3f3f");
     root.style.setProperty("--color-light-greyTop", "#696969");
     root.style.setProperty("--color-social", "rgb(255,255,255)");
@@ -47,7 +51,11 @@ const TrybNocny = (e) => {
     sessionStorage.setItem("night", "true");
     btnKolory.classList.toggle("night");
     root.style.setProperty("--color-panel-font", "#666");
+    root.style.setProperty("--color-panel-fontA", "rgba(102,102,102,.3");
     root.style.setProperty("--color-panel-grey", "#222");
+    root.style.setProperty("--color-panel-grey2", "#222");
+    root.style.setProperty("--color-panel-grey3", "rgb(40,40,40)");
+    root.style.setProperty("--color-panel-grey4", "#333");
     root.style.setProperty("--color-light-grey", "#3f3f3f");
     root.style.setProperty("--color-light-greyTop", "#696969");
     root.style.setProperty("--color-social", "rgb(255,255,255)");
@@ -62,8 +70,12 @@ const TrybNocny = (e) => {
   } else {
     sessionStorage.removeItem("night");
     btnKolory.classList.toggle("night");
-    root.style.setProperty("--color-panel-font", "#222");
+    root.style.setProperty("--color-panel-font", "rgb(53,53,53)");
+    root.style.setProperty("--color-panel-fontA", "rgba(34,34,34,.3");
     root.style.setProperty("--color-panel-grey", "rgb(193, 193, 193)");
+    root.style.setProperty("--color-panel-grey2", "#444");
+    root.style.setProperty("--color-panel-grey3", "#333");
+    root.style.setProperty("--color-panel-grey4", "#444");
     root.style.setProperty("--color-light-grey", "#8d8d8d");
     root.style.setProperty("--color-light-greyTop", "#b3b3b3");
     root.style.setProperty("--color-social", "rgb(0,0,0)");
@@ -88,8 +100,8 @@ const colorsOfTheNight = () => {
   root.style.setProperty("--color-main4", "#ffc800");
   root.style.setProperty("--color-main4A", "#ffc8007e");
   root.style.setProperty("--color-main5", "#ad8e00");
-  root.style.setProperty("--color-panel-mainA", "rgb(13, 59, 13)");
-  root.style.setProperty("--color-panel-mainB", "rgb(27, 51, 27)");
+  root.style.setProperty("--color-panel-mainA", "rgb(21, 41, 21)");
+  root.style.setProperty("--color-panel-mainB", "rgb(23, 34, 23)");
   root.style.setProperty("--color-panel-mainC", "rgba(21, 94, 21, 0.1)");
   root.style.setProperty("--color-panel-mainD", "rgba(5, 18, 5, 0.8)");
 };

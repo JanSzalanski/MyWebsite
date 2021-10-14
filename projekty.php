@@ -395,7 +395,7 @@
             <div class="BackgroundGrid"></div>
             <div class="BackgroundGardient"></div>
 
-            <h3 class="NaglowekTresc">Dodatkowe projekty zrealizowane dla instytucji publicznych.</h3>
+            <h3 class="NaglowekTresc Light">Dodatkowe projekty zrealizowane dla instytucji publicznych.</h3>
 
             <div class="maska">
               <div class="ozdobnik">
@@ -690,7 +690,8 @@
 
             <div class="Panel">
               <div class="Panel__Border1">
-                <h3>/// Panel Dodatków ///</h3>  
+                <h3>/// Panel Dodatków ///</h3> 
+                <h3 class="MadeIn">Made in Poland</h3> 
             </div> 
             
             <div class="PanelBorderShadow"></div> 
@@ -790,13 +791,13 @@
                     <h2 class="Sterowanie">Sterowanie</h2> 
 
                     <div class="Panel__Btn">
-                      <input type="checkbox" name="Panel__Sterowanie_btn" class="BtnTrybNocny"/>
+                      <input type="checkbox" name="Panel__Sterowanie_btn" class="BtnTrybNocny" />  
                       <h3 class="TrybNocny">Tryb Nocny</h3>
                     </div>
 
                     <div class="Panel__Btn">
 
-                      <input type="checkbox" name="Panel__Sterowanie_btn" class="BtnDzwieki"/>
+                      <input type="checkbox" name="Panel__Sterowanie_btn"  class="BtnDzwieki"/>
                       <h3 class="Dzwieki">Dźwięki</h3>
 
                     </div>
@@ -944,7 +945,7 @@
               </div>
 
             </div>
-            <div class="InnerShadow"></div>
+            <div class="InnerShadow"></div> 
 
           </div>
   

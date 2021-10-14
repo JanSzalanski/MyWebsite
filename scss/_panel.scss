@@ -652,7 +652,7 @@ input[type="checkbox"]:before {
   height: 19px;
   background: linear-gradient(to top, var(--color-black), var(--color-panel-grey4));
   border-radius: 10px;
-  box-shadow: 0 0 0 1px #111, inset 0 0 3px 3px var(--color-panel-grey3);
+  box-shadow: 0 0 0 1px rgb(28, 28, 28), inset 0 0 3px 3px var(--color-panel-grey3);
   transform: scale(0.9, 0.84);
   transition: 0.5s;
 

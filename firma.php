@@ -364,7 +364,7 @@
             <div class="BackgroundGrid"></div>
             <div class="BackgroundGardient"></div>
 
-            <h3 class="NaglowekTresc OFirmie">szalanski.eu</h3>
+            <h3 class="NaglowekTresc OFirmie Light">szalanski.eu</h3>
 
             <div class="maska">
               <div class="ozdobnik">
@@ -440,7 +440,7 @@
             </div>
 
             <div class="ShapeB modF Light">
-              <h3 class="modF Light">sektor /// a</h3>
+              <h3 class="modF">sektor /// a</h3>
             </div>
           </div>
           <div class="ShapeC OFirmie Light"></div> 
@@ -548,7 +548,8 @@
 
             <div class="Panel RevFirma">
               <div class="Panel__Border1">
-                <h3>/// Panel Dodatków ///</h3>   
+                <h3>/// Panel Dodatków ///</h3>
+                <h3 class="MadeIn">Made in Poland</h3>   
             </div> 
             
             <div class="PanelBorderShadow"></div> 
@@ -619,7 +620,7 @@
 
             </div>
 
-            <div class="ScrewD">
+            <div class="ScrewD"> 
               
               <div class="ScrewD__Head"></div>
 
@@ -653,14 +654,16 @@
                     </div>
 
                     <div class="Panel__Btn">
-                      <input type="checkbox" name="Panel__Sterowanie_btn" class="BtnDzwieki"/>
+
+                      <input type="checkbox" name="Panel__Sterowanie_btn"  class="BtnDzwieki"/>
                       <h3 class="Dzwieki">Dźwięki</h3>
+
                     </div>
 
               </div>
 
               <div  id="kolory">
-                <input type="checkbox"/> 
+                <input type="checkbox" class="BtnTrybKolorow"/> 
                 <h3 class="Kolory">Kolory</h3> 
               </div>
 

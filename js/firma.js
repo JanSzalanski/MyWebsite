@@ -14,8 +14,68 @@ const itemsParent = document.querySelector(".Nav__List");
 const btnTrybNocny = document.querySelector(".BtnTrybNocny");
 const btnDzwieki = document.querySelector(".BtnDzwieki");
 const btnKolory = document.getElementById("kolory");
+const btnTrybKolorow = document.querySelector(".BtnTrybKolorow");
 
 let root = document.documentElement;
+
+///////////////////////elementy do koloru
+
+const ShapeA = document.querySelector(".ShapeA");
+const RectangleA = document.querySelector(".RectangleA");
+const LinesA = document.querySelector(".LinesA");
+const LinesB = document.querySelector(".LinesB");
+const RectangleTresc = document.querySelector(".RectangleTresc");
+const Background = document.querySelector(".Background");
+const ShapeB = document.querySelector(".ShapeB");
+const ShapeC = document.querySelector(".ShapeC");
+const NaglowekTresc = document.querySelector(".NaglowekTresc");
+
+const sprawdzanieTrybuKolorow = () => {
+  if (sessionStorage.getItem("AltColors")) {
+    if (btnTrybKolorow.checked === false) {
+      btnTrybKolorow.checked = true;
+    }
+    ShapeA.classList.remove("Light");
+    RectangleA.classList.remove("Light");
+    LinesA.classList.remove("Light");
+    LinesB.classList.remove("Light");
+    RectangleTresc.classList.remove("Light");
+    Background.classList.remove("Light");
+    ShapeB.classList.remove("Light");
+    ShapeC.classList.remove("Light");
+    NaglowekTresc.classList.remove("Light");
+  } else {
+    return;
+  }
+};
+
+sprawdzanieTrybuKolorow();
+
+const ZmianaKolorow = (e) => {
+  if (e.target.checked === true) {
+    sessionStorage.setItem("AltColors", "true");
+    ShapeA.classList.remove("Light");
+    RectangleA.classList.remove("Light");
+    LinesA.classList.remove("Light");
+    LinesB.classList.remove("Light");
+    RectangleTresc.classList.remove("Light");
+    Background.classList.remove("Light");
+    ShapeB.classList.remove("Light");
+    ShapeC.classList.remove("Light");
+    NaglowekTresc.classList.remove("Light");
+  } else {
+    sessionStorage.removeItem("AltColors");
+    ShapeA.classList.add("Light");
+    RectangleA.classList.add("Light");
+    LinesA.classList.add("Light");
+    LinesB.classList.add("Light");
+    RectangleTresc.classList.add("Light");
+    Background.classList.add("Light");
+    ShapeB.classList.add("Light");
+    ShapeC.classList.add("Light");
+    NaglowekTresc.classList.add("Light");
+  }
+};
 
 const sprawdzanieTrybuNocnego = () => {
   if (sessionStorage.getItem("night")) {
@@ -24,7 +84,11 @@ const sprawdzanieTrybuNocnego = () => {
     }
     btnKolory.classList.toggle("night");
     root.style.setProperty("--color-panel-font", "#666");
+    root.style.setProperty("--color-panel-fontA", "rgba(102,102,102,.3");
     root.style.setProperty("--color-panel-grey", "#222");
+    root.style.setProperty("--color-panel-grey2", "#222");
+    root.style.setProperty("--color-panel-grey3", "rgb(40,40,40)");
+    root.style.setProperty("--color-panel-grey4", "#333");
     root.style.setProperty("--color-light-grey", "#3f3f3f");
     root.style.setProperty("--color-light-greyTop", "#696969");
     root.style.setProperty("--color-social", "rgb(255,255,255)");
@@ -47,7 +111,11 @@ const TrybNocny = (e) => {
     sessionStorage.setItem("night", "true");
     btnKolory.classList.toggle("night");
     root.style.setProperty("--color-panel-font", "#666");
+    root.style.setProperty("--color-panel-fontA", "rgba(102,102,102,.3");
     root.style.setProperty("--color-panel-grey", "#222");
+    root.style.setProperty("--color-panel-grey2", "#222");
+    root.style.setProperty("--color-panel-grey3", "rgb(40,40,40)");
+    root.style.setProperty("--color-panel-grey4", "#333");
     root.style.setProperty("--color-light-grey", "#3f3f3f");
     root.style.setProperty("--color-light-greyTop", "#696969");
     root.style.setProperty("--color-social", "rgb(255,255,255)");
@@ -62,8 +130,12 @@ const TrybNocny = (e) => {
   } else {
     sessionStorage.removeItem("night");
     btnKolory.classList.toggle("night");
-    root.style.setProperty("--color-panel-font", "#222");
+    root.style.setProperty("--color-panel-font", "rgb(53,53,53)");
+    root.style.setProperty("--color-panel-fontA", "rgba(34,34,34,.3");
     root.style.setProperty("--color-panel-grey", "rgb(193, 193, 193)");
+    root.style.setProperty("--color-panel-grey2", "#444");
+    root.style.setProperty("--color-panel-grey3", "#333");
+    root.style.setProperty("--color-panel-grey4", "#444");
     root.style.setProperty("--color-light-grey", "#8d8d8d");
     root.style.setProperty("--color-light-greyTop", "#b3b3b3");
     root.style.setProperty("--color-social", "rgb(0,0,0)");
@@ -88,7 +160,7 @@ const colorsOfTheNight = () => {
   root.style.setProperty("--color-main4", "#01b070");
   root.style.setProperty("--color-main4A", "#01b0707e");
   root.style.setProperty("--color-main5", "#0066ff");
-  root.style.setProperty("--color-panel-mainA", "rgb(13, 43, 59)");
+  root.style.setProperty("--color-panel-mainA", "rgb(25, 35, 41)");
   root.style.setProperty("--color-panel-mainB", "rgb(27, 43, 51)");
   root.style.setProperty("--color-panel-mainC", "rgba(21, 43, 94, 0.2)");
   root.style.setProperty("--color-panel-mainD", "rgba(5, 13, 18, 0.8)");
@@ -174,3 +246,5 @@ ContactBtn.addEventListener("click", WyjazdContact);
 // ContactBtn.addEventListener("touchend", WyjazdContact);
 
 btnTrybNocny.addEventListener("click", TrybNocny);
+
+btnTrybKolorow.addEventListener("click", ZmianaKolorow);
