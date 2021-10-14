@@ -508,6 +508,16 @@ $scss-grey: rgb(193, 193, 193);
     letter-spacing: 1px;
     transform: translate(-50%, -50%) rotatez(-90deg);
   }
+  @media (max-width: 1536px) {
+    left: 190px;
+  }
+
+  @media (max-width: 1280px) {
+    left: 179px;
+  }
+  @media (max-width: 1152px) {
+    left: 178px;
+  }
 }
 #kolory input[type="checkbox"] {
   position: absolute;
