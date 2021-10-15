@@ -519,7 +519,7 @@
             <div class="BackgroundGrid"></div>
             <div class="BackgroundGardient"></div>
 
-            <h3 class="NaglowekTresc">Projekt tej strony w szczegółach.</h3>
+            <h3 class="NaglowekTresc Light">Projekt tej strony w szczegółach.</h3>
             <div class="maska">
               <div class="ozdobnik">
                 <div class="geo begining"></div>
@@ -805,7 +805,7 @@
               </div>
 
               <div  id="kolory">
-                <input type="checkbox"/> 
+                <input type="checkbox" class="BtnTrybKolorow"/> 
                 <h3 class="Kolory">Kolory</h3> 
               </div>
 

@@ -14,8 +14,166 @@ const itemsParent = document.querySelector(".Nav__List");
 const btnTrybNocny = document.querySelector(".BtnTrybNocny");
 const btnDzwieki = document.querySelector(".BtnDzwieki");
 const btnKolory = document.getElementById("kolory");
+const btnTrybKolorow = document.querySelector(".BtnTrybKolorow");
 
 let root = document.documentElement;
+
+///////////////////////elementy do koloru
+
+const ShapeA = document.querySelector(".ShapeA");
+const ShapeBA = document.querySelector(".ShapeBA");
+
+const RectangleA = document.querySelectorAll(".RectangleA");
+const RectanglesA = [...RectangleA];
+
+const LinesA = document.querySelectorAll(".LinesA");
+const LinjeA = [...LinesA];
+
+const LinesB = document.querySelectorAll(".LinesB");
+const LinjeB = [...LinesB];
+
+const RectangleTresc = document.querySelectorAll(".RectangleTresc");
+const RectanglesTresc = [...RectangleTresc];
+
+const Background = document.querySelectorAll(".Background");
+const Backgrounds = [...Background];
+
+const ShapeB = document.querySelector(".ShapeB");
+const ShapeC = document.querySelector(".ShapeC");
+
+const ShapeBB = document.querySelector(".ShapeBB");
+const ShapeBC = document.querySelector(".ShapeBC");
+
+const NaglowekTresc = document.querySelectorAll(".NaglowekTresc");
+const Naglowki = [...NaglowekTresc];
+
+const BorderPic = document.querySelectorAll(".BorderPic");
+const Borders = [...BorderPic];
+
+const sprawdzanieTrybuKolorow = () => {
+  if (sessionStorage.getItem("AltColors")) {
+    if (btnTrybKolorow.checked === false) {
+      btnTrybKolorow.checked = true;
+    }
+    ShapeA.classList.remove("Light");
+    ShapeBA.classList.remove("Light");
+
+    RectanglesA.forEach((rec) => {
+      rec.classList.remove("Light");
+    });
+
+    LinjeA.forEach((linja) => {
+      linja.classList.remove("Light");
+    });
+
+    LinjeB.forEach((linja) => {
+      linja.classList.remove("Light");
+    });
+
+    RectanglesTresc.forEach((rec) => {
+      rec.classList.remove("Light");
+    });
+
+    Backgrounds.forEach((back) => {
+      back.classList.remove("Light");
+    });
+
+    //NaglowekTresc.classList.remove("Light");
+    Naglowki.forEach((naglowek) => {
+      naglowek.classList.remove("Light");
+    });
+
+    Borders.forEach((border) => {
+      border.classList.remove("Light");
+    });
+
+    ShapeB.classList.remove("Light");
+    ShapeBB.classList.remove("Light");
+    ShapeC.classList.remove("Light");
+    ShapeBC.classList.remove("Light");
+  } else {
+    return;
+  }
+};
+
+sprawdzanieTrybuKolorow();
+
+const ZmianaKolorow = (e) => {
+  if (e.target.checked === true) {
+    sessionStorage.setItem("AltColors", "true");
+    ShapeA.classList.remove("Light");
+    ShapeBA.classList.remove("Light");
+
+    RectanglesA.forEach((rec) => {
+      rec.classList.remove("Light");
+    });
+
+    LinjeA.forEach((linja) => {
+      linja.classList.remove("Light");
+    });
+
+    LinjeB.forEach((linja) => {
+      linja.classList.remove("Light");
+    });
+
+    RectanglesTresc.forEach((rec) => {
+      rec.classList.remove("Light");
+    });
+
+    Backgrounds.forEach((back) => {
+      back.classList.remove("Light");
+    });
+
+    Naglowki.forEach((naglowek) => {
+      naglowek.classList.remove("Light");
+    });
+
+    Borders.forEach((border) => {
+      border.classList.remove("Light");
+    });
+
+    ShapeB.classList.remove("Light");
+    ShapeBB.classList.remove("Light");
+    ShapeC.classList.remove("Light");
+    ShapeBC.classList.remove("Light");
+  } else {
+    sessionStorage.removeItem("AltColors");
+    ShapeA.classList.add("Light");
+    ShapeBA.classList.add("Light");
+
+    RectanglesA.forEach((rec) => {
+      rec.classList.add("Light");
+    });
+
+    LinjeA.forEach((linja) => {
+      linja.classList.add("Light");
+    });
+
+    LinjeB.forEach((linja) => {
+      linja.classList.add("Light");
+    });
+
+    RectanglesTresc.forEach((rec) => {
+      rec.classList.add("Light");
+    });
+
+    Backgrounds.forEach((back) => {
+      back.classList.add("Light");
+    });
+
+    Naglowki.forEach((naglowek) => {
+      naglowek.classList.add("Light");
+    });
+    Borders.forEach((border) => {
+      border.classList.add("Light");
+    });
+
+    ShapeB.classList.add("Light");
+    ShapeBB.classList.add("Light");
+    ShapeC.classList.add("Light");
+    ShapeBC.classList.add("Light");
+  }
+};
 
 const sprawdzanieTrybuNocnego = () => {
   if (sessionStorage.getItem("night")) {
@@ -186,3 +344,5 @@ ContactBtn.addEventListener("click", WyjazdContact);
 // ContactBtn.addEventListener("touchend", WyjazdContact);
 
 btnTrybNocny.addEventListener("click", TrybNocny);
+
+btnTrybKolorow.addEventListener("click", ZmianaKolorow);

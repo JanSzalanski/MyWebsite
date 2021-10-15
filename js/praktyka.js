@@ -14,6 +14,7 @@ const itemsParent = document.querySelector(".Nav__List");
 const btnTrybNocny = document.querySelector(".BtnTrybNocny");
 const btnDzwieki = document.querySelector(".BtnDzwieki");
 const btnKolory = document.getElementById("kolory");
+const btnTrybKolorow = document.querySelector(".BtnTrybKolorow");
 
 let root = document.documentElement;
 
@@ -343,3 +344,5 @@ ContactBtn.addEventListener("click", WyjazdContact);
 // ContactBtn.addEventListener("touchend", WyjazdContact);
 
 btnTrybNocny.addEventListener("click", TrybNocny);
+
+btnTrybKolorow.addEventListener("click", ZmianaKolorow);

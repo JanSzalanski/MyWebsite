@@ -393,7 +393,7 @@
             <div class="BackgroundGrid"></div>
             <div class="BackgroundGardient"></div>
 
-            <h3 class="NaglowekTresc">AAT Holding Sp.z.o.o.</h3>
+            <h3 class="NaglowekTresc Light">AAT Holding Sp.z.o.o.</h3>
 
             <div class="maska">
               <div class="ozdobnik">
@@ -419,7 +419,7 @@
              Po raz pierwszy podjąłem zatrudnienie w polskiej firmie AAT Holding sp. z o.o. Jako młody chłopak po technikum elektronicznym i student wieczorowy mogłem podjąć pracę na pełny etat w spółce, gdzie szukano technika serwisu do naprawy wielu urządzeń elektronicznych. Świetnie się składało ja jeszcze świeży adept technikum elektronicznego a tu od razu praca w zawodzie. Co prawda głównym powołaniem, jakie mnie przywiodło do owego technikum, była informatyka i taki też był kierunek moich studiów. Natomiast uznałem, że takie elektroniczne doświadczenie może tylko zaprocentować i sprawić, że będę jeszcze lepszym specjalistą w przyszłej dowolnej specjalizacji informatycznej. Firma zajmowała się dystrybucją urządzeń SSWiN czyli Systemów Sygnalizacji Włamania i Napadu. W siostrzanej firmie mieszczącej się w tym samym budynku oferowano produkty pod marką własną z dziedziny CCTV, czyli na polski - telewizji dozorowej. Moim zadaniem postawionym przez Dyrektora miało być naprawianie asortymentu z jednej, jak i drugiej dziedziny. Oraz jeśli podołam - udzielanie porad technicznych na temat oferowanych rozwiązań także najlepiej z obydwu obszarów. Trochę mnie zdziwiło, że nikt z wówczas pracujących serwisantów nie posiadał tak szerokiego zakresu obowiązków – nie zastanawiałem się jednak nad tym długo i przeszedłem do działania. Miałem to szczęście, że w serwisie, jak i w dziale technicznym pracowali zdolni ludzie daleko bardziej zaawansowani elektronicy ode mnie - młodego adepta tej dziedziny. Jednak ta świadomość tylko mnie mobilizowała do pracy nad swoimi umiejętnościami tak, aby z czasem strać się dorównywać tym właśnie osobom. Takie okoliczności dawały możliwości uczenia się od lepszych od siebie, co jest bardzo efektywne i szalenie motywujące. Należy powiedzieć, że asortyment firmy nie sprowadzał się do jednej marki własnej telewizji i kilku marek z tzw. alarmówki o nie… cennik, który także stosunkowo dobrze znałem był całkiem opasłym wydawnictwem własnym. Poza tym firma miała oddziały w Polsce, jaki poszerzała swoje portfolio o rynki zagraniczne. Jednym słowem z uwagi na wielkość firmy brygada w serwisie nie narzekała na pracę w tym i ja. Po dwóch latach chyba na tyle dobrze wywiązywałem się z ambitnych założeń postawionych mojej osobie, że z technika serwisu stałem się specjalistą do spraw serwisu i z tego, co mi wiadomo żaden z moich bardziej doświadczonych kolegów ze specjalizacji SSWiN lub CCTV nie zgłosił zastrzeżeń do takiego całkiem szybkiego awansu.
             </p>
 
-            <h3 class="NaglowekTresc">NSS Sp.z.o.o.</h3>
+            <h3 class="NaglowekTresc Light">NSS Sp.z.o.o.</h3>
 
             <div class="maska">
               <div class="ozdobnik">
@@ -444,7 +444,7 @@
                 Po trzech i pół roku przeszedłem do firmy o podobnym profilu produktowym na podobne stanowisko tj. specjalista ds. serwisu technicznego. Czyli znowu naprawa sprzętu z dwóch dziedzin SSWiN oraz CCTV. Tym razem inne marki z nieco mniej opasłego cennika. Także do moich obowiązków należała pomoc techniczna na miejscu i przez telefon. W tej firmie było to nawet bardziej obciążające, gdyż tutaj za moich czasów dział techniczny nie występował był tylko serwis. Firma była dużo mniejsza, jeśli chodzi o skład osobowy jednak nie wiele mniejsza, jeśli chodzi o asortyment. Ekstremalnie mała, jeśli chodzi o osoby techniczne. Dość powiedzieć, że było ich wówczas ze mną dokładnie trzy. Jeśli u osób, które być może trochę znają się na pracy serwisowej czy elektronika właśnie zrodziła się taka myśl ?- że co ja tam się rozpisuje nad prostym zajęciem polegającą na demontażach i wymianach płyt głównych czy całych modułów. Otóż od samego początku w tej firmie, jak i opisywanej poprzednio było moim priorytetem (oraz niektórych kolegów po fachu) - zdiagnozowanie usterki znalezienie uszkodzonych elementów i ich wymiana. Mówiąc krótko jak najefektywniejsze podejścia do kwestii naprawy pod względem koszt\efekt (a jeszcze krócej nie pójście na łatwiznę). Czyli robienie czegoś więcej niż tylko sprawny montaż-demontaż wyuczonego asortymentu. Nie zrażała mnie nawet wymiana układów scalonych bga. Rozpoznanie niektórych usterek z czasem doszło do takiego poziomu, że uszkodzone element\ty potrafiliśmy precyzyjnie rozpoznać w danym produkcie na podstawie samego dźwięku, jaki się z niego wydobywał (taki był przerób). A w niektórych przypadkach defekt rozpoznawaliśmy (z całkiem dużo dozą prawdopodobieństwa) po dochodzącym z wnętrza przedmiotu zapachu tak, nie przewidziało się Tobie po zapachu... Lub co było już sztuką prostszą na sam dotyk - bez patrzenia. Czyli, innymi słowy, i z małym przymrużeniem oka – w wąskim gronie mogliśmy urządzać zawody prestidigitatorskie z napraw elektroniki przy zasłoniętych oczach :)  
             </p>
 
-            <h3 class="NaglowekTresc">freelancer</h3>
+            <h3 class="NaglowekTresc Light">freelancer</h3>
 
             <div class="maska">  
               <div class="ozdobnik">
@@ -515,7 +515,7 @@
             <div class="BackgroundNoise"></div>
             <div class="BackgroundGrid"></div>
             <div class="BackgroundGardient"></div>
-            <h3 class="NaglowekTresc">Sąd Rejonowy dla Warszawy Żoliborza</h3>
+            <h3 class="NaglowekTresc Light">Sąd Rejonowy dla Warszawy Żoliborza</h3>
 
             <div class="maska">
               <div class="ozdobnik">
@@ -540,7 +540,7 @@
               Jako już „dyplomowany” informatyk zacząłem pracę w Sądzie Rejonowym dla Warszawy Żoliborza. W obiegowej opinii funkcjonuje przekonanie, że praca w instytucji państwowej to jedynie picie kawy od 8 do 16. Nie kończenie - a z pewnością nie dla osoby technicznej jednej z trzech lub częściej dwóch. Bo dokoła czekają na nią takie atrakcje jak między innymi ponad 400 użytkowników przeszło 300 maszyn i cała infrastruktura, czyli sieci, bazy danych, serwery. O specjalizowanym oprogramowaniu resortowym nawet nie będę wspominał, bo można by napisać na te temat powieść i to nie koniecznie romantyczną. W publicznym sektorze jest się specjalistą od wszystkiego. Można by rzec, że jest się człowiekiem od administrowania systemami Windows Server (całego ich spektrum), zarządzania bazami SQL, poprzez nadzorowanie sieci aż po bycie guru od Worda i Excela. Jedno, czego być może było najmniej, jeśli chodzi o informatyczne zajęcia w takim miejscu jak Sądy to programowanie - przynajmniej nie w opisywanych przeze mnie (nie licząc oczywiście zapytań SQL i okazjonalnego skryptowania). Człowiek orkiestra pierwsza, jaki druga linia wsparcia, informatyk z help desk, żeby zaraz przemienić się w administratora systemów czy sieci, a w międzyczasie robi się za admina od baz danych i tak  cały czas. Tu nie ma specjalistów w białych kołnierzykach, tu trzeba być tęgą głową (z grubą skórą), która nie boi się zakasać rękawy i czasami ubrudzić ręce. Co dzień byłem na pierwszej linii frontu po to, aby cały ten niemały przybytek spod znaku „ślepej niewiasty”, jako tako funkcjonował. Dni spokojne były rzadkością i najczęściej oznaczały przysłowiową ciszę przed burzą. W 2012 roku przechodzę na własną działalność i od tej pory na podstawie faktur rozliczam moją współpracę z Sądem. W tym czasie zrealizowałem na rzecz Żoliborskiego Sądu sporo dodatkowych projektów, które opisałem na sąsiedniej stronie i do lektury, których gorąco zachęcam.
             </p>
 
-            <h3 class="NaglowekTresc">Sąd Rejonowy dla Warszawy Woli</h3>
+            <h3 class="NaglowekTresc Light">Sąd Rejonowy dla Warszawy Woli</h3>
 
             <div class="maska">
               <div class="ozdobnik">
@@ -799,7 +799,7 @@
               </div>
 
               <div  id="kolory">
-                <input type="checkbox"/> 
+                <input type="checkbox" class="BtnTrybKolorow"/> 
                 <h3 class="Kolory">Kolory</h3> 
               </div>
 

@@ -661,12 +661,12 @@
               </div>
 
               <div  id="kolory">
-                <input type="checkbox"/> 
+                <input type="checkbox" class="BtnTrybKolorow"/>   
                 <h3 class="Kolory">Kolory</h3> 
               </div>
 
               <div class="Panel__Sociale"> 
-
+  
                 <h2 class="Sociale">Sociale</h2> 
                     
                 <div class="GitHub">
