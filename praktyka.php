@@ -938,6 +938,11 @@
 
               </div>
 
+              <div  id="kolory">
+                <input type="checkbox" class="BtnTrybKolorow"/> 
+                <h3 class="Kolory">Kolory</h3> 
+              </div>
+
             </div>
             <div class="InnerShadow"></div>
 
