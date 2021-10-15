@@ -660,11 +660,6 @@
 
               </div>
 
-              <div  id="kolory">
-                <input type="checkbox" class="BtnTrybKolorow"/>   
-                <h3 class="Kolory">Kolory</h3> 
-              </div>
-
               <div class="Panel__Sociale"> 
   
                 <h2 class="Sociale">Sociale</h2> 
@@ -798,6 +793,11 @@
                       </svg>
                 </div>
 
+              </div>
+
+              <div  id="kolory">
+                <input type="checkbox" class="BtnTrybKolorow"/>   
+                <h3 class="Kolory">Kolory</h3> 
               </div>
 
             </div>

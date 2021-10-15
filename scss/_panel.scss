@@ -474,7 +474,7 @@ $scss-grey: rgb(193, 193, 193);
   }
 
   @include mq(xs) {
-    width: 36%;
+    width: 50%;
     height: 100%;
   }
 
@@ -483,132 +483,6 @@ $scss-grey: rgb(193, 193, 193);
   }
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-#kolory {
-  position: absolute;
-  left: 192px;
-  top: 50%;
-  width: 15px;
-  height: calc(100% - 30px);
-  transform: translateY(-50%);
-  & h3 {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    width: 60px;
-    height: 15px;
-    text-align: center;
-    line-height: 15px;
-    margin-left: 0;
-    text-transform: uppercase;
-    font-family: $font-audio;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: var(--color-panel-font);
-    letter-spacing: 1px;
-    transform: translate(-50%, -50%) rotatez(-90deg);
-  }
-  @media (max-width: 1536px) {
-    left: 190px;
-  }
-
-  @media (max-width: 1280px) {
-    left: 179px;
-  }
-  @media (max-width: 1152px) {
-    left: 178px;
-  }
-}
-#kolory input[type="checkbox"] {
-  position: absolute;
-  top: 5px;
-  left: 2px;
-  background-image: url(../assets/obramowanie.svg);
-  background-position: center;
-  background-repeat: none;
-  background-size: cover;
-  width: 12px;
-  height: 18px;
-  background-color: rgb(27, 27, 27);
-  border-radius: 0px;
-  margin-left: 0px;
-  outline: none;
-  appearance: none;
-  cursor: pointer;
-  box-shadow: none;
-}
-
-#kolory.night input[type="checkbox"] {
-  background-image: url(../assets/obramowanieB.svg);
-  background-color: #111;
-}
-
-#kolory input:checked[type="checkbox"] {
-  left: 2px;
-  background-image: url(../assets/obramowanie.svg);
-  width: 12px;
-  height: 18px;
-  background-color: #111;
-  border-radius: 0px;
-  margin-left: 0px;
-  outline: none;
-  appearance: none;
-  cursor: pointer;
-  box-shadow: none;
-}
-
-#kolory.night input:checked[type="checkbox"] {
-  background-image: url(../assets/obramowanieB.svg);
-  background-color: #111;
-}
-
-#kolory input[type="checkbox"]:before {
-  position: absolute;
-  top: 0;
-  left: 1px;
-  width: 10px;
-  height: 10px;
-  border-radius: 0px;
-  margin-left: 0px;
-  outline: none;
-  appearance: none;
-  cursor: pointer;
-  box-shadow: none;
-  background-image: url(../assets/Kwadrat.svg);
-  background-position: center;
-  background-repeat: none;
-  background-size: cover;
-  box-shadow: 3px 1px 6px -1px #000000;
-}
-
-#kolory.night input[type="checkbox"]:before {
-  background-image: url(../assets/KwadratB.svg);
-}
-
-#kolory input:checked[type="checkbox"]:before {
-  position: absolute;
-  top: 7px;
-  left: 1px;
-  width: 10px;
-  height: 10px;
-  border-radius: 0px;
-  margin-left: 0px;
-  outline: none;
-  appearance: none;
-  cursor: pointer;
-  box-shadow: none;
-  background-image: url(../assets/Kwadrat.svg);
-  background-position: center;
-  background-repeat: none;
-  background-size: contain;
-  box-shadow: 3px 1px 6px -1px #000000, 3px 3px 4px 3px rgba(0, 0, 0, 0);
-}
-
-#kolory.night input:checked[type="checkbox"]:before {
-  background-image: url(../assets/KwadratB.svg);
-}
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 input[type="checkbox"] {
   //obwiednia i środek
@@ -724,7 +598,181 @@ input:checked[type="checkbox"]:after {
     left: calc(18px + 25px);
   }
 }
-////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////// Kolory//////////////
+
+#kolory {
+  position: absolute;
+  left: 192px;
+  top: 50%;
+  width: 15px;
+  height: calc(100% - 30px);
+  transform: translateY(-50%);
+
+  & h3 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 60px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    margin-left: 0;
+    text-transform: uppercase;
+    font-family: $font-audio;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--color-panel-font);
+    letter-spacing: 1px;
+    transform: translate(-50%, -50%) rotatez(-90deg);
+  }
+  @media (max-width: 1536px) {
+    left: 190px;
+  }
+
+  @media (max-width: 1280px) {
+    left: 179px;
+  }
+  @media (max-width: 1152px) {
+    left: 177px;
+  }
+
+  @include mq(xs) {
+    transform: translate(0, -50%) rotatez(90deg);
+    top: 91%;
+    height: 50%;
+    left: 77%;
+  }
+}
+#kolory input[type="checkbox"] {
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  background: var(--color-panel-grey2);
+  background-image: url(../assets/obramowanie.svg);
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  width: 12px;
+  height: 18px;
+  background-color: rgb(27, 27, 27);
+  border-radius: 0px;
+  margin-left: 0px;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: none;
+  transition: 0.5s;
+
+  @media (max-width: 1280px) {
+    width: 11px;
+    height: 17px;
+    left: 3px;
+  }
+}
+
+#kolory.night input[type="checkbox"] {
+  background-image: url(../assets/obramowanieB.svg);
+  background-color: #111;
+}
+
+#kolory input:checked[type="checkbox"] {
+  left: 2px;
+  background-image: url(../assets/obramowanie.svg);
+  width: 12px;
+  height: 18px;
+  background-color: #111;
+  border-radius: 0px;
+  margin-left: 0px;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: none;
+
+  @media (max-width: 1280px) {
+    width: 11px;
+    height: 17px;
+    left: 3px;
+  }
+}
+
+#kolory.night input:checked[type="checkbox"] {
+  background-image: url(../assets/obramowanieB.svg);
+  background-color: #111;
+}
+
+#kolory input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 10px;
+  height: 10px;
+  border-radius: 0px;
+  margin-left: 0px;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: none;
+  background: #222;
+  background-image: url(../assets/Kwadrat.svg);
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  box-shadow: 3px 1px 6px -1px #000;
+  transition: 0.5s;
+  transform: translateY(0);
+
+  @media (max-width: 1280px) {
+    top: 1px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+  }
+}
+
+#kolory.night input[type="checkbox"]:before {
+  background-image: url(../assets/KwadratB.svg);
+}
+
+#kolory input:checked[type="checkbox"]:before {
+  position: absolute;
+  top: 7px;
+  left: 1px;
+  width: 10px;
+  height: 10px;
+  border-radius: 0px;
+  margin-left: 0px;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: none;
+  background-image: url(../assets/Kwadrat.svg);
+  background-position: center;
+  background-repeat: none;
+  background-size: contain;
+  box-shadow: 3px 1px 6px -1px #000; //3px 3px 4px 3px rgba(0, 0, 0, 0);
+  transform: translate(0, 0);
+
+  @media (max-width: 1280px) {
+    left: 2px;
+    width: 8px;
+    height: 8px;
+  }
+}
+
+#kolory.night input:checked[type="checkbox"]:before {
+  background-image: url(../assets/KwadratB.svg);
+}
+
+#kolory input[type="checkbox"]:after {
+  display: none;
+}
+
+#kolory input:checked[type="checkbox"]:after {
+  display: none;
+}
+
+/////////////////////////////////////////////////////////////////
 
 .DecorLine {
   height: calc(100% - 4px);
