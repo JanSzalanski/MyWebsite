@@ -616,7 +616,6 @@ input:checked[type="checkbox"]:after {
     height: 15px;
     text-align: center;
     line-height: 15px;
-    margin-left: 0;
     text-transform: uppercase;
     font-family: $font-audio;
     font-size: 0.9rem;
@@ -647,14 +646,13 @@ input:checked[type="checkbox"]:after {
   position: absolute;
   top: 5px;
   left: 2px;
-  background: var(--color-panel-grey2);
-  background-image: url(../assets/obramowanie.svg);
+  background-image: url(../assets/obramowanieA.svg);
   background-position: center;
   background-repeat: none;
   background-size: cover;
   width: 12px;
   height: 18px;
-  background-color: rgb(27, 27, 27);
+  background-color: rgb(47, 45, 45);
   border-radius: 0px;
   margin-left: 0px;
   outline: none;
@@ -677,10 +675,10 @@ input:checked[type="checkbox"]:after {
 
 #kolory input:checked[type="checkbox"] {
   left: 2px;
-  background-image: url(../assets/obramowanie.svg);
+  background-image: url(../assets/obramowanieA.svg);
   width: 12px;
   height: 18px;
-  background-color: #111;
+  background-color: rgb(47, 45, 45);
   border-radius: 0px;
   margin-left: 0px;
   outline: none;

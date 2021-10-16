@@ -798,8 +798,8 @@
               </div>
 
               <div  id="kolory">
-                <input type="checkbox" class="BtnTrybKolorow"/> 
                 <h3 class="Kolory">Kolory</h3> 
+                <input type="checkbox" class="BtnTrybKolorow"/> 
               </div>
 
             </div>

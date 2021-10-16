@@ -568,14 +568,16 @@
                     <h2 class="Sterowanie">Sterowanie</h2> 
 
                     <div class="Panel__Btn">
-                      <input type="checkbox" name="Panel__Sterowanie_btn" class="BtnTrybNocny" />  
+
+                      <input type="checkbox" name="Panel__Sterowanie_btn" class="BtnTrybNocny" /> 
                       <h3 class="TrybNocny">Tryb Nocny</h3>
+
                     </div>
 
                     <div class="Panel__Btn">
 
                       <input type="checkbox" name="Panel__Sterowanie_btn"  class="BtnDzwieki"/>
-                      <h3 class="Dzwieki">Dźwięki</h3>
+                      <h3 class="TrybNocny">Tryb Nocny</h3>
 
                     </div>
 
@@ -717,8 +719,8 @@
               </div>
 
               <div  id="kolory">
-                <input type="checkbox" class="BtnTrybKolorow"/> 
                 <h3 class="Kolory">Kolory</h3> 
+                <input type="checkbox" class="BtnTrybKolorow"/> 
               </div>
 
             </div>
