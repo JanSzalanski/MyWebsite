@@ -1477,7 +1477,7 @@ $WtrescC: 1000px;
   background-size: cover;
   background-position: center;
   box-shadow: inset 0px 0px 6px 2px rgba(0, 0, 0, 0.3);
-  filter: sepia(100%);
+  filter: grayscale(100%);
   transition: ease-in-out 0.7s;
   cursor: pointer;
 }
@@ -1505,13 +1505,13 @@ $WtrescC: 1000px;
   position: absolute;
   left: 0;
   top: 0;
-  background: radial-gradient(circle, rgba(2, 0, 36, 0) 62%, rgba(20, 10, 0, 0.49) 87%, rgba(20, 10, 5, 0.85) 100%);
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 62%, rgba(20, 20, 20, 0.49) 87%, rgba(20, 19, 18, 0.85) 100%);
   transition: ease-in-out 0.7s;
   opacity: 1;
 }
 
 .PicA:hover {
-  filter: sepia(0);
+  filter: grayscale(0);
 }
 
 .PicA:hover::before {
@@ -1875,7 +1875,7 @@ svg > rect {
   }
 
   &.Mnie {
-    color: var(--color-main);
+    color: var(--color-main1);
   }
 }
 

@@ -577,10 +577,10 @@
                     <div class="Panel__Btn">
 
                       <input type="checkbox" name="Panel__Sterowanie_btn"  class="BtnDzwieki"/>
-                      <h3 class="TrybNocny">Tryb Nocny</h3>
+                      <h3 class="TrybNocny">Dźwięki</h3>
 
                     </div>
-
+  
               </div>
 
               <div class="Panel__Sociale"> 
