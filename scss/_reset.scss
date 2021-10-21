@@ -1,22 +1,21 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; //
+  -moz-osx-font-smoothing: grayscale;
 }
 
-
 input:focus {
-    outline: 0; //głupia obwódka w webkicie w polach formularza przy wpisywaniu
+  outline: 0; //głupia obwódka w webkicie w polach formularza przy wpisywaniu
 }
 
 button:focus {
-    outline: 0; //głupia obwódka w webkicie na buttonie po kliknieciu
+  outline: 0; //głupia obwódka w webkicie na buttonie po kliknieciu
 }
 
 textarea:focus {
-    outline: 0; //głupia obwódka w webkicie na buttonie po wpisywaniu
+  outline: 0; //głupia obwódka w webkicie na buttonie po wpisywaniu
 }
