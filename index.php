@@ -565,7 +565,7 @@
 
               <div class="Panel__Sterowanie"> 
 
-                    <h2 class="Sterowanie">Sterowanie</h2> 
+                    <h2 class="Sterowanie">Sterowanie</h2>  
 
                     <div class="Panel__Btn">
 
@@ -760,18 +760,17 @@
         <div class="Footer__BottomSection-Right">
           <div class="Footer__BottomSection-Right-P">
             <div class="Footer__BottomSection-Right-Div1">
-              <h2 class="Footer__BottomSection-Right-h2">
+              <!-- <h2 class="Footer__BottomSection-Right-h2">
                 szalanski.eu <br />
                 Jan Szałański
-              </h2>
+              </h2> -->
             </div>
 
             <div class="Footer__BottomSection-Right-Div2">
-              <h3 class="Footer__BottomSection-Right-h3">
-                02-285 Warszawa <br />
-                Szyszkowa 46\13<br />
-                NIP: 5222739323 <br />REGON :1462757
-              </h3>
+              <!-- <h3 class="Footer__BottomSection-Right-h3">
+                
+                
+              </h3> -->
             </div>
 
             <div class="Footer__BottomSection-Right-Div3">
