@@ -839,15 +839,15 @@
         <div class="Footer__BottomSection-Right">
           <div class="Footer__BottomSection-Right-P">
             <div class="Footer__BottomSection-Right-Div1">
-              <!-- <h2 class="Footer__BottomSection-Right-h2">
+               <h2 class="Footer__BottomSection-Right-h2">
                 szalanski.eu <br />
                 Jan Szałański
-              </h2> -->
+              </h2> 
             </div>
 
-            <div class="Footer__BottomSection-Right-Div2">
+            <!-- <div class="Footer__BottomSection-Right-Div2">
             
-            </div>
+            </div> --> 
 
             <div class="Footer__BottomSection-Right-Div3">
               <h3 class="Footer__BottomSection-Right-h3B">Polityka Prywatności</h3>

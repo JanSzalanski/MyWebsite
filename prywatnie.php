@@ -837,10 +837,10 @@
         <div class="Footer__BottomSection-Right">
           <div class="Footer__BottomSection-Right-P">
             <div class="Footer__BottomSection-Right-Div1">
-              <!-- <h2 class="Footer__BottomSection-Right-h2P">
+               <h2 class="Footer__BottomSection-Right-h2P">
                 szalanski.eu <br />
                 Jan Szałański
-              </h2> -->
+              </h2> 
             </div>
 
             <div class="Footer__BottomSection-Right-Div2">
